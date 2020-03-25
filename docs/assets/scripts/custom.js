@@ -18,7 +18,7 @@ $(document).ready(function () {
 		e.preventDefault();
 
 		var creditAPIURL = "https://api.foldingathome.org/project/" + $('#projectId').val() + "/run/" + $('#runId').val() + "/clone/" + $('#cloneId').val() + "/gen/" + $('#genId').val();
-		creditAPIURL = "https://assign1.foldingathome.org/api/ws/summary";
+		//creditAPIURL = "https://assign1.foldingathome.org/api/ws/summary";
 
 		//var xhttp = new XMLHttpRequest();
 		//xhttp.onreadystatechange = function() {
@@ -39,8 +39,8 @@ $(document).ready(function () {
 			alert(data);
 		})
 		.always(function(data) {
-			//alert( "finished" ); //3rd
-			alert(data);
+			alert( "finished" ); //3rd
+			//alert(data);
 		});
 		// Perform other work here ...
 		//alert( "something" ); //1st before even making call
