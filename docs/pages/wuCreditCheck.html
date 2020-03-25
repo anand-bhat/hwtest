@@ -1,0 +1,64 @@
+---
+layout: page
+tagline: WU Credit Checker
+tagline_min: WUCreditChecker
+---
+<div>
+	 This page lets you check if your Folding@home (FAH) Work Unit (WU) has been credited.
+</div>
+<hr>
+<div>
+	<form class="form-horizontal">
+		<fieldset>
+
+		<!-- Project Id input -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="projectId">Project Id</label>
+			<div class="col-md-2">
+				<input id="projectId" name="projectId" type="number" value="11762" class="form-control input-md" required>
+			</div>
+		</div>
+
+		<!-- Run input -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="runId">Run</label>
+			<div class="col-md-1">
+				<input id="runId" name="runId" type="number" value="0" class="form-control input-md" required>
+			</div>
+		</div>
+
+		<!-- Clone input -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="cloneId">Clone</label>
+			<div class="col-md-1">
+				<input id="cloneId" name="cloneId" type="number" value="4854" class="form-control input-md" required>
+			</div>
+		</div>
+
+		<!-- Gen input -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="genId">Generation (Gen)</label>
+			<div class="col-md-1">
+				<input id="genId" name="genId" type="number" value="7" class="form-control input-md" required>
+			</div>
+		</div>
+
+		<!-- Buttons -->
+		<div class="form-group">
+			<div class="col-md-4">
+				<button id="fetchCredit" name="fetchCredit" class="btn btn-primary">Check</button>
+				<button id="fetchCreditReset" name="fetchCreditReset" class="btn btn-danger" type="reset">Reset</button>
+			</div>
+		</div>
+
+		<!-- Display after calculation -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="wuTotal">Total points for the WU</label>  
+			<div class="col-md-4">
+				<input id="wuTotal" name="wuTotal" type="text" disabled="" class="form-control input-md">
+			</div>
+		</div>
+		</fieldset>
+	</form>
+</div>
+<hr>
