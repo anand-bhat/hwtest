@@ -25,12 +25,12 @@ $(document).ready(function () {
 		var logLine = $('#logLine').val();
 		alert(logLine);
 		if (logLine != null && logLine != '') {
-			var logLinePattern = '^.*.project:(?<p>\d*) run:(?<r>\d*) clone:(?<c>\d*) gen:(?<g>\d*).*.$';
+			var logLinePattern = /^.*.project:(?<p>\d*) run:(?<r>\d*) clone:(?<c>\d*) gen:(?<g>\d*).*.$/;
 			var match = logLinePattern.exec(logLine);
-			var p = ${match.groups.p};
-			var r = ${match.groups.r};
-			var c = ${match.groups.r};
-			var g = ${match.groups.r};
+			var p = match.groups.p;
+			var r = match.groups.r;
+			var c = match.groups.c;
+			var g = match.groups.g;
 			
 			$('#projectId').val(p);
 			$('#runId').val(r);
