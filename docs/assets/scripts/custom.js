@@ -84,7 +84,7 @@ $(document).ready(function () {
 			$('#wuStatus').text('Checking for WU credits...');
 			$('#wuStatus').removeClass();
 			$('#wuStatusData').hide();
-			$('#wuStatusTable').bootstrapTable('removeAll');
+			//$('#wuStatusTable').bootstrapTable('removeAll');
 		} else {
 			$(this).closest('form')[0].reportValidity();
 		}
