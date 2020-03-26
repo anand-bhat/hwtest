@@ -66,13 +66,15 @@ $(document).ready(function () {
 			.done(function(data) {
 				$('#wuStatus').text('WU credit check complete for ' + wuDescription + '.');
 				$('#wuStatus').removeClass('bad').addClass('good');
+				alert(data);
+				alert(JSON.stringify(data));
 				$('#wuStatusTable').bootstrapTable({data: data, formatNoMatches: function () {return 'No credits found.';}});
 				$('#wuStatusData').show();
 			})
 			.fail(function(data) {
 				$('#wuStatus').text('An error occured when checking WU credits.');
 				$('#wuStatus').removeClass('good').addClass('bad');
-				$('#wuStatusTable').bootstrapTable('removeAll');
+				//$('#wuStatusTable').bootstrapTable('removeAll');
 				$('#wuStatusData').hide();
 			})
 			.always(function(data) {
@@ -84,7 +86,6 @@ $(document).ready(function () {
 			$('#wuStatus').text('Checking for WU credits...');
 			$('#wuStatus').removeClass();
 			$('#wuStatusData').hide();
-			//$('#wuStatusTable').bootstrapTable('removeAll');
 		} else {
 			$(this).closest('form')[0].reportValidity();
 		}
