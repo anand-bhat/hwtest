@@ -23,7 +23,6 @@ $(document).ready(function () {
 	// Fetch credit for WU
 	$('#fetchCredit').on('click', function (e) {
 		var logLine = $('#logLine').val();
-		alert(logLine);
 		if (logLine != null && logLine != '') {
 			var logLinePattern = /^.*.project:(?<p>\d*) run:(?<r>\d*) clone:(?<c>\d*) gen:(?<g>\d*).*.$/;
 			var match = logLinePattern.exec(logLine);
@@ -36,7 +35,6 @@ $(document).ready(function () {
 			$('#runId').val(r);
 			$('#cloneId').val(c);
 			$('#genId').val(g);
-			alert(p + " " + r + " " + c + " " + g);
 		}
 
 		if($(this).closest('form')[0].checkValidity()) {
