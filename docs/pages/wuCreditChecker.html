@@ -12,57 +12,42 @@ tagline_min: WUCreditChecker
 <hr>
 <div>
 	<form class="form-horizontal">
-		<fieldset name="logLineFields">
-			<!-- Line from log containg PRCG -->
-			<div class="form-group">
+		<div class="row">
+			<div class="col">
+				<!-- Line from log containg PRCG -->
 				<label class="col-md-4 control-label" for="logLine">Line from FAH log</label>
-				<div class="col-md-12">
-					<input id="logLine" name="logLine" type="text" value="12:59:59:WU01:FS01:Sending unit results: id:01 state:SEND error:NO_ERROR project:12345 run:0 clone:1 gen:2 core:0x22 unit:0x000000000000000000012345" class="form-control input-md">
-				</div>
+				<input id="logLine" name="logLine" type="text" value="12:59:59:WU01:FS01:Sending unit results: id:01 state:SEND error:NO_ERROR project:12345 run:0 clone:1 gen:2 core:0x22 unit:0x000000000000000000012345" class="form-control input-md">
 			</div>
-		</fieldset>
-		<fieldset name="buttonFields">
-			<!-- Buttons -->
-			<div class="form-group">
-				<div class="col-md-4">
-					<button id="fetchCredit" name="fetchCredit" class="btn btn-primary">Check</button>
-					<button id="fetchCreditReset" name="fetchCreditReset" class="btn btn-danger" type="reset">Reset</button>
-				</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Buttons -->
+				<button id="fetchCredit" name="fetchCredit" class="btn btn-primary">Check</button>
+				<button id="fetchCreditReset" name="fetchCreditReset" class="btn btn-danger" type="reset">Reset</button>
 			</div>
-		</fieldset>
-		<fieldset name="prcgFields">
-			<!-- Project Id input -->
-			<div class="form-group">
+		</div>
+		<div class="row">
+			<div class="col">
+				<!-- Project Id input -->
 				<label class="col-md-4 control-label" for="projectId">Project Id</label>
-				<div class="col-md-2">
-					<input id="projectId" name="projectId" type="number" placeholder="11762" class="form-control input-md" required>
-				</div>
+				<input id="projectId" name="projectId" type="number" placeholder="11762" class="form-control input-md" required>
 			</div>
-
-			<!-- Run input -->
-			<div class="form-group">
+			<div class="col">
+				<!-- Run input -->
 				<label class="col-md-4 control-label" for="runId">Run</label>
-				<div class="col-md-2">
-					<input id="runId" name="runId" type="number" placeholder="0" class="form-control input-md" required>
-				</div>
+				<input id="runId" name="runId" type="number" placeholder="0" class="form-control input-md" required>
 			</div>
-
-			<!-- Clone input -->
-			<div class="form-group">
+			<div class="col">
+				<!-- Clone input -->
 				<label class="col-md-4 control-label" for="cloneId">Clone</label>
-				<div class="col-md-2">
-					<input id="cloneId" name="cloneId" type="number" placeholder="4854" class="form-control input-md" required>
-				</div>
+				<input id="cloneId" name="cloneId" type="number" placeholder="4854" class="form-control input-md" required>
 			</div>
-
-			<!-- Gen input -->
-			<div class="form-group">
+			<div class="col">
+				<!-- Gen input -->
 				<label class="col-md-4 control-label" for="genId">Gen</label>
-				<div class="col-md-2">
-					<input id="genId" name="genId" type="number" placeholder="7" class="form-control input-md" required>
-				</div>
+				<input id="genId" name="genId" type="number" placeholder="7" class="form-control input-md" required>
 			</div>
-		</fieldset>
+		</div>
 	</form>
 <div>
 <!-- Display result -->
