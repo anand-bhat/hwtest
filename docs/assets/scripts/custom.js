@@ -22,9 +22,8 @@ $(document).ready(function () {
 		var jqxhr = $.getJSON(creditAPIURL)
 		.done(function(data) {
 			$('#wuStatus').text("WU credit check complete.");
-			//$('#wuStatusTable').bootstrapTable('removeAll');
-			//$('#wuStatusTable').bootstrapTable({data: data});
-			$('#wuStatusTable').bootstrapTable('load', data);
+			$('#wuStatusTable').bootstrapTable('removeAll');
+			$('#wuStatusTable').bootstrapTable({data: data});
 			$('#wuStatusData').show();
 		})
 		.fail(function(data) {
@@ -39,7 +38,5 @@ $(document).ready(function () {
 			}, 5000);
 		});
 		$('#wuStatus').text("Checking for WU credits...");
-		// Perform other work here
-		//$("#fetchCredit").attr("disabled", true);
 	});
 });
