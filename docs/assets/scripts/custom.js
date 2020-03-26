@@ -39,7 +39,6 @@ $(document).ready(function () {
 		if (logLine != null && logLine != '') {
 			var logLinePattern = /^.*.project:(?<p>\d*) run:(?<r>\d*) clone:(?<c>\d*) gen:(?<g>\d*).*.$/;
 			var match = logLinePattern.exec(logLine);
-			alert(match);
 			if (match == null) {
 				$('#projectId').val('');
 				$('#runId').val('');
@@ -48,6 +47,7 @@ $(document).ready(function () {
 				$('#wuStatus').text('Unable to parse line from log file.');
 				$('#wuStatus').removeClass('good').addClass('bad');
 				$('#wuStatusData').hide();
+				e.preventDefault();
 				return;
 			} else {
 				var p = match.groups.p;
