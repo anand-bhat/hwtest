@@ -21,15 +21,15 @@ $(document).ready(function () {
 
 		var jqxhr = $.getJSON(creditAPIURL)
 		.done(function(data) {
-			alert( "second success" );
-			alert(JSON.stringify(data));
 			$('#wuStatus').text("WU credit check complete.");
-			$('#wuStatusTable').bootstrapTable('removeAll');
-			$('#wuStatusTable').bootstrapTable({data: data});
+			//$('#wuStatusTable').bootstrapTable('removeAll');
+			//$('#wuStatusTable').bootstrapTable({data: data});
+			$('#wuStatusTable').bootstrapTable('load', data);
 			$('#wuStatusData').show();
 		})
 		.fail(function(data) {
 			$('#wuStatus').text("An error occured when checking WU credits.");
+			$('#wuStatusTable').bootstrapTable('removeAll');
 			$('#wuStatusData').hide();
 		})
 		.always(function(data) {
