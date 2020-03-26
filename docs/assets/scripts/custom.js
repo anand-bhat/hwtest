@@ -71,7 +71,6 @@ $(document).ready(function () {
 			var genId = $('#genId').val();
 
 			var creditAPIURL = 'https://api.foldingathome.org/project/' + projectId + '/run/' + runId + '/clone/' + cloneId + '/gen/' + genId + '?callback=?';
-			
 			var wuDescription = 'Project: ' + projectId + ' (Run: ' + runId + '; Clone: ' + cloneId + '; Gen: ' + genId + ')';
 
 			var jqxhr = $.getJSON(creditAPIURL)

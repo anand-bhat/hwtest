@@ -25,16 +25,17 @@
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#65d55b">
 	<meta name="theme-color" content="#ffffff">
 
-	<!--<meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src https://assign1.foldingathome.org https://api.foldingathome.org; script-src 'self' https://cdnjs.cloudflare.com/ajax/libs/jquery/; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/; img-src 'self'; font-src 'self' https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/; form-action 'self'; manifest-src 'self'; block-all-mixed-content; upgrade-insecure-requests;">-->
+	<meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src https://api.foldingathome.org; script-src 'self' https://cdnjs.cloudflare.com/ajax/libs/jquery/ https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/ https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/ https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/; img-src 'self'; font-src 'self' https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/; form-action 'self'; manifest-src 'self'; block-all-mixed-content; upgrade-insecure-requests;">
 	<meta http-equiv="Referrer-Policy" content="no-referrer">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.16.0/bootstrap-table.min.css1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y= sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh sha512-znmTf4HNoF9U6mfB6KlhAShbRvbt4CvCaHoNV0gyssfToNQ/9A0eNdUbvsSwOIUoJdMjFG2ndSvr0Lo3ZpsTqQ==" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.16.0/bootstrap-table.min.css" integrity="sha256-cCxZ912RWIYqgo3Di4S0U4rdHxVGoqE23gqVU4XNABE= sha384-stUTdwV9AgSXI+zB6SWTZSIq0SP1EKWXA/H6rWp1hNmSwvjkuFCwPhqcA01KnlWS sha512-vCwlNkIAgo4AdRP4Vih4gpN353WmPFJSIKekI5jCN8HCfBfIrtIzS8Tjhoj/d7A5KYI0SO9Prtelyq1GGnZyYw==" crossorigin="anonymous">
+
 	<link rel="stylesheet" type="text/css" href="{{ ASSET_PATH }}/styles/custom.css">
 
-	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.16.0/bootstrap-table.min.js"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo= sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg= sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 sha512-jCaU0Dp3IbMDlZ6f6dSEQSnOrSsugG6F6YigRWnagi7HoOLshF1kwxLT4+xCZRgQsTNqpUKj6WmWOxsu9l3URA==" crossorigin="anonymous"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.16.0/bootstrap-table.min.js" integrity="sha256-JFzlEUS2cZGdNFhVNH3GSFuqZFLjzWIjOqG5BY+Yhvw= sha384-W/LH8RGi1CAONGTnvEB4NWjQ6p4GE6qGHSFZUOalxWWwyvcIr8btqBmjvMSBs+HT sha512-fiX2ubLzt+1HQI4RXu19PDLHCLxM/eehIVMtXYmtyjMMmY+UBRrfFMZ1UfJAZ8/ZLWnr8AqC2WDp0IyfpveWnQ==" crossorigin="anonymous"></script>
 	{% if page.tagline_min %}
 	<script defer src="{{ ASSET_PATH }}/scripts/custom.js"></script>{% endif %}
 </head>
