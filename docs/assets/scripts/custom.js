@@ -48,6 +48,7 @@ $(document).ready(function () {
 				$('#wuStatus').text('Unable to parse line from log file.');
 				$('#wuStatus').removeClass('good').addClass('bad');
 				$('#wuStatusData').hide();
+				return;
 			} else {
 				var p = match.groups.p;
 				var r = match.groups.r;
