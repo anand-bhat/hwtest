@@ -66,14 +66,14 @@ $(document).ready(function () {
 			.done(function(data) {
 				$('#wuStatus').text('WU credit check complete for ' + wuDescription + '.');
 				$('#wuStatus').removeClass('bad').addClass('good');
-				$('#wuStatusTable').bootstrapTable('removeAll');
+				//$('#wuStatusTable').bootstrapTable('removeAll');
 				$('#wuStatusTable').bootstrapTable({data: data, formatNoMatches: function () {return 'No credits found.';}});
 				$('#wuStatusData').show();
 			})
 			.fail(function(data) {
 				$('#wuStatus').text('An error occured when checking WU credits.');
 				$('#wuStatus').removeClass('good').addClass('bad');
-				$('#wuStatusTable').bootstrapTable('removeAll');
+				//$('#wuStatusTable').bootstrapTable('removeAll');
 				$('#wuStatusData').hide();
 			})
 			.always(function(data) {
