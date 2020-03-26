@@ -38,5 +38,7 @@ $(document).ready(function () {
 			}, 5000);
 		});
 		$('#wuStatus').text("Checking for WU credits...");
+		$('#wuStatusData').hide();
+		$('#wuStatusTable').bootstrapTable('removeAll');
 	});
 });
