@@ -64,6 +64,7 @@ $(document).ready(function () {
 
 			var jqxhr = $.getJSON(creditAPIURL)
 			.done(function(data) {
+				alert(data);
 				$('#wuStatus').text('WU credit check complete for ' + wuDescription + '.');
 				$('#wuStatus').removeClass('bad').addClass('good');
 				$('#wuStatusTable').bootstrapTable('removeAll');
