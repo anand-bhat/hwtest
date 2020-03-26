@@ -12,7 +12,7 @@ tagline_min: WUCreditChecker
 <hr>
 <div>
 	<form class="form-horizontal">
-		<fieldset>
+		<fieldset name="logLineFields">
 			<!-- Line from log containg PRCG -->
 			<div class="form-group">
 				<label class="col-md-4 control-label" for="logLine">Line from FAH log</label>
@@ -20,7 +20,9 @@ tagline_min: WUCreditChecker
 					<input id="logLine" name="logLine" type="text" value="11762" class="form-control input-md">
 				</div>
 			</div>
+		</fieldset>
 
+		<fieldset name="prcgFields">
 			<!-- Project Id input -->
 			<div class="form-group">
 				<label class="col-md-4 control-label" for="projectId">Project Id</label>
@@ -52,7 +54,9 @@ tagline_min: WUCreditChecker
 					<input id="genId" name="genId" type="number" value="7" class="form-control input-md" required>
 				</div>
 			</div>
+		</fieldset>
 
+		<fieldset name="buttonFields">
 			<!-- Buttons -->
 			<div class="form-group">
 				<div class="col-md-4">
