@@ -6,7 +6,7 @@ tagline_min: WUCreditChecker
 <div>
 	This page lets you check if your Folding@home Work Unit (FAH WU) has been credited. <a id="togglePageDescription" href="#">Show instructions:</a>
 	<div id="pageDescription" class="collapse">
-		Copy the line from the FAH log that has the Project Id, Run, Clone and Gen (PRCG) numbers, paste that into the form and click "Check". Alternatively, enter the Project Id, Run, Clone and Gen (PRCG) numbers and click "Check".<br><br>
+		<br>Copy the line from the FAH log that has the Project Id, Run, Clone and Gen (PRCG) numbers, paste that into the form and click "Check". Alternatively, enter the Project Id, Run, Clone and Gen (PRCG) numbers and click "Check".<br><br>
 		Note: The line from the log should look like this:
 		<pre>12:59:59:WU01:FS01:Sending unit results: id:01 state:SEND error:NO_ERROR project:12345 run:0 clone:1 gen:2 core:0x22 unit:0x000000000000000000012345</pre>
 	</div>
@@ -18,7 +18,7 @@ tagline_min: WUCreditChecker
 			<div class="col">
 				<!-- Line from log containg PRCG -->
 				<label class="col-md-4 control-label" for="logLine">Line from FAH log</label>
-				<input id="logLine" name="logLine" type="text" placeholder="12:59:59:WU01:FS01:Sending unit results: id:01 state:SEND error:NO_ERROR project:12345 run:0 clone:1 gen:2 core:0x22 unit:0x000000000000000000012345" value="10:07:40:WU02:FS00:Sending unit results: id:02 state:SEND error:NO_ERROR project:13851 run:0 clone:31505 gen:1 core:0xa7 unit:0x00000002287234c95e7883719b33f0a6" class="form-control input-md">
+				<input id="logLine" name="logLine" type="text" placeholder="12:00:00:WU01:FS01:Sending unit results: id:01 state:SEND error:NO_ERROR project:12345 run:1 clone:2 gen:3 core:0x22 unit:0x000000000000000000012345" value="10:07:40:WU02:FS00:Sending unit results: id:02 state:SEND error:NO_ERROR project:13851 run:0 clone:31505 gen:1 core:0xa7 unit:0x00000002287234c95e7883719b33f0a6" class="form-control input-md">
 			</div>
 		</div>
 		<div class="row form-group">
@@ -32,22 +32,22 @@ tagline_min: WUCreditChecker
 			<div class="col">
 				<!-- Project Id input -->
 				<label class="col-md-4 control-label" for="projectId">Project</label>
-				<input id="projectId" name="projectId" type="number" placeholder="11762" class="form-control input-md" required>
+				<input id="projectId" name="projectId" type="number" placeholder="12345" class="form-control input-md" required>
 			</div>
 			<div class="col">
 				<!-- Run input -->
 				<label class="col-md-4 control-label" for="runId">Run</label>
-				<input id="runId" name="runId" type="number" placeholder="0" class="form-control input-md" required>
+				<input id="runId" name="runId" type="number" placeholder="1" class="form-control input-md" required>
 			</div>
 			<div class="col">
 				<!-- Clone input -->
 				<label class="col-md-4 control-label" for="cloneId">Clone</label>
-				<input id="cloneId" name="cloneId" type="number" placeholder="4854" class="form-control input-md" required>
+				<input id="cloneId" name="cloneId" type="number" placeholder="2" class="form-control input-md" required>
 			</div>
 			<div class="col">
 				<!-- Gen input -->
 				<label class="col-md-4 control-label" for="genId">Gen</label>
-				<input id="genId" name="genId" type="number" placeholder="7" class="form-control input-md" required>
+				<input id="genId" name="genId" type="number" placeholder="3" class="form-control input-md" required>
 			</div>
 		</div>
 	</form>
