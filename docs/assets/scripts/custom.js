@@ -24,6 +24,7 @@ $(document).ready(function () {
 			alert( "second success" );
 			alert(JSON.stringify(data));
 			$('#wuStatus').text("WU credit check complete.");
+			$('#wuStatusTable').bootstrapTable('removeAll');
 			$('#wuStatusTable').bootstrapTable({data: data});
 			$('#wuStatusData').show();
 		})
