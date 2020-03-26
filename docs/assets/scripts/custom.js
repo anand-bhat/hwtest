@@ -1,5 +1,18 @@
 $(document).ready(function () {
 	'use strict';
+	// Toggle page description visibility
+	$('#togglePageDescription').on('click', function (e) {
+		e.preventDefault();
+		if ($('#pageDescription').is(':visible')) {
+			$('#pageDescription').hide();
+			$(this).text('Show instructions:');
+		}
+		else {
+			$('#pageDescription').show();
+			$(this).text('Hide instructions:');
+		}
+	});
+
 	// Calculate QRB
 	$('#calculateQRB').on('click', function (e) {
 		if($(this).closest('form')[0].checkValidity()) {
