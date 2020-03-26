@@ -14,8 +14,8 @@ $(document).ready(function () {
 	});
 
 	// Fetch credit for WU
-	$('#fetchCredit').on('click', function (e) {
-		if($(this).closest('form')[0].checkValidity()) {
+	$('#fetchCredit').on('submit', function (e) {
+		//if($(this).closest('form')[0].checkValidity()) {
 			e.preventDefault();
 
 			var projectId = $('#projectId').val()
@@ -48,6 +48,6 @@ $(document).ready(function () {
 			$('#wuStatus').text('Checking for WU credits...');
 			$('#wuStatusData').hide();
 			$('#wuStatusTable').bootstrapTable('removeAll');
-		}
+		//}
 	});
 });
