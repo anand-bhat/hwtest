@@ -17,27 +17,34 @@ $(document).ready(function () {
 	$('#fetchCredit').on('click', function (e) {
 		e.preventDefault();
 
-		var creditAPIURL = "https://api.foldingathome.org/project/" + $('#projectId').val() + "/run/" + $('#runId').val() + "/clone/" + $('#cloneId').val() + "/gen/" + $('#genId').val();
+		var projectId = $('#projectId').val()
+		var runId = $('#runId').val()
+		var cloneId = $('#cloneId').val()
+		var genId = $('#genId').val()
+
+		var creditAPIURL = 'https://api.foldingathome.org/project/' + projectId + '/run/' + runId + '/clone/' + cloneId + '/gen/' + genId;
+		
+		var wuDescription = 'Project: ' + projectId + ' (Run: ' + runId + '; Clone: ' + cloneId + '; Gen: ' + genId + ')';
 
 		var jqxhr = $.getJSON(creditAPIURL)
 		.done(function(data) {
-			$('#wuStatus').text("WU credit check complete.");
+			$('#wuStatus').text('WU credit check complete for ' + wuDescription + '.');
 			$('#wuStatusTable').bootstrapTable('removeAll');
-			$('#wuStatusTable').bootstrapTable({data: data});
+			$('#wuStatusTable').bootstrapTable({data: data, formatNoMatches: function () {return 'No credits for WU ' + wuDescription + ' found';}});
 			$('#wuStatusData').show();
 		})
 		.fail(function(data) {
-			$('#wuStatus').text("An error occured when checking WU credits.");
+			$('#wuStatus').text('An error occured when checking WU credits.');
 			$('#wuStatusTable').bootstrapTable('removeAll');
 			$('#wuStatusData').hide();
 		})
 		.always(function(data) {
-			$("#fetchCredit").attr("disabled", true);
+			$('#fetchCredit').attr('disabled', true);
 			setTimeout(function() {
-				$("#fetchCredit").attr('disabled', false);
+				$('#fetchCredit').attr('disabled', false);
 			}, 5000);
 		});
-		$('#wuStatus').text("Checking for WU credits...");
+		$('#wuStatus').text('Checking for WU credits...');
 		$('#wuStatusData').hide();
 		$('#wuStatusTable').bootstrapTable('removeAll');
 	});
