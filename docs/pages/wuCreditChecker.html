@@ -16,12 +16,20 @@ tagline_min: WUCreditChecker
 			<!-- Line from log containg PRCG -->
 			<div class="form-group">
 				<label class="col-md-4 control-label" for="logLine">Line from FAH log</label>
-				<div class="col-md-16">
+				<div class="col-md-12">
 					<input id="logLine" name="logLine" type="text" value="12:59:59:WU01:FS01:Sending unit results: id:01 state:SEND error:NO_ERROR project:12345 run:0 clone:1 gen:2 core:0x22 unit:0x000000000000000000012345" class="form-control input-md">
 				</div>
 			</div>
 		</fieldset>
-
+		<fieldset name="buttonFields">
+			<!-- Buttons -->
+			<div class="form-group">
+				<div class="col-md-4">
+					<button id="fetchCredit" name="fetchCredit" class="btn btn-primary">Check</button>
+					<button id="fetchCreditReset" name="fetchCreditReset" class="btn btn-danger" type="reset">Reset</button>
+				</div>
+			</div>
+		</fieldset>
 		<fieldset name="prcgFields">
 			<!-- Project Id input -->
 			<div class="form-group">
@@ -52,16 +60,6 @@ tagline_min: WUCreditChecker
 				<label class="col-md-4 control-label" for="genId">Gen</label>
 				<div class="col-md-2">
 					<input id="genId" name="genId" type="number" placeholder="7" class="form-control input-md" required>
-				</div>
-			</div>
-		</fieldset>
-
-		<fieldset name="buttonFields">
-			<!-- Buttons -->
-			<div class="form-group">
-				<div class="col-md-4">
-					<button id="fetchCredit" name="fetchCredit" class="btn btn-primary">Check</button>
-					<button id="fetchCreditReset" name="fetchCreditReset" class="btn btn-danger" type="reset">Reset</button>
 				</div>
 			</div>
 		</fieldset>
