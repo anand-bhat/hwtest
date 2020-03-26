@@ -23,19 +23,19 @@ $(document).ready(function () {
 		.done(function(data) {
 			alert( "second success" );
 			alert(JSON.stringify(data));
-			$('#wuStatus').val("WU credit check complete.");
+			$('#wuStatus').text("WU credit check complete.");
 			$('#wuStatusTable').bootstrapTable({data: data});
 			$('#wuStatusData').show();
 		})
 		.fail(function(data) {
-			$('#wuStatus').val("An error occured when checking WU credits.");
+			$('#wuStatus').text("An error occured when checking WU credits.");
 			$('#wuStatusData').hide();
 		})
 		.always(function(data) {
 			$("#fetchCredit").attr("disabled", true);
 			setTimeout(function() {
 				$("#fetchCredit").attr('disabled', false);
-			}, 5000);
+			}, 15000);
 		});
 		// Perform other work here
 		//$("#fetchCredit").attr("disabled", true);
