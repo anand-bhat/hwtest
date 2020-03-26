@@ -22,23 +22,23 @@ $(document).ready(function () {
 
 	// Fetch credit for WU
 	$('#fetchCredit').on('click', function (e) {
+		var logLine = $('#logLine').val();
+		if (logLine != null && logLine != '') {
+			var logLinePattern = '^.*.project:(?<p>\d*) run:(?<r>\d*) clone:(?<c>\d*) gen:(?<g>\d*).*.$';
+			var match = logLinePattern.exec(logLine);
+			var p = ${match.groups.p};
+			var r = ${match.groups.r};
+			var c = ${match.groups.r};
+			var g = ${match.groups.r};
+			
+			$('#projectId').val(p);
+			$('#runId').val(r);
+			$('#cloneId').val(c);
+			$('#genId').val(g);
+		}
+
 		if($(this).closest('form')[0].checkValidity()) {
 			e.preventDefault();
-
-			var logLine = $('#logLine').val();
-			if (logLine != null && logLine != '') {
-				var logLinePattern = '^.*.project:(?<p>\d*) run:(?<r>\d*) clone:(?<c>\d*) gen:(?<g>\d*).*.$';
-				var match = logLinePattern.exec(logLine);
-				var p = ${match.groups.p};
-				var r = ${match.groups.r};
-				var c = ${match.groups.r};
-				var g = ${match.groups.r};
-				
-				$('#projectId').val(p);
-				$('#runId').val(r);
-				$('#cloneId').val(c);
-				$('#genId').val(g);
-			}
 
 			var projectId = $('#projectId').val();
 			var runId = $('#runId').val();
