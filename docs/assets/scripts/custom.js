@@ -70,7 +70,8 @@ $(document).ready(function () {
 				alert(jQuery.isEmptyObject(data));
 				alert(JSON.stringify(data));
 				alert(jQuery.isEmptyObject(JSON.stringify(data)));
-				$('#wuStatusTable').bootstrapTable({data: data, formatNoMatches: function () {return 'No credits found.';}});
+				//$('#wuStatusTable').bootstrapTable({data: data, formatNoMatches: function () {return 'No credits found.';}});
+				$('#wuStatusTable').bootstrapTable('load', data);
 				$('#wuStatusData').show();
 			})
 			.fail(function(data) {
