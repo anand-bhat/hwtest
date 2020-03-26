@@ -33,10 +33,11 @@ $(document).ready(function () {
 		})
 		.always(function(data) {
 			$("#fetchCredit").attr("disabled", true);
-			//setTimeout(function() {
-			//	$("#fetchCredit").attr('disabled', false);
-			//}, 15000);
+			setTimeout(function() {
+				$("#fetchCredit").attr('disabled', false);
+			}, 5000);
 		});
+		$('#wuStatus').text("Checking for WU credits...");
 		// Perform other work here
 		//$("#fetchCredit").attr("disabled", true);
 	});
