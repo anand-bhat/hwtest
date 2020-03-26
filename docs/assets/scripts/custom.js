@@ -64,7 +64,6 @@ $(document).ready(function () {
 
 			var jqxhr = $.getJSON(creditAPIURL)
 			.done(function(data) {
-				alert(data);
 				$('#wuStatus').text('WU credit check complete for ' + wuDescription + '.');
 				$('#wuStatus').removeClass('bad').addClass('good');
 				$('#wuStatusTable').bootstrapTable('removeAll');
@@ -86,7 +85,7 @@ $(document).ready(function () {
 			$('#wuStatus').text('Checking for WU credits...');
 			$('#wuStatus').removeClass();
 			$('#wuStatusData').hide();
-			$('#wuStatusTable').bootstrapTable('removeAll');
+			//$('#wuStatusTable').bootstrapTable('removeAll');
 		} else {
 			$(this).closest('form')[0].reportValidity();
 		}
