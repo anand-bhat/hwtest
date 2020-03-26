@@ -48,8 +48,6 @@ $(document).ready(function () {
 			$('#wuStatus').text('Checking for WU credits...');
 			$('#wuStatusData').hide();
 			$('#wuStatusTable').bootstrapTable('removeAll');
-		} else {
-			return false;
 		}
 	});
 });
