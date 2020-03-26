@@ -39,15 +39,19 @@ $(document).ready(function () {
 		if (logLine != null && logLine != '') {
 			var logLinePattern = /^.*.project:(?<p>\d*) run:(?<r>\d*) clone:(?<c>\d*) gen:(?<g>\d*).*.$/;
 			var match = logLinePattern.exec(logLine);
-			var p = match.groups.p;
-			var r = match.groups.r;
-			var c = match.groups.c;
-			var g = match.groups.g;
-			
-			$('#projectId').val(p);
-			$('#runId').val(r);
-			$('#cloneId').val(c);
-			$('#genId').val(g);
+			alert(match);
+			if (match != null) {
+				alert(match.groups.p);
+				var p = match.groups.p;
+				var r = match.groups.r;
+				var c = match.groups.c;
+				var g = match.groups.g;
+				
+				$('#projectId').val(p);
+				$('#runId').val(r);
+				$('#cloneId').val(c);
+				$('#genId').val(g);
+			}
 		}
 
 		if($(this).closest('form')[0].checkValidity()) {
@@ -66,10 +70,6 @@ $(document).ready(function () {
 			.done(function(data) {
 				$('#wuStatus').text('WU credit check complete for ' + wuDescription + '.');
 				$('#wuStatus').removeClass('bad').addClass('good');
-				alert(data);
-				alert(jQuery.isEmptyObject(data));
-				alert(JSON.stringify(data));
-				alert(jQuery.isEmptyObject(JSON.stringify(data)));
 				$('#wuStatusTable').bootstrapTable({data: data, formatNoMatches: function () {return 'No credits found.';}});
 				$('#wuStatusTable').bootstrapTable('load', data);
 				$('#wuStatusData').show();
@@ -77,7 +77,6 @@ $(document).ready(function () {
 			.fail(function(data) {
 				$('#wuStatus').text('An error occured when checking WU credits.');
 				$('#wuStatus').removeClass('good').addClass('bad');
-				//$('#wuStatusTable').bootstrapTable('removeAll');
 				$('#wuStatusData').hide();
 			})
 			.always(function(data) {
