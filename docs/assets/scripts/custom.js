@@ -18,21 +18,24 @@ $(document).ready(function () {
 		e.preventDefault();
 
 		var creditAPIURL = "https://api.foldingathome.org/project/" + $('#projectId').val() + "/run/" + $('#runId').val() + "/clone/" + $('#cloneId').val() + "/gen/" + $('#genId').val();
-		//creditAPIURL = "https://assign1.foldingathome.org/api/ws/summary";
 
 		var jqxhr = $.getJSON(creditAPIURL)
 		.done(function(data) {
 			alert( "second success" );
 			alert(JSON.stringify(data));
+			$('#wuStatus').val("WU credit check complete.");
 			$('#wuStatusTable').bootstrapTable({data: data});
+			$('#wuStatusData').show();
 		})
 		.fail(function(data) {
-			alert( "error" ); //2nd
-			alert(data);
+			$('#wuStatus').val("An error occured when checking WU credits.");
+			$('#wuStatusData').hide();
 		})
 		.always(function(data) {
-			//$("#fetchCredit").attr("disabled", true);
-			//sleep
+			$("#fetchCredit").attr("disabled", true);
+			setTimeout(function() {
+				$("#fetchCredit").attr('disabled', false);
+			}, 5000);
 		});
 		// Perform other work here
 		//$("#fetchCredit").attr("disabled", true);
