@@ -15,37 +15,41 @@ $(document).ready(function () {
 
 	// Fetch credit for WU
 	$('#fetchCredit').on('click', function (e) {
-		e.preventDefault();
+		if($(this).closest('form')[0].checkValidity()) {
+			e.preventDefault();
 
-		var projectId = $('#projectId').val()
-		var runId = $('#runId').val()
-		var cloneId = $('#cloneId').val()
-		var genId = $('#genId').val()
+			var projectId = $('#projectId').val()
+			var runId = $('#runId').val()
+			var cloneId = $('#cloneId').val()
+			var genId = $('#genId').val()
 
-		var creditAPIURL = 'https://api.foldingathome.org/project/' + projectId + '/run/' + runId + '/clone/' + cloneId + '/gen/' + genId;
-		
-		var wuDescription = 'Project: ' + projectId + ' (Run: ' + runId + '; Clone: ' + cloneId + '; Gen: ' + genId + ')';
+			var creditAPIURL = 'https://api.foldingathome.org/project/' + projectId + '/run/' + runId + '/clone/' + cloneId + '/gen/' + genId;
+			
+			var wuDescription = 'Project: ' + projectId + ' (Run: ' + runId + '; Clone: ' + cloneId + '; Gen: ' + genId + ')';
 
-		var jqxhr = $.getJSON(creditAPIURL)
-		.done(function(data) {
-			$('#wuStatus').text('WU credit check complete for ' + wuDescription + '.');
-			$('#wuStatusTable').bootstrapTable('removeAll');
-			$('#wuStatusTable').bootstrapTable({data: data, formatNoMatches: function () {return 'No credits for WU ' + wuDescription + ' found';}});
-			$('#wuStatusData').show();
-		})
-		.fail(function(data) {
-			$('#wuStatus').text('An error occured when checking WU credits.');
-			$('#wuStatusTable').bootstrapTable('removeAll');
+			var jqxhr = $.getJSON(creditAPIURL)
+			.done(function(data) {
+				$('#wuStatus').text('WU credit check complete for ' + wuDescription + '.');
+				$('#wuStatusTable').bootstrapTable('removeAll');
+				$('#wuStatusTable').bootstrapTable({data: data, formatNoMatches: function () {return 'No credits found.';}});
+				$('#wuStatusData').show();
+			})
+			.fail(function(data) {
+				$('#wuStatus').text('An error occured when checking WU credits.');
+				$('#wuStatusTable').bootstrapTable('removeAll');
+				$('#wuStatusData').hide();
+			})
+			.always(function(data) {
+				$('#fetchCredit').attr('disabled', true);
+				setTimeout(function() {
+					$('#fetchCredit').attr('disabled', false);
+				}, 5000);
+			});
+			$('#wuStatus').text('Checking for WU credits...');
 			$('#wuStatusData').hide();
-		})
-		.always(function(data) {
-			$('#fetchCredit').attr('disabled', true);
-			setTimeout(function() {
-				$('#fetchCredit').attr('disabled', false);
-			}, 5000);
-		});
-		$('#wuStatus').text('Checking for WU credits...');
-		$('#wuStatusData').hide();
-		$('#wuStatusTable').bootstrapTable('removeAll');
+			$('#wuStatusTable').bootstrapTable('removeAll');
+		} else {
+			return false;
+		}
 	});
 });
