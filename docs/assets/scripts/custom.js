@@ -40,8 +40,15 @@ $(document).ready(function () {
 			var logLinePattern = /^.*.project:(?<p>\d*) run:(?<r>\d*) clone:(?<c>\d*) gen:(?<g>\d*).*.$/;
 			var match = logLinePattern.exec(logLine);
 			alert(match);
-			if (match != null) {
-				alert(match.groups.p);
+			if (match == null) {
+				$('#projectId').val('');
+				$('#runId').val('');
+				$('#cloneId').val('');
+				$('#genId').val('');
+				$('#wuStatus').text('Unable to parse line from log file.');
+				$('#wuStatus').removeClass('good').addClass('bad');
+				$('#wuStatusData').hide();
+			} else {
 				var p = match.groups.p;
 				var r = match.groups.r;
 				var c = match.groups.c;
