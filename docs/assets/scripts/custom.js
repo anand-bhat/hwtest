@@ -66,7 +66,7 @@ $(document).ready(function () {
 			.done(function(data) {
 				$('#wuStatus').text('WU credit check complete for ' + wuDescription + '.');
 				$('#wuStatus').removeClass('bad').addClass('good');
-				//$('#wuStatusTable').bootstrapTable('removeAll');
+				$('#wuStatusTable').bootstrapTable('removeAll');
 				$('#wuStatusTable').bootstrapTable({data: data, formatNoMatches: function () {return 'No credits found.';}});
 				$('#wuStatusData').show();
 			})
