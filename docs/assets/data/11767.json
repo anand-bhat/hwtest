@@ -1,0 +1,38 @@
+{
+  "project": 11767
+  "maxRuns": 2,
+  "maxClonesPerRun": 10,
+  "maxGensPerClone": 100,
+  "runs": [
+    {
+      "run": 0,
+      "clones": [
+        { "clone": 0, "gen": 100 },
+        { "clone": 1, "gen": 90 },
+        { "clone": 2, "gen": 80 },
+        { "clone": 3, "gen": 70 },
+        { "clone": 4, "gen": 60 },
+        { "clone": 5, "gen": 50 },
+        { "clone": 6, "gen": 40 },
+        { "clone": 7, "gen": 30 },
+        { "clone": 8, "gen": 20 },
+        { "clone": 9, "gen": 10 }
+      ]
+    },
+    {
+      "run": 1,
+      "clones": [
+        { "clone": 0, "gen": 0 },
+        { "clone": 1, "gen": 20 },
+        { "clone": 2, "gen": 40 },
+        { "clone": 3, "gen": 60 },
+        { "clone": 4, "gen": 80 },
+        { "clone": 5, "gen": 100 },
+        { "clone": 6, "gen": 90 },
+        { "clone": 7, "gen": 70 },
+        { "clone": 8, "gen": 50 },
+        { "clone": 9, "gen": 40 }
+      ]
+    }
+  ]
+}
