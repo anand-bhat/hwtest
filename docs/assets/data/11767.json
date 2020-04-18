@@ -1,5 +1,5 @@
 {
-  "project": 11767
+  "project": 11767,
   "maxRuns": 2,
   "maxClonesPerRun": 10,
   "maxGensPerClone": 100,
