@@ -1,38 +1,53 @@
 {
   "project": 11767,
   "lastUpdated": 1587343011959,
-  "maxRuns": 2,
+  "maxRuns": 3,
   "maxClonesPerRun": 10,
   "maxGensPerClone": 1000,
   "runs": [
     {
       "run": 0,
       "clones": [
-        { "clone": 0, "gen": 200 },
-        { "clone": 1, "gen": 200 },
-        { "clone": 2, "gen": 100 },
-        { "clone": 3, "gen": 100 },
-        { "clone": 4, "gen": 200 },
-        { "clone": 5, "gen": 100 },
-        { "clone": 6, "gen": 100 },
-        { "clone": 7, "gen": 200 },
-        { "clone": 8, "gen": 200 },
-        { "clone": 9, "gen": 100 }
+        { "clone": 0, "gen": 199 },
+        { "clone": 1, "gen": 199 },
+        { "clone": 2, "gen": 99 },
+        { "clone": 3, "gen": 99 },
+        { "clone": 4, "gen": 199 },
+        { "clone": 5, "gen": 99 },
+        { "clone": 6, "gen": 99 },
+        { "clone": 7, "gen": 199 },
+        { "clone": 8, "gen": 199 },
+        { "clone": 9, "gen": 99 }
       ]
     },
     {
       "run": 1,
       "clones": [
-        { "clone": 0, "gen": 100 },
-        { "clone": 1, "gen": 100 },
-        { "clone": 2, "gen": 100 },
-        { "clone": 3, "gen": 100 },
-        { "clone": 4, "gen": 100 },
-        { "clone": 5, "gen": 100 },
-        { "clone": 6, "gen": 100 },
-        { "clone": 7, "gen": 100 },
-        { "clone": 8, "gen": 100 },
-        { "clone": 9, "gen": 100 }
+        { "clone": 0, "gen": 99 },
+        { "clone": 1, "gen": 99 },
+        { "clone": 2, "gen": 99 },
+        { "clone": 3, "gen": 99 },
+        { "clone": 4, "gen": 99 },
+        { "clone": 5, "gen": 99 },
+        { "clone": 6, "gen": 99 },
+        { "clone": 7, "gen": 99 },
+        { "clone": 8, "gen": 99 },
+        { "clone": 9, "gen": 99 }
+      ]
+    },
+    {
+      "run": 2,
+      "clones": [
+        { "clone": 0, "gen": 199 },
+        { "clone": 1, "gen": 199 },
+        { "clone": 2, "gen": 199 },
+        { "clone": 3, "gen": 199 },
+        { "clone": 4, "gen": 199 },
+        { "clone": 5, "gen": 199 },
+        { "clone": 6, "gen": 199 },
+        { "clone": 7, "gen": 199 },
+        { "clone": 8, "gen": 199 },
+        { "clone": 9, "gen": 199 }
       ]
     }
   ]

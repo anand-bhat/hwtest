@@ -46,11 +46,13 @@ function prcgProgress() {
 	var urlParams = new URLSearchParams(window.location.search);
 	if (!urlParams.has('project')) {
 		alert('Missing project ID');
+		return;
 	}
 
 	var projectId = urlParams.get('project');
 	if (!Number.isInteger(parseInt(projectId))) {
 		alert('Unable to get data for Project: ' + projectId);
+		return;
 	}
 
 	$.getJSON("../assets/data/" + projectId + ".json")
@@ -79,6 +81,7 @@ function prcgProgress() {
 		colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompleted) / totalGensForProject) - 1);
 		percentage = Math.round((((100 * totalGensCompleted) / totalGensForProject) + Number.EPSILON) * 100) / 100;
 		$('#prcgProgressBar').html(getProgressBar(percentage, colorClass[colorClassIndex]));
+		$('#prcgTable').show();
 	})
 	.fail(function(data) {
 		// The project specified in the URL does not point to a valid project or there isn't data yet
@@ -94,19 +97,23 @@ function prcgProgress2() {
 	var urlParams = new URLSearchParams(window.location.search);
 	if (!urlParams.has('project')) {
 		alert('Missing project ID');
+		return;
 	}
 	if (!urlParams.has('run')) {
 		alert('Missing run ID');
+		return;
 	}
 
 	var projectId = urlParams.get('project');
 	if (!Number.isInteger(parseInt(projectId))) {
 		alert('Unable to get data for Project: ' + projectId);
+		return;
 	}
 
 	var runId = urlParams.get('run');
 	if (!Number.isInteger(parseInt(runId))) {
 		alert('Unable to get data for Project: ' + projectId + '; Run: ' + runId);
+		return;
 	}
 
 	$.getJSON("../assets/data/" + projectId + ".json")
@@ -135,6 +142,16 @@ function prcgProgress2() {
 		colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompleted) / totalGensForRun) - 1);
 		percentage = Math.round((((100 * totalGensCompleted) / totalGensForRun) + Number.EPSILON) * 100) / 100;
 		$('#prcg2ProgressBar').html(getProgressBar(percentage, colorClass[colorClassIndex]));
+		$('#prcg2Table').show();
+		
+		if (runId != 0) {
+			$('#prcg2PreviousRun').show();
+			$('#prcg2PreviousRunURL').attr('href', './prcgProgress2?project=' + projectId + '&run=' + runId-1);
+		}
+		if (runId != data.maxRuns) {
+			$('#prcg2NextRun').show();
+			$('#prcg2NextRunURL').attr('href', './prcgProgress2?project=' + projectId + '&run=' + runId+1);
+		}
 	})
 	.fail(function(data) {
 		// The project specified in the URL does not point to a valid project or there isn't data yet
