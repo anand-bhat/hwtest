@@ -36,6 +36,54 @@ function getProgressBar(percentage, color) {
 	return `<div class="progress"><div class="progress-bar role="progressbar" style="width: ${percentage}%; background-color: ${color}" aria-valuenow="${percentage}" aria-valuemin="0" aria-valuemax="100">${percentage}%</div></div>`;
 }
 
+function prcgProgress() {
+	'use strict';
+	var urlParams = new URLSearchParams(window.location.search);
+	if (!urlParams.has('project')) {
+		alert('Missing project ID');
+	}
+
+	var projectId = urlParams.get('project');
+	if (!Number.isInteger(parseInt(projectId))) {
+		alert('Unable to get data for Project: ' + projectId);
+	}
+
+	$.getJSON("../assets/data/" + projectId + ".json")
+	.done(function(data) {
+		$('#prcgTitle').html('Progress for Project: ' + projectId + '. Last updated at ' + new Date(data.lastUpdated).toLocaleString());
+
+		var dataRows = []
+		var totalGensCompleted = 0;
+		var percentage = 0.0;
+		var colorClassIndex = '';
+		var totalGensForRun = data.maxClonesPerRun * data.maxGensPerClone;
+
+		$.each(data.runs, function(index, run) {
+			var totalGensCompletedForRun = 0;
+			$.each(run.clones, function(index, clone) {
+				var genCount = clone.gen + 1
+				totalGensCompleted += genCount;
+				totalGensCompletedForRun += genCount;
+			});
+			colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompletedForRun) / totalGensForRun) - 1);
+			percentage =  Math.round((((100 * totalGensCompletedForRun) / totalGensForRun) + Number.EPSILON) * 100) / 100;
+			dataRows[index] = { run: run.run, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+		});
+		$('#prcgTable').bootstrapTable({data: dataRows, formatNoMatches: function () {return 'No data found.';}});
+		var totalGensForProject = totalGensForRun * maxRuns;
+		colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompleted) / totalGensForProject) - 1);
+		percentage = Math.round((((100 * totalGensCompleted) / totalGensForProject) + Number.EPSILON) * 100) / 100;
+		$('#prcgProgressBar').html(getProgressBar(percentage, colorClass[colorClassIndex]));
+	})
+	.fail(function(data) {
+		// The project specified in the URL does not point to a valid project or there isn't data yet
+		alert('Unable to get data for Project: ' + projectId);
+	})
+	.always(function(data) {
+		//alert('always');
+	});
+}
+
 function prcgProgress2() {
 	'use strict';
 	var urlParams = new URLSearchParams(window.location.search);
@@ -66,7 +114,6 @@ function prcgProgress2() {
 
 		$('#prcg2Title').html('Progress for Project: ' + projectId + '; Run: ' + runId + '. Last updated at ' + new Date(data.lastUpdated).toLocaleString());
 
-		var dataSeries = [];
 		var dataRows = []
 		var totalGensCompleted = 0;
 		var percentage = 0.0;
@@ -75,11 +122,9 @@ function prcgProgress2() {
 			var genCount = clone.gen + 1
 			colorClassIndex = Math.max(0, Math.floor((30 * genCount) / data.maxGensPerClone) - 1);
 			percentage =  Math.round((((100 * genCount) / data.maxGensPerClone) + Number.EPSILON) * 100) / 100;
-			dataSeries[index] = { data: [{x: clone.clone,y: 0}, {x: clone.clone, y: clone.gen}], borderColor: colorClass[colorClassIndex], backgroundColor:colorClass[colorClassIndex] };
 			dataRows[index] = { clone: clone.clone, gen: clone.gen, remaining: (data.maxGensPerClone - genCount), progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 			totalGensCompleted += genCount;
 		});
-		//createCloneGenChart(projectId, runId, data.maxClonesPerRun, data.maxGensPerClone, dataSeries);
 		$('#prcg2Table').bootstrapTable({data: dataRows, formatNoMatches: function () {return 'No data found.';}});
 		var totalGensForRun = data.maxClonesPerRun * data.maxGensPerClone;
 		colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompleted) / totalGensForRun) - 1);
@@ -97,6 +142,12 @@ function prcgProgress2() {
 
 $(document).ready(function () {
 	'use strict';
+	// PRCG Progress
+	var page = window.location.pathname.split("/").pop();
+	if (page === 'prcgProgress') {
+		prcgProgress();
+	}
+
 	// PRCG Progress 2
 	var page = window.location.pathname.split("/").pop();
 	if (page === 'prcgProgress2') {

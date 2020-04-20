@@ -2,7 +2,7 @@
   "project": 11767,
   "lastUpdated": 1587343011959,
   "maxRuns": 1,
-  "maxClonesPerRun": 12,
+  "maxClonesPerRun": 2,
   "maxGensPerClone": 1000,
   "runs": [
     {
@@ -19,6 +19,22 @@
         { "clone": 8, "gen": 147 },
         { "clone": 9, "gen": 164 },
         { "clone": 10, "gen": 999 }
+      ]
+    },
+    {
+      "run": 1,
+      "clones": [
+        { "clone": 0, "gen": 272 },
+        { "clone": 1, "gen": 215 },
+        { "clone": 2, "gen": 204 },
+        { "clone": 3, "gen": 190 },
+        { "clone": 4, "gen": 184 },
+        { "clone": 5, "gen": 155 },
+        { "clone": 6, "gen": 218 },
+        { "clone": 7, "gen": 170 },
+        { "clone": 8, "gen": 147 },
+        { "clone": 9, "gen": 164 },
+        { "clone": 10, "gen": 0 }
       ]
     }
   ]
