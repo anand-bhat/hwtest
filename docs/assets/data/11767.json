@@ -14,7 +14,7 @@
         { "clone": 3, "gen": 99 },
         { "clone": 4, "gen": 199 },
         { "clone": 5, "gen": 99 },
-        { "clone": 6, "gen": 99 },
+        { "clone": 6, "gen": -1 },
         { "clone": 7, "gen": 199 },
         { "clone": 8, "gen": 199 },
         { "clone": 9, "gen": 99 }
