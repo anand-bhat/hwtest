@@ -147,7 +147,7 @@ function prcgProgress2() {
 		$('#prcg2ProgressBar').html(getProgressBar(percentage, colorClass[colorClassIndex]));
 		$('#prcg2Table').show();
 		$('#prcg2UpToProject').show();
-		$('prcg2UpToProjectURL').attr('href', './prcgProgress?project=' + projectId);
+		$('#prcg2UpToProjectURL').attr('href', './prcgProgress?project=' + projectId);
 
 		if (runId != 0) {
 			$('#prcg2PreviousRun').show();
