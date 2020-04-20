@@ -56,7 +56,7 @@ function prcgProgress2() {
 		alert('Unable to get data for Project: ' + projectId + '; Run: ' + runId);
 	}
 
-	$.getJSON("/assets/data/" + projectId + ".json")
+	$.getJSON("../assets/data/" + projectId + ".json")
 	.done(function(data) {
 		var runData = data.runs.find(run=>run.run==runId);
 		if (!runData) {
