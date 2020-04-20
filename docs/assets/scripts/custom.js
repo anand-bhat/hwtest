@@ -32,10 +32,12 @@ var colorClass = {
 };
 
 function getProgressBar(percentage, color) {
+	'use strict';
 	return `<div class="progress"><div class="progress-bar role="progressbar" style="width: ${percentage}%; background-color: ${color}" aria-valuenow="${percentage}" aria-valuemin="0" aria-valuemax="100">${percentage}%</div></div>`;
 }
 
-function processCloneGenProgressPage() {
+function prcgProgress2() {
+	'use strict';
 	var urlParams = new URLSearchParams(window.location.search);
 	if (!urlParams.has('project')) {
 		alert('Missing project ID');
