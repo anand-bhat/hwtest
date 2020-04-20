@@ -70,7 +70,7 @@ function prcgProgress() {
 			dataRows[index] = { run: run.run, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 		$('#prcgTable').bootstrapTable({data: dataRows, formatNoMatches: function () {return 'No data found.';}});
-		var totalGensForProject = totalGensForRun * maxRuns;
+		var totalGensForProject = totalGensForRun * data.maxRuns;
 		colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompleted) / totalGensForProject) - 1);
 		percentage = Math.round((((100 * totalGensCompleted) / totalGensForProject) + Number.EPSILON) * 100) / 100;
 		$('#prcgProgressBar').html(getProgressBar(percentage, colorClass[colorClassIndex]));
