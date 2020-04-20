@@ -8,9 +8,9 @@
     {
       "run": 0,
       "clones": [
-        { "clone": 0, "gen": 199 },
-        { "clone": 1, "gen": 199 },
-        { "clone": 2, "gen": 99 },
+        { "clone": 0, "gen": 789 },
+        { "clone": 1, "gen": 999 },
+        { "clone": 2, "gen": 80 },
         { "clone": 3, "gen": 99 },
         { "clone": 4, "gen": 199 },
         { "clone": 5, "gen": 99 },
