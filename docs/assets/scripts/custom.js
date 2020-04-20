@@ -59,7 +59,7 @@ function prcgProgress() {
 	.done(function(data) {
 		$('#prcgTitle').html('Progress for Project: ' + projectId + '. Last updated at ' + new Date(data.lastUpdated).toLocaleString());
 
-		var dataRows = []
+		var dataRows = [];
 		var totalGensCompleted = 0;
 		var percentage = 0.0;
 		var colorClassIndex = '';
@@ -68,7 +68,7 @@ function prcgProgress() {
 		$.each(data.runs, function(index, run) {
 			var totalGensCompletedForRun = 0;
 			$.each(run.clones, function(index, clone) {
-				var genCount = clone.gen + 1
+				var genCount = clone.gen + 1;
 				totalGensCompleted += genCount;
 				totalGensCompletedForRun += genCount;
 			});
@@ -129,12 +129,12 @@ function prcgProgress2() {
 
 		$('#prcg2Title').html('Progress for Project: ' + projectId + '; Run: ' + runId + '. Last updated at ' + new Date(data.lastUpdated).toLocaleString());
 
-		var dataRows = []
+		var dataRows = [];
 		var totalGensCompleted = 0;
 		var percentage = 0.0;
 		var colorClassIndex = '';
 		$.each(runData.clones, function(index, clone) {
-			var genCount = clone.gen + 1
+			var genCount = clone.gen + 1;
 			colorClassIndex = Math.max(0, Math.floor((30 * genCount) / data.maxGensPerClone) - 1);
 			percentage =  Math.round((((100 * genCount) / data.maxGensPerClone) + Number.EPSILON) * 100) / 100;
 			dataRows[index] = { clone: clone.clone, gen: clone.gen, remaining: (data.maxGensPerClone - genCount), progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
@@ -146,14 +146,14 @@ function prcgProgress2() {
 		percentage = Math.round((((100 * totalGensCompleted) / totalGensForRun) + Number.EPSILON) * 100) / 100;
 		$('#prcg2ProgressBar').html(getProgressBar(percentage, colorClass[colorClassIndex]));
 		$('#prcg2Table').show();
-		
+
 		if (runId != 0) {
 			$('#prcg2PreviousRun').show();
-			$('#prcg2PreviousRunURL').attr('href', './prcgProgress2?project=' + projectId + '&run=' + runId-1);
+			$('#prcg2PreviousRunURL').attr('href', './prcgProgress2?project=' + projectId + '&run=' + (runId-1));
 		}
 		if (runId != data.maxRuns-1) {
 			$('#prcg2NextRun').show();
-			$('#prcg2NextRunURL').attr('href', './prcgProgress2?project=' + projectId + '&run=' + runId+1);
+			$('#prcg2NextRunURL').attr('href', './prcgProgress2?project=' + projectId + '&run=' + (runId+1));
 		}
 	})
 	.fail(function(data) {
@@ -174,7 +174,6 @@ $(document).ready(function () {
 	}
 
 	// PRCG Progress 2
-	var page = window.location.pathname.split("/").pop();
 	if (page === 'prcgProgress2') {
 		prcgProgress2();
 	}
@@ -252,7 +251,7 @@ $(document).ready(function () {
 			var creditAPIURL = 'https://api.foldingathome.org/project/' + projectId + '/run/' + runId + '/clone/' + cloneId + '/gen/' + genId + '?callback=?';
 			var wuDescription = 'Project: ' + projectId + ' (Run: ' + runId + '; Clone: ' + cloneId + '; Gen: ' + genId + ')';
 
-			var jqxhr = $.getJSON(creditAPIURL)
+			$.getJSON(creditAPIURL)
 			.done(function(data) {
 				$('#wuStatus').text('WU credit check complete for ' + wuDescription + '.');
 				$('#wuStatus').removeClass('bad').addClass('good');
