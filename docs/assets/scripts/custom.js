@@ -74,7 +74,7 @@ function prcgProgress2() {
 		$.each(runData.clones, function(index, clone) {
 			var genCount = clone.gen + 1
 			colorClassIndex = Math.max(0, Math.floor((30 * genCount) / data.maxGensPerClone) - 1);
-			percentage = (100 * genCount) / data.maxGensPerClone;
+			percentage =  Math.round((((100 * genCount) / data.maxGensPerClone) + Number.EPSILON) * 100) / 100;
 			dataSeries[index] = { data: [{x: clone.clone,y: 0}, {x: clone.clone, y: clone.gen}], borderColor: colorClass[colorClassIndex], backgroundColor:colorClass[colorClassIndex] };
 			dataRows[index] = { clone: clone.clone, gen: clone.gen, remaining: (data.maxGensPerClone - genCount), progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 			totalGensCompleted += genCount;
@@ -83,7 +83,7 @@ function prcgProgress2() {
 		$('#prcg2Table').bootstrapTable({data: dataRows, formatNoMatches: function () {return 'No data found.';}});
 		var totalGensForRun = data.maxClonesPerRun * data.maxGensPerClone;
 		colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompleted) / totalGensForRun) - 1);
-		percentage = (100 * totalGensCompleted) / totalGensForRun;
+		percentage = Math.round((((100 * totalGensCompleted) / totalGensForRun) + Number.EPSILON) * 100) / 100;
 		$('#prcg2ProgressBar').html(getProgressBar(percentage, colorClass[colorClassIndex]));
 	})
 	.fail(function(data) {
