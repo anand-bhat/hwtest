@@ -151,7 +151,7 @@ function prcgProgress2() {
 			$('#prcg2PreviousRun').show();
 			$('#prcg2PreviousRunURL').attr('href', './prcgProgress2?project=' + projectId + '&run=' + runId-1);
 		}
-		if (runId != data.maxRuns) {
+		if (runId != data.maxRuns-1) {
 			$('#prcg2NextRun').show();
 			$('#prcg2NextRunURL').attr('href', './prcgProgress2?project=' + projectId + '&run=' + runId+1);
 		}
