@@ -217,8 +217,9 @@ $(document).ready(function () {
 	$('#fetchCredit').on('click', function (e) {
 		var logLine = $('#logLine').val();
 		if (logLine != null && logLine != '') {
-			var logLinePattern = /^.*.project:(?<p>\d*) run:(?<r>\d*) clone:(?<c>\d*) gen:(?<g>\d*).*.$/;
-			var match = logLinePattern.exec(logLine);
+			//var logLinePattern = /^.*.project:(?<p>\d*) run:(?<r>\d*) clone:(?<c>\d*) gen:(?<g>\d*).*.$/;
+			//var match = logLinePattern.exec(logLine);
+			var match = null;
 			if (match == null) {
 				$('#projectId').val('');
 				$('#runId').val('');
