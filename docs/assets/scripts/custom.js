@@ -116,6 +116,9 @@ function prcgProgress2() {
 		return;
 	}
 
+	projectId = parseInt(projectId);
+	runId = parseInt(runId);
+
 	$.getJSON("../assets/data/" + projectId + ".json")
 	.done(function(data) {
 		var runData = data.runs.find(run=>run.run==runId);
