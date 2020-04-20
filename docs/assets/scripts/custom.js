@@ -36,6 +36,11 @@ function getProgressBar(percentage, color) {
 	return `<div class="progress"><div class="progress-bar role="progressbar" style="width: ${percentage}%; background-color: ${color}" aria-valuenow="${percentage}" aria-valuemin="0" aria-valuemax="100">${percentage}%</div></div>`;
 }
 
+function prcgProgress2Link(project, run) {
+	'use strict';
+	return `<div><a href="./prcgProgress2?project=${project}&run=${run}">Link</a></div>`;
+}
+
 function prcgProgress() {
 	'use strict';
 	var urlParams = new URLSearchParams(window.location.search);
@@ -67,7 +72,7 @@ function prcgProgress() {
 			});
 			colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompletedForRun) / totalGensForRun) - 1);
 			percentage =  Math.round((((100 * totalGensCompletedForRun) / totalGensForRun) + Number.EPSILON) * 100) / 100;
-			dataRows[index] = { run: run.run, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			dataRows[index] = { run: run.run, details: prcgProgress2Link(projectId, run.run), progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 		$('#prcgTable').bootstrapTable({data: dataRows, formatNoMatches: function () {return 'No data found.';}});
 		var totalGensForProject = totalGensForRun * data.maxRuns;
