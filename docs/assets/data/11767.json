@@ -17,22 +17,22 @@
         { "clone": 6, "gen": 100 },
         { "clone": 7, "gen": 200 },
         { "clone": 8, "gen": 200 },
-        { "clone": 9, "gen": 100 },
+        { "clone": 9, "gen": 100 }
       ]
     },
     {
       "run": 1,
       "clones": [
-        { "clone": 0, "gen": 0 },
+        { "clone": 0, "gen": 100 },
         { "clone": 1, "gen": 100 },
         { "clone": 2, "gen": 100 },
         { "clone": 3, "gen": 100 },
-        { "clone": 4, "gen": 0 },
+        { "clone": 4, "gen": 100 },
         { "clone": 5, "gen": 100 },
-        { "clone": 6, "gen": 0 },
+        { "clone": 6, "gen": 100 },
         { "clone": 7, "gen": 100 },
-        { "clone": 8, "gen": 0 },
-        { "clone": 9, "gen": 0 },
+        { "clone": 8, "gen": 100 },
+        { "clone": 9, "gen": 100 }
       ]
     }
   ]
