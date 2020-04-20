@@ -137,7 +137,7 @@ function prcgProgress2() {
 			var genCount = clone.gen + 1;
 			colorClassIndex = Math.max(0, Math.floor((30 * genCount) / data.maxGensPerClone) - 1);
 			percentage =  Math.round((((100 * genCount) / data.maxGensPerClone) + Number.EPSILON) * 100) / 100;
-			dataRows[index] = { clone: clone.clone, gen: clone.gen, remaining: (data.maxGensPerClone - genCount), progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			dataRows[index] = { clone: clone.clone, gen: clone.gen === -1 ? '-':clone.gen, remaining: (data.maxGensPerClone - genCount), progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 			totalGensCompleted += genCount;
 		});
 		$('#prcg2Table').bootstrapTable({data: dataRows, formatNoMatches: function () {return 'No data found.';}});
