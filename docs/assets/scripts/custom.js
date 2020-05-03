@@ -36,6 +36,70 @@ function getProgressBar(percentage, color) {
 	return `<div class="progress"><div class="progress-bar role="progressbar" style="width: ${percentage}%; background-color: ${color}" aria-valuenow="${percentage}" aria-valuemin="0" aria-valuemax="100">${percentage}%</div></div>`;
 }
 
+function prcg2Chart(projectId, runId, maxClonesPerRun, maxGensPerClone, dataSeries) {
+	'use strict';
+	var myChart = new Chart($('#prcg2Chart'), {
+		type: 'scatter',
+		data: {
+			datasets: dataSeries,
+		},
+		options: {
+				//responsive: true, // Instruct chart js to respond nicely.
+				maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height
+			datasets : [{
+				line: {
+					showLine: true
+				}
+			}],
+			legend: {
+				display: false,
+			},
+			scales: {
+				xAxes: [{
+					gridLines: {
+						display: false,
+					},
+					scaleLabel : {
+						display: true,
+						labelString: "Clone #"
+					},
+					ticks: {
+						stepSize: 1,
+						max: maxClonesPerRun-1
+					}
+				}],
+				yAxes: [{
+					scaleLabel : {
+						display: true,
+						labelString: "Gen #"
+					},
+					ticks: {
+						max: maxGensPerClone
+					}
+				}]
+			},
+			title: {
+				display: true,
+				text: 'Progress for Project: ' + projectId + '; Run: ' + runId
+			},
+			tooltips: {
+				callbacks: {
+					label: function(tooltipItem, data) {
+						// Returned formatted tooltip
+						return 'Clone: ' + tooltipItem.xLabel + '; Gen: ' + tooltipItem.yLabel + ' (' + ((tooltipItem.yLabel/maxGensPerClone) * 100) + '%)';
+					}
+				},
+				filter: function (tooltipItem, data) {
+					// Hide tooltip for first coordinate
+					return !(tooltipItem.index == 0);
+				}
+			}
+		}
+	});
+
+	return myChart;
+}
+
 function prcgProgress2Link(project, run) {
 	'use strict';
 	return `<div><a href="./prcgProgress2?project=${project}&run=${run}">Link</a></div>`;
@@ -129,6 +193,7 @@ function prcgProgress2() {
 
 		$('#prcg2Title').html('Progress for Project: ' + projectId + '; Run: ' + runId + '. Last updated at ' + new Date(data.lastUpdated).toLocaleString());
 
+		var dataSeries = [];
 		var dataRows = [];
 		var totalGensCompleted = 0;
 		var percentage = 0.0;
@@ -137,9 +202,11 @@ function prcgProgress2() {
 			var genCount = clone.gen + 1;
 			colorClassIndex = Math.max(0, Math.floor((30 * genCount) / data.maxGensPerClone) - 1);
 			percentage =  Math.round((((100 * genCount) / data.maxGensPerClone) + Number.EPSILON) * 100) / 100;
+			dataSeries[index] = { data: [{x: clone.clone, y: 0}, {x: clone.clone, y: Math.max(0, clone.gen)}], borderColor: colorClass[colorClassIndex], backgroundColor:colorClass[colorClassIndex] };
 			dataRows[index] = { clone: clone.clone, gen: clone.gen === -1 ? '-':clone.gen, remaining: (data.maxGensPerClone - genCount), progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 			totalGensCompleted += genCount;
 		});
+		prcg2Chart(projectId, runId, data.maxClonesPerRun, data.maxGensPerClone, dataSeries);
 		$('#prcg2Table').bootstrapTable({data: dataRows, formatNoMatches: function () {return 'No data found.';}});
 		var totalGensForRun = data.maxClonesPerRun * data.maxGensPerClone;
 		colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompleted) / totalGensForRun) - 1);
