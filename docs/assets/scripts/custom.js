@@ -44,8 +44,7 @@ function prcg2Chart(projectId, runId, maxClonesPerRun, maxGensPerClone, dataSeri
 			datasets: dataSeries,
 		},
 		options: {
-				//responsive: true, // Instruct chart js to respond nicely.
-				maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height
+			maintainAspectRatio: false,
 			datasets : [{
 				line: {
 					showLine: true
@@ -61,7 +60,7 @@ function prcg2Chart(projectId, runId, maxClonesPerRun, maxGensPerClone, dataSeri
 					},
 					scaleLabel : {
 						display: true,
-						labelString: "Clone #"
+						labelString: 'Clone #'
 					},
 					ticks: {
 						stepSize: 1,
@@ -71,7 +70,7 @@ function prcg2Chart(projectId, runId, maxClonesPerRun, maxGensPerClone, dataSeri
 				yAxes: [{
 					scaleLabel : {
 						display: true,
-						labelString: "Gen #"
+						labelString: 'Gen #'
 					},
 					ticks: {
 						max: maxGensPerClone
@@ -237,7 +236,7 @@ function prcgProgress2() {
 $(document).ready(function () {
 	'use strict';
 	// PRCG Progress
-	var page = window.location.pathname.split("/").pop();
+	var page = window.location.pathname.split('/').pop();
 	if (page === 'prcgProgress') {
 		prcgProgress();
 	}
