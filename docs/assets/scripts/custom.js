@@ -142,7 +142,7 @@ function prcgProgress() {
 			colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompletedForRun) / totalGensForRun) - 1);
 			percentage =  Math.round((((100 * totalGensCompletedForRun) / totalGensForRun) + Number.EPSILON) * 100) / 100;
 			var run = abortedCount > 0 ? run.run + abortedAlert : run.run;
-			dataRows[index] = { run: run.run, details: prcgProgress2Link(projectId, run.run), progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			dataRows[index] = { run: run, details: prcgProgress2Link(projectId, run.run), progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 		$('#prcgTable').bootstrapTable({data: dataRows, formatNoMatches: function () {return 'No data found.';}});
 		var totalGensForProject = totalGensForRun * data.maxRuns;
