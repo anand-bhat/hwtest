@@ -101,7 +101,7 @@ function prcg2Chart(projectId, runId, maxClonesPerRun, maxGensPerClone, dataSeri
 
 function prcgProgress2Link(project, run) {
 	'use strict';
-	return `<div><a href="./prcgProgress2?project=${project}&run=${run}">Link</a></div>`;
+	return `<div><a href="./prcgProgress2?project=${project}&run=${run}">Details</a></div>`;
 }
 
 function prcgProgress() {
