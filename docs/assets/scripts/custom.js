@@ -150,7 +150,7 @@ function prcgProgress() {
 			var abortedAlert = ` <svg class="bi bi-exclamation-triangle-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 5zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"><title>${abortedCount} trajectories aborted</title></path></svg>`;
 
 			var runText = abortedCount > 0 ? (abortedCount === 1 ? run.run + abortedAlert1 : run.run + abortedAlert) : run.run;
-			dataRows[index] = { run: runText, details: prcgProgress2Link(projectId, run.run), remaining: totalWUsRemaining, completed: totalWUsCompleted, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			dataRows[index] = { run: runText, details: prcgProgress2Link(projectId, run.run), remaining: totalWUsRemaining, completed: totalWUsCompleted, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 		$('#prcgTable').bootstrapTable({data: dataRows, formatNoMatches: function () {return 'No data found.';}});
 		var totalGensForProject = totalGensForRun * data.maxRuns;
@@ -220,7 +220,7 @@ function prcgProgress2() {
 			var lastCompleted = clone.gen === -1 ? '-' : clone.gen;
 			lastCompleted = clone.aborted ? lastCompleted + abortedAlert : lastCompleted;
 
-			dataRows[index] = { clone: clone.clone, gen: lastCompleted, completed: clone.gen + 1, remaining: (data.maxGensPerClone - genCount), progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			dataRows[index] = { clone: clone.clone, gen: lastCompleted, completed: clone.gen + 1, remaining: (data.maxGensPerClone - genCount), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 			totalGensCompleted += genCount;
 		});
 		prcg2Chart(projectId, runId, data.maxClonesPerRun, data.maxGensPerClone, dataSeries);
