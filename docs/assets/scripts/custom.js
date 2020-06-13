@@ -198,6 +198,8 @@ function prcgProgress2() {
 		var percentage = 0.0;
 		var colorClassIndex = '';
 		$.each(runData.clones, function(index, clone) {
+			var aborted = clone.aborted;
+			alert(aborted);
 			var genCount = clone.gen + 1;
 			colorClassIndex = Math.max(0, Math.floor((30 * genCount) / data.maxGensPerClone) - 1);
 			percentage =  Math.round((((100 * genCount) / data.maxGensPerClone) + Number.EPSILON) * 100) / 100;
