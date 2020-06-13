@@ -34,7 +34,7 @@
       "run": 1,
       "clones": [
         { "clone": 0, "gen": 99 },
-        { "clone": 1, "gen": -1 },
+        { "clone": 1, "gen": 81 },
         { "clone": 2, "gen": 99 },
         { "clone": 3, "gen": 99 },
         { "clone": 4, "gen": 99 },
@@ -43,7 +43,7 @@
         { "clone": 7, "gen": 99 },
         { "clone": 8, "gen": 75 },
         { "clone": 9, "gen": 99 },
-        { "clone": 10, "gen": -1 },
+        { "clone": 10, "gen": -1, "aborted": true },
         { "clone": 11, "gen": 99 },
         { "clone": 12, "gen": 95 },
         { "clone": 13, "gen": 79 },
