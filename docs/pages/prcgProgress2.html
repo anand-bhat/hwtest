@@ -51,13 +51,13 @@ tagline_min: PRCGProgress2
 </div>
 <hr>
 <div>
-	<table id="prcg2Table" class="collapse">
+	<table id="prcg2Table" class="collapse" data-show-footer="true">
 		<thead>
 			<tr>
 				<th data-field="clone" data-sortable="true">Clone</th>
 				<th data-field="gen" data-sortable="true">Last processed Gen</th>
-				<th data-field="completed" data-sortable="true">Completed WUs</th>
-				<th data-field="remaining" data-sortable="true">Remaining WUs</th>
+				<th data-field="completed" data-sortable="true" data-footer-formatter="numberTotalFormatter">Completed WUs</th>
+				<th data-field="remaining" data-sortable="true" data-footer-formatter="numberTotalFormatter">Remaining WUs</th>
 				<th data-field="progress" data-width="100" data-width-unit="%">Progress</th>
 			</tr>
 		</thead>

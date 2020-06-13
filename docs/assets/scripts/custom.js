@@ -251,6 +251,20 @@ function prcgProgress2() {
 	});
 }
 
+function numberTotalFormatter(data) {
+	'use strict';
+	//var field = this.field
+	//return '$' + data.map(function (row) {
+	//	return +row[field].substring(1)
+	//}).reduce(function (sum, i) {
+	//	return sum + i
+	//}, 0)
+	
+	var total = 0;
+	$.each(data, function (i, row) { total += row[field]; });
+	return total;
+}
+
 $(document).ready(function () {
 	'use strict';
 	// PRCG Progress
