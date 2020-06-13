@@ -11,10 +11,10 @@ tagline_min: PRCGProgress
 	<table id="prcgTable" class="collapse">
 		<thead>
 			<tr>
-				<th data-field="run" data-sortable="true">Run</th>
+				<th data-field="run" data-sortable="true" data-footer-formatter="totalLabelFormatter">Run</th>
 				<th data-field="details">Details</th>
-				<th data-field="completed" data-sortable="true">Completed WUs</th>
-				<th data-field="remaining" data-sortable="true">Remaining WUs</th>
+				<th data-field="completed" data-sortable="true" data-footer-formatter="totalNumberFormatter">Completed WUs</th>
+				<th data-field="remaining" data-sortable="true" data-footer-formatter="totalNumberFormatter">Remaining WUs</th>
 				<th data-field="progress" data-width="100" data-width-unit="%">Progress</th>
 			</tr>
 		</thead>
