@@ -139,7 +139,7 @@ function prcgProgress() {
 				totalGensCompleted += genCount;
 				totalGensCompletedForRun += genCount;
 				totalWUsRemaining = totalWUsRemaining + (data.maxGensPerClone - genCount);
-				totalWUsCompleted = totalWUsCompleted + (clone.aborted ? clone.gen : clone.gen + 1);
+				totalWUsCompleted = totalWUsCompleted + (clone.gen + 1);
 			});
 
 			colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompletedForRun) / totalGensForRun) - 1);
@@ -220,7 +220,7 @@ function prcgProgress2() {
 			var lastCompleted = clone.gen === -1 ? '-' : clone.gen;
 			lastCompleted = clone.aborted ? lastCompleted + abortedAlert : lastCompleted;
 
-			dataRows[index] = { clone: clone.clone, gen: lastCompleted, completed: clone.aborted ? clone.gen : clone.gen + 1, remaining: (data.maxGensPerClone - genCount), progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			dataRows[index] = { clone: clone.clone, gen: lastCompleted, completed: clone.gen + 1, remaining: (data.maxGensPerClone - genCount), progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 			totalGensCompleted += genCount;
 		});
 		prcg2Chart(projectId, runId, data.maxClonesPerRun, data.maxGensPerClone, dataSeries);
