@@ -58,8 +58,8 @@
     {
       "run": 2,
       "clones": [
-        { "clone": 0, "gen": -1 },
-        { "clone": 1, "gen": -1 },
+        { "clone": 0, "gen": -1, "aborted": true },
+        { "clone": 1, "gen": -1, "aborted": true },
         { "clone": 2, "gen": -1 },
         { "clone": 3, "gen": -1 },
         { "clone": 4, "gen": -1 },

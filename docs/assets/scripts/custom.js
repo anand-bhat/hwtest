@@ -128,7 +128,10 @@ function prcgProgress() {
 		var colorClassIndex = '';
 		var totalGensForRun = data.maxClonesPerRun * data.maxGensPerClone;
 
-		var abortedAlert = ' <svg class="bi bi-exclamation-triangle-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 5zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"><title>Trajectories aborted due to failures</title></path></svg>';
+		var abortedCount = 0;
+		// TODO: Pluralize in a better manner
+		var abortedAlert1 = ` <svg class="bi bi-exclamation-triangle-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 5zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"><title>${abortedCount} trajectory aborted </title></path></svg>`;
+		var abortedAlert = ` <svg class="bi bi-exclamation-triangle-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 5zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"><title>${abortedCount} trajectories aborted</title></path></svg>`;
 
 		$.each(data.runs, function(index, run) {
 			var totalGensCompletedForRun = 0;
@@ -141,8 +144,8 @@ function prcgProgress() {
 			});
 			colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompletedForRun) / totalGensForRun) - 1);
 			percentage =  Math.round((((100 * totalGensCompletedForRun) / totalGensForRun) + Number.EPSILON) * 100) / 100;
-			var run = abortedCount > 0 ? run.run + abortedAlert : run.run;
-			dataRows[index] = { run: run, details: prcgProgress2Link(projectId, run.run), progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			var runText = abortedCount > 0 ? (abortedCount === 1 ? run.run + abortedAlert1 : run.run + abortedAlert) : run.run;
+			dataRows[index] = { run: runText, details: prcgProgress2Link(projectId, run.run), progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 		$('#prcgTable').bootstrapTable({data: dataRows, formatNoMatches: function () {return 'No data found.';}});
 		var totalGensForProject = totalGensForRun * data.maxRuns;
