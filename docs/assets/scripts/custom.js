@@ -160,7 +160,7 @@ function prcgProgress() {
 		$('#prcgTable').show();
 	})
 	.fail(function(data) {
-		// The project specified in the URL does not point to a valid project or there isn't data yet
+		// The project specified in the URL does not point to a valid project
 		alert('Unable to get data for Project: ' + projectId);
 	})
 	.always(function(data) {
@@ -243,7 +243,7 @@ function prcgProgress2() {
 		}
 	})
 	.fail(function(data) {
-		// The project specified in the URL does not point to a valid project or there isn't data yet
+		// The project specified in the URL does not point to a valid project
 		alert('Unable to get data for Project: ' + projectId);
 	})
 	.always(function(data) {
