@@ -253,7 +253,7 @@ function prcgProgress2() {
 
 function numberTotalFormatter(data) {
 	'use strict';
-	//var field = this.field
+	var field = this.field
 	//return '$' + data.map(function (row) {
 	//	return +row[field].substring(1)
 	//}).reduce(function (sum, i) {
