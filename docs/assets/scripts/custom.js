@@ -375,7 +375,7 @@ $(document).ready(function () {
 	$('#fetchCredit').on('click', function (e) {
 		var logLine = $('#logLine').val();
 		if (logLine != null && logLine != '') {
-			var logLinePattern = /^.*.project:(\d*) run:(\d*) clone:(\d*) gen:(\d*).*.$/;
+			var logLinePattern = /^.*.project\D*(\d*)\D*run\D*?(\d*)\D*clone\D*(\d*)\D*gen\D*s?(\d*).*.$/i;
 			var match = logLinePattern.exec(logLine);
 			var match = null;
 			if (match == null or match.length != 5) {
