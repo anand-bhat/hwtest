@@ -90,7 +90,7 @@ function prcg2Chart(projectId, runId, maxClonesPerRun, maxGensPerClone, dataSeri
 				},
 				filter: function (tooltipItem, data) {
 					// Hide tooltip for first coordinate
-					return !(tooltipItem.index == 0);
+					return tooltipItem.index != 0;
 				}
 			}
 		}
@@ -319,7 +319,7 @@ function totalLabelFormatter(data) {
 
 function totalNumberFormatter(data) {
 	'use strict';
-	var field = this.field
+	var field = this.field;
 	var total = 0;
 	$.each(data, function (i, row) { total += row[field]; });
 	return total;
@@ -375,10 +375,10 @@ $(document).ready(function () {
 	$('#fetchCredit').on('click', function (e) {
 		var logLine = $('#logLine').val();
 		if (logLine != null && logLine != '') {
-			//var logLinePattern = /^.*.project:(?<p>\d*) run:(?<r>\d*) clone:(?<c>\d*) gen:(?<g>\d*).*.$/;
-			//var match = logLinePattern.exec(logLine);
+			var logLinePattern = /^.*.project:(\d*) run:(\d*) clone:(\d*) gen:(\d*).*.$/;
+			var match = logLinePattern.exec(logLine);
 			var match = null;
-			if (match == null) {
+			if (match == null or match.length != 5) {
 				$('#projectId').val('');
 				$('#runId').val('');
 				$('#cloneId').val('');
@@ -389,11 +389,11 @@ $(document).ready(function () {
 				e.preventDefault();
 				return;
 			} else {
-				var p = match.groups.p;
-				var r = match.groups.r;
-				var c = match.groups.c;
-				var g = match.groups.g;
-				
+				var p = match[1];
+				var r = match[2];
+				var c = match[3];
+				var g = match[4];
+
 				$('#projectId').val(p);
 				$('#runId').val(r);
 				$('#cloneId').val(c);
