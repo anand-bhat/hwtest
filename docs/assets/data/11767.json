@@ -1,6 +1,7 @@
 {
   "project": 11767,
-  "lastUpdated": 1592028903000,
+  "maxFailures": 5,
+  "lastUpdated": 1592114768513,
   "maxRuns": 1,
   "maxClonesPerRun": 40,
   "maxGensPerClone": 1000,
@@ -8,46 +9,166 @@
     {
       "run": 0,
       "clones": [
-        { "clone": 0, "gen": 706 },
-        { "clone": 1, "gen": 638 },
-        { "clone": 2, "gen": 645 },
-        { "clone": 3, "gen": 560 },
-        { "clone": 4, "gen": 597 },
-        { "clone": 5, "gen": 464 },
-        { "clone": 6, "gen": 681 },
-        { "clone": 7, "gen": 518 },
-        { "clone": 8, "gen": 384 },
-        { "clone": 9, "gen": 437 },
-        { "clone": 10, "gen": 344 },
-        { "clone": 11, "gen": 212 },
-        { "clone": 12, "gen": 255 },
-        { "clone": 13, "gen": 154 },
-        { "clone": 14, "gen": 116 },
-        { "clone": 15, "gen": 12 },
-        { "clone": 16, "gen": 28 },
-        { "clone": 17, "gen": 18 },
-        { "clone": 18, "gen": 20 },
-        { "clone": 19, "gen": 11 },
-        { "clone": 20, "gen": 10 },
-        { "clone": 21, "gen": 5 },
-        { "clone": 22, "gen": 9 },
-        { "clone": 23, "gen": 8 },
-        { "clone": 24, "gen": 3 },
-        { "clone": 25, "gen": 2 },
-        { "clone": 26, "gen": 1 },
-        { "clone": 27, "gen": 0 },
-        { "clone": 28, "gen": 1 },
-        { "clone": 29, "gen": -1 },
-        { "clone": 30, "gen": -1 },
-        { "clone": 31, "gen": -1 },
-        { "clone": 32, "gen": 71 },
-        { "clone": 33, "gen": 39 },
-        { "clone": 34, "gen": 64 },
-        { "clone": 35, "gen": 6 },
-        { "clone": 36, "gen": 16 },
-        { "clone": 37, "gen": 11 },
-        { "clone": 38, "gen": -1 },
-        { "clone": 39, "gen": -1 }
+        {
+          "clone": 0,
+          "gen": 706
+        },
+        {
+          "clone": 1,
+          "gen": 638
+        },
+        {
+          "clone": 2,
+          "gen": 645
+        },
+        {
+          "clone": 3,
+          "gen": 560
+        },
+        {
+          "clone": 4,
+          "gen": 597
+        },
+        {
+          "clone": 5,
+          "gen": 464
+        },
+        {
+          "clone": 6,
+          "gen": 681
+        },
+        {
+          "clone": 7,
+          "gen": 518
+        },
+        {
+          "clone": 8,
+          "gen": 384
+        },
+        {
+          "clone": 9,
+          "gen": 437
+        },
+        {
+          "clone": 10,
+          "gen": 344
+        },
+        {
+          "clone": 11,
+          "gen": 212
+        },
+        {
+          "clone": 12,
+          "gen": 255
+        },
+        {
+          "clone": 13,
+          "gen": 155
+        },
+        {
+          "clone": 14,
+          "gen": 116
+        },
+        {
+          "clone": 15,
+          "gen": 12
+        },
+        {
+          "clone": 16,
+          "gen": 28
+        },
+        {
+          "clone": 17,
+          "gen": 18
+        },
+        {
+          "clone": 18,
+          "gen": 20
+        },
+        {
+          "clone": 19,
+          "gen": 11
+        },
+        {
+          "clone": 20,
+          "gen": 10
+        },
+        {
+          "clone": 21,
+          "gen": 5
+        },
+        {
+          "clone": 22,
+          "gen": 9
+        },
+        {
+          "clone": 23,
+          "gen": 8
+        },
+        {
+          "clone": 24,
+          "gen": 3
+        },
+        {
+          "clone": 25,
+          "gen": 2
+        },
+        {
+          "clone": 26,
+          "gen": 1
+        },
+        {
+          "clone": 27,
+          "gen": 0
+        },
+        {
+          "clone": 28,
+          "gen": 1
+        },
+        {
+          "clone": 29,
+          "gen": -1
+        },
+        {
+          "clone": 30,
+          "gen": -1
+        },
+        {
+          "clone": 31,
+          "gen": -1
+        },
+        {
+          "clone": 32,
+          "gen": 72
+        },
+        {
+          "clone": 33,
+          "gen": 39
+        },
+        {
+          "clone": 34,
+          "gen": 64
+        },
+        {
+          "clone": 35,
+          "gen": 6
+        },
+        {
+          "clone": 36,
+          "gen": 16
+        },
+        {
+          "clone": 37,
+          "gen": 11
+        },
+        {
+          "clone": 38,
+          "gen": -1
+        },
+        {
+          "clone": 39,
+          "gen": -1
+        }
       ]
     }
   ]
