@@ -120,42 +120,71 @@ function prcgProgress() {
 
 	$.getJSON("../assets/data/" + projectId + ".json")
 	.done(function(data) {
-		$('#prcgTitle').html('Progress for Project: ' + projectId + '. Last updated at ' + new Date(data.lastUpdated).toLocaleString());
+		$('#prcgTitle').html('Progress for Project: ' + projectId);
+		$('#timeUpdated').html('Last updated at ' + new Date(data.lastUpdated).toLocaleString());
 
 		var dataRows = [];
-		var totalGensCompleted = 0;
-		var totalWUsCompleted = 0;
-		var totalWUsRemaining = 0;
+		var totalGensCompletedForProject = 0;
 		var percentage = 0.0;
 		var colorClassIndex = '';
 		var totalGensForRun = data.maxClonesPerRun * data.maxGensPerClone;
+		var totalGensForProject = totalGensForRun * data.maxRuns;
 
 		$.each(data.runs, function(index, run) {
 			var totalGensCompletedForRun = 0;
+			var totalWUsCompleted = 0;
+			var totalWUsRemaining = 0;
 			var abortedCount = 0;
+
 			$.each(run.clones, function(index, clone) {
-				abortedCount = clone.aborted ? abortedCount + 1 : abortedCount;
+				// genCount is used for calculating percentage and remaining work
+				// Set it to gen + 1 or to max gen (if aborted)
 				var genCount = clone.aborted ? data.maxGensPerClone : clone.gen + 1;
-				totalGensCompleted += genCount;
+
+				// Accumulator to report on percentage completion for this run
 				totalGensCompletedForRun += genCount;
+
+				// Accumulator to report on overall percentage completion for the project
+				totalGensCompletedForProject += genCount;
+
+				// Accumulator to report on remaining number of WUs for this run
 				totalWUsRemaining = totalWUsRemaining + (data.maxGensPerClone - genCount);
+
+				// abortedCount is used to display number of aborted trajectories
+				abortedCount = clone.aborted ? abortedCount + 1 : abortedCount;
+
+				// totalWUsCompleted is used to display number of completed WUs
+				// Cannot use genCount as it'll inflate numbers for aborted trajectories
 				totalWUsCompleted = totalWUsCompleted + (clone.gen + 1);
 			});
 
+			// Determine color for the progress bar for the run
 			colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompletedForRun) / totalGensForRun) - 1);
+
+			// Percentage completion for the run
 			percentage =  Math.round((((100 * totalGensCompletedForRun) / totalGensForRun) + Number.EPSILON) * 100) / 100;
 
 			// TODO: Pluralize in a better manner
 			var abortedAlert1 = ` <svg class="bi bi-exclamation-triangle-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 5zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"><title>${abortedCount} trajectory aborted </title></path></svg>`;
 			var abortedAlert = ` <svg class="bi bi-exclamation-triangle-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 5zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"><title>${abortedCount} trajectories aborted</title></path></svg>`;
 
+			// Display string to show for Run # along with any indicators for aborted trajectories
 			var runText = abortedCount > 0 ? (abortedCount === 1 ? run.run + abortedAlert1 : run.run + abortedAlert) : run.run;
+
+			// Data table row
 			dataRows[index] = { run: runText, details: prcgProgress2Link(projectId, run.run), remaining: totalWUsRemaining, completed: totalWUsCompleted, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
+
+		// Populate data into table
 		$('#prcgTable').bootstrapTable({data: dataRows, formatNoMatches: function () {return 'No data found.';}});
-		var totalGensForProject = totalGensForRun * data.maxRuns;
-		colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompleted) / totalGensForProject) - 1);
-		percentage = Math.round((((100 * totalGensCompleted) / totalGensForProject) + Number.EPSILON) * 100) / 100;
+
+		// Determine color for the progress bar for the overall project
+		colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompletedForProject) / totalGensForProject) - 1);
+
+		// Percentage completion for the overall project
+		percentage = Math.round((((100 * totalGensCompletedForProject) / totalGensForProject) + Number.EPSILON) * 100) / 100;
+
+		// Populate progress bar
 		$('#prcgProgressBar').html(getProgressBar(percentage, colorClass[colorClassIndex]));
 		$('#prcgTable').show();
 	})
@@ -203,7 +232,8 @@ function prcgProgress2() {
 			return;
 		}
 
-		$('#prcg2Title').html('Progress for Project: ' + projectId + '; Run: ' + runId + '. Last updated at ' + new Date(data.lastUpdated).toLocaleString());
+		$('#prcg2Title').html('Progress for Project: ' + projectId + '; Run: ' + runId);
+		$('#timeUpdated').html('Last updated at ' + new Date(data.lastUpdated).toLocaleString());
 
 		var abortedAlert = ' <svg class="bi bi-exclamation-triangle-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 5zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"><title>Trajectory aborted due to failures</title></path></svg>';
 
