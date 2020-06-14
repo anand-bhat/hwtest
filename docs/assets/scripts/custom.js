@@ -186,6 +186,8 @@ function prcgProgress() {
 
 		// Populate progress bar
 		$('#prcgProgressBar').html(getProgressBar(percentage, colorClass[colorClassIndex]));
+
+		// Show details table
 		$('#prcgTable').show();
 	})
 	.fail(function(data) {
@@ -239,37 +241,66 @@ function prcgProgress2() {
 
 		var dataSeries = [];
 		var dataRows = [];
-		var totalGensCompleted = 0;
+		var totalGensCompletedForRun = 0;
 		var percentage = 0.0;
 		var colorClassIndex = '';
+		var totalGensForRun = data.maxClonesPerRun * data.maxGensPerClone;
+
 		$.each(runData.clones, function(index, clone) {
+			// genCount is used for calculating percentage and remaining work
+			// Set it to gen + 1 or to max gen (if aborted)
 			var genCount = clone.aborted ? data.maxGensPerClone : clone.gen + 1;
+
+			// Accumulator to report on percentage completion for this run
+			totalGensCompletedForRun += genCount;
+
+			// Determine color for the progress bar for the clone
 			colorClassIndex = Math.max(0, Math.floor((30 * genCount) / data.maxGensPerClone) - 1);
+
+			// Percentage completion for the clone
 			percentage =  Math.round((((100 * genCount) / data.maxGensPerClone) + Number.EPSILON) * 100) / 100;
+
+			// Create coordinates for chart
 			dataSeries[index] = { data: [{x: clone.clone, y: 0}, {x: clone.clone, y: Math.max(0, clone.gen)}], borderColor: colorClass[colorClassIndex], backgroundColor:colorClass[colorClassIndex] };
+
+			// Display string to show for Last completed gen # along with any indicator for aborted trajectories
 			var lastCompleted = clone.gen === -1 ? '-' : clone.gen;
 			lastCompleted = clone.aborted ? lastCompleted + abortedAlert : lastCompleted;
 
+			// Data table row
 			dataRows[index] = { clone: clone.clone, gen: lastCompleted, completed: clone.gen + 1, remaining: (data.maxGensPerClone - genCount), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
-			totalGensCompleted += genCount;
 		});
-		prcg2Chart(projectId, runId, data.maxClonesPerRun, data.maxGensPerClone, dataSeries);
-		$('#prcg2Table').bootstrapTable({data: dataRows, formatNoMatches: function () {return 'No data found.';}});
-		var totalGensForRun = data.maxClonesPerRun * data.maxGensPerClone;
-		colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompleted) / totalGensForRun) - 1);
-		percentage = Math.round((((100 * totalGensCompleted) / totalGensForRun) + Number.EPSILON) * 100) / 100;
-		$('#prcg2ProgressBar').html(getProgressBar(percentage, colorClass[colorClassIndex]));
-		$('#prcg2Table').show();
-		$('#prcg2UpToProject').show();
-		$('#prcg2UpToProjectURL').attr('href', './prcgProgress?project=' + projectId);
 
+		// Draw chart
+		prcg2Chart(projectId, runId, data.maxClonesPerRun, data.maxGensPerClone, dataSeries);
+
+		// Populate data into table
+		$('#prcg2Table').bootstrapTable({data: dataRows, formatNoMatches: function () {return 'No data found.';}});
+
+		// Determine color for the progress bar for the run
+		colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompletedForRun) / totalGensForRun) - 1);
+
+		// Percentage completion for the run
+		percentage = Math.round((((100 * totalGensCompletedForRun) / totalGensForRun) + Number.EPSILON) * 100) / 100;
+
+		// Populate progress bar
+		$('#prcg2ProgressBar').html(getProgressBar(percentage, colorClass[colorClassIndex]));
+
+		// Show details table
+		$('#prcg2Table').show();
+
+		// Display button to navigate up to project details
+		$('#prcg2UpToProjectURL').attr('href', './prcgProgress?project=' + projectId);
+		$('#prcg2UpToProject').show();
+
+		// Display buttons to navigate across runs
 		if (runId != 0) {
-			$('#prcg2PreviousRun').show();
 			$('#prcg2PreviousRunURL').attr('href', './prcgProgress2?project=' + projectId + '&run=' + (runId-1));
+			$('#prcg2PreviousRun').show();
 		}
 		if (runId != data.maxRuns-1) {
-			$('#prcg2NextRun').show();
 			$('#prcg2NextRunURL').attr('href', './prcgProgress2?project=' + projectId + '&run=' + (runId+1));
+			$('#prcg2NextRun').show();
 		}
 	})
 	.fail(function(data) {
