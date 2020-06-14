@@ -377,7 +377,7 @@ $(document).ready(function () {
 		if (logLine != null && logLine != '') {
 			var logLinePattern = /^.*.project\D*(\d*)\D*run\D*?(\d*)\D*clone\D*(\d*)\D*gen\D*s?(\d*).*.$/i;
 			var match = logLinePattern.exec(logLine);
-			if (match == null or match.size() != 5) {
+			if (match == null || match.length != 5) {
 				$('#projectId').val('');
 				$('#runId').val('');
 				$('#cloneId').val('');
