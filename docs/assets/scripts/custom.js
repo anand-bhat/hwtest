@@ -248,11 +248,28 @@ function prcgProgress2() {
 		var trajLengthPerWU = data.trajLengthPerWU;
 
 		var attributes = []
-		attributes[0] = { attributeName: 'Project:', attributeValue: projectId };
-		attributes[1] = { attributeName: 'Number of Runs for this projects:', attributeValue: data.maxRuns };
-		attributes[2] = { attributeName: 'Number of Clones per Run:', attributeValue: data.maxClonesPerRun };
-		attributes[3] = { attributeName: 'Number of Gens per Clone:', attributeValue: data.maxGensPerClone };
-		attributes[4] = { attributeName: 'Trajectory (simulation) length per WU:', attributeValue: data.trajLengthPerWU };
+		// Project level attributes
+		//attributes[0] = { attributeName: 'Project:', attributeValue: projectId };
+		//attributes[1] = { attributeName: 'Number of Runs for this projects:', attributeValue: data.maxRuns };
+		//attributes[2] = { attributeName: 'Number of Clones per Run:', attributeValue: data.maxClonesPerRun };
+		//attributes[3] = { attributeName: 'Number of Gens per Clone:', attributeValue: data.maxGensPerClone };
+		//attributes[4] = { attributeName: 'Trajectory (simulation) length per WU:', attributeValue: data.trajLengthPerWU };
+
+
+		attributes[0] = { attributeName: 'Total planned WUs:', attributeValueP: data.maxRuns * data.maxClonesPerRun * data.maxGensPerClone, attributeValuePR: data.maxClonesPerRun * data.maxGensPerClone, attributeValuePRC: data.maxGensPerClone };
+		attributes[1] = { attributeName: 'Total completed WUs:', attributeValueP: 'TODO', attributeValuePR: 'TODO', attributeValuePRC: 'TODO' };
+		attributes[2] = { attributeName: 'Total aborted WUs:', attributeValueP: 'TODO', attributeValuePR: 'TODO', attributeValuePRC: 'TODO' };
+		attributes[3] = { attributeName: 'Total remaining WUs:', attributeValueP: 'TODO', attributeValuePR: 'TODO', attributeValuePRC: 'TODO' };
+
+		attributes[4] = { attributeName: 'Total trajectories:', attributeValueP: 'TODO', attributeValuePR: 'TODO', attributeValuePRC: 'TODO' };
+		attributes[5] = { attributeName: 'Total completed trajectories:', attributeValueP: 'TODO', attributeValuePR: 'TODO', attributeValuePRC: 'TODO' };
+		attributes[6] = { attributeName: 'Total aborted trajectories:', attributeValueP: 'TODO', attributeValuePR: 'TODO', attributeValuePRC: 'TODO' };
+		attributes[3] = { attributeName: 'Total remaining trajectories:', attributeValueP: 'TODO', attributeValuePR: 'TODO', attributeValuePRC: 'TODO' };
+
+		//$table.bootstrapTable('updateColumnTitle', {
+        //field: 'name',
+        //title: 'Updated Name'
+      //})
 
 		$.each(runData.clones, function(index, clone) {
 			// genCount is used for calculating percentage and remaining work
