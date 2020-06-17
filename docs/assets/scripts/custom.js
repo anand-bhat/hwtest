@@ -249,7 +249,12 @@ function prcgProgress2() {
 
 		var attributesProject = []
 		// Project level attributes
-		attributesProject[0] = { project: projectId, maxRuns: data.maxRuns, maxClonesPerRun: data.maxClonesPerRun, maxGensPerClone: data.maxGensPerClone, trajLengthPerWU, attributeValue: data.trajLengthPerWU };
+		attributesProject[0] = { project: projectId, maxRuns: data.maxRuns, maxClonesPerRun: data.maxClonesPerRun, maxGensPerClone: data.maxGensPerClone, trajLengthPerWU: data.trajLengthPerWU };
+
+		var attributesRun = []
+		// Run level attributes
+		attributesRun[0] = { scope: 'Entire project', wuPlanned: '-', wuCompleted: '-', wuFailed: '-', wuAborted: '-', wuRemaining: '-', trajPlanned: '-', trajCompleted: '-', trajFailed: '-', trajAborted: '-', trajRemaining: '-' };
+		attributesRun[1] = { scope: 'This run (Run: ' + runId + ')', wuPlanned: '-', wuCompleted: '-', wuFailed: '-', wuAborted: '-', wuRemaining: '-', trajPlanned: '-', trajCompleted: '-', trajFailed: '-', trajAborted: '-', trajRemaining: '-' };
 
 		//attributes[5] = { attributeName: 'Total planned WUs:', attributeValue: data.maxRuns * data.maxClonesPerRun * data.maxGensPerClone, attributeValuePR: data.maxClonesPerRun * data.maxGensPerClone};
 		//attributes[6] = { attributeName: 'Total completed WUs:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
@@ -285,7 +290,7 @@ function prcgProgress2() {
 			lastCompleted = clone.aborted ? lastCompleted + abortedAlert : lastCompleted;
 
 			// Trajectory length for this clone
-			var trajLength = clone.gen === -1 ? 0 : (clone.gen + 1) * trajLengthPerWU;
+			var trajLength = clone.gen === -1 ? 0 : (clone.gen + 1) * data.trajLengthPerWU;
 
 			// Data table row
 			dataRows[index] = { clone: clone.clone, gen: lastCompleted, trajLength: trajLength, completed: clone.gen + 1, remaining: (data.maxGensPerClone - genCount), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
@@ -296,6 +301,9 @@ function prcgProgress2() {
 
 		// Populate data into project details table
 		$('#prcg2ProjectTable').bootstrapTable({data: attributesProject, formatNoMatches: function () {return 'No data found.';}});
+
+		// Populate data into run details table
+		$('#prcg2RunTable').bootstrapTable({data: attributesRun, formatNoMatches: function () {return 'No data found.';}});
 
 		// Populate data into clone details table
 		$('#prcg2CloneTable').bootstrapTable({data: dataRows, formatNoMatches: function () {return 'No data found.';}});
@@ -311,6 +319,7 @@ function prcgProgress2() {
 
 		// Show tables
 		$('#prcg2ProjectTable').show();
+		$('#prcg2RunTable').show();
 		$('#prcg2CloneTable').show();
 
 		// Display button to navigate up to project details
