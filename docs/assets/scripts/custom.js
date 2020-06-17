@@ -245,28 +245,12 @@ function prcgProgress2() {
 		var percentage = 0.0;
 		var colorClassIndex = '';
 		var totalGensForRun = data.maxClonesPerRun * data.maxGensPerClone;
-		var trajLengthPerWU = data.trajLengthPerWU;
+		var totalGensForProject = data.maxRuns * totalGensForRun;
+		var totalGensSuccessfulForRun = 0;
 
 		var attributesProject = []
 		// Project level attributes
 		attributesProject[0] = { project: projectId, maxRuns: data.maxRuns, maxClonesPerRun: data.maxClonesPerRun, maxGensPerClone: data.maxGensPerClone, trajLengthPerWU: data.trajLengthPerWU };
-
-		var attributesRun = []
-		// Run level attributes
-		attributesRun[0] = { scope: 'Entire project', wuPlanned: '-', wuCompleted: '-', wuFailed: '-', wuAborted: '-', wuRemaining: '-', trajPlanned: '-', trajCompleted: '-', trajFailed: '-', trajAborted: '-', trajRemaining: '-' };
-		attributesRun[1] = { scope: 'This run (Run: ' + runId + ')', wuPlanned: '-', wuCompleted: '-', wuFailed: '-', wuAborted: '-', wuRemaining: '-', trajPlanned: '-', trajCompleted: '-', trajFailed: '-', trajAborted: '-', trajRemaining: '-' };
-
-		//attributes[5] = { attributeName: 'Total planned WUs:', attributeValue: data.maxRuns * data.maxClonesPerRun * data.maxGensPerClone, attributeValuePR: data.maxClonesPerRun * data.maxGensPerClone};
-		//attributes[6] = { attributeName: 'Total completed WUs:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
-		//attributes[7] = { attributeName: 'Total aborted WUs:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
-		//attributes[8] = { attributeName: 'Total remaining WUs:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
-
-		//attributes[9] = { attributeName: 'Total planned trajectory length:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
-		//attributes[10] = { attributeName: 'Total completed trajectory length:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
-		//attributes[11] = { attributeName: 'Total aborted trajectory length:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
-		//attributes[12] = { attributeName: 'Total remaining trajectory length:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
-
-		//$('#prcg2TableSummary').bootstrapTable('updateColumnTitle', { field: 'attributeValueP', title: 'For this Project' })
 
 		$.each(runData.clones, function(index, clone) {
 			// genCount is used for calculating percentage and remaining work
@@ -289,12 +273,20 @@ function prcgProgress2() {
 			var lastCompleted = clone.gen === -1 ? '-' : clone.gen;
 			lastCompleted = clone.aborted ? lastCompleted + abortedAlert : lastCompleted;
 
+			// Keep track of how many Gens (WUs) have been successfully completed
+			totalGensSuccessfulForRun = totalGensSuccessfulForRun + (clone.gen === -1 ? 0 : (clone.aborted ? clone.gen : clone.gen + 1));
+
 			// Trajectory length for this clone
 			var trajLength = clone.gen === -1 ? 0 : (clone.gen + 1) * data.trajLengthPerWU;
 
 			// Data table row
 			dataRows[index] = { clone: clone.clone, gen: lastCompleted, trajLength: trajLength, completed: clone.gen + 1, remaining: (data.maxGensPerClone - genCount), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
+
+		var attributesRun = []
+		// Run level attributes
+		attributesRun[0] = { scope: 'Entire project', wuPlanned: totalGensForProject, wuCompleted: '-', wuFailed: '-', wuAborted: '-', wuRemaining: '-', trajPlanned: totalGensForProject * data.trajLengthPerWU, trajCompleted: '-', trajFailed: '-', trajAborted: '-', trajRemaining: '-' };
+		attributesRun[1] = { scope: 'This run (Run: ' + runId + ')', wuPlanned: totalGensForRun, wuCompleted: totalGensSuccessfulForRun, wuFailed: '-', wuAborted: '-', wuRemaining: '-', trajPlanned: '-', trajCompleted: '-', trajFailed: '-', trajAborted: '-', trajRemaining: '-' };
 
 		// Draw chart
 		prcg2Chart(projectId, runId, data.maxClonesPerRun, data.maxGensPerClone, dataSeries);
