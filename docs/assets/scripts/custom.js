@@ -266,10 +266,7 @@ function prcgProgress2() {
 		attributes[6] = { attributeName: 'Total aborted trajectories:', attributeValueP: 'TODO', attributeValuePR: 'TODO', attributeValuePRC: 'TODO' };
 		attributes[3] = { attributeName: 'Total remaining trajectories:', attributeValueP: 'TODO', attributeValuePR: 'TODO', attributeValuePRC: 'TODO' };
 
-		//$table.bootstrapTable('updateColumnTitle', {
-        //field: 'name',
-        //title: 'Updated Name'
-      //})
+		$('#prcg2TableSummary').bootstrapTable('updateColumnTitle', { field: 'attributeValueP', title: 'For this Project' })
 
 		$.each(runData.clones, function(index, clone) {
 			// genCount is used for calculating percentage and remaining work
