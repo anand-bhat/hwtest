@@ -254,6 +254,8 @@ function prcgProgress2() {
 		var attributesProject = []
 		// Project level attributes
 		attributesProject[0] = { project: projectId, maxRuns: data.maxRuns, maxClonesPerRun: data.maxClonesPerRun, maxGensPerClone: data.maxGensPerClone, trajLengthPerWU: data.trajLengthPerWU };
+		projectConfig = 'Project ' + projectId + ' has been configured to have ' + data.maxRuns + (data.maxRuns > 1 ? ' Runs' : 'Run') + ', each with ' + data.maxClonesPerRun + (data.maxClonesPerRun > 1 ? ' Clones' : 'Clone') + '. Each Clone has ' + data.maxGensPerClone + (data.maxGensPerClone > 1 ? ' Gens' : 'Gen') + '. The total WUs for the project is ' + (data.maxRuns * data.maxClonesPerRun * data.maxGensPerClone) + '. Each WU represents ' + data.trajLengthPerWU + 'nanoseconds of simulation.';
+		$('#projectConfig').html(projectConfig);
 
 		$.each(runData.clones, function(index, clone) {
 			// genCount is used for calculating percentage and remaining work
@@ -297,7 +299,6 @@ function prcgProgress2() {
 
 		var attributesRun = []
 		// Run level attributes
-		//attributesRun[0] = { scope: 'Entire project', wuPlanned: totalGensForProject, wuCompleted: '-', wuFailed: '-', wuAborted: '-', wuRemaining: '-', trajPlanned: totalGensForProject * data.trajLengthPerWU, trajCompleted: '-', trajFailed: '-', trajAborted: '-', trajRemaining: '-' };
 		attributesRun[0] = { scope: 'This run (Run: ' + runId + ')', wuPlanned: totalGensForRun, wuCompleted: totalGensSuccessfulForRun, wuFailed: totalGensFailedForRun, wuAborted: totalGensAbortedForRun, wuRemaining: totalGensRemainingForRun, trajPlanned: totalGensForRun * data.trajLengthPerWU, trajCompleted: totalGensSuccessfulForRun * data.trajLengthPerWU, trajFailed: totalGensFailedForRun * data.trajLengthPerWU, trajAborted: totalGensAbortedForRun * data.trajLengthPerWU, trajRemaining: totalGensRemainingForRun * data.trajLengthPerWU };
 
 		// Draw chart
