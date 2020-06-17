@@ -4,7 +4,7 @@ tagline: PRCG Progress (Gens by clone)
 tagline_min: PRCGProgress2
 ---
 <div>
-	<table id="prcg2ProjectTable" class="collapse table table-sm table-borderless" data-resizable="true">
+	<table id="prcg2ProjectTable" class="collapse table-sm">
 		<thead>
 			<tr>
 				<th class="nowrap" data-field="project" class="font-weight-bold" data-width="1" data-width-unit="%">Project</th>
@@ -18,7 +18,7 @@ tagline_min: PRCGProgress2
 </div>
 <hr>
 <div>
-	<table id="prcg2RunTable" class="collapse table table-sm table-borderless" data-show-header="false" data-resizable="true">
+	<table id="prcg2RunTable" class="collapse table-sm" data-show-header="false" data-resizable="true">
 		<thead>
 			<tr>
 				<th class="nowrap" data-field="attributeName" class="font-weight-bold" data-width="1" data-width-unit="%">Attribute</th>
@@ -28,19 +28,27 @@ tagline_min: PRCGProgress2
 	</table>
 </div>
 <table
-        id="table"
-        data-toggle="table"
-        data-url="json/data1.json">
-    <thead>
-    <tr>
-        <th colspan="2">Item Detail</th>
-        <th data-field="id" rowspan="2" data-valign="middle">Item ID</th>
-    </tr>
-    <tr>
-        <th data-field="name">Item Name</th>
-        <th data-field="price">Item Price</th>
-    </tr>
-    </thead>
+		id="table"
+		data-toggle="table"
+		data-url="json/data1.json">
+	<thead>
+	<tr>
+		<th data-field="scope" rowspan="2">Scope</th>
+		<th colspan="5">Entire project</th>
+	</tr>
+	<tr>
+		<th data-field="wuPlannedP">Planned WU count</th>
+		<th data-field="wuCompletedP">Completed WU count</th>
+		<th data-field="wuFailedP">Failed WU count</th>
+		<th data-field="wuAbortedP">Aborted WU count</th>
+		<th data-field="wuRemainingP">Remaining WU count</th>
+		<th data-field="trajPlannedP">Planned trajectory (ns)</th>
+		<th data-field="trajCompletedP">Completed trajectory (ns)</th>
+		<th data-field="trajFailedP">Failed trajectory (ns)</th>
+		<th data-field="trajAbortedP">Aborted trajectory (ns)</th>
+		<th data-field="trajRemainingP">Remaining trajectory (ns)</th>
+	</tr>
+	</thead>
 </table>
 <hr>
 <div id="prcg2Title" class="font-weight-bold"></div>
