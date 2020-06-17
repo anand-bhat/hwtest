@@ -247,6 +247,9 @@ function prcgProgress2() {
 		var totalGensForRun = data.maxClonesPerRun * data.maxGensPerClone;
 		var totalGensForProject = data.maxRuns * totalGensForRun;
 		var totalGensSuccessfulForRun = 0;
+		var totalGensFailedForRun = 0;
+		var totalGensAbortedForRun = 0;
+		var totalGensRemainingForRun = 0;
 
 		var attributesProject = []
 		// Project level attributes
@@ -274,7 +277,16 @@ function prcgProgress2() {
 			lastCompleted = clone.aborted ? lastCompleted + abortedAlert : lastCompleted;
 
 			// Keep track of how many Gens (WUs) have been successfully completed
-			totalGensSuccessfulForRun = totalGensSuccessfulForRun + (clone.gen === -1 ? 0 : (clone.aborted ? clone.gen : clone.gen + 1));
+			totalGensSuccessfulForRun += (clone.gen === -1 ? 0 : (clone.aborted ? clone.gen : clone.gen + 1));
+
+			// Keep track of how many Gens (WUs) have failed
+			totalGensFailedForRun += clone.aborted ? 1 : 0;
+
+			// Keep track of how many future Gens (WUs) have been aborted if this gen failed
+			totalGensAbortedForRun += clone.aborted ? (data.maxGensPerClone - clone.gen + 1)) : 0;
+
+			// Keep track of how many Gens (WUs) are remaining
+			totalGensRemainingForRun += (data.maxGensPerClone - genCount)
 
 			// Trajectory length for this clone
 			var trajLength = clone.gen === -1 ? 0 : (clone.gen + 1) * data.trajLengthPerWU;
@@ -286,7 +298,7 @@ function prcgProgress2() {
 		var attributesRun = []
 		// Run level attributes
 		attributesRun[0] = { scope: 'Entire project', wuPlanned: totalGensForProject, wuCompleted: '-', wuFailed: '-', wuAborted: '-', wuRemaining: '-', trajPlanned: totalGensForProject * data.trajLengthPerWU, trajCompleted: '-', trajFailed: '-', trajAborted: '-', trajRemaining: '-' };
-		attributesRun[1] = { scope: 'This run (Run: ' + runId + ')', wuPlanned: totalGensForRun, wuCompleted: totalGensSuccessfulForRun, wuFailed: '-', wuAborted: '-', wuRemaining: '-', trajPlanned: '-', trajCompleted: '-', trajFailed: '-', trajAborted: '-', trajRemaining: '-' };
+		attributesRun[1] = { scope: 'This run (Run: ' + runId + ')', wuPlanned: totalGensForRun, wuCompleted: totalGensSuccessfulForRun, wuFailed: totalGensFailedForRun, wuAborted: totalGensAbortedForRun, wuRemaining: totalGensRemainingForRun, trajPlanned: totalGensForRun * data.trajLengthPerWU, trajCompleted: totalGensSuccessfulForRun * data.trajLengthPerWU, trajFailed: totalGensFailedForRun * data.trajLengthPerWU, trajAborted: totalGensAbortedForRun * data.trajLengthPerWU, trajRemaining: totalGensRemainingForRun * data.trajLengthPerWU };
 
 		// Draw chart
 		prcg2Chart(projectId, runId, data.maxClonesPerRun, data.maxGensPerClone, dataSeries);
