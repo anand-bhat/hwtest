@@ -3,6 +3,17 @@ layout: page
 tagline: PRCG Progress (Gens by clone)
 tagline_min: PRCGProgress2
 ---
+<div>
+	<table id="prcg2TableSummary" class="collapse table table-sm table-borderless" data-show-header="false" data-resizable="true">
+		<thead>
+			<tr>
+				<th class="nowrap" data-field="attributeName" class="font-weight-bold" data-width="1" data-width-unit="%">Attribute</th>
+				<th data-field="attributeValue">Value</th>
+			</tr>
+		</thead>
+	</table>
+</div>
+<hr>
 <div id="prcg2Title" class="font-weight-bold"></div>
 <table>
 	<tr>
@@ -45,19 +56,6 @@ tagline_min: PRCGProgress2
 	</tr>
 </table>
 <div id="timeUpdated"></div>
-<hr>
-<div>
-	<table id="prcg2TableSummary" class="collapse table table-sm table-borderless" data-resizable="true">
-		<thead>
-			<tr>
-				<th class="nowrap" data-field="attributeName" class="font-weight-bold" data-width="1" data-width-unit="%">&nbsp;</th>
-				<th class="nowrap" data-field="attributeValueForP" data-width="1" data-width-unit="%">For Project</th>
-				<th class="nowrap" data-field="attributeValueForPR" data-width="1" data-width-unit="%">For Run</th>
-				<th class="nowrap" data-field="attributeValueForPRC" data-width="1" data-width-unit="%">For Clone</th>
-			</tr>
-		</thead>
-	</table>
-</div>
 <hr>
 <div class="chart" style="position: relative; height:50vh; width:97vw">
 	<canvas id="prcg2Chart"></canvas>

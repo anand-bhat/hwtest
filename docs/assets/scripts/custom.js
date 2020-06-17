@@ -249,24 +249,23 @@ function prcgProgress2() {
 
 		var attributes = []
 		// Project level attributes
-		//attributes[0] = { attributeName: 'Project:', attributeValue: projectId };
-		//attributes[1] = { attributeName: 'Number of Runs for this projects:', attributeValue: data.maxRuns };
-		//attributes[2] = { attributeName: 'Number of Clones per Run:', attributeValue: data.maxClonesPerRun };
-		//attributes[3] = { attributeName: 'Number of Gens per Clone:', attributeValue: data.maxGensPerClone };
-		//attributes[4] = { attributeName: 'Trajectory (simulation) length per WU:', attributeValue: data.trajLengthPerWU };
+		attributes[0] = { attributeName: 'Project:', attributeValue: projectId };
+		attributes[1] = { attributeName: 'Number of Runs for this projects:', attributeValue: data.maxRuns };
+		attributes[2] = { attributeName: 'Number of Clones per Run:', attributeValue: data.maxClonesPerRun };
+		attributes[3] = { attributeName: 'Number of Gens per Clone:', attributeValue: data.maxGensPerClone };
+		attributes[4] = { attributeName: 'Trajectory (simulation) length per WU:', attributeValue: data.trajLengthPerWU };
 
+		attributes[5] = { attributeName: 'Total planned WUs:', attributeValue: data.maxRuns * data.maxClonesPerRun * data.maxGensPerClone, attributeValuePR: data.maxClonesPerRun * data.maxGensPerClone};
+		attributes[6] = { attributeName: 'Total completed WUs:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
+		attributes[7] = { attributeName: 'Total aborted WUs:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
+		attributes[8] = { attributeName: 'Total remaining WUs:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
 
-		attributes[0] = { attributeName: 'Total planned WUs:', attributeValueP: data.maxRuns * data.maxClonesPerRun * data.maxGensPerClone, attributeValuePR: data.maxClonesPerRun * data.maxGensPerClone, attributeValuePRC: data.maxGensPerClone };
-		attributes[1] = { attributeName: 'Total completed WUs:', attributeValueP: 'TODO', attributeValuePR: 'TODO', attributeValuePRC: 'TODO' };
-		attributes[2] = { attributeName: 'Total aborted WUs:', attributeValueP: 'TODO', attributeValuePR: 'TODO', attributeValuePRC: 'TODO' };
-		attributes[3] = { attributeName: 'Total remaining WUs:', attributeValueP: 'TODO', attributeValuePR: 'TODO', attributeValuePRC: 'TODO' };
+		attributes[9] = { attributeName: 'Total planned trajectory length:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
+		attributes[10] = { attributeName: 'Total completed trajectory length:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
+		attributes[11] = { attributeName: 'Total aborted trajectory length:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
+		attributes[12] = { attributeName: 'Total remaining trajectory length:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
 
-		attributes[4] = { attributeName: 'Total trajectories:', attributeValueP: 'TODO', attributeValuePR: 'TODO', attributeValuePRC: 'TODO' };
-		attributes[5] = { attributeName: 'Total completed trajectories:', attributeValueP: 'TODO', attributeValuePR: 'TODO', attributeValuePRC: 'TODO' };
-		attributes[6] = { attributeName: 'Total aborted trajectories:', attributeValueP: 'TODO', attributeValuePR: 'TODO', attributeValuePRC: 'TODO' };
-		attributes[3] = { attributeName: 'Total remaining trajectories:', attributeValueP: 'TODO', attributeValuePR: 'TODO', attributeValuePRC: 'TODO' };
-
-		$('#prcg2TableSummary').bootstrapTable('updateColumnTitle', { field: 'attributeValueP', title: 'For this Project' })
+		//$('#prcg2TableSummary').bootstrapTable('updateColumnTitle', { field: 'attributeValueP', title: 'For this Project' })
 
 		$.each(runData.clones, function(index, clone) {
 			// genCount is used for calculating percentage and remaining work
