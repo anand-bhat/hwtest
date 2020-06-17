@@ -104,6 +104,12 @@ function prcgProgress2Link(project, run) {
 	return `<div><a href="./prcgProgress2?project=${project}&run=${run}">Details</a></div>`;
 }
 
+function abortedAlert(abortedCount) {
+	'use strict';
+	var entity = abortedCount > 1 ? 'trajectories' : 'trajectory';
+	return ` <svg class="bi bi-exclamation-triangle-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 5zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"><title>${abortedCount} ${entity} aborted</title></path></svg>`;
+}
+
 function prcgProgress() {
 	'use strict';
 	var urlParams = new URLSearchParams(window.location.search);
@@ -118,7 +124,7 @@ function prcgProgress() {
 		return;
 	}
 
-	$.getJSON("../assets/data/" + projectId + ".json")
+	$.getJSON('../assets/data/' + projectId + '.json')
 	.done(function(data) {
 		$('#prcgTitle').html('Progress for Project: ' + projectId);
 		$('#timeUpdated').html('Last updated at ' + new Date(data.lastUpdated).toLocaleString());
@@ -171,12 +177,8 @@ function prcgProgress() {
 			// Percentage completion for the run
 			percentage =  Math.round((((100 * totalGensCompletedForRun) / totalGensForRun) + Number.EPSILON) * 100) / 100;
 
-			// TODO: Pluralize in a better manner
-			var abortedAlert1 = ` <svg class="bi bi-exclamation-triangle-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 5zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"><title>${abortedCount} trajectory aborted </title></path></svg>`;
-			var abortedAlert = ` <svg class="bi bi-exclamation-triangle-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 5zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"><title>${abortedCount} trajectories aborted</title></path></svg>`;
-
 			// Display string to show for Run # along with any indicators for aborted trajectories
-			var runText = abortedCount > 0 ? (abortedCount === 1 ? run.run + abortedAlert1 : run.run + abortedAlert) : run.run;
+			var runText = abortedCount > 0 ? run.run + abortedAlert(abortedCount) : run.run;
 
 			// Run data table row
 			metricsRun[index] = { run: runText, details: prcgProgress2Link(projectId, run.run), remaining: totalWUsRemaining, completed: totalWUsCompleted, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
@@ -238,7 +240,7 @@ function prcgProgress2() {
 	projectId = parseInt(projectId);
 	runId = parseInt(runId);
 
-	$.getJSON("../assets/data/" + projectId + ".json")
+	$.getJSON('../assets/data/' + projectId + '.json')
 	.done(function(data) {
 		var runData = data.runs.find(run=>run.run==runId);
 		if (!runData) {
@@ -248,8 +250,6 @@ function prcgProgress2() {
 
 		$('#prcg2Title').html('Progress for Project: ' + projectId + '; Run: ' + runId);
 		$('#timeUpdated').html('Last updated at ' + new Date(data.lastUpdated).toLocaleString());
-
-		var abortedAlert = ' <svg class="bi bi-exclamation-triangle-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 5zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"><title>Trajectory aborted due to failures</title></path></svg>';
 
 		var dataSeries = [];
 		var metricsClone = [];
@@ -284,7 +284,7 @@ function prcgProgress2() {
 
 			// Display string to show for Last completed gen # along with any indicator for aborted trajectories
 			var lastCompleted = clone.gen === -1 ? '-' : clone.gen;
-			lastCompleted = clone.aborted ? lastCompleted + abortedAlert : lastCompleted;
+			lastCompleted = clone.aborted ? lastCompleted + abortedAlert(1) : lastCompleted;
 
 			// Keep track of how many Gens (WUs) have been successfully completed
 			totalGensSuccessfulForRun += (clone.gen === -1 ? 0 : (clone.aborted ? clone.gen : clone.gen + 1));
