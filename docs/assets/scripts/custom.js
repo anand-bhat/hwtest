@@ -310,7 +310,7 @@ function prcgProgress2() {
 		$('#prcg2ProgressBar').html(getProgressBar(percentage, colorClass[colorClassIndex]));
 
 		// Show tables
-		$('#prcg2TableSummary').show();
+		$('#prcg2ProjectTable').show();
 		$('#prcg2CloneTable').show();
 
 		// Display button to navigate up to project details
