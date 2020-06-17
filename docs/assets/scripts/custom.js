@@ -248,11 +248,11 @@ function prcgProgress2() {
 		var trajLengthPerWU = data.trajLengthPerWU;
 
 		var attributes = []
-		attributes[0] = { attributeName: 'Project:', attributeValue: projectId);
-		attributes[1] = { attributeName: 'Number of Runs for this projects:', attributeValue: data.maxRuns);
-		attributes[2] = { attributeName: 'Number of Clones per Run:', attributeValue: data.maxClonesPerRun);
-		attributes[3] = { attributeName: 'Number of Gens per Clone:', attributeValue: data.maxGensPerClone);
-		attributes[4] = { attributeName: 'Trajectory (simulation) length per WU:', attributeValue: data.trajLengthPerWU);
+		attributes[0] = { attributeName: 'Project:', attributeValue: projectId };
+		attributes[1] = { attributeName: 'Number of Runs for this projects:', attributeValue: data.maxRuns };
+		attributes[2] = { attributeName: 'Number of Clones per Run:', attributeValue: data.maxClonesPerRun };
+		attributes[3] = { attributeName: 'Number of Gens per Clone:', attributeValue: data.maxGensPerClone };
+		attributes[4] = { attributeName: 'Trajectory (simulation) length per WU:', attributeValue: data.trajLengthPerWU };
 
 		$.each(runData.clones, function(index, clone) {
 			// genCount is used for calculating percentage and remaining work
