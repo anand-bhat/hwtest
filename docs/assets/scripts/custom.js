@@ -251,10 +251,10 @@ function prcgProgress2() {
 		var totalGensAbortedForRun = 0;
 		var totalGensRemainingForRun = 0;
 
-		var attributesProject = []
+		//var attributesProject = []
 		// Project level attributes
-		attributesProject[0] = { project: projectId, maxRuns: data.maxRuns, maxClonesPerRun: data.maxClonesPerRun, maxGensPerClone: data.maxGensPerClone, trajLengthPerWU: data.trajLengthPerWU };
-		var projectConfig = 'Project ' + projectId + ' has been configured to have ' + data.maxRuns + (data.maxRuns > 1 ? ' Runs' : 'Run') + ', each with ' + data.maxClonesPerRun + (data.maxClonesPerRun > 1 ? ' Clones' : 'Clone') + '. Each Clone has ' + data.maxGensPerClone + (data.maxGensPerClone > 1 ? ' Gens' : 'Gen') + '. The total WUs for the project is ' + (data.maxRuns * data.maxClonesPerRun * data.maxGensPerClone) + '. Each WU represents ' + data.trajLengthPerWU + 'nanoseconds of simulation.';
+		//attributesProject[0] = { project: projectId, maxRuns: data.maxRuns, maxClonesPerRun: data.maxClonesPerRun, maxGensPerClone: data.maxGensPerClone, trajLengthPerWU: data.trajLengthPerWU };
+		var projectConfig = 'Project ' + projectId + ' has been configured to have ' + data.maxRuns + (data.maxRuns > 1 ? ' Runs' : 'Run') + ', each with ' + data.maxClonesPerRun + (data.maxClonesPerRun > 1 ? ' Clones' : 'Clone') + '. Each Clone has ' + data.maxGensPerClone + (data.maxGensPerClone > 1 ? ' Gens' : 'Gen') + ', resulting in ' + (data.maxRuns * data.maxClonesPerRun * data.maxGensPerClone) ' potential WUs for the project. Each WU represents ' + data.trajLengthPerWU + 'nanoseconds of simulation.';
 		$('#projectConfig').html(projectConfig);
 
 		$.each(runData.clones, function(index, clone) {
@@ -305,7 +305,7 @@ function prcgProgress2() {
 		prcg2Chart(projectId, runId, data.maxClonesPerRun, data.maxGensPerClone, dataSeries);
 
 		// Populate data into project details table
-		$('#prcg2ProjectTable').bootstrapTable({data: attributesProject, formatNoMatches: function () {return 'No data found.';}});
+		//$('#prcg2ProjectTable').bootstrapTable({data: attributesProject, formatNoMatches: function () {return 'No data found.';}});
 
 		// Populate data into run details table
 		$('#prcg2RunTable').bootstrapTable({data: attributesRun, formatNoMatches: function () {return 'No data found.';}});
