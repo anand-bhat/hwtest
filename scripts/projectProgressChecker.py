@@ -25,6 +25,7 @@ def main(argv):
     parser.add_argument('-c', '--clone', type=int, help='Max. number of clones per run')
     parser.add_argument('-g', '--gen', type=int, help='Max. number of gens per clone')
     parser.add_argument('-e', '--errors', type=int, default=5, help='Max. number of errors before the trajectory is aborted (default: 5)')
+    parser.add_argument('-l', '--length', type=int, help='Trajectory length (in ns) per WU')
     args = parser.parse_args()
 
     projectFile = args.file
@@ -34,11 +35,12 @@ def main(argv):
         maxClonesPerRun = args.clone
         maxGensPerClone = args.gen
         maxFailures = args.errors
-        if not project or not maxRuns or not maxClonesPerRun or not maxGensPerClone:
-            print('projectProgressChecker.py: error: Missing argument -f/--file OR all of the following arguments: -p/--project, -r/--run, -c/--clone, -g/--gen')
+        trajLengthPerWU = args.length
+        if not project or not maxRuns or not maxClonesPerRun or not maxGensPerClone or not trajLengthPerWU:
+            print('projectProgressChecker.py: error: Missing argument -f/--file OR all of the following arguments: -p/--project, -r/--run, -c/--clone, -g/--gen, -l/--length')
             sys.exit(2)
         projectFile = str(project) + '.json'
-        create_projects_json(projectFile, project, maxRuns, maxClonesPerRun, maxGensPerClone, maxFailures)
+        create_projects_json(projectFile, project, maxRuns, maxClonesPerRun, maxGensPerClone, maxFailures, trajLengthPerWU)
 
     global MAX_FAILURES
 
@@ -128,7 +130,7 @@ def main(argv):
     print('Done')
 
 
-def create_projects_json(projectFile, project, maxRuns, maxClonesPerRun, maxGensPerClone, maxFailures):
+def create_projects_json(projectFile, project, maxRuns, maxClonesPerRun, maxGensPerClone, maxFailures, trajLengthPerWU):
     """Create the projects file."""
     # Write projects JSON
     project_entry = json.loads(json.dumps({}))
@@ -138,6 +140,7 @@ def create_projects_json(projectFile, project, maxRuns, maxClonesPerRun, maxGens
     project_entry['maxRuns'] = maxRuns
     project_entry['maxClonesPerRun'] = maxClonesPerRun
     project_entry['maxGensPerClone'] = maxGensPerClone
+    project_entry['trajLengthPerWU'] = trajLengthPerWU
     runs = []
 
     for run in range(maxRuns):

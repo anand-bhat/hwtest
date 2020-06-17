@@ -245,6 +245,7 @@ function prcgProgress2() {
 		var percentage = 0.0;
 		var colorClassIndex = '';
 		var totalGensForRun = data.maxClonesPerRun * data.maxGensPerClone;
+		var trajLengthPerWU = data.trajLengthPerWU;
 
 		$.each(runData.clones, function(index, clone) {
 			// genCount is used for calculating percentage and remaining work
@@ -267,8 +268,11 @@ function prcgProgress2() {
 			var lastCompleted = clone.gen === -1 ? '-' : clone.gen;
 			lastCompleted = clone.aborted ? lastCompleted + abortedAlert : lastCompleted;
 
+			// Trajectory length for this clone
+			var trajLength = clone.gen === -1 ? 0 : (clone.gen + 1) * trajLengthPerWU;
+
 			// Data table row
-			dataRows[index] = { clone: clone.clone, gen: lastCompleted, completed: clone.gen + 1, remaining: (data.maxGensPerClone - genCount), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			dataRows[index] = { clone: clone.clone, gen: lastCompleted, trajLength: trajLength, completed: clone.gen + 1, remaining: (data.maxGensPerClone - genCount), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 
 		// Draw chart
