@@ -251,15 +251,15 @@ function prcgProgress2() {
 		// Project level attributes
 		attributesProject[0] = { project: projectId, maxRuns: data.maxRuns, maxClonesPerRun: data.maxClonesPerRun, maxGensPerClone: data.maxGensPerClone, trajLengthPerWU, attributeValue: data.trajLengthPerWU };
 
-		attributes[5] = { attributeName: 'Total planned WUs:', attributeValue: data.maxRuns * data.maxClonesPerRun * data.maxGensPerClone, attributeValuePR: data.maxClonesPerRun * data.maxGensPerClone};
-		attributes[6] = { attributeName: 'Total completed WUs:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
-		attributes[7] = { attributeName: 'Total aborted WUs:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
-		attributes[8] = { attributeName: 'Total remaining WUs:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
+		//attributes[5] = { attributeName: 'Total planned WUs:', attributeValue: data.maxRuns * data.maxClonesPerRun * data.maxGensPerClone, attributeValuePR: data.maxClonesPerRun * data.maxGensPerClone};
+		//attributes[6] = { attributeName: 'Total completed WUs:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
+		//attributes[7] = { attributeName: 'Total aborted WUs:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
+		//attributes[8] = { attributeName: 'Total remaining WUs:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
 
-		attributes[9] = { attributeName: 'Total planned trajectory length:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
-		attributes[10] = { attributeName: 'Total completed trajectory length:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
-		attributes[11] = { attributeName: 'Total aborted trajectory length:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
-		attributes[12] = { attributeName: 'Total remaining trajectory length:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
+		//attributes[9] = { attributeName: 'Total planned trajectory length:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
+		//attributes[10] = { attributeName: 'Total completed trajectory length:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
+		//attributes[11] = { attributeName: 'Total aborted trajectory length:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
+		//attributes[12] = { attributeName: 'Total remaining trajectory length:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
 
 		//$('#prcg2TableSummary').bootstrapTable('updateColumnTitle', { field: 'attributeValueP', title: 'For this Project' })
 
