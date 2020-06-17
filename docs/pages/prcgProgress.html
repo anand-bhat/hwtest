@@ -3,16 +3,42 @@ layout: page
 tagline: PRCG Progress (Runs by project)
 tagline_min: PRCGProgress
 ---
+<div id="projectConfig"></div>
+<hr>
 <div id="prcgTitle" class="font-weight-bold"></div>
 <div id="prcgProgressBar"></div>
+<div>
+	<table id="prcgProjectTable" class="collapse table-sm">
+		<thead>
+			<tr>
+				<th colspan="5">WU counts for this project </th>
+				<th colspan="5">Trajectory simulation lengths (ns) for this project</th>
+			</tr>
+			<tr>
+				<th data-field="wuPlanned">Planned</th>
+				<th data-field="wuCompleted">Completed</th>
+				<th data-field="wuFailed">Failed</th>
+				<th data-field="wuAborted">Aborted</th>
+				<th data-field="wuRemaining">Remaining</th>
+
+				<th data-field="trajPlanned">Planned </th>
+				<th data-field="trajCompleted">Completed</th>
+				<th data-field="trajFailed">Failed</th>
+				<th data-field="trajAborted">Aborted</th>
+				<th data-field="trajRemaining">Remaining</th>
+			</tr>
+		</thead>
+	</table>
+</div>
 <div id="timeUpdated"></div>
 <hr>
 <div>
-	<table id="prcgTable" class="collapse" data-show-footer="true">
+	<table id="prcgRunTable" class="collapse" data-show-footer="true">
 		<thead>
 			<tr>
 				<th data-field="run" data-footer-formatter="totalLabelFormatter" data-sortable="true" data-width="1" data-width-unit="%">Run</th>
 				<th data-field="details" data-width="1" data-width-unit="%">&nbsp;</th>
+				<th data-field="trajLength" data-footer-formatter="totalNumberFormatter" data-sortable="true" data-width="1" data-width-unit="%">Length of trajectory (ns)</th>
 				<th data-field="completed" data-footer-formatter="totalNumberFormatter" data-sortable="true" data-width="1" data-width-unit="%">Completed WUs</th>
 				<th data-field="remaining" data-footer-formatter="totalNumberFormatter" data-sortable="true" data-width="1" data-width-unit="%">Remaining WUs</th>
 				<th data-field="progressVal" data-visible="false">Progress</th>

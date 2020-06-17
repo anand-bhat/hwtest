@@ -47,11 +47,11 @@ tagline_min: PRCGProgress2
 	</tr>
 </table>
 <div>
-	<table id="prcg2RunTable" class="collapse table-sm" data-resizable="true">
+	<table id="prcg2RunTable" class="collapse table-sm">
 		<thead>
 			<tr>
-				<th colspan="5">WU counts</th>
-				<th colspan="5">Trajectory simulation lengths (ns)</th>
+				<th colspan="5">WU counts for this Run</th>
+				<th colspan="5">Trajectory simulation lengths (ns) for this Run</th>
 			</tr>
 			<tr>
 				<th data-field="wuPlanned">Planned</th>
@@ -81,7 +81,7 @@ tagline_min: PRCGProgress2
 			<tr>
 				<th data-field="clone" data-footer-formatter="totalLabelFormatter" data-sortable="true" data-width="1" data-width-unit="%">Clone</th>
 				<th data-field="gen" data-sortable="true" data-width="1" data-width-unit="%">Last processed Gen</th>
-				<th data-field="trajLength" data-sortable="true" data-width="1" data-width-unit="%">Length of trajectory (ns)</th>
+				<th data-field="trajLength" data-footer-formatter="totalNumberFormatter" data-sortable="true" data-width="1" data-width-unit="%">Length of trajectory (ns)</th>
 				<th data-field="completed" data-footer-formatter="totalNumberFormatter" data-sortable="true" data-width="1" data-width-unit="%">Completed WUs</th>
 				<th data-field="remaining" data-footer-formatter="totalNumberFormatter" data-sortable="true" data-width="1" data-width-unit="%">Remaining WUs</th>
 				<th data-field="progressVal" data-visible="false">Progress</th>
