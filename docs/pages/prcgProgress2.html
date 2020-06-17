@@ -17,65 +17,6 @@ tagline_min: PRCGProgress2
 	</table>
 </div>
 <hr>
-<div>
-	<table id="prcg2RunTable" class="collapse table-sm" data-show-header="false" data-resizable="true">
-		<thead>
-			<tr>
-				<th class="nowrap" data-field="attributeName" class="font-weight-bold" data-width="1" data-width-unit="%">Attribute</th>
-				<th data-field="attributeValue">Value</th>
-			</tr>
-		</thead>
-	</table>
-</div>
-<table
-		id="table"
-		data-toggle="table"
-		data-url="json/data1.json">
-	<thead>
-	<tr>
-		<th data-field="scope" rowspan="2">Scope</th>
-		<th colspan="5">Entire project</th>
-	</tr>
-	<tr>
-		<th data-field="wuPlannedP">Planned WU count</th>
-		<th data-field="wuCompletedP">Completed WU count</th>
-		<th data-field="wuFailedP">Failed WU count</th>
-		<th data-field="wuAbortedP">Aborted WU count</th>
-		<th data-field="wuRemainingP">Remaining WU count</th>
-		<th data-field="trajPlannedP">Planned trajectory (ns)</th>
-		<th data-field="trajCompletedP">Completed trajectory (ns)</th>
-		<th data-field="trajFailedP">Failed trajectory (ns)</th>
-		<th data-field="trajAbortedP">Aborted trajectory (ns)</th>
-		<th data-field="trajRemainingP">Remaining trajectory (ns)</th>
-	</tr>
-	</thead>
-</table>
-<table
-		id="table2"
-		data-toggle="table"
-		data-url="json/data1.json">
-	<thead>
-	<tr>
-		<th data-field="scope" rowspan="2">Scope</th>
-		<th colspan="5">WU count</th>
-		<th colspan="5">Trajectory simulation (ns)</th>
-	</tr>
-	<tr>
-		<th data-field="wuPlannedP">Planned</th>
-		<th data-field="wuCompletedP">Completed</th>
-		<th data-field="wuFailedP">Failed</th>
-		<th data-field="wuAbortedP">Aborted</th>
-		<th data-field="wuRemainingP">Remaining</th>
-
-		<th data-field="trajPlannedP">Planned </th>
-		<th data-field="trajCompletedP">Completed</th>
-		<th data-field="trajFailedP">Failed</th>
-		<th data-field="trajAbortedP">Aborted</th>
-		<th data-field="trajRemainingP">Remaining</th>
-	</tr>
-	</thead>
-</table>
-<hr>
 <div id="prcg2Title" class="font-weight-bold"></div>
 <table>
 	<tr>
@@ -118,6 +59,31 @@ tagline_min: PRCGProgress2
 	</tr>
 </table>
 <div id="timeUpdated"></div>
+<hr>
+<div>
+	<table id="prcg2RunTable" class="collapse table-sm" data-show-header="false" data-resizable="true">
+		<thead>
+			<tr>
+				<th class="nowrap font-weight-bold" data-field="scope" rowspan="2">Scope</th>
+				<th colspan="5">WU count</th>
+				<th colspan="5">Trajectory simulation (ns)</th>
+			</tr>
+			<tr>
+				<th data-field="wuPlanned">Planned</th>
+				<th data-field="wuCompleted">Completed</th>
+				<th data-field="wuFailed">Failed</th>
+				<th data-field="wuAborted">Aborted</th>
+				<th data-field="wuRemaining">Remaining</th>
+
+				<th data-field="trajPlanned">Planned </th>
+				<th data-field="trajCompleted">Completed</th>
+				<th data-field="trajFailed">Failed</th>
+				<th data-field="trajAborted">Aborted</th>
+				<th data-field="trajRemaining">Remaining</th>
+			</tr>
+		</thead>
+	</table>
+</div>
 <hr>
 <div class="chart" style="position: relative; height:50vh; width:97vw">
 	<canvas id="prcg2Chart"></canvas>
