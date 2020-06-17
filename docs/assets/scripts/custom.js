@@ -247,13 +247,9 @@ function prcgProgress2() {
 		var totalGensForRun = data.maxClonesPerRun * data.maxGensPerClone;
 		var trajLengthPerWU = data.trajLengthPerWU;
 
-		var attributes = []
+		var attributesProject = []
 		// Project level attributes
-		attributes[0] = { attributeName: 'Project:', attributeValue: projectId };
-		attributes[1] = { attributeName: 'Number of Runs for this projects:', attributeValue: data.maxRuns };
-		attributes[2] = { attributeName: 'Number of Clones per Run:', attributeValue: data.maxClonesPerRun };
-		attributes[3] = { attributeName: 'Number of Gens per Clone:', attributeValue: data.maxGensPerClone };
-		attributes[4] = { attributeName: 'Trajectory (simulation) length per WU:', attributeValue: data.trajLengthPerWU };
+		attributesProject[0] = { project: projectId, maxRuns: data.maxRuns, maxClonesPerRun: data.maxClonesPerRun, maxGensPerClone: data.maxGensPerClone, trajLengthPerWU, attributeValue: data.trajLengthPerWU };
 
 		attributes[5] = { attributeName: 'Total planned WUs:', attributeValue: data.maxRuns * data.maxClonesPerRun * data.maxGensPerClone, attributeValuePR: data.maxClonesPerRun * data.maxGensPerClone};
 		attributes[6] = { attributeName: 'Total completed WUs:', attributeValue: 'TODO', attributeValuePR: 'TODO' };
@@ -298,11 +294,11 @@ function prcgProgress2() {
 		// Draw chart
 		prcg2Chart(projectId, runId, data.maxClonesPerRun, data.maxGensPerClone, dataSeries);
 
-		// Populate data into attributes table
-		$('#prcg2TableSummary').bootstrapTable({data: attributes, formatNoMatches: function () {return 'No data found.';}});
+		// Populate data into project details table
+		$('#prcg2ProjectTable').bootstrapTable({data: attributesProject, formatNoMatches: function () {return 'No data found.';}});
 
-		// Populate data into table
-		$('#prcg2Table').bootstrapTable({data: dataRows, formatNoMatches: function () {return 'No data found.';}});
+		// Populate data into clone details table
+		$('#prcg2CloneTable').bootstrapTable({data: dataRows, formatNoMatches: function () {return 'No data found.';}});
 
 		// Determine color for the progress bar for the run
 		colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompletedForRun) / totalGensForRun) - 1);
@@ -315,7 +311,7 @@ function prcgProgress2() {
 
 		// Show tables
 		$('#prcg2TableSummary').show();
-		$('#prcg2Table').show();
+		$('#prcg2CloneTable').show();
 
 		// Display button to navigate up to project details
 		$('#prcg2UpToProjectURL').attr('href', './prcgProgress?project=' + projectId);

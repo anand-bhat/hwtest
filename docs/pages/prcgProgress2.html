@@ -4,7 +4,21 @@ tagline: PRCG Progress (Gens by clone)
 tagline_min: PRCGProgress2
 ---
 <div>
-	<table id="prcg2TableSummary" class="collapse table table-sm table-borderless" data-show-header="false" data-resizable="true">
+	<table id="prcg2ProjectTable" class="collapse table table-sm table-borderless" data-resizable="true">
+		<thead>
+			<tr>
+				<th class="nowrap" data-field="project" class="font-weight-bold" data-width="1" data-width-unit="%">Project</th>
+				<th class="nowrap" data-field="maxRuns" data-width="1" data-width-unit="%">Number of Runs</th>
+				<th class="nowrap" data-field="maxClonesPerRun" data-width="1" data-width-unit="%">Number of Clones per Run</th>
+				<th class="nowrap" data-field="maxGensPerClone" data-width="1" data-width-unit="%">Number of Gens per Clone</th>
+				<th class="nowrap" data-field="trajLengthPerWU">Trajectory (simulation) length per WU</th>
+			</tr>
+		</thead>
+	</table>
+</div>
+<hr>
+<div>
+	<table id="prcg2RunTable" class="collapse table table-sm table-borderless" data-show-header="false" data-resizable="true">
 		<thead>
 			<tr>
 				<th class="nowrap" data-field="attributeName" class="font-weight-bold" data-width="1" data-width-unit="%">Attribute</th>
@@ -62,7 +76,7 @@ tagline_min: PRCGProgress2
 </div>
 <hr>
 <div>
-	<table id="prcg2Table" class="collapse" data-show-footer="true">
+	<table id="prcg2CloneTable" class="collapse" data-show-footer="true">
 		<thead>
 			<tr>
 				<th data-field="clone" data-footer-formatter="totalLabelFormatter" data-sortable="true" data-width="1" data-width-unit="%">Clone</th>
