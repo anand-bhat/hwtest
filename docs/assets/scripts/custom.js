@@ -166,15 +166,15 @@ function prcgProgress() {
 				// abortedCount is used to display number of aborted trajectories
 				abortedCount = clone.aborted ? abortedCount + 1 : abortedCount;
 
-				// totalWUsCompleted is used to display number of completed WUs
-				// Cannot use genCount as it'll inflate numbers for aborted trajectories
-				totalWUsCompleted = totalWUsCompleted + (clone.gen + 1);
-
 				// Gens (WUs) have been successfully completed for this clone
 				var completed = (clone.gen === -1 ? 0 : (clone.aborted ? clone.gen : clone.gen + 1));
 
 				// Keep track of how many Gens (WUs) have been successfully completed
 				totalGensSuccessfulForProject += completed;
+
+				// totalWUsCompleted is used to display number of completed WUs per run
+				// Cannot use genCount as it'll inflate numbers for aborted trajectories
+				totalWUsCompleted += completed;
 
 				// Keep track of how many Gens (WUs) have failed
 				totalGensFailedForProject += clone.aborted ? 1 : 0;
@@ -199,7 +199,7 @@ function prcgProgress() {
 			var runText = abortedCount > 0 ? run.run + abortedAlert(abortedCount) : run.run;
 
 			// Run data table row
-			metricsRun[index] = { run: runText, details: prcgProgress2Link(projectId, run.run), remaining: totalWUsRemaining, completed: totalWUsCompleted, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			metricsRun[index] = { run: runText, details: prcgProgress2Link(projectId, run.run), completed: totalWUsCompleted, remaining: totalWUsRemaining, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 
 		var metricsProject = [];
