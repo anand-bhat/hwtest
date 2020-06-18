@@ -199,7 +199,7 @@ function prcgProgress() {
 			var runText = abortedCount > 0 ? run.run + abortedAlert(abortedCount) : run.run;
 
 			// Run data table row
-			metricsRun[index] = { run: runText, details: prcgProgress2Link(projectId, run.run), completed: totalWUsCompleted, remaining: totalWUsRemaining, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			metricsRun[index] = { run: runText, details: prcgProgress2Link(projectId, run.run), trajLength: totalWUsCompleted * data.trajLengthPerWU, completed: totalWUsCompleted, remaining: totalWUsRemaining, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 
 		var metricsProject = [];
@@ -322,11 +322,8 @@ function prcgProgress2() {
 			// Keep track of how many Gens (WUs) are remaining
 			totalGensRemainingForRun += (data.maxGensPerClone - genCount)
 
-			// Trajectory length for this clone
-			var trajLength = clone.gen === -1 ? 0 : (clone.gen + 1) * data.trajLengthPerWU;
-
 			// Clone data table row
-			metricsClone[index] = { clone: clone.clone, gen: lastCompleted, trajLength: trajLength, completed: completed, remaining: (data.maxGensPerClone - genCount), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			metricsClone[index] = { clone: clone.clone, gen: lastCompleted, trajLength: completed * data.trajLengthPerWU, completed: completed, remaining: (data.maxGensPerClone - genCount), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 
 		var metricsRun = []
