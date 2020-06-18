@@ -1,18 +1,18 @@
 {
   "project": 11767,
   "maxFailures": 5,
-  "lastUpdated": 1592114768513,
+  "lastUpdated": 1592456205916,
   "maxRuns": 1,
   "maxClonesPerRun": 40,
   "maxGensPerClone": 1000,
-  "trajLengthPerWU": 0.50,
+  "trajLengthPerWU": 0.4,
   "runs": [
     {
       "run": 0,
       "clones": [
         {
           "clone": 0,
-          "gen": 706
+          "gen": 727
         },
         {
           "clone": 1,
@@ -36,7 +36,7 @@
         },
         {
           "clone": 6,
-          "gen": 681
+          "gen": 699
         },
         {
           "clone": 7,
@@ -64,7 +64,7 @@
         },
         {
           "clone": 13,
-          "gen": 155
+          "gen": 156
         },
         {
           "clone": 14,
