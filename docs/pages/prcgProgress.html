@@ -15,17 +15,17 @@ tagline_min: PRCGProgress
 				<th colspan="5">Trajectory simulation lengths (ns) for this project</th>
 			</tr>
 			<tr>
-				<th data-field="wuPlanned">Planned</th>
-				<th data-field="wuCompleted">Completed</th>
-				<th data-field="wuFailed">Failed</th>
-				<th data-field="wuAborted">Aborted</th>
-				<th data-field="wuRemaining">Remaining</th>
+				<th data-field="wuPlanned" data-title-tooltip="The number of WUs planned for this Project">Planned</th>
+				<th data-field="wuCompleted" data-title-tooltip="The number of WUs successfully completed for this Project">Completed</th>
+				<th data-field="wuFailed" data-title-tooltip="The number of WUs that have permanently failed for this Project">Failed</th>
+				<th data-field="wuAborted" data-title-tooltip="The number of WUs that cannot be processed for this Project due to failures in processing their predecessors">Aborted</th>
+				<th data-field="wuRemaining" data-title-tooltip="The number of WUs remaining for this Project">Remaining</th>
 
-				<th data-field="trajPlanned">Planned </th>
-				<th data-field="trajCompleted">Completed</th>
-				<th data-field="trajFailed">Failed</th>
-				<th data-field="trajAborted">Aborted</th>
-				<th data-field="trajRemaining">Remaining</th>
+				<th data-field="trajPlanned" data-title-tooltip="Total simulation time planned for this Project">Planned </th>
+				<th data-field="trajCompleted" data-title-tooltip="Total simulation time from successfully completed WUs for this Project">Completed</th>
+				<th data-field="trajFailed" data-title-tooltip="Total simulation time lost from WUs that have permanently failed for this Project">Failed</th>
+				<th data-field="trajAborted" data-title-tooltip="Total simulation time lost from WUs that cannot be processed for this Project due to failures in processing their predecessors">Aborted</th>
+				<th data-field="trajRemaining" data-title-tooltip="Total simulation time pending from WUs remaining for this Project">Remaining</th>
 			</tr>
 		</thead>
 	</table>
@@ -36,13 +36,13 @@ tagline_min: PRCGProgress
 	<table id="prcgRunTable" class="collapse" data-show-footer="true">
 		<thead>
 			<tr>
-				<th data-field="run" data-footer-formatter="totalLabelFormatter" data-sortable="true" data-width="1" data-width-unit="%">Run</th>
-				<th data-field="details" data-width="1" data-width-unit="%">&nbsp;</th>
-				<th data-field="trajLength" data-footer-formatter="totalNumberFormatter" data-sortable="true" data-width="1" data-width-unit="%">Length of trajectory (ns)</th>
-				<th data-field="completed" data-footer-formatter="totalNumberFormatter" data-sortable="true" data-width="1" data-width-unit="%">Completed WUs</th>
-				<th data-field="remaining" data-footer-formatter="totalNumberFormatter" data-sortable="true" data-width="1" data-width-unit="%">Remaining WUs</th>
+				<th data-field="run" data-footer-formatter="totalLabelFormatter" data-sortable="true" data-title-tooltip="Run # for this Project" data-width="1" data-width-unit="%">Run</th>
+				<th data-field="details" data-title-tooltip="Click the links to view details for a specific Run" data-width="1" data-width-unit="%">&nbsp;</th>
+				<th data-field="trajLength" data-footer-formatter="totalNumberFormatter" data-sortable="true" data-title-tooltip="Total simulation time from successfully completed WUs for this Run" data-width="1" data-width-unit="%">Length of trajectory (ns)</th>
+				<th data-field="completed" data-footer-formatter="totalNumberFormatter" data-title-tooltip="The number of WUs successfully completed for this Run" data-sortable="true" data-width="1" data-width-unit="%">Completed WUs</th>
+				<th data-field="remaining" data-footer-formatter="totalNumberFormatter" data-title-tooltip="The number of WUs remaining for this Run" data-sortable="true" data-width="1" data-width-unit="%">Remaining WUs</th>
 				<th data-field="progressVal" data-visible="false">Progress</th>
-				<th data-field="progress" data-sortable="true" data-sort-name="progressVal">Progress</th>
+				<th data-field="progress" data-sortable="true" data-sort-name="progressVal" data-title-tooltip="Progress expressed in terms of the number of remaining WUs for this Run">Progress</th>
 			</tr>
 		</thead>
 	</table>
