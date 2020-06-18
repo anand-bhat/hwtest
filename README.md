@@ -1,12 +1,12 @@
 
 # Folding@home
 
-[![Code Climate](https://codeclimate.com/github/anand-bhat/foldingathome/badges/gpa.svg)](https://codeclimate.com/github/anand-bhat/foldingathome)
-[![Issue Count](https://codeclimate.com/github/anand-bhat/foldingathome/badges/issue_count.svg)](https://codeclimate.com/github/anand-bhat/foldingathome)
+[![Code Climate](https://codeclimate.com/github/anand-bhat/hwtest/badges/gpa.svg)](https://codeclimate.com/github/anand-bhat/foldingathome)
+[![Issue Count](https://codeclimate.com/github/anand-bhat/hwtest/badges/issue_count.svg)](https://codeclimate.com/github/anand-bhat/foldingathome)
 
 Some tools and scripts for the [Folding@home](https://foldingathome.org) project.
 
-The project site is available at <https://anand-bhat.github.io/foldingathome/>.
+The project site is available at <https://anand-bhat.github.io/hwtest/>.
 The code (and content) for the site rests within the `/docs` folder.
 
 ## Components used for website
