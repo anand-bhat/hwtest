@@ -184,7 +184,7 @@ function prcgProgress() {
 				totalGensFailedForProject += clone.aborted ? 1 : 0;
 
 				// Keep track of how many future Gens (WUs) have been aborted if this gen failed
-				totalGensAbortedForProject += clone.aborted ? (data.maxGensPerClone - clone.gen - 1) : 0;
+				totalGensAbortedForProject += clone.aborted ? (data.maxGensPerClone - (clone.gen === -1 ? 0 : clone.gen + 1) - 1) : 0;
 
 				// Keep track of how many Gens (WUs) are remaining
 				totalGensRemainingForProject += (data.maxGensPerClone - genCount)
@@ -320,7 +320,7 @@ function prcgProgress2() {
 			totalGensFailedForRun += clone.aborted ? 1 : 0;
 
 			// Keep track of how many future Gens (WUs) have been aborted if this gen failed
-			totalGensAbortedForRun += clone.aborted ? (data.maxGensPerClone - clone.gen - 1) : 0;
+			totalGensAbortedForRun += clone.aborted ? (data.maxGensPerClone - (clone.gen === -1 ? 0 : clone.gen + 1) - 1) : 0;
 
 			// Keep track of how many Gens (WUs) are remaining
 			totalGensRemainingForRun += (data.maxGensPerClone - genCount)
