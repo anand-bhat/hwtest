@@ -72,7 +72,6 @@ def main(argv):
 
             # Special case: Check next gen
             genToSearch = gen + 1
-            print('   Starting processing for Project {}, Run {}, Clone {}. Gen {}...'.format(project, run, clone, genToSearch))
             response = wu_check(project, run, clone, genToSearch)
             if response == 0:
                 print('   No progress detected')
@@ -92,7 +91,6 @@ def main(argv):
 
             # Special case: Check last gen
             genToSearch = maxGensPerClone - 1
-            print('   Starting processing for Project {}, Run {}, Clone {}. Gen {}...'.format(project, run, clone, genToSearch))
             response = wu_check(project, run, clone, genToSearch)
             if response == 1:
                 # Record this gen where traj has completed
@@ -185,6 +183,7 @@ def read_projects_json(projectFile):
 
 def wu_check(project, run, clone, gen):
     """Check WU status."""
+    print('   Checking status for Project {}, Run {}, Clone {}, Gen {}...'.format(project, run, clone, gen))
     url = 'https://api.foldingathome.org/project/{}/run/{}/clone/{}/gen/{}'.format(project, run, clone, gen)
     sleep(1)
     response = requests.get(url)
@@ -209,7 +208,6 @@ def wu_check(project, run, clone, gen):
 
 def binary_search_wu_check(project, run, clone, gen, lower, upper):
     """Recursively search for last completed WU."""
-    print('   Starting processing for Project {}, Run {}, Clone {}. Gen {}...'.format(project, run, clone, gen))
     response = wu_check(project, run, clone, gen)
     if response == 2:
         return (2, gen)
