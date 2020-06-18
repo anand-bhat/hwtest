@@ -202,6 +202,7 @@ function prcgProgress() {
 		$('#prcgProgressBar').html(getProgressBar(percentage, colorClass[colorClassIndex]));
 
 		// Show tables
+		$('#prcgProjectTable').show();
 		$('#prcgRunTable').show();
 	})
 	.fail(function(data) {
