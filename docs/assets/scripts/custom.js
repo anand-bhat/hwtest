@@ -112,7 +112,7 @@ function abortedAlert(abortedCount) {
 
 function projectConfigText(projectId, data) {
 	'use strict';
-	return 'Project ' + projectId + ' has been configured to have ' + data.maxRuns + (data.maxRuns > 1 ? ' Runs' : 'Run') + ', each with ' + data.maxClonesPerRun + (data.maxClonesPerRun > 1 ? ' Clones' : 'Clone') + '. Each Clone has ' + data.maxGensPerClone + (data.maxGensPerClone > 1 ? ' Gens' : 'Gen') + ', resulting in ' + (data.maxRuns * data.maxClonesPerRun * data.maxGensPerClone) + ' potential WUs for the project. Each WU represents ' + data.trajLengthPerWU + ' nanoseconds of simulation.';
+	return 'Project ' + projectId + ' has been configured to have ' + data.maxRuns + (data.maxRuns > 1 ? ' Runs' : ' Run') + ', each with ' + data.maxClonesPerRun + (data.maxClonesPerRun > 1 ? ' Clones' : ' Clone') + '. Each Clone has ' + data.maxGensPerClone + (data.maxGensPerClone > 1 ? ' Gens' : ' Gen') + ', resulting in ' + (data.maxRuns * data.maxClonesPerRun * data.maxGensPerClone) + ' potential WUs for the project. Each WU represents ' + data.trajLengthPerWU + ' nanoseconds of simulation.';
 }
 
 function prcgProgress() {
@@ -145,7 +145,6 @@ function prcgProgress() {
 		var totalGensAbortedForProject = 0;
 		var totalGensRemainingForProject = 0;
 
-		//var projectConfig = 'Project ' + projectId + ' has been configured to have ' + data.maxRuns + (data.maxRuns > 1 ? ' Runs' : 'Run') + ', each with ' + data.maxClonesPerRun + (data.maxClonesPerRun > 1 ? ' Clones' : 'Clone') + '. Each Clone has ' + data.maxGensPerClone + (data.maxGensPerClone > 1 ? ' Gens' : 'Gen') + ', resulting in ' + (data.maxRuns * data.maxClonesPerRun * data.maxGensPerClone) + ' potential WUs for the project. Each WU represents ' + data.trajLengthPerWU + ' nanoseconds of simulation.';
 		$('#projectConfig').html(projectConfigText(projectId, data));
 
 		$.each(data.runs, function(index, run) {
@@ -288,7 +287,6 @@ function prcgProgress2() {
 		var totalGensAbortedForRun = 0;
 		var totalGensRemainingForRun = 0;
 
-		//var projectConfig = 'Project ' + projectId + ' has been configured to have ' + data.maxRuns + (data.maxRuns > 1 ? ' Runs' : 'Run') + ', each with ' + data.maxClonesPerRun + (data.maxClonesPerRun > 1 ? ' Clones' : 'Clone') + '. Each Clone has ' + data.maxGensPerClone + (data.maxGensPerClone > 1 ? ' Gens' : 'Gen') + ', resulting in ' + (data.maxRuns * data.maxClonesPerRun * data.maxGensPerClone) + ' potential WUs for the project. Each WU represents ' + data.trajLengthPerWU + ' nanoseconds of simulation.';
 		$('#projectConfig').html(projectConfigText(projectId, data));
 
 		$.each(runData.clones, function(index, clone) {
