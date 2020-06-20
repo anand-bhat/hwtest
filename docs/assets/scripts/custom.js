@@ -334,12 +334,12 @@ function prcgProgress2() {
 			totalGensRemainingForRun += (data.maxGensPerClone - genCount)
 
 			// Clone data table row
-			metricsClone[index] = { clone: clone.clone, gen: lastCompleted, trajLength: completed * data.trajLengthPerWU, completed: completed, remaining: (data.maxGensPerClone - genCount), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			metricsClone[index] = { clone: clone.clone, gen: lastCompleted, trajLength: round(completed * data.trajLengthPerWU, 3), completed: completed, remaining: (data.maxGensPerClone - genCount), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 
 		var metricsRun = []
 		// Run level metrics
-		metricsRun[0] = { wuPlanned: totalGensForRun, wuCompleted: totalGensSuccessfulForRun, wuFailed: totalGensFailedForRun, wuAborted: totalGensAbortedForRun, wuRemaining: totalGensRemainingForRun, trajPlanned: totalGensForRun * data.trajLengthPerWU, trajCompleted: totalGensSuccessfulForRun * data.trajLengthPerWU, trajFailed: totalGensFailedForRun * data.trajLengthPerWU, trajAborted: totalGensAbortedForRun * data.trajLengthPerWU, trajRemaining: totalGensRemainingForRun * data.trajLengthPerWU };
+		metricsRun[0] = { wuPlanned: totalGensForRun, wuCompleted: totalGensSuccessfulForRun, wuFailed: totalGensFailedForRun, wuAborted: totalGensAbortedForRun, wuRemaining: totalGensRemainingForRun, trajPlanned: round(totalGensForRun * data.trajLengthPerWU, 3), trajCompleted: round(totalGensSuccessfulForRun * data.trajLengthPerWU, 3), trajFailed: round(totalGensFailedForRun * data.trajLengthPerWU, 3), trajAborted: round(totalGensAbortedForRun * data.trajLengthPerWU, 3), trajRemaining: round(totalGensRemainingForRun * data.trajLengthPerWU, 3) };
 
 		// Draw chart
 		prcg2Chart(projectId, runId, data.maxClonesPerRun, data.maxGensPerClone, dataSeries);
