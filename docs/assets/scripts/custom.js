@@ -146,6 +146,7 @@ function prcgProgress() {
 		var totalGensRemainingForProject = 0;
 
 		$('#projectConfig').html(projectConfigText(projectId, data));
+		$('#titleProjectID').html(projectId);
 
 		$.each(data.runs, function(index, run) {
 			var totalGensCompletedForRun = 0;
