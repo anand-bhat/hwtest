@@ -204,12 +204,12 @@ function prcgProgress() {
 			var runText = abortedCount > 0 ? run.run + abortedAlert(abortedCount) : run.run;
 
 			// Run data table row
-			metricsRun[index] = { run: runText, details: prcgProgress2Link(projectId, run.run), trajLength: totalWUsCompleted * data.trajLengthPerWU, completed: totalWUsCompleted, remaining: totalWUsRemaining, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			metricsRun[index] = { run: runText, details: prcgProgress2Link(projectId, run.run), trajLength: (totalWUsCompleted * data.trajLengthPerWU).toFixed(3), completed: totalWUsCompleted, remaining: totalWUsRemaining, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 
 		var metricsProject = [];
 		// Project level metrics
-		metricsProject[0] = { wuPlanned: totalGensForProject, wuCompleted: totalGensSuccessfulForProject, wuFailed: totalGensFailedForProject, wuAborted: totalGensAbortedForProject, wuRemaining: totalGensRemainingForProject, trajPlanned: totalGensForProject * data.trajLengthPerWU, trajCompleted: totalGensSuccessfulForProject * data.trajLengthPerWU, trajFailed: totalGensFailedForProject * data.trajLengthPerWU, trajAborted: totalGensAbortedForProject * data.trajLengthPerWU, trajRemaining: totalGensRemainingForProject * data.trajLengthPerWU };
+		metricsProject[0] = { wuPlanned: totalGensForProject, wuCompleted: totalGensSuccessfulForProject, wuFailed: totalGensFailedForProject, wuAborted: totalGensAbortedForProject, wuRemaining: totalGensRemainingForProject, trajPlanned: (totalGensForProject * data.trajLengthPerWU).toFixed(3), trajCompleted: (totalGensSuccessfulForProject * data.trajLengthPerWU).toFixed(3), trajFailed: (totalGensFailedForProject * data.trajLengthPerWU).toFixed(3), trajAborted: (totalGensAbortedForProject * data.trajLengthPerWU).toFixed(3), trajRemaining: (totalGensRemainingForProject * data.trajLengthPerWU).toFixed(3) };
 
 		// Populate data into project details table
 		$('#prcgProjectTable').bootstrapTable({data: metricsProject, formatNoMatches: function () {return 'No data found.';}});
