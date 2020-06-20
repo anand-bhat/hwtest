@@ -124,6 +124,7 @@ function prcgProgress() {
 	}
 
 	var projectId = urlParams.get('project');
+	$('#titleProjectID').html(projectId);
 	if (!Number.isInteger(parseInt(projectId))) {
 		alert('Unable to get data for Project: ' + projectId);
 		return;
@@ -146,7 +147,6 @@ function prcgProgress() {
 		var totalGensRemainingForProject = 0;
 
 		$('#projectConfig').html(projectConfigText(projectId, data));
-		$('#titleProjectID').html(projectId);
 
 		$.each(data.runs, function(index, run) {
 			var totalGensCompletedForRun = 0;
@@ -252,12 +252,14 @@ function prcgProgress2() {
 	}
 
 	var projectId = urlParams.get('project');
+	$('#titleProjectID').html('<a href="../pages/prcgProgress?project=' + projectId + '">' + projectId + '</a>');
 	if (!Number.isInteger(parseInt(projectId))) {
 		alert('Unable to get data for Project: ' + projectId);
 		return;
 	}
 
 	var runId = urlParams.get('run');
+	$('#titleRunID').html('Run ' + runId);
 	if (!Number.isInteger(parseInt(runId))) {
 		alert('Unable to get data for Project: ' + projectId + '; Run: ' + runId);
 		return;
