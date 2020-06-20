@@ -396,7 +396,7 @@ function totalNumberFormatter(data) {
 	var field = this.field;
 	var total = 0;
 	$.each(data, function (i, row) { total += row[field]; });
-	return total;
+	return round(total, 3);
 }
 
 $(document).ready(function () {
