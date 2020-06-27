@@ -126,9 +126,9 @@ function projectConfigText(projectId, data) {
 
 function formattedDateString(dateVal) {
 	'use strict';
-	var dateTimeFormat = new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', hour12: false, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' }) 
-	var parts = dateTimeFormat.formatToParts(new Date(dateVal))
-	return `${parts[4].value}-${parts[0].value}-${parts[2].value} ${parts[6].value}:${parts[8].value}:${parts[10].value} UTC`)
+	var dateTimeFormat = new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', hour12: false, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+	var parts = dateTimeFormat.formatToParts(new Date(dateVal));
+	return `${parts[4].value}-${parts[0].value}-${parts[2].value} ${parts[6].value}:${parts[8].value}:${parts[10].value} UTC`;
 }
 
 function prcgProgress() {
