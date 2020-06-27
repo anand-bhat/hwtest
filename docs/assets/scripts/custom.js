@@ -329,16 +329,18 @@ function prcgProgress2() {
 			totalGensSuccessfulForRun += completed;
 
 			// Keep track of how many Gens (WUs) have failed
-			totalGensFailedForRun += clone.aborted ? 1 : 0;
+			var failed = clone.aborted ? 1 : 0;
+			totalGensFailedForRun += failed;
 
 			// Keep track of how many future Gens (WUs) have been aborted if this gen failed
-			totalGensAbortedForRun += clone.aborted ? (data.maxGensPerClone - completed - 1) : 0;
+			var aborted = clone.aborted ? (data.maxGensPerClone - completed - 1) : 0;
+			totalGensAbortedForRun += aborted;
 
 			// Keep track of how many Gens (WUs) are remaining
 			totalGensRemainingForRun += (data.maxGensPerClone - genCount)
 
 			// Clone data table row
-			metricsClone[index] = { clone: clone.clone, gen: lastCompleted, trajLength: round(completed * data.trajLengthPerWU, 3), completed: completed, remaining: (data.maxGensPerClone - genCount), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			metricsClone[index] = { clone: clone.clone, gen: lastCompleted, trajLength: round(completed * data.trajLengthPerWU, 3), completed: completed, failed: failed, aborted: aborted, remaining: (data.maxGensPerClone - genCount), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 
 		var metricsRun = []
