@@ -329,7 +329,7 @@ function prcgProgress2() {
 			var totalGensFailedForClone = clone.aborted ? 1 : 0;
 
 			// Gens (WUs) aborted for this clone if a gen failed
-			var totalGensFailedForClone = clone.aborted ? (data.maxGensPerClone - totalGensSuccessfulForClone) : 0;
+			var totalGensAbortedForClone = clone.aborted ? (data.maxGensPerClone - totalGensSuccessfulForClone) : 0;
 
 			// Gens (WUs) remaining for this clone
 			var totalGensRemainingForClone = data.maxGensPerClone - totalGensCompletedForClone;
@@ -338,7 +338,7 @@ function prcgProgress2() {
 			totalGensCompletedForRun += totalGensCompletedForClone;
 			totalGensSuccessfulForRun += totalGensSuccessfulForClone;
 			totalGensFailedForRun += totalGensFailedForClone;
-			totalGensAbortedForRun += totalGensFailedForClone;
+			totalGensAbortedForRun += totalGensAbortedForClone;
 			totalGensRemainingForRun += totalGensRemainingForClone;
 
 			// Determine color for the progress bar for the clone
@@ -355,7 +355,7 @@ function prcgProgress2() {
 			lastCompleted = clone.aborted ? lastCompleted + failedAlert(1, projectId, runId, clone.clone, clone.gen === -1 ? 0 : clone.gen) : lastCompleted;
 
 			// Clone data table row
-			metricsClone[index] = { clone: clone.clone, gen: lastCompleted, trajLength: round(totalGensSuccessfulForClone * data.trajLengthPerWU, 3), completed: totalGensSuccessfulForClone, failed: totalGensFailedForClone, aborted: totalGensFailedForClone, remaining: totalGensRemainingForClone, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			metricsClone[index] = { clone: clone.clone, gen: lastCompleted, trajLength: round(totalGensSuccessfulForClone * data.trajLengthPerWU, 3), completed: totalGensSuccessfulForClone, failed: totalGensFailedForClone, aborted: totalGensAbortedForClone, remaining: totalGensRemainingForClone, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 
 		var metricsRun = []
