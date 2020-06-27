@@ -350,7 +350,7 @@ function prcgProgress2() {
 			totalGensRemainingForRun += (data.maxGensPerClone - genCount)
 
 			// Clone data table row
-			metricsClone[index] = { clone: clone.clone, gen: lastCompleted, trajLength: round(completed * data.trajLengthPerWU, 3), completed: completed, failed: failed, aborted: aborted, remaining: (data.maxGensPerClone - genCount), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			metricsClone[index] = { clone: clone.clone, gen: lastCompleted, genDate: clone.genDate, trajLength: round(completed * data.trajLengthPerWU, 3), completed: completed, failed: failed, aborted: aborted, remaining: (data.maxGensPerClone - genCount), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 
 		var metricsRun = []
