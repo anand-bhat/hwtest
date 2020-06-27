@@ -172,6 +172,9 @@ function prcgProgress() {
 				// Keep track if the trajectory has permanently failed
 				var failed = clone.aborted ? 1 : 0;
 
+				// Gens (WUs) have been successfully completed for this clone
+				var completed = (clone.gen === -1 ? 0 : clone.gen + 1);
+
 				// Keep track of how many future Gens (WUs) have been aborted if this gen failed
 				var aborted = clone.aborted ? (data.maxGensPerClone - completed - 1) : 0;
 
@@ -189,9 +192,6 @@ function prcgProgress() {
 
 				// totalGensAbortedForRun is used to display number of aborted WUs
 				totalGensAbortedForRun += aborted;
-
-				// Gens (WUs) have been successfully completed for this clone
-				var completed = (clone.gen === -1 ? 0 : clone.gen + 1);
 
 				// Keep track of how many Gens (WUs) have been successfully completed for the project
 				totalGensSuccessfulForProject += completed;
