@@ -318,6 +318,9 @@ function prcgProgress2() {
 			// Keep track if the trajectory has permanently failed
 			var failed = clone.aborted ? 1 : 0;
 
+			// Keep track of how many future Gens (WUs) have been aborted if this gen failed
+			var aborted = clone.aborted ? (data.maxGensPerClone - completed - 1) : 0;
+
 			// Accumulator to report on percentage completion for this run
 			totalGensCompletedForRun += genCount;
 
@@ -337,20 +340,20 @@ function prcgProgress2() {
 			// Gens (WUs) have been successfully completed for this clone
 			var completed = (clone.gen === -1 ? 0 : clone.gen + 1);
 
-			// Keep track of how many Gens (WUs) have been successfully completed for this run
+			// Gens (WUs) successfully completed for this run
 			totalGensSuccessfulForRun += completed;
 
+			// Gens (WUs) failed for this run
 			totalGensFailedForRun += failed;
 
-			// Keep track of how many future Gens (WUs) have been aborted if this gen failed
-			var aborted = clone.aborted ? (data.maxGensPerClone - completed - 1) : 0;
+			// Gens (WUs) aborted (not executed) for this run
 			totalGensAbortedForRun += aborted;
 
 			// Keep track of how many Gens (WUs) are remaining
 			totalGensRemainingForRun += (data.maxGensPerClone - genCount)
 
 			// Clone data table row
-			metricsClone[index] = { clone: clone.clone, gen: lastCompleted, genDate: clone.genDate, trajLength: round(completed * data.trajLengthPerWU, 3), completed: completed, failed: failed, aborted: aborted, remaining: (data.maxGensPerClone - genCount), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			metricsClone[index] = { clone: clone.clone, gen: lastCompleted, trajLength: round(completed * data.trajLengthPerWU, 3), completed: completed, failed: failed, aborted: aborted, remaining: (data.maxGensPerClone - genCount), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 
 		var metricsRun = []
