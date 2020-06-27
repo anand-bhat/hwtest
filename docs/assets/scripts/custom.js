@@ -299,10 +299,10 @@ function prcgProgress2() {
 
 		var dataSeries = [];
 		var metricsClone = [];
-		var totalGensCompletedForRun = 0;
 		var percentage = 0.0;
 		var colorClassIndex = '';
 		var totalGensForRun = data.maxClonesPerRun * data.maxGensPerClone;
+		var totalGensCompletedForRun = 0;
 		var totalGensSuccessfulForRun = 0;
 		var totalGensFailedForRun = 0;
 		var totalGensAbortedForRun = 0;
@@ -311,24 +311,27 @@ function prcgProgress2() {
 		$('#projectConfig').html(projectConfigText(projectId, data));
 
 		$.each(runData.clones, function(index, clone) {
-			// genCount is used for calculating percentage and remaining work
+			// completed is used for calculating percentage and remaining work
 			// Set it to gen + 1 or to max gen (if aborted)
-			var genCount = clone.aborted ? data.maxGensPerClone : clone.gen + 1;
+			var completed = clone.aborted ? data.maxGensPerClone : clone.gen + 1;
 
 			// Keep track if the trajectory has permanently failed
 			var failed = clone.aborted ? 1 : 0;
 
+			// Gens (WUs) have been successfully completed for this clone
+			var successful = clone.gen === -1 ? 0 : clone.gen + 1;
+
 			// Keep track of how many future Gens (WUs) have been aborted if this gen failed
-			var aborted = clone.aborted ? (data.maxGensPerClone - completed - 1) : 0;
+			var aborted = clone.aborted ? (data.maxGensPerClone - successful - 1) : 0;
 
 			// Accumulator to report on percentage completion for this run
-			totalGensCompletedForRun += genCount;
+			totalGensCompletedForRun += completed;
 
 			// Determine color for the progress bar for the clone
-			colorClassIndex = Math.max(0, Math.floor((30 * genCount) / data.maxGensPerClone) - 1);
+			colorClassIndex = Math.max(0, Math.floor((30 * completed) / data.maxGensPerClone) - 1);
 
 			// Percentage completion for the clone
-			percentage =  Math.round((((100 * genCount) / data.maxGensPerClone) + Number.EPSILON) * 100) / 100;
+			percentage =  Math.round((((100 * completed) / data.maxGensPerClone) + Number.EPSILON) * 100) / 100;
 
 			// Create coordinates for chart
 			dataSeries[index] = { data: [{x: clone.clone, y: 0}, {x: clone.clone, y: Math.max(0, clone.gen)}], borderColor: colorClass[colorClassIndex], backgroundColor:colorClass[colorClassIndex] };
@@ -337,11 +340,8 @@ function prcgProgress2() {
 			var lastCompleted = clone.gen === -1 ? '-' : clone.gen;
 			lastCompleted = clone.aborted ? lastCompleted + failedAlert(1, projectId, runId, clone.clone, clone.gen === -1 ? 0 : clone.gen) : lastCompleted;
 
-			// Gens (WUs) have been successfully completed for this clone
-			var completed = (clone.gen === -1 ? 0 : clone.gen + 1);
-
 			// Gens (WUs) successfully completed for this run
-			totalGensSuccessfulForRun += completed;
+			totalGensSuccessfulForRun += successful;
 
 			// Gens (WUs) failed for this run
 			totalGensFailedForRun += failed;
@@ -350,10 +350,10 @@ function prcgProgress2() {
 			totalGensAbortedForRun += aborted;
 
 			// Keep track of how many Gens (WUs) are remaining
-			totalGensRemainingForRun += (data.maxGensPerClone - genCount)
+			totalGensRemainingForRun += (data.maxGensPerClone - completed)
 
 			// Clone data table row
-			metricsClone[index] = { clone: clone.clone, gen: lastCompleted, trajLength: round(completed * data.trajLengthPerWU, 3), completed: completed, failed: failed, aborted: aborted, remaining: (data.maxGensPerClone - genCount), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			metricsClone[index] = { clone: clone.clone, gen: lastCompleted, trajLength: round(successful * data.trajLengthPerWU, 3), completed: successful, failed: failed, aborted: aborted, remaining: (data.maxGensPerClone - completed), progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 
 		var metricsRun = []
