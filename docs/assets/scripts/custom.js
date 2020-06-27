@@ -329,7 +329,7 @@ function prcgProgress2() {
 			var totalGensFailedForClone = clone.aborted ? 1 : 0;
 
 			// Gens (WUs) aborted for this clone if a gen failed
-			var totalGensAbortedForClone = clone.aborted ? (data.maxGensPerClone - totalGensSuccessfulForClone) : 0;
+			var totalGensAbortedForClone = clone.aborted ? (data.maxGensPerClone - totalGensSuccessfulForClone - 1) : 0;
 
 			// Gens (WUs) remaining for this clone
 			var totalGensRemainingForClone = data.maxGensPerClone - totalGensCompletedForClone;
