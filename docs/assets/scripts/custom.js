@@ -219,10 +219,10 @@ function prcgProgress() {
 			percentage =  Math.round((((100 * totalGensCompletedForRun) / totalGensForRun) + Number.EPSILON) * 100) / 100;
 
 			// Display string to show for Run # along with any indicators for aborted trajectories
-			var runText = totalWUsFailed > 0 ? run.run + failedAlert(totalWUsFailed, null, null, null, null) : run.run;
+			var runText = totalGensFailedForRun > 0 ? run.run + failedAlert(totalGensFailedForRun, null, null, null, null) : run.run;
 
 			// Run data table row
-			metricsRun[index] = { run: runText, details: prcgProgress2Link(projectId, run.run), trajLength: round(totalGensSuccessfulForRun * data.trajLengthPerWU, 3), completed: totalGensSuccessfulForRun, failed: totalWUsFailed, aborted: totalWUsAborted, remaining: totalGensRemainingForRun, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			metricsRun[index] = { run: runText, details: prcgProgress2Link(projectId, run.run), trajLength: round(totalGensSuccessfulForRun * data.trajLengthPerWU, 3), completed: totalGensSuccessfulForRun, failed: totalGensFailedForRun, aborted: totalGensAbortedForRun, remaining: totalGensRemainingForRun, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 
 		var metricsProject = [];
