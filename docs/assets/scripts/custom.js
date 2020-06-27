@@ -319,10 +319,10 @@ function prcgProgress2() {
 			var failed = clone.aborted ? 1 : 0;
 
 			// Gens (WUs) have been successfully completed for this clone
-			var successful = clone.gen === -1 ? 0 : clone.gen + 1;
+			var successful = clone.gen === -1 ? 0 : (clone.aborted ? clone.gen : clone.gen + 1);
 
 			// Keep track of how many future Gens (WUs) have been aborted if this gen failed
-			var aborted = clone.aborted ? (data.maxGensPerClone - successful - 1) : 0;
+			var aborted = clone.aborted ? (data.maxGensPerClone - successful) : 0;
 
 			// Accumulator to report on percentage completion for this run
 			totalGensCompletedForRun += completed;
