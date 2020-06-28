@@ -73,6 +73,7 @@ def main(argv):
             # Special case: Check next gen
             genToSearch = gen + 1
             response = wu_check(project, run, clone, genToSearch)
+            lastGenDate = '-'
             if response[0] == 0:
                 print('   No progress detected')
                 continue
@@ -90,6 +91,8 @@ def main(argv):
                 clone_entry['genDate'] = response[1]
                 clone_entry['aborted'] = True
                 continue
+
+            lastGenDate = response[1]
 
             # Special case: Check last gen
             genToSearch = maxGensPerClone - 1
@@ -120,7 +123,7 @@ def main(argv):
             elif (latest[0] == 0):
                 # Record previous gen where traj has completed
                 clone_entry['gen'] = gen + 1
-                clone_entry['genDate'] = response[1]
+                clone_entry['genDate'] = lastGenDate
                 clone_entry.pop('aborted', None)
             elif (latest[0] == 2):
                 # Record previous gen where traj has been aborted
