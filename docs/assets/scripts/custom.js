@@ -217,7 +217,7 @@ function prcgProgress() {
 
 			// Display string to show for Run # along with any indicators for aborted trajectories
 			var runText = prcgProgress2Link(projectId, run.run);
-			runText = totalGensFailedForRun > 0 ? runText + failedAlert(totalGensFailedForRun) : runText;
+			runText = totalGensFailedForRun > 0 ? runText + ' ' + failedAlert(totalGensFailedForRun) : runText;
 
 			// Run data table row
 			metricsRun[index] = { run: runText, lastGenDate: lastGenDate, trajLength: round(totalGensSuccessfulForRun * data.trajLengthPerWU, 3), completed: totalGensSuccessfulForRun, failed: totalGensFailedForRun, aborted: totalGensAbortedForRun, remaining: totalGensRemainingForRun, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
@@ -343,7 +343,7 @@ function prcgProgress2() {
 
 			// Display string to show for Last completed gen # along with any indicator for aborted trajectories
 			var genText = clone.gen === -1 ? '-' : wuLookupLink(projectId, runId, clone.clone, clone.gen);
-			genText = clone.aborted ? genText + failedAlert(1) : genText;
+			genText = clone.aborted ? genText + ' ' + failedAlert(1) : genText;
 
 			// Clone data table row
 			metricsClone[index] = { clone: clone.clone, gen: genText, genDate: clone.genDate, trajLength: round(totalGensSuccessfulForClone * data.trajLengthPerWU, 3), completed: totalGensSuccessfulForClone, failed: totalGensFailedForClone, aborted: totalGensAbortedForClone, remaining: totalGensRemainingForClone, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
