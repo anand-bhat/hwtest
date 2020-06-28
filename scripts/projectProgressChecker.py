@@ -100,7 +100,6 @@ def main(argv):
 
             # Binary search
             latest = binary_search_wu_check(project, run, clone, gen, gen + 2, maxGensPerClone - 1)
-            print(latest)
             # Record this gen
             if (latest[0] == 1):
                 # Record this gen where traj has completed
@@ -215,7 +214,6 @@ def binary_search_wu_check(project, run, clone, gen, lower, upper):
     while lower <= upper:
         mid = (lower + upper) // 2
         response = wu_check(project, run, clone, mid)
-        print(response)
         if response[0] == 2:
             return (2, mid, response[1])
 
