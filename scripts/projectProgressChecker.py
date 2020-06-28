@@ -25,7 +25,7 @@ def main(argv):
     parser.add_argument('-c', '--clone', type=int, help='Max. number of clones per run')
     parser.add_argument('-g', '--gen', type=int, help='Max. number of gens per clone')
     parser.add_argument('-e', '--errors', type=int, default=5, help='Max. number of errors before the trajectory is aborted (default: 5)')
-    parser.add_argument('-l', '--length', type=int, help='Trajectory length (in ns) per WU')
+    parser.add_argument('-l', '--length', type=float, help='Trajectory length (in ns) per WU')
     args = parser.parse_args()
 
     projectFile = args.file
