@@ -71,44 +71,31 @@ def main(argv):
                 continue
 
             # Special case: Check next gen
-            genToSearch = gen + 1
-            response = wu_check(project, run, clone, genToSearch)
+            response = wu_check(project, run, clone, gen + 1)
             lastGenDate = '-'
             if response[0] == 0:
                 print('   No progress detected')
                 continue
-
-            if response[0] == 1 and genToSearch == (maxGensPerClone - 1):
-                # Record this gen where traj has completed and this is the last gen
-                clone_entry['gen'] = genToSearch
-                clone_entry['genDate'] = response[1]
-                clone_entry.pop('aborted', None)
-                continue
-
-            if response[0] == 2:
+            elif response[0] == 1:
+                # Record this gen where traj has completed
+                record_clone_entry(clone_entry, gen + 1, response[1], False)
+                if (gen + 1) == (maxGensPerClone - 1):
+                    # This is the last gen
+                    continue
+            elif response[0] == 2:
                 # Record this gen where traj has been aborted
-                clone_entry['gen'] = genToSearch
-                clone_entry['genDate'] = response[1]
-                clone_entry['aborted'] = True
+                record_clone_entry(clone_entry, gen + 1, response[1], True)
                 continue
-
-            lastGenDate = response[1]
 
             # Special case: Check last gen
-            genToSearch = maxGensPerClone - 1
-            response = wu_check(project, run, clone, genToSearch)
+            response = wu_check(project, run, clone, maxGensPerClone - 1)
             if response[0] == 1:
                 # Record this gen where traj has completed
-                clone_entry['gen'] = genToSearch
-                clone_entry['genDate'] = response[1]
-                clone_entry.pop('aborted', None)
+                record_clone_entry(clone_entry, maxGensPerClone - 1, response[1], False)
                 continue
-
-            if response[0] == 2:
+            elif response[0] == 2:
                 # Record this gen where traj has been aborted
-                clone_entry['gen'] = genToSearch
-                clone_entry['genDate'] = response[1]
-                clone_entry['aborted'] = True
+                record_clone_entry(clone_entry, maxGensPerClone - 1, response[1], True)
                 continue
 
             # Binary search
@@ -117,23 +104,24 @@ def main(argv):
             # Record this gen
             if (latest[0] == 1):
                 # Record this gen where traj has completed
-                clone_entry['gen'] = latest[1]
-                clone_entry['genDate'] = latest[2]
-                clone_entry.pop('aborted', None)
-            elif (latest[0] == 0):
-                # Record previous gen where traj has completed
-                clone_entry['gen'] = gen + 1
-                clone_entry['genDate'] = lastGenDate
-                clone_entry.pop('aborted', None)
+                record_clone_entry(clone_entry, latest[1], latest[2], False)
             elif (latest[0] == 2):
-                # Record previous gen where traj has been aborted
-                clone_entry['gen'] = latest[1]
-                clone_entry['genDate'] = latest[2]
-                clone_entry['aborted'] = True
+                # Record this gen where traj has been aborted
+                record_clone_entry(clone_entry, latest[1], latest[2], True)
 
     project_entry['lastUpdated'] = math.floor(time.time() * 1000)
     write_projects_json(projectFile, project_entry)
     print('Done')
+
+
+def record_clone_entry(clone_entry, gen, genDate, aborted):
+    """Record an updated gen entry."""
+    clone_entry['gen'] = gen
+    clone_entry['genDate'] = genDate
+    if aborted:
+        clone_entry['aborted'] = True
+    else:
+        clone_entry.pop('aborted', None)
 
 
 def create_projects_json(projectFile, project, maxRuns, maxClonesPerRun, maxGensPerClone, maxFailures, trajLengthPerWU):
