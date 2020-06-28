@@ -84,19 +84,19 @@ tagline_min: PRCGProgress2
 		<thead>
 			<tr>
 				<th rowspan="2" data-field="clone" data-footer-formatter="totalLabelFormatter" data-sortable="true" data-title-tooltip="Clone # for this Run" data-width="1" data-width-unit="%">Clone</th>
-				<th colspan="2" class="text-center">Last processed</th>
+				<th class="text-center" colspan="2" >Last processed</th>
 				<th rowspan="2" data-field="trajLength" data-footer-formatter="totalNumberFormatter" data-sortable="true" data-title-tooltip="Total simulation time from successfully completed WUs for this Clone" data-width="1" data-width-unit="%">Length of trajectory (ns)</th>
-				<th colspan="4" class="text-center">WU counts</th>
+				<th class="text-center" colspan="4">WU counts</th>
 				<th rowspan="2" data-field="progress" data-sortable="true" data-sort-name="progressVal" data-title-tooltip="Progress expressed in terms of the number of remaining WUs for this Clone">Progress</th>
 			</tr>
 			<tr>
 				<th data-field="gen" data-sortable="true" data-title-tooltip="The last processed Gen # for this Clone" data-width="1" data-width-unit="%">Gen</th>
-				<th data-field="genDate" data-sortable="true" data-title-tooltip="Date the last Gen was processed for this Clone" data-width="1" data-width-unit="%">Date</th>
+				<th class="nowrap" data-field="genDate" data-sortable="true" data-title-tooltip="Date the last Gen was processed for this Clone" data-width="1" data-width-unit="%">Date</th>
 				<th data-field="completed" data-footer-formatter="totalNumberFormatter" data-title-tooltip="The number of WUs successfully completed for this Clone" data-sortable="true" data-width="1" data-width-unit="%">Completed</th>
 				<th data-field="failed" data-footer-formatter="totalNumberFormatter" data-title-tooltip="The number of WUs that have permanently failed for this Clone" data-sortable="true" data-width="1" data-width-unit="%">Failed</th>
 				<th data-field="aborted" data-footer-formatter="totalNumberFormatter" data-title-tooltip="The number of WUs that cannot be processed for this Clone due to failures in processing their predecessors" data-sortable="true" data-width="1" data-width-unit="%">Aborted</th>
 				<th data-field="remaining" data-footer-formatter="totalNumberFormatter" data-title-tooltip="The number of WUs remaining for this Clone" data-sortable="true" data-width="1" data-width-unit="%">Remaining</th>
-				<th data-field="progressVal" data-visible="false">Progress</th>
+				<th class="text-center" data-field="progressVal" data-visible="false">Progress</th>
 			</tr>
 		</thead>
 	</table>
