@@ -172,51 +172,35 @@ function prcgProgress() {
 			var totalGensRemainingForRun = 0;
 
 			$.each(run.clones, function(index, clone) {
-				// genCount is used for calculating percentage and remaining work
-				// Set it to gen + 1 or to max gen (if aborted)
-				var genCount = clone.aborted ? data.maxGensPerClone : clone.gen + 1;
-
-				// Keep track if the trajectory has permanently failed
-				var failed = clone.aborted ? 1 : 0;
+				// Total WUs completed (successfully or otherwise) for this clone
+				// Used to calculate percentage and remaining work
+				var totalGensCompletedForClone = clone.aborted ? data.maxGensPerClone : clone.gen + 1;
 
 				// Gens (WUs) have been successfully completed for this clone
-				var completed = (clone.gen === -1 ? 0 : clone.gen + 1);
+				var totalGensSuccessfulForClone = clone.gen === -1 ? 0 : (clone.aborted ? clone.gen : clone.gen + 1);
 
-				// Keep track of how many future Gens (WUs) have been aborted if this gen failed
-				var aborted = clone.aborted ? (data.maxGensPerClone - completed - 1) : 0;
+				// Gens (WUs) failed for this clone (1 or 0)
+				var totalGensFailedForClone = clone.aborted ? 1 : 0;
 
-				// Accumulator to report on percentage completion for this run
-				totalGensCompletedForRun += genCount;
+				// Gens (WUs) aborted for this clone if a gen failed
+				var totalGensAbortedForClone = clone.aborted ? (data.maxGensPerClone - totalGensSuccessfulForClone - 1) : 0;
 
-				// Accumulator to report on overall percentage completion for the project
-				totalGensCompletedForProject += genCount;
+				// Gens (WUs) remaining for this clone
+				var totalGensRemainingForClone = data.maxGensPerClone - totalGensCompletedForClone;
 
-				// Accumulator to report on remaining number of WUs for this run
-				totalGensRemainingForRun += (data.maxGensPerClone - genCount);
+				// Run level accumulators
+				totalGensCompletedForRun += totalGensCompletedForClone;
+				totalGensSuccessfulForRun += totalGensSuccessfulForClone;
+				totalGensFailedForRun += totalGensFailedForClone;
+				totalGensAbortedForRun += totalGensAbortedForClone;
+				totalGensRemainingForRun += totalGensRemainingForClone;
 
-				// totalGensFailedForRun is used to display number of failed trajectories
-				totalGensFailedForRun += failed;
-
-				// totalGensAbortedForRun is used to display number of aborted WUs
-				totalGensAbortedForRun += aborted;
-
-				// Keep track of how many Gens (WUs) have been successfully completed for the project
-				totalGensSuccessfulForProject += completed;
-
-				// totalGensSuccessfulForRun is used to display number of successfully completed WUs per run
-				totalGensSuccessfulForRun += completed;
-
-				// Keep track of how many Gens (WUs) have failed
-				totalGensFailedForProject += failed;
-
-				// Keep track of how many future Gens (WUs) have been aborted if this gen failed
-				totalGensAbortedForProject += aborted;
-
-				// Keep track of how many Gens (WUs) are remaining
-				totalGensRemainingForProject += (data.maxGensPerClone - genCount)
-
-				// Trajectory length for this clone
-				var trajLength = clone.gen === -1 ? 0 : (clone.gen + 1) * data.trajLengthPerWU;
+				// Project level accumulators
+				totalGensCompletedForProject += totalGensCompletedForClone;
+				totalGensSuccessfulForProject += totalGensSuccessfulForClone;
+				totalGensFailedForProject += totalGensFailedForClone;
+				totalGensAbortedForProject += totalGensAbortedForClone;
+				totalGensRemainingForProject += totalGensRemainingForClone;
 			});
 
 			// Determine color for the progress bar for the run
