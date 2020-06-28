@@ -353,7 +353,7 @@ function prcgProgress2() {
 		$('#prcg2RunTable').bootstrapTable({data: metricsRun, formatNoMatches: function () {return 'No data found.';}});
 
 		// Populate data into clone details table
-		$('#prcg2CloneTable').bootstrapTable({data: metricsClone, stickyHeader: true, stickyHeaderOffsetLeft: '3em', stickyHeaderOffsetRight: '3em', formatNoMatches: function () {return 'No data found.';}});
+		$('#prcg2CloneTable').bootstrapTable({data: metricsClone, stickyHeader: true, formatNoMatches: function () {return 'No data found.';}});
 
 		// Determine color for the progress bar for the run
 		colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompletedForRun) / totalGensForRun) - 1);
