@@ -220,7 +220,7 @@ function prcgProgress() {
 			runText = totalGensFailedForRun > 0 ? runText + ' ' + failedAlert(totalGensFailedForRun) : runText;
 
 			// Run data table row
-			metricsRun[index] = { run: runText, lastGenDate: lastGenDate, trajLength: round(totalGensSuccessfulForRun * data.trajLengthPerWU, 3), completed: totalGensSuccessfulForRun, failed: totalGensFailedForRun, aborted: totalGensAbortedForRun, remaining: totalGensRemainingForRun, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			metricsRun[index] = { runVal: run.run, runText: runText, lastGenDate: lastGenDate, trajLength: round(totalGensSuccessfulForRun * data.trajLengthPerWU, 3), completed: totalGensSuccessfulForRun, failed: totalGensFailedForRun, aborted: totalGensAbortedForRun, remaining: totalGensRemainingForRun, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 
 		var metricsProject = [];
@@ -342,11 +342,12 @@ function prcgProgress2() {
 			dataSeries[index] = { data: [{x: clone.clone, y: 0}, {x: clone.clone, y: Math.max(0, clone.gen)}], borderColor: colorClass[colorClassIndex], backgroundColor:colorClass[colorClassIndex] };
 
 			// Display string to show for Last completed gen # along with any indicator for aborted trajectories
+			var genVal = clone.gen === -1 ? '-' : clone.gen;
 			var genText = clone.gen === -1 ? '-' : wuLookupLink(projectId, runId, clone.clone, clone.gen);
 			genText = clone.aborted ? genText + ' ' + failedAlert(1) : genText;
 
 			// Clone data table row
-			metricsClone[index] = { clone: clone.clone, gen: genText, genDate: clone.genDate, trajLength: round(totalGensSuccessfulForClone * data.trajLengthPerWU, 3), completed: totalGensSuccessfulForClone, failed: totalGensFailedForClone, aborted: totalGensAbortedForClone, remaining: totalGensRemainingForClone, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
+			metricsClone[index] = { clone: clone.clone, genVal: genVal, genText: genText, genDate: clone.genDate, trajLength: round(totalGensSuccessfulForClone * data.trajLengthPerWU, 3), completed: totalGensSuccessfulForClone, failed: totalGensFailedForClone, aborted: totalGensAbortedForClone, remaining: totalGensRemainingForClone, progressVal: percentage, progress: getProgressBar(percentage, colorClass[colorClassIndex]) };
 		});
 
 		var metricsRun = [];
