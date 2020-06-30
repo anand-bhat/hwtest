@@ -1,7 +1,7 @@
 {
   "project": 16800,
   "maxFailures": 5,
-  "lastUpdated": 1593399616403,
+  "lastUpdated": 1593531477535,
   "maxRuns": 10,
   "maxClonesPerRun": 20,
   "maxGensPerClone": 100,
@@ -97,8 +97,8 @@
         },
         {
           "clone": 17,
-          "gen": 98,
-          "genDate": "2020-06-28 00:45:57 UTC"
+          "gen": 99,
+          "genDate": "2020-06-30 11:36:04 UTC"
         },
         {
           "clone": 18,
@@ -414,8 +414,8 @@
         },
         {
           "clone": 17,
-          "gen": 94,
-          "genDate": "2020-06-27 08:22:32 UTC"
+          "gen": 96,
+          "genDate": "2020-06-30 14:49:36 UTC"
         },
         {
           "clone": 18,
@@ -454,8 +454,8 @@
         },
         {
           "clone": 4,
-          "gen": 92,
-          "genDate": "2020-06-28 21:05:44 UTC"
+          "gen": 94,
+          "genDate": "2020-06-30 13:12:58 UTC"
         },
         {
           "clone": 5,
@@ -579,8 +579,8 @@
         },
         {
           "clone": 8,
-          "gen": 93,
-          "genDate": "2020-06-28 08:39:03 UTC"
+          "gen": 98,
+          "genDate": "2020-06-30 01:48:13 UTC"
         },
         {
           "clone": 9,
@@ -739,8 +739,8 @@
         },
         {
           "clone": 19,
-          "gen": 90,
-          "genDate": "2020-06-26 19:06:47 UTC"
+          "gen": 96,
+          "genDate": "2020-06-30 08:00:55 UTC"
         }
       ]
     },
@@ -864,8 +864,8 @@
         },
         {
           "clone": 2,
-          "gen": 97,
-          "genDate": "2020-06-29 01:32:09 UTC"
+          "gen": 99,
+          "genDate": "2020-06-29 05:13:35 UTC"
         },
         {
           "clone": 3,
@@ -874,13 +874,13 @@
         },
         {
           "clone": 4,
-          "gen": 95,
-          "genDate": "2020-06-28 23:19:59 UTC"
+          "gen": 96,
+          "genDate": "2020-06-29 07:07:04 UTC"
         },
         {
           "clone": 5,
-          "gen": 93,
-          "genDate": "2020-06-29 00:29:57 UTC"
+          "gen": 97,
+          "genDate": "2020-06-29 21:50:50 UTC"
         },
         {
           "clone": 6,
