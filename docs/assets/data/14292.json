@@ -1,0 +1,267 @@
+{
+  "project": 14292,
+  "maxFailures": 5,
+  "lastUpdated": 1593538004549,
+  "maxRuns": 1,
+  "maxClonesPerRun": 50,
+  "maxGensPerClone": 250,
+  "trajLengthPerWU": 0.5,
+  "runs": [
+    {
+      "run": 0,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 249,
+          "genDate": "2020-02-04 12:40:02 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 249,
+          "genDate": "2020-02-05 13:40:02 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 249,
+          "genDate": "2020-03-18 04:31:13 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 249,
+          "genDate": "2020-04-01 03:20:37 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 249,
+          "genDate": "2020-02-22 18:40:01 UTC"
+        },
+        {
+          "clone": 5,
+          "gen": 249,
+          "genDate": "2020-02-24 20:40:02 UTC"
+        },
+        {
+          "clone": 6,
+          "gen": 249,
+          "genDate": "2020-03-03 03:40:02 UTC"
+        },
+        {
+          "clone": 7,
+          "gen": 249,
+          "genDate": "2020-02-05 12:15:01 UTC"
+        },
+        {
+          "clone": 8,
+          "gen": 224,
+          "genDate": "2020-06-22 21:28:51 UTC",
+          "aborted": true
+        },
+        {
+          "clone": 9,
+          "gen": 249,
+          "genDate": "2020-02-19 19:40:02 UTC"
+        },
+        {
+          "clone": 10,
+          "gen": 249,
+          "genDate": "2020-02-25 13:00:02 UTC"
+        },
+        {
+          "clone": 11,
+          "gen": 249,
+          "genDate": "2020-02-19 08:40:02 UTC"
+        },
+        {
+          "clone": 12,
+          "gen": 249,
+          "genDate": "2020-02-18 17:15:01 UTC"
+        },
+        {
+          "clone": 13,
+          "gen": 249,
+          "genDate": "2020-03-08 07:00:02 UTC"
+        },
+        {
+          "clone": 14,
+          "gen": 249,
+          "genDate": "2020-04-04 18:00:42 UTC"
+        },
+        {
+          "clone": 15,
+          "gen": 249,
+          "genDate": "2020-06-12 00:33:11 UTC"
+        },
+        {
+          "clone": 16,
+          "gen": 249,
+          "genDate": "2020-06-12 15:08:10 UTC"
+        },
+        {
+          "clone": 17,
+          "gen": 249,
+          "genDate": "2020-02-26 04:40:02 UTC"
+        },
+        {
+          "clone": 18,
+          "gen": 249,
+          "genDate": "2020-05-12 05:44:13 UTC"
+        },
+        {
+          "clone": 19,
+          "gen": 249,
+          "genDate": "2020-03-05 05:15:02 UTC"
+        },
+        {
+          "clone": 20,
+          "gen": 249,
+          "genDate": "2020-03-08 10:00:02 UTC"
+        },
+        {
+          "clone": 21,
+          "gen": 249,
+          "genDate": "2020-02-18 18:40:02 UTC"
+        },
+        {
+          "clone": 22,
+          "gen": 249,
+          "genDate": "2020-03-05 05:00:02 UTC"
+        },
+        {
+          "clone": 23,
+          "gen": 249,
+          "genDate": "2020-02-24 02:00:02 UTC"
+        },
+        {
+          "clone": 24,
+          "gen": 249,
+          "genDate": "2020-02-24 21:40:02 UTC"
+        },
+        {
+          "clone": 25,
+          "gen": 249,
+          "genDate": "2020-02-20 06:40:02 UTC"
+        },
+        {
+          "clone": 26,
+          "gen": 249,
+          "genDate": "2020-02-25 21:00:02 UTC"
+        },
+        {
+          "clone": 27,
+          "gen": 249,
+          "genDate": "2020-02-20 15:40:02 UTC"
+        },
+        {
+          "clone": 28,
+          "gen": 249,
+          "genDate": "2020-06-22 08:33:17 UTC"
+        },
+        {
+          "clone": 29,
+          "gen": 249,
+          "genDate": "2020-05-10 12:30:51 UTC"
+        },
+        {
+          "clone": 30,
+          "gen": 249,
+          "genDate": "2020-03-14 11:05:54 UTC"
+        },
+        {
+          "clone": 31,
+          "gen": 249,
+          "genDate": "2020-02-24 12:15:02 UTC"
+        },
+        {
+          "clone": 32,
+          "gen": 249,
+          "genDate": "2020-02-21 00:40:02 UTC"
+        },
+        {
+          "clone": 33,
+          "gen": 249,
+          "genDate": "2020-05-10 22:27:30 UTC"
+        },
+        {
+          "clone": 34,
+          "gen": 249,
+          "genDate": "2020-03-04 16:40:02 UTC"
+        },
+        {
+          "clone": 35,
+          "gen": 249,
+          "genDate": "2020-03-04 03:40:02 UTC"
+        },
+        {
+          "clone": 36,
+          "gen": 249,
+          "genDate": "2020-02-13 08:15:02 UTC"
+        },
+        {
+          "clone": 37,
+          "gen": 249,
+          "genDate": "2020-02-28 21:15:02 UTC"
+        },
+        {
+          "clone": 38,
+          "gen": 249,
+          "genDate": "2020-02-20 16:15:02 UTC"
+        },
+        {
+          "clone": 39,
+          "gen": 249,
+          "genDate": "2020-02-19 03:40:01 UTC"
+        },
+        {
+          "clone": 40,
+          "gen": 249,
+          "genDate": "2020-03-11 14:40:01 UTC"
+        },
+        {
+          "clone": 41,
+          "gen": 249,
+          "genDate": "2020-06-12 18:11:20 UTC"
+        },
+        {
+          "clone": 42,
+          "gen": 249,
+          "genDate": "2020-02-04 13:00:02 UTC"
+        },
+        {
+          "clone": 43,
+          "gen": 249,
+          "genDate": "2020-05-22 01:41:24 UTC"
+        },
+        {
+          "clone": 44,
+          "gen": 249,
+          "genDate": "2020-02-21 11:00:02 UTC"
+        },
+        {
+          "clone": 45,
+          "gen": 194,
+          "genDate": "2020-06-01 08:39:00 UTC"
+        },
+        {
+          "clone": 46,
+          "gen": 249,
+          "genDate": "2020-02-21 20:40:02 UTC"
+        },
+        {
+          "clone": 47,
+          "gen": 245,
+          "genDate": "2020-03-30 09:06:00 UTC"
+        },
+        {
+          "clone": 48,
+          "gen": 249,
+          "genDate": "2020-06-14 03:00:49 UTC"
+        },
+        {
+          "clone": 49,
+          "gen": 249,
+          "genDate": "2020-02-20 16:40:02 UTC"
+        }
+      ]
+    }
+  ]
+}
