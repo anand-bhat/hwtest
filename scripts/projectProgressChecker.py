@@ -70,17 +70,6 @@ def main(argv):
                 print('   All gens accounted for')
                 continue
 
-            # Special case: Check last gen
-            response = wu_check(project, run, clone, maxGensPerClone - 1)
-            if response[0] == 1:
-                # Record this gen where traj has completed
-                record_clone_entry(clone_entry, maxGensPerClone - 1, response[1], False)
-                continue
-            elif response[0] == 2:
-                # Record this gen where traj has been aborted
-                record_clone_entry(clone_entry, maxGensPerClone - 1, response[1], True)
-                continue
-
             # Special case: Check next gen
             response = wu_check(project, run, clone, gen + 1)
             lastGenDate = '-'
@@ -96,6 +85,17 @@ def main(argv):
             elif response[0] == 2:
                 # Record this gen where traj has been aborted
                 record_clone_entry(clone_entry, gen + 1, response[1], True)
+                continue
+
+            # Special case: Check last gen
+            response = wu_check(project, run, clone, maxGensPerClone - 1)
+            if response[0] == 1:
+                # Record this gen where traj has completed
+                record_clone_entry(clone_entry, maxGensPerClone - 1, response[1], False)
+                continue
+            elif response[0] == 2:
+                # Record this gen where traj has been aborted
+                record_clone_entry(clone_entry, maxGensPerClone - 1, response[1], True)
                 continue
 
             # Binary search
