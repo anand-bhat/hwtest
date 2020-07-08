@@ -26,6 +26,7 @@ def main(argv):
     parser.add_argument('-g', '--gen', type=int, help='Max. number of gens per clone')
     parser.add_argument('-e', '--errors', type=int, default=5, help='Max. number of errors before the trajectory is aborted (default: 5)')
     parser.add_argument('-l', '--length', type=float, help='Trajectory length (in ns) per WU')
+    parser.add_argument('-ra', '--retryaborted', type=bool, default=False, help='Retry Gens previously marked as aborted')
     args = parser.parse_args()
 
     projectFile = args.file
@@ -43,6 +44,9 @@ def main(argv):
         create_projects_json(projectFile, project, maxRuns, maxClonesPerRun, maxGensPerClone, maxFailures, trajLengthPerWU)
 
     global MAX_FAILURES
+
+    # Should aborted Gens be rechecked for progress?
+    retryAborted = args.retryaborted
 
     # Project to update
     project_entry = read_projects_json(projectFile)
@@ -66,8 +70,15 @@ def main(argv):
             clone = clone_entry['clone']
             print('  Starting processing for Project {}, Run {}, Clone {}...'.format(project, run, clone))
             gen = clone_entry['gen']
+
+            # Have all Gens been processed?
             if gen == maxGensPerClone - 1:
-                print('   All gens accounted for')
+                print('   All Gens accounted for')
+                continue
+
+            # Should aborted Gens be rechecked?
+            if (not retryAborted) and clone_entry.get('aborted', False):
+                print('   Not checking progress for aborted Gen')
                 continue
 
             # Special case: Check next gen
@@ -195,7 +206,7 @@ def wu_check(project, run, clone, gen):
         if genDate is None:
             genDate = result['log_time'] + ' UTC'
         code = result['code']
-        if code == 'Ok':
+        if code in ['Ok', 'Relayed']:
             return (1, genDate)
         elif code in ['Faulty', 'Faulty 2']:
             faultCount = faultCount + 1
