@@ -861,7 +861,7 @@
           "clone": 1,
           "gen": 84,
           "genDate": "2020-06-01 02:04:13 UTC",
-          "terminated": true
+          "skipped": true
         },
         {
           "clone": 2,
@@ -882,7 +882,7 @@
           "clone": 5,
           "gen": 98,
           "genDate": "2020-07-01 18:32:25 UTC",
-          "terminated": true
+          "skipped": true
         },
         {
           "clone": 6,
