@@ -336,7 +336,7 @@ function prcgProgress2() {
       $.each(runData.clones, (cloneIndex, clone) => {
         // Total WUs completed (successfully or otherwise) for this clone
         // Used to calculate percentage and remaining work
-        const totalGensCompletedForClone = clone.aborted ? data.maxGensPerClone : clone.gen + 1;
+        const totalGensCompletedForClone = clone.aborted || clone.terminated ? data.maxGensPerClone : clone.gen + 1;
 
         // Gens (WUs) successfully completed for this clone
         const totalGensSuccessfulForClone = clone.gen !== -1 && clone.aborted ? clone.gen : clone.gen + 1;

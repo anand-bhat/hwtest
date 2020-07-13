@@ -860,7 +860,8 @@
         {
           "clone": 1,
           "gen": 84,
-          "genDate": "2020-06-01 02:04:13 UTC"
+          "genDate": "2020-06-01 02:04:13 UTC",
+          "termimated": true
         },
         {
           "clone": 2,
