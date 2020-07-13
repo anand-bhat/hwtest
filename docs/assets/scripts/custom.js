@@ -287,9 +287,6 @@ function prcgProgress() {
     .fail(() => {
       // The project specified in the URL does not point to a valid project
       alert(`Unable to get data for Project: ${projectId}`);
-    })
-    .always(() => {
-      // alert('always');
     });
 }
 
@@ -464,9 +461,6 @@ function prcgProgress2() {
     .fail(() => {
       // The project specified in the URL does not point to a valid project
       alert(`Unable to get data for Project: ${projectId}`);
-    })
-    .always(() => {
-      // alert('always');
     });
 }
 
