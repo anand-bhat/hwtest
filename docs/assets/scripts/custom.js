@@ -139,7 +139,7 @@ function formattedDateString(dateVal) {
 
 function isNextGenLate(checkedAt, lastGenAt) {
 	const latePeriod =  15 * 24 * 60 * 60 * 1000; // 15 days
-	alert('Last = ' + Date.parse(lastGenAt) + ', to check against = ' + (checkedAt - latePeriod));
+	console.log('Last = ' + Date.parse(lastGenAt) + ', to check against = ' + (checkedAt - latePeriod));
 	return Date.parse(lastGenAt) < (checkedAt - latePeriod);
 }
 
