@@ -139,6 +139,7 @@ function formattedDateString(dateVal) {
 
 function isNextGenLate(checkedAt, lastGenAt) {
 	const latePeriod =  15 * 24 * 60 * 60 * 100; // 15 days
+	alert('Last = ' + Date.parse(lastGenAt) + ', to check against = ' + (checkedAt - latePeriod));
 	return Date.parse(lastGenAt) < (checkedAt - latePeriod);
 }
 
@@ -389,7 +390,7 @@ function prcgProgress2() {
         let genText = clone.gen === -1 ? '-' : wuLookupLink(projectId, runId, clone.clone, clone.gen);
         genText = clone.aborted ? `${genText} ${failedAlert(1)}` : genText;
         genText = clone.skipped ? `${genText} ${skippedAlert(1)}` : genText;
-        genText = isNextGenLate(data.lastUpdated, clone.genDate) ? `${genText} ${lateAlert(1)}` : genText;
+        genText = totalGensRemainingForClone > 0 && isNextGenLate(data.lastUpdated, clone.genDate) ? `${genText} ${lateAlert(1)}` : genText;
 
         // Clone data table row
         metricsClone[cloneIndex] = {
