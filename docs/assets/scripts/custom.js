@@ -172,6 +172,7 @@ function prcgProgress() {
       let totalGensFailedForProject = 0;
       let totalGensAbortedForProject = 0;
       let totalGensRemainingForProject = 0;
+      let totalGensLateForProject = 0;
 
       $('#projectConfig').html(projectConfigText(projectId, data));
 
@@ -182,6 +183,7 @@ function prcgProgress() {
 		let totalGensSkippedForRun = 0;
         let totalGensAbortedForRun = 0;
         let totalGensRemainingForRun = 0;
+        let totalGensLateForRun = 0;
         let lastGenDate = '';
 
         $.each(run.clones, (cloneIndex, clone) => {
@@ -204,6 +206,9 @@ function prcgProgress() {
           // Gens (WUs) remaining for this clone
           const totalGensRemainingForClone = data.maxGensPerClone - totalGensCompletedForClone;
 
+          // Gens (WUs) late for this clone (1 or 0)
+          const totalGensLateForClone = totalGensRemainingForClone > 0 && isNextGenLate(data.lastUpdated, clone.genDate) ? 1 : 0;
+
           // Run level accumulators
           totalGensCompletedForRun += totalGensCompletedForClone;
           totalGensSuccessfulForRun += totalGensSuccessfulForClone;
@@ -211,6 +216,7 @@ function prcgProgress() {
           totalGensAbortedForRun += totalGensAbortedForClone;
           totalGensRemainingForRun += totalGensRemainingForClone;
 		  totalGensSkippedForRun += totalGensSkippedForClone;
+		  totalGensLateForRun += totalGensLateForClone;
 
           // Project level accumulators
           totalGensCompletedForProject += totalGensCompletedForClone;
@@ -218,6 +224,7 @@ function prcgProgress() {
           totalGensFailedForProject += totalGensFailedForClone;
           totalGensAbortedForProject += totalGensAbortedForClone;
           totalGensRemainingForProject += totalGensRemainingForClone;
+		  totalGensLateForProject += totalGensLateForClone;
 
           if (lastGenDate < clone.genDate) {
             lastGenDate = clone.genDate;
@@ -234,6 +241,7 @@ function prcgProgress() {
         let runText = prcgProgress2Link(projectId, run.run);
         runText = totalGensFailedForRun > 0 ? `${runText} ${failedAlert(totalGensFailedForRun)}` : runText;
         runText = totalGensSkippedForRun > 0 ? `${runText} ${skippedAlert(totalGensSkippedForRun)}` : runText;
+        runText = totalGensLateForRun > 0 ? `${runText} ${lateAlert(totalGensLateForRun)}` : runText;
 
         // Run data table row
         metricsRun[runIndex] = {
@@ -349,6 +357,7 @@ function prcgProgress2() {
       let totalGensFailedForRun = 0;
       let totalGensAbortedForRun = 0;
       let totalGensRemainingForRun = 0;
+      let totalGensLateForRun = 0;
 
       $('#projectConfig').html(projectConfigText(projectId, data));
 
@@ -369,12 +378,16 @@ function prcgProgress2() {
         // Gens (WUs) remaining for this clone
         const totalGensRemainingForClone = data.maxGensPerClone - totalGensCompletedForClone;
 
+        // Gens (WUs) late for this clone (1 or 0)
+        const totalGensLateForClone = totalGensRemainingForClone > 0 && isNextGenLate(data.lastUpdated, clone.genDate) ? 1 : 0;
+
         // Run level accumulators
         totalGensCompletedForRun += totalGensCompletedForClone;
         totalGensSuccessfulForRun += totalGensSuccessfulForClone;
         totalGensFailedForRun += totalGensFailedForClone;
         totalGensAbortedForRun += totalGensAbortedForClone;
         totalGensRemainingForRun += totalGensRemainingForClone;
+		totalGensLateForRun += totalGensLateForClone;
 
         // Determine color for the progress bar for the clone
         colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompletedForClone) / data.maxGensPerClone) - 1);
@@ -390,7 +403,7 @@ function prcgProgress2() {
         let genText = clone.gen === -1 ? '-' : wuLookupLink(projectId, runId, clone.clone, clone.gen);
         genText = clone.aborted ? `${genText} ${failedAlert(1)}` : genText;
         genText = clone.skipped ? `${genText} ${skippedAlert(1)}` : genText;
-        genText = totalGensRemainingForClone > 0 && isNextGenLate(data.lastUpdated, clone.genDate) ? `${genText} ${lateAlert(1)}` : genText;
+        genText = totalGensLateForClone > 0 ? `${genText} ${lateAlert(1)}` : genText;
 
         // Clone data table row
         metricsClone[cloneIndex] = {
