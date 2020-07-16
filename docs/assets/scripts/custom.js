@@ -138,9 +138,8 @@ function formattedDateString(dateVal) {
 }
 
 function isNextGenLate(checkedAt, lastGenAt) {
-	const latePeriod =  15 * 24 * 60 * 60 * 1000; // 15 days
-	console.log('Last = ' + Date.parse(lastGenAt) + ', to check against = ' + (checkedAt - latePeriod));
-	return Date.parse(lastGenAt) < (checkedAt - latePeriod);
+  const latePeriod =  15 * 24 * 60 * 60 * 1000; // 15 days
+  return Date.parse(lastGenAt) < (checkedAt - latePeriod);
 }
 
 function prcgProgress() {
@@ -180,7 +179,7 @@ function prcgProgress() {
         let totalGensCompletedForRun = 0;
         let totalGensSuccessfulForRun = 0;
         let totalGensFailedForRun = 0;
-		let totalGensSkippedForRun = 0;
+        let totalGensSkippedForRun = 0;
         let totalGensAbortedForRun = 0;
         let totalGensRemainingForRun = 0;
         let totalGensLateForRun = 0;
@@ -215,8 +214,8 @@ function prcgProgress() {
           totalGensFailedForRun += totalGensFailedForClone;
           totalGensAbortedForRun += totalGensAbortedForClone;
           totalGensRemainingForRun += totalGensRemainingForClone;
-		  totalGensSkippedForRun += totalGensSkippedForClone;
-		  totalGensLateForRun += totalGensLateForClone;
+          totalGensSkippedForRun += totalGensSkippedForClone;
+          totalGensLateForRun += totalGensLateForClone;
 
           // Project level accumulators
           totalGensCompletedForProject += totalGensCompletedForClone;
@@ -224,7 +223,7 @@ function prcgProgress() {
           totalGensFailedForProject += totalGensFailedForClone;
           totalGensAbortedForProject += totalGensAbortedForClone;
           totalGensRemainingForProject += totalGensRemainingForClone;
-		  totalGensLateForProject += totalGensLateForClone;
+          totalGensLateForProject += totalGensLateForClone;
 
           if (lastGenDate < clone.genDate) {
             lastGenDate = clone.genDate;
@@ -239,14 +238,25 @@ function prcgProgress() {
 
         // Display string to show for Run # along with any indicators for aborted trajectories
         let runText = prcgProgress2Link(projectId, run.run);
-        runText = totalGensFailedForRun > 0 ? `${runText} ${failedAlert(totalGensFailedForRun)}` : runText;
-        runText = totalGensSkippedForRun > 0 ? `${runText} ${skippedAlert(totalGensSkippedForRun)}` : runText;
-        runText = totalGensLateForRun > 0 ? `${runText} ${lateAlert(totalGensLateForRun)}` : runText;
+        let flags = [];
+        if (totalGensFailedForRun > 0) {
+          flags.push('F');
+          runText = `${runText} ${failedAlert(totalGensFailedForRun)}`;
+        }
+        if (totalGensLateForRun > 0) {
+          flags.push('L');
+          runText = `${runText} ${lateAlert(totalGensLateForRun)}`;
+        }
+        if (totalGensSkippedForRun > 0) {
+          flags.push('S');
+          runText = `${runText} ${skippedAlert(totalGensSkippedForRun)}`;
+        }
 
         // Run data table row
         metricsRun[runIndex] = {
           runVal: run.run,
           runText,
+          flags: flags.toString(),
           lastGenDate,
           trajLength: round(totalGensSuccessfulForRun * data.trajLengthPerWU, 3),
           completed: totalGensSuccessfulForRun,
@@ -387,7 +397,7 @@ function prcgProgress2() {
         totalGensFailedForRun += totalGensFailedForClone;
         totalGensAbortedForRun += totalGensAbortedForClone;
         totalGensRemainingForRun += totalGensRemainingForClone;
-		totalGensLateForRun += totalGensLateForClone;
+        totalGensLateForRun += totalGensLateForClone;
 
         // Determine color for the progress bar for the clone
         colorClassIndex = Math.max(0, Math.floor((30 * totalGensCompletedForClone) / data.maxGensPerClone) - 1);
@@ -401,15 +411,26 @@ function prcgProgress2() {
         // Display string to show for Last completed gen # along with any indicator for aborted trajectories
         const genVal = clone.gen === -1 ? '-' : clone.gen;
         let genText = clone.gen === -1 ? '-' : wuLookupLink(projectId, runId, clone.clone, clone.gen);
-        genText = clone.aborted ? `${genText} ${failedAlert(1)}` : genText;
-        genText = clone.skipped ? `${genText} ${skippedAlert(1)}` : genText;
-        genText = totalGensLateForClone > 0 ? `${genText} ${lateAlert(1)}` : genText;
+        let flags = [];
+        if (clone.aborted) {
+          flags.push('F');
+          genText = `${genText} ${failedAlert(1)}`;
+        }
+        if (totalGensLateForClone > 0) {
+          flags.push('L');
+          genText = `${genText} ${lateAlert(1)}`;
+        }
+        if (clone.skipped) {
+          flags.push('S');
+          genText = `${genText} ${skippedAlert(1)}`;
+        }
 
         // Clone data table row
         metricsClone[cloneIndex] = {
           clone: clone.clone,
           genVal,
           genText,
+          flags: flags.toString(),
           genDate: clone.genDate,
           trajLength: round(totalGensSuccessfulForClone * data.trajLengthPerWU, 3),
           completed: totalGensSuccessfulForClone,
