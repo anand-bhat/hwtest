@@ -1,0 +1,732 @@
+{
+  "project": 14836,
+  "maxFailures": 5,
+  "lastUpdated": 1595905119238,
+  "maxRuns": 24,
+  "maxClonesPerRun": 5,
+  "maxGensPerClone": 1000,
+  "trajLengthPerWU": 0.001,
+  "runs": [
+    {
+      "run": 0,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 20,
+          "genDate": "2020-07-25 23:46:07 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 32,
+          "genDate": "2020-07-26 08:33:54 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 24,
+          "genDate": "2020-07-24 20:50:21 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 21,
+          "genDate": "2020-07-24 13:19:46 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 13,
+          "genDate": "2020-07-27 08:49:17 UTC"
+        }
+      ]
+    },
+    {
+      "run": 1,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 30,
+          "genDate": "2020-07-24 20:05:45 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 14,
+          "genDate": "2020-07-24 13:58:32 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 23,
+          "genDate": "2020-07-24 15:26:07 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 15,
+          "genDate": "2020-07-25 19:19:27 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 15,
+          "genDate": "2020-07-24 10:54:49 UTC"
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 15,
+          "genDate": "2020-07-24 07:59:57 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 13,
+          "genDate": "2020-07-26 04:25:11 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 15,
+          "genDate": "2020-07-24 08:35:24 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 16,
+          "genDate": "2020-07-24 09:28:50 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 18,
+          "genDate": "2020-07-24 18:45:12 UTC"
+        }
+      ]
+    },
+    {
+      "run": 3,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 37,
+          "genDate": "2020-07-26 16:09:39 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 19,
+          "genDate": "2020-07-25 01:34:54 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 10,
+          "genDate": "2020-07-24 08:56:35 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 12,
+          "genDate": "2020-07-24 07:58:14 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 4,
+          "genDate": "2020-07-25 13:44:58 UTC"
+        }
+      ]
+    },
+    {
+      "run": 4,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 19,
+          "genDate": "2020-07-25 02:43:23 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 33,
+          "genDate": "2020-07-24 21:24:51 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 22,
+          "genDate": "2020-07-24 08:32:54 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 18,
+          "genDate": "2020-07-24 09:34:16 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 6,
+          "genDate": "2020-07-25 09:18:19 UTC"
+        }
+      ]
+    },
+    {
+      "run": 5,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 16,
+          "genDate": "2020-07-26 20:58:12 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 25,
+          "genDate": "2020-07-24 20:15:25 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 22,
+          "genDate": "2020-07-24 14:13:41 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 11,
+          "genDate": "2020-07-24 12:57:45 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 6,
+          "genDate": "2020-07-25 15:41:43 UTC"
+        }
+      ]
+    },
+    {
+      "run": 6,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 12,
+          "genDate": "2020-07-14 21:59:48 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 33,
+          "genDate": "2020-07-24 16:33:05 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 4,
+          "genDate": "2020-07-24 08:14:46 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 25,
+          "genDate": "2020-07-24 14:21:30 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 10,
+          "genDate": "2020-07-24 15:19:36 UTC"
+        }
+      ]
+    },
+    {
+      "run": 7,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 9,
+          "genDate": "2020-07-24 14:59:04 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 25,
+          "genDate": "2020-07-24 04:00:49 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 24,
+          "genDate": "2020-07-24 06:15:44 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 11,
+          "genDate": "2020-07-24 17:51:21 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 17,
+          "genDate": "2020-07-24 09:09:17 UTC"
+        }
+      ]
+    },
+    {
+      "run": 8,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 21,
+          "genDate": "2020-07-24 20:54:45 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 8,
+          "genDate": "2020-07-24 09:57:07 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 23,
+          "genDate": "2020-07-24 18:39:43 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 16,
+          "genDate": "2020-07-24 18:00:26 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 13,
+          "genDate": "2020-07-24 22:34:18 UTC"
+        }
+      ]
+    },
+    {
+      "run": 9,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 10,
+          "genDate": "2020-07-26 15:06:39 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 5,
+          "genDate": "2020-07-24 12:48:05 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 16,
+          "genDate": "2020-07-25 03:56:51 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 11,
+          "genDate": "2020-07-24 12:14:51 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 10,
+          "genDate": "2020-07-25 01:49:09 UTC"
+        }
+      ]
+    },
+    {
+      "run": 10,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 10,
+          "genDate": "2020-07-25 10:06:46 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 15,
+          "genDate": "2020-07-24 06:05:29 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 16,
+          "genDate": "2020-07-24 15:48:11 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 8,
+          "genDate": "2020-07-24 11:37:54 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 2,
+          "genDate": "2020-07-24 16:01:53 UTC"
+        }
+      ]
+    },
+    {
+      "run": 11,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 15,
+          "genDate": "2020-07-27 20:37:53 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 21,
+          "genDate": "2020-07-25 16:24:45 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 16,
+          "genDate": "2020-07-24 07:09:53 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 20,
+          "genDate": "2020-07-24 15:59:46 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 11,
+          "genDate": "2020-07-25 00:16:45 UTC"
+        }
+      ]
+    },
+    {
+      "run": 12,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 39,
+          "genDate": "2020-07-26 23:27:02 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 19,
+          "genDate": "2020-07-25 01:31:00 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 20,
+          "genDate": "2020-07-24 08:01:20 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 4,
+          "genDate": "2020-07-24 21:55:28 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 8,
+          "genDate": "2020-07-25 03:44:19 UTC"
+        }
+      ]
+    },
+    {
+      "run": 13,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 19,
+          "genDate": "2020-07-24 11:10:03 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 31,
+          "genDate": "2020-07-25 13:25:25 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 16,
+          "genDate": "2020-07-27 10:19:29 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 22,
+          "genDate": "2020-07-24 06:25:21 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 13,
+          "genDate": "2020-07-24 13:56:36 UTC"
+        }
+      ]
+    },
+    {
+      "run": 14,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 13,
+          "genDate": "2020-07-17 04:49:26 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 19,
+          "genDate": "2020-07-24 09:42:12 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 18,
+          "genDate": "2020-07-24 03:26:18 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 11,
+          "genDate": "2020-07-25 05:14:01 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 11,
+          "genDate": "2020-07-24 22:30:37 UTC"
+        }
+      ]
+    },
+    {
+      "run": 15,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 15,
+          "genDate": "2020-07-24 06:55:34 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 10,
+          "genDate": "2020-07-24 15:42:42 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 15,
+          "genDate": "2020-07-24 07:59:48 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 21,
+          "genDate": "2020-07-24 19:09:06 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 9,
+          "genDate": "2020-07-24 15:34:57 UTC"
+        }
+      ]
+    },
+    {
+      "run": 16,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 25,
+          "genDate": "2020-07-24 17:08:52 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 19,
+          "genDate": "2020-07-24 14:22:39 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 26,
+          "genDate": "2020-07-24 17:47:12 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 14,
+          "genDate": "2020-07-25 17:44:04 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 16,
+          "genDate": "2020-07-27 00:22:02 UTC"
+        }
+      ]
+    },
+    {
+      "run": 17,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 25,
+          "genDate": "2020-07-24 05:07:03 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 14,
+          "genDate": "2020-07-24 15:13:03 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 20,
+          "genDate": "2020-07-24 05:17:38 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 9,
+          "genDate": "2020-07-27 06:43:04 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 10,
+          "genDate": "2020-07-25 11:36:24 UTC"
+        }
+      ]
+    },
+    {
+      "run": 18,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 12,
+          "genDate": "2020-07-24 17:43:22 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 9,
+          "genDate": "2020-07-25 22:02:38 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 13,
+          "genDate": "2020-07-24 15:41:14 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 21,
+          "genDate": "2020-07-24 16:10:20 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 2,
+          "genDate": "2020-07-24 15:07:16 UTC"
+        }
+      ]
+    },
+    {
+      "run": 19,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 13,
+          "genDate": "2020-07-24 14:02:16 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 17,
+          "genDate": "2020-07-25 02:07:10 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 5,
+          "genDate": "2020-07-17 04:30:53 UTC",
+          "aborted": true
+        },
+        {
+          "clone": 3,
+          "gen": 21,
+          "genDate": "2020-07-25 03:56:33 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 7,
+          "genDate": "2020-07-24 19:56:55 UTC"
+        }
+      ]
+    },
+    {
+      "run": 20,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 15,
+          "genDate": "2020-07-27 14:30:01 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 18,
+          "genDate": "2020-07-24 12:25:39 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 9,
+          "genDate": "2020-07-24 21:57:13 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 20,
+          "genDate": "2020-07-24 08:32:24 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 5,
+          "genDate": "2020-07-24 15:50:59 UTC"
+        }
+      ]
+    },
+    {
+      "run": 21,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 14,
+          "genDate": "2020-07-24 18:14:41 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 20,
+          "genDate": "2020-07-24 13:48:48 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 11,
+          "genDate": "2020-07-24 12:57:51 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 8,
+          "genDate": "2020-07-24 11:24:12 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 5,
+          "genDate": "2020-07-24 21:37:27 UTC"
+        }
+      ]
+    },
+    {
+      "run": 22,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 18,
+          "genDate": "2020-07-24 09:31:11 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 23,
+          "genDate": "2020-07-24 17:15:54 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 19,
+          "genDate": "2020-07-25 22:33:42 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 21,
+          "genDate": "2020-07-25 02:19:28 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 9,
+          "genDate": "2020-07-24 14:22:36 UTC"
+        }
+      ]
+    },
+    {
+      "run": 23,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 21,
+          "genDate": "2020-07-24 22:40:17 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 7,
+          "genDate": "2020-07-24 10:31:27 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 15,
+          "genDate": "2020-07-24 11:27:29 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 9,
+          "genDate": "2020-07-26 06:38:38 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 9,
+          "genDate": "2020-07-24 14:35:40 UTC"
+        }
+      ]
+    }
+  ]
+}
