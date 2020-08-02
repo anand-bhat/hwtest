@@ -12,6 +12,7 @@ from time import sleep
 requests.packages.urllib3.disable_warnings()
 
 MAX_FAILURES = 0
+s = requests.Session()
 
 
 def main(argv):
@@ -193,7 +194,7 @@ def wu_check(project, run, clone, gen):
     print('   Checking status for Project {}, Run {}, Clone {}, Gen {}...'.format(project, run, clone, gen))
     url = 'https://api.foldingathome.org/project/{}/run/{}/clone/{}/gen/{}'.format(project, run, clone, gen)
     sleep(1)
-    response = requests.get(url)
+    response = s.get(url, verify=False)
     if response.status_code != 200:
         print('ERROR: Error in API response')
         exit(1)
