@@ -10,6 +10,10 @@ python projectProgressChecker.py -f ../docs/assets/data/14296.json
 python projectProgressChecker.py -f ../docs/assets/data/14297.json
 python projectProgressChecker.py -f ../docs/assets/data/14298.json
 python projectProgressChecker.py -f ../docs/assets/data/14299.json
+python projectProgressChecker.py -f ../docs/assets/data/14520.json
+python projectProgressChecker.py -f ../docs/assets/data/14524.json
+python projectProgressChecker.py -f ../docs/assets/data/14836.json
 python projectProgressChecker.py -f ../docs/assets/data/16800.json
 python projectProgressChecker.py -f ../docs/assets/data/16801.json
+python projectProgressChecker.py -f ../docs/assets/data/16804.json
 cmd
