@@ -194,7 +194,7 @@ def wu_check(project, run, clone, gen):
     print('   Checking status for Project {}, Run {}, Clone {}, Gen {}...'.format(project, run, clone, gen))
     url = 'https://api.foldingathome.org/project/{}/run/{}/clone/{}/gen/{}'.format(project, run, clone, gen)
     sleep(1)
-    response = s.get(url, verify=False)
+    response = s.get(url)
     if response.status_code != 200:
         print('ERROR: Error in API response')
         exit(1)
