@@ -1,0 +1,611 @@
+{
+  "project": 16920,
+  "maxFailures": 5,
+  "lastUpdated": 1596682294087,
+  "maxRuns": 60,
+  "maxClonesPerRun": 1,
+  "maxGensPerClone": 25,
+  "trajLengthPerWU": 0.001,
+  "runs": [
+    {
+      "run": 0,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 8,
+          "genDate": "2020-08-05 17:20:11 UTC"
+        }
+      ]
+    },
+    {
+      "run": 1,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 14,
+          "genDate": "2020-08-05 22:45:54 UTC"
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 9,
+          "genDate": "2020-08-05 18:28:01 UTC"
+        }
+      ]
+    },
+    {
+      "run": 3,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 7,
+          "genDate": "2020-08-05 17:14:16 UTC"
+        }
+      ]
+    },
+    {
+      "run": 4,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 6,
+          "genDate": "2020-08-05 16:54:17 UTC"
+        }
+      ]
+    },
+    {
+      "run": 5,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 8,
+          "genDate": "2020-08-05 16:59:09 UTC"
+        }
+      ]
+    },
+    {
+      "run": 6,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 14,
+          "genDate": "2020-08-05 21:40:18 UTC"
+        }
+      ]
+    },
+    {
+      "run": 7,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 5,
+          "genDate": "2020-08-05 17:01:38 UTC"
+        }
+      ]
+    },
+    {
+      "run": 8,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 8,
+          "genDate": "2020-08-05 20:03:01 UTC"
+        }
+      ]
+    },
+    {
+      "run": 9,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 17,
+          "genDate": "2020-08-06 01:32:29 UTC"
+        }
+      ]
+    },
+    {
+      "run": 10,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 17,
+          "genDate": "2020-08-05 23:30:24 UTC"
+        }
+      ]
+    },
+    {
+      "run": 11,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 2,
+          "genDate": "2020-08-05 16:33:05 UTC"
+        }
+      ]
+    },
+    {
+      "run": 12,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 16,
+          "genDate": "2020-08-05 23:59:40 UTC"
+        }
+      ]
+    },
+    {
+      "run": 13,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 3,
+          "genDate": "2020-08-05 16:37:29 UTC"
+        }
+      ]
+    },
+    {
+      "run": 14,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 5,
+          "genDate": "2020-08-05 19:23:07 UTC"
+        }
+      ]
+    },
+    {
+      "run": 15,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 9,
+          "genDate": "2020-08-05 17:24:52 UTC"
+        }
+      ]
+    },
+    {
+      "run": 16,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 9,
+          "genDate": "2020-08-05 16:44:02 UTC"
+        }
+      ]
+    },
+    {
+      "run": 17,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 8,
+          "genDate": "2020-08-05 17:39:02 UTC"
+        }
+      ]
+    },
+    {
+      "run": 18,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 7,
+          "genDate": "2020-08-05 19:42:40 UTC"
+        }
+      ]
+    },
+    {
+      "run": 19,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 2,
+          "genDate": "2020-08-05 17:26:46 UTC"
+        }
+      ]
+    },
+    {
+      "run": 20,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 10,
+          "genDate": "2020-08-05 16:28:36 UTC"
+        }
+      ]
+    },
+    {
+      "run": 21,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 9,
+          "genDate": "2020-08-05 16:50:31 UTC"
+        }
+      ]
+    },
+    {
+      "run": 22,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 12,
+          "genDate": "2020-08-05 22:09:45 UTC"
+        }
+      ]
+    },
+    {
+      "run": 23,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 6,
+          "genDate": "2020-08-05 16:43:17 UTC"
+        }
+      ]
+    },
+    {
+      "run": 24,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 6,
+          "genDate": "2020-08-05 17:09:21 UTC"
+        }
+      ]
+    },
+    {
+      "run": 25,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 9,
+          "genDate": "2020-08-05 17:08:02 UTC"
+        }
+      ]
+    },
+    {
+      "run": 26,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 16,
+          "genDate": "2020-08-05 20:55:04 UTC"
+        }
+      ]
+    },
+    {
+      "run": 27,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 0,
+          "genDate": "2020-08-05 21:35:54 UTC"
+        }
+      ]
+    },
+    {
+      "run": 28,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 8,
+          "genDate": "2020-08-05 17:28:22 UTC"
+        }
+      ]
+    },
+    {
+      "run": 29,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 10,
+          "genDate": "2020-08-05 16:53:19 UTC"
+        }
+      ]
+    },
+    {
+      "run": 30,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 3,
+          "genDate": "2020-08-05 17:01:46 UTC"
+        }
+      ]
+    },
+    {
+      "run": 31,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 11,
+          "genDate": "2020-08-05 17:35:56 UTC"
+        }
+      ]
+    },
+    {
+      "run": 32,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 13,
+          "genDate": "2020-08-05 19:05:10 UTC"
+        }
+      ]
+    },
+    {
+      "run": 33,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 6,
+          "genDate": "2020-08-05 19:30:09 UTC"
+        }
+      ]
+    },
+    {
+      "run": 34,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 5,
+          "genDate": "2020-08-05 16:29:02 UTC"
+        }
+      ]
+    },
+    {
+      "run": 35,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 9,
+          "genDate": "2020-08-05 16:52:42 UTC"
+        }
+      ]
+    },
+    {
+      "run": 36,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 10,
+          "genDate": "2020-08-05 17:11:28 UTC"
+        }
+      ]
+    },
+    {
+      "run": 37,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 7,
+          "genDate": "2020-08-05 19:39:08 UTC"
+        }
+      ]
+    },
+    {
+      "run": 38,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 2,
+          "genDate": "2020-08-05 21:01:52 UTC"
+        }
+      ]
+    },
+    {
+      "run": 39,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 10,
+          "genDate": "2020-08-05 16:50:38 UTC"
+        }
+      ]
+    },
+    {
+      "run": 40,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 7,
+          "genDate": "2020-08-05 19:46:28 UTC"
+        }
+      ]
+    },
+    {
+      "run": 41,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 9,
+          "genDate": "2020-08-05 17:36:52 UTC"
+        }
+      ]
+    },
+    {
+      "run": 42,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 11,
+          "genDate": "2020-08-05 18:03:27 UTC"
+        }
+      ]
+    },
+    {
+      "run": 43,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 9,
+          "genDate": "2020-08-05 16:50:39 UTC"
+        }
+      ]
+    },
+    {
+      "run": 44,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 10,
+          "genDate": "2020-08-05 16:35:02 UTC"
+        }
+      ]
+    },
+    {
+      "run": 45,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 7,
+          "genDate": "2020-08-05 19:20:59 UTC"
+        }
+      ]
+    },
+    {
+      "run": 46,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 7,
+          "genDate": "2020-08-05 17:48:30 UTC"
+        }
+      ]
+    },
+    {
+      "run": 47,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 10,
+          "genDate": "2020-08-05 17:57:43 UTC"
+        }
+      ]
+    },
+    {
+      "run": 48,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 2,
+          "genDate": "2020-08-05 16:59:42 UTC"
+        }
+      ]
+    },
+    {
+      "run": 49,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 7,
+          "genDate": "2020-08-05 16:36:27 UTC"
+        }
+      ]
+    },
+    {
+      "run": 50,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 5,
+          "genDate": "2020-08-05 16:45:51 UTC"
+        }
+      ]
+    },
+    {
+      "run": 51,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 3,
+          "genDate": "2020-08-05 17:11:22 UTC"
+        }
+      ]
+    },
+    {
+      "run": 52,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 1,
+          "genDate": "2020-08-05 21:08:17 UTC"
+        }
+      ]
+    },
+    {
+      "run": 53,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 0,
+          "genDate": "2020-08-05 16:29:34 UTC"
+        }
+      ]
+    },
+    {
+      "run": 54,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": -1,
+          "genDate": "-"
+        }
+      ]
+    },
+    {
+      "run": 55,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": -1,
+          "genDate": "-"
+        }
+      ]
+    },
+    {
+      "run": 56,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": -1,
+          "genDate": "-"
+        }
+      ]
+    },
+    {
+      "run": 57,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": -1,
+          "genDate": "-"
+        }
+      ]
+    },
+    {
+      "run": 58,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": -1,
+          "genDate": "-"
+        }
+      ]
+    },
+    {
+      "run": 59,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": -1,
+          "genDate": "-"
+        }
+      ]
+    }
+  ]
+}
