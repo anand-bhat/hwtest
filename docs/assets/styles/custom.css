@@ -20,4 +20,5 @@ body {
 }
 .cardimg {
 	max-height: 50px;
+	width: auto;
 }
