@@ -19,6 +19,8 @@ body {
 	height: 1.5rem;
 }
 .cardimg {
+	height: auto;
 	max-height: 50px;
+	max-width: 175px;
 	width: auto;
 }
