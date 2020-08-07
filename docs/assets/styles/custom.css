@@ -21,6 +21,4 @@ body {
 .cardimg {
 	max-height: 50px;
 	width: auto;
-	object-fit: contain;
-	text-align: center;
 }
