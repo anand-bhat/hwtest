@@ -20,6 +20,10 @@ python projectProgressChecker.py -f ../docs/assets/data/14521.json
 python projectProgressChecker.py -f ../docs/assets/data/14523.json
 python projectProgressChecker.py -f ../docs/assets/data/14524.json
 python projectProgressChecker.py -f ../docs/assets/data/14525.json
+python projectProgressChecker.py -f ../docs/assets/data/14526.json
+python projectProgressChecker.py -f ../docs/assets/data/14527.json
+python projectProgressChecker.py -f ../docs/assets/data/14528.json
+python projectProgressChecker.py -f ../docs/assets/data/14529.json
 python projectProgressChecker.py -f ../docs/assets/data/14630.json
 python projectProgressChecker.py -f ../docs/assets/data/14631.json
 python projectProgressChecker.py -f ../docs/assets/data/14836.json
