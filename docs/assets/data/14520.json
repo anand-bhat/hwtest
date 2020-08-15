@@ -1,7 +1,7 @@
 {
   "project": 14520,
   "maxFailures": 5,
-  "lastUpdated": 1597152602625,
+  "lastUpdated": 1597369796078,
   "maxRuns": 1,
   "maxClonesPerRun": 1000,
   "maxGensPerClone": 320,
@@ -2734,8 +2734,8 @@
         },
         {
           "clone": 542,
-          "gen": 239,
-          "genDate": "2020-08-05 13:04:28 UTC"
+          "gen": 240,
+          "genDate": "2020-08-12 00:29:33 UTC"
         },
         {
           "clone": 543,
