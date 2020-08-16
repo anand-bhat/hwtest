@@ -178,9 +178,9 @@ def record_clone_entry(clone_entry, gen, genDate, code):
     clone_entry.pop('abortedWhenSuccess', None)
     clone_entry.pop('abortedWhenSuccessAndDumped', None)
 
-    if code == 2:
+    if code >= 2:
         clone_entry['aborted'] = True
-    elif code == 3:
+    if code == 3:
         clone_entry['abortedWhenDumped'] = True
     elif code == 4:
         clone_entry['abortedWhenSuccess'] = True

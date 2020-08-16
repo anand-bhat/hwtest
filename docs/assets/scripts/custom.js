@@ -115,9 +115,27 @@ function failedAlert(count) {
   return `<svg class="bi bi-exclamation-circle-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg"><title>${count} ${entity} failed (aborted)</title><path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg>`;
 }
 
+function failedWhenDumpedAlert(count) {
+  const entity = count > 1 ? 'trajectories' : 'trajectory';
+  return `<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bug-fill" fill="red" xmlns="http://www.w3.org/2000/svg"><title>${count} ${entity} failed (aborted) due to issue #1549</title><path fill-rule="evenodd" d="M4.978.855a.5.5 0 1 0-.956.29l.41 1.352A4.985 4.985 0 0 0 3 6h10a4.985 4.985 0 0 0-1.432-3.503l.41-1.352a.5.5 0 1 0-.956-.29l-.291.956A4.978 4.978 0 0 0 8 1a4.979 4.979 0 0 0-2.731.811l-.29-.956zM13 6v1H8.5v8.975A5 5 0 0 0 13 11h.5a.5.5 0 0 1 .5.5v.5a.5.5 0 1 0 1 0v-.5a1.5 1.5 0 0 0-1.5-1.5H13V9h1.5a.5.5 0 0 0 0-1H13V7h.5A1.5 1.5 0 0 0 15 5.5V5a.5.5 0 0 0-1 0v.5a.5.5 0 0 1-.5.5H13zm-5.5 9.975V7H3V6h-.5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 0-1 0v.5A1.5 1.5 0 0 0 2.5 7H3v1H1.5a.5.5 0 0 0 0 1H3v1h-.5A1.5 1.5 0 0 0 1 11.5v.5a.5.5 0 1 0 1 0v-.5a.5.5 0 0 1 .5-.5H3a5 5 0 0 0 4.5 4.975z"/>
+</svg>`;
+}
+
+function failedWhenSuccessAlert(count) {
+  const entity = count > 1 ? 'trajectories' : 'trajectory';
+  return `<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bug-fill" fill="purple" xmlns="http://www.w3.org/2000/svg"><title>${count} ${entity} failed (aborted) due to issue #1532</title><path fill-rule="evenodd" d="M4.978.855a.5.5 0 1 0-.956.29l.41 1.352A4.985 4.985 0 0 0 3 6h10a4.985 4.985 0 0 0-1.432-3.503l.41-1.352a.5.5 0 1 0-.956-.29l-.291.956A4.978 4.978 0 0 0 8 1a4.979 4.979 0 0 0-2.731.811l-.29-.956zM13 6v1H8.5v8.975A5 5 0 0 0 13 11h.5a.5.5 0 0 1 .5.5v.5a.5.5 0 1 0 1 0v-.5a1.5 1.5 0 0 0-1.5-1.5H13V9h1.5a.5.5 0 0 0 0-1H13V7h.5A1.5 1.5 0 0 0 15 5.5V5a.5.5 0 0 0-1 0v.5a.5.5 0 0 1-.5.5H13zm-5.5 9.975V7H3V6h-.5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 0-1 0v.5A1.5 1.5 0 0 0 2.5 7H3v1H1.5a.5.5 0 0 0 0 1H3v1h-.5A1.5 1.5 0 0 0 1 11.5v.5a.5.5 0 1 0 1 0v-.5a.5.5 0 0 1 .5-.5H3a5 5 0 0 0 4.5 4.975z"/>
+</svg>`;
+}
+
+function failedWhenSuccessAndDumpedAlert(count) {
+  const entity = count > 1 ? 'trajectories' : 'trajectory';
+  return `<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bug-fill" fill="magenta" xmlns="http://www.w3.org/2000/svg"><title>${count} ${entity} failed (aborted) due to issues #1532 and #1549</title><path fill-rule="evenodd" d="M4.978.855a.5.5 0 1 0-.956.29l.41 1.352A4.985 4.985 0 0 0 3 6h10a4.985 4.985 0 0 0-1.432-3.503l.41-1.352a.5.5 0 1 0-.956-.29l-.291.956A4.978 4.978 0 0 0 8 1a4.979 4.979 0 0 0-2.731.811l-.29-.956zM13 6v1H8.5v8.975A5 5 0 0 0 13 11h.5a.5.5 0 0 1 .5.5v.5a.5.5 0 1 0 1 0v-.5a1.5 1.5 0 0 0-1.5-1.5H13V9h1.5a.5.5 0 0 0 0-1H13V7h.5A1.5 1.5 0 0 0 15 5.5V5a.5.5 0 0 0-1 0v.5a.5.5 0 0 1-.5.5H13zm-5.5 9.975V7H3V6h-.5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 0-1 0v.5A1.5 1.5 0 0 0 2.5 7H3v1H1.5a.5.5 0 0 0 0 1H3v1h-.5A1.5 1.5 0 0 0 1 11.5v.5a.5.5 0 1 0 1 0v-.5a.5.5 0 0 1 .5-.5H3a5 5 0 0 0 4.5 4.975z"/>
+</svg>`;
+}
+
 function skippedAlert(count) {
   const entity = count > 1 ? 'trajectories' : 'trajectory';
-  return `<svg class="bi bi-info-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><title>${count} ${entity} skipped</title><path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/><circle cx="8" cy="4.5" r="1"/></svg>`;
+  return `<svg class="bi bi-info-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="black" xmlns="http://www.w3.org/2000/svg"><title>${count} ${entity} skipped</title><path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/><circle cx="8" cy="4.5" r="1"/></svg>`;
 }
 
 function lateAlert(count) {
@@ -169,6 +187,9 @@ function prcgProgress() {
       let totalGensCompletedForProject = 0;
       let totalGensSuccessfulForProject = 0;
       let totalGensFailedForProject = 0;
+      let totalGensFailedWhenDumpedForProject = 0;
+      let totalGensFailedWhenSuccessForProject = 0;
+      let totalGensFailedWhenSuccessAndDumpedForProject = 0;
       let totalGensAbortedForProject = 0;
       let totalGensRemainingForProject = 0;
       let totalGensLateForProject = 0;
@@ -179,6 +200,9 @@ function prcgProgress() {
         let totalGensCompletedForRun = 0;
         let totalGensSuccessfulForRun = 0;
         let totalGensFailedForRun = 0;
+        let totalGensFailedWhenDumpedForRun = 0;
+        let totalGensFailedWhenSuccessForRun = 0;
+        let totalGensFailedWhenSuccessAndDumpedForRun = 0;
         let totalGensSkippedForRun = 0;
         let totalGensAbortedForRun = 0;
         let totalGensRemainingForRun = 0;
@@ -196,6 +220,15 @@ function prcgProgress() {
           // Gens (WUs) failed for this clone (1 or 0)
           const totalGensFailedForClone = clone.aborted ? 1 : 0;
 
+          // Gens (WUs) failed when dumped for this clone (1 or 0)
+          const totalGensFailedWhenDumpedForClone = clone.abortedWhenDumped ? 1 : 0;
+
+          // Gens (WUs) failed when dumped for this clone (1 or 0)
+          const totalGensFailedWhenSuccessForClone = clone.abortedWhenSuccess ? 1 : 0;
+
+          // Gens (WUs) failed when dumped for this clone (1 or 0)
+          const totalGensFailedWhenSuccessAndDumpedForClone = clone.abortedWhenSuccessAndDumped ? 1 : 0;
+
           // Gens (WUs) skipped for this clone (1 or 0)
           const totalGensSkippedForClone = clone.skipped ? 1 : 0;
 
@@ -212,6 +245,9 @@ function prcgProgress() {
           totalGensCompletedForRun += totalGensCompletedForClone;
           totalGensSuccessfulForRun += totalGensSuccessfulForClone;
           totalGensFailedForRun += totalGensFailedForClone;
+          totalGensFailedWhenDumpedForRun += totalGensFailedWhenDumpedForClone;
+          totalGensFailedWhenSuccessForRun += totalGensFailedWhenSuccessForClone;
+          totalGensFailedWhenSuccessAndDumpedForRun += totalGensFailedWhenSuccessAndDumpedForClone;
           totalGensAbortedForRun += totalGensAbortedForClone;
           totalGensRemainingForRun += totalGensRemainingForClone;
           totalGensSkippedForRun += totalGensSkippedForClone;
@@ -221,6 +257,9 @@ function prcgProgress() {
           totalGensCompletedForProject += totalGensCompletedForClone;
           totalGensSuccessfulForProject += totalGensSuccessfulForClone;
           totalGensFailedForProject += totalGensFailedForClone;
+          totalGensFailedWhenDumpedForProject += totalGensFailedWhenDumpedForClone;
+          totalGensFailedWhenSuccessForProject += totalGensFailedWhenSuccessForClone;
+          totalGensFailedWhenSuccessAndDumpedForProject += totalGensFailedWhenSuccessAndDumpedForClone;
           totalGensAbortedForProject += totalGensAbortedForClone;
           totalGensRemainingForProject += totalGensRemainingForClone;
           totalGensLateForProject += totalGensLateForClone;
@@ -242,6 +281,19 @@ function prcgProgress() {
         if (totalGensFailedForRun > 0) {
           flags.push('F');
           runText = `${runText} ${failedAlert(totalGensFailedForRun)}`;
+        }
+        if (totalGensFailedWhenDumpedForRun > 0) {
+          flags.push('B1549');
+          genText = `${genText} ${failedWhenDumpedAlert(totalGensFailedWhenDumpedForRun)}`;
+        }
+        if (totalGensFailedWhenSuccessForRun > 0) {
+          flags.push('B1532');
+          genText = `${genText} ${failedWhenSuccessAlert(totalGensFailedWhenSuccessForRun)}`;
+        }
+        if (totalGensFailedWhenSuccessAndDumpedForRun > 0) {
+          flags.push('B1532');
+          flags.push('B1549');
+          genText = `${genText} ${failedWhenSuccessAndDumpedAlert(totalGensFailedWhenSuccessAndDumpedForRun)}`;
         }
         if (totalGensLateForRun > 0) {
           flags.push('L');
@@ -365,6 +417,9 @@ function prcgProgress2() {
       let totalGensCompletedForRun = 0;
       let totalGensSuccessfulForRun = 0;
       let totalGensFailedForRun = 0;
+      let totalGensFailedWhenDumpedForRun = 0;
+      let totalGensFailedWhenSuccessForRun = 0;
+      let totalGensFailedWhenSuccessAndDumpedForRun = 0;
       let totalGensAbortedForRun = 0;
       let totalGensRemainingForRun = 0;
       let totalGensLateForRun = 0;
@@ -382,6 +437,15 @@ function prcgProgress2() {
         // Gens (WUs) failed for this clone (1 or 0)
         const totalGensFailedForClone = clone.aborted ? 1 : 0;
 
+        // Gens (WUs) failed when dumped for this clone (1 or 0)
+        const totalGensFailedWhenDumpedForClone = clone.abortedWhenDumped ? 1 : 0;
+
+        // Gens (WUs) failed when dumped for this clone (1 or 0)
+        const totalGensFailedWhenSuccessForClone = clone.abortedWhenSuccess ? 1 : 0;
+
+        // Gens (WUs) failed when dumped for this clone (1 or 0)
+        const totalGensFailedWhenSuccessAndDumpedForClone = clone.abortedWhenSuccessAndDumped ? 1 : 0;
+
         // Gens (WUs) aborted for this clone if a gen failed
         const totalGensAbortedForClone = clone.aborted ? (data.maxGensPerClone - totalGensSuccessfulForClone - 1) : 0;
 
@@ -395,6 +459,9 @@ function prcgProgress2() {
         totalGensCompletedForRun += totalGensCompletedForClone;
         totalGensSuccessfulForRun += totalGensSuccessfulForClone;
         totalGensFailedForRun += totalGensFailedForClone;
+        totalGensFailedWhenDumpedForRun += totalGensFailedWhenDumpedForClone;
+        totalGensFailedWhenSuccessForRun += totalGensFailedWhenSuccessForClone;
+        totalGensFailedWhenSuccessAndDumpedForRun += totalGensFailedWhenSuccessAndDumpedForClone;
         totalGensAbortedForRun += totalGensAbortedForClone;
         totalGensRemainingForRun += totalGensRemainingForClone;
         totalGensLateForRun += totalGensLateForClone;
@@ -415,6 +482,19 @@ function prcgProgress2() {
         if (clone.aborted) {
           flags.push('F');
           genText = `${genText} ${failedAlert(1)}`;
+        }
+        if (clone.abortedWhenDumped) {
+          flags.push('B1549');
+          genText = `${genText} ${failedWhenDumpedAlert(1)}`;
+        }
+        if (clone.abortedWhenSuccess) {
+          flags.push('B1532');
+          genText = `${genText} ${failedWhenSuccessAlert(1)}`;
+        }
+        if (clone.abortedWhenSuccessAndDumped) {
+          flags.push('B1532');
+          flags.push('B1549');
+          genText = `${genText} ${failedWhenSuccessAndDumpedAlert(1)}`;
         }
         if (totalGensLateForClone > 0) {
           flags.push('L');
