@@ -1,7 +1,7 @@
 {
   "project": 13807,
   "maxFailures": 5,
-  "lastUpdated": 1597545797325,
+  "lastUpdated": 1597586499440,
   "maxRuns": 1,
   "maxClonesPerRun": 300,
   "maxGensPerClone": 1000,
@@ -67,8 +67,10 @@
         },
         {
           "clone": 11,
-          "gen": 472,
-          "genDate": "2018-11-15 05:15:02 UTC"
+          "gen": 473,
+          "genDate": "2018-11-17 07:15:02 UTC",
+          "aborted": true,
+          "abortedWhenDumped": true
         },
         {
           "clone": 12,
@@ -747,8 +749,10 @@
         },
         {
           "clone": 145,
-          "gen": 744,
-          "genDate": "2019-03-04 23:30:03 UTC"
+          "gen": 745,
+          "genDate": "2019-03-08 04:45:02 UTC",
+          "aborted": true,
+          "abortedWhenDumped": true
         },
         {
           "clone": 146,

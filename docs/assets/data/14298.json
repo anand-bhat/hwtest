@@ -1,7 +1,7 @@
 {
   "project": 14298,
   "maxFailures": 5,
-  "lastUpdated": 1597546330499,
+  "lastUpdated": 1597588255078,
   "maxRuns": 1,
   "maxClonesPerRun": 50,
   "maxGensPerClone": 250,
@@ -105,7 +105,9 @@
         {
           "clone": 18,
           "gen": 238,
-          "genDate": "2020-06-23 03:40:08 UTC"
+          "genDate": "2020-06-23 03:40:08 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 19,
@@ -120,7 +122,9 @@
         {
           "clone": 21,
           "gen": 183,
-          "genDate": "2020-06-25 16:09:18 UTC"
+          "genDate": "2020-06-25 16:09:18 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 22,
@@ -156,12 +160,16 @@
         {
           "clone": 28,
           "gen": 181,
-          "genDate": "2020-05-16 12:23:16 UTC"
+          "genDate": "2020-05-16 12:23:16 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 29,
           "gen": 123,
-          "genDate": "2020-05-30 00:29:49 UTC"
+          "genDate": "2020-05-30 00:29:49 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 30,
@@ -183,7 +191,9 @@
         {
           "clone": 33,
           "gen": 86,
-          "genDate": "2020-05-12 04:15:29 UTC"
+          "genDate": "2020-05-12 04:15:29 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 34,
@@ -235,12 +245,16 @@
         {
           "clone": 43,
           "gen": 192,
-          "genDate": "2020-06-12 03:12:21 UTC"
+          "genDate": "2020-06-12 03:12:21 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 44,
           "gen": 199,
-          "genDate": "2020-06-09 02:10:04 UTC"
+          "genDate": "2020-06-09 02:10:04 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 45,

@@ -1,7 +1,7 @@
 {
   "project": 14296,
   "maxFailures": 5,
-  "lastUpdated": 1597546305800,
+  "lastUpdated": 1597588060888,
   "maxRuns": 1,
   "maxClonesPerRun": 50,
   "maxGensPerClone": 250,
@@ -44,7 +44,9 @@
         {
           "clone": 6,
           "gen": 157,
-          "genDate": "2020-05-22 04:26:42 UTC"
+          "genDate": "2020-05-22 04:26:42 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 7,
@@ -54,7 +56,9 @@
         {
           "clone": 8,
           "gen": 146,
-          "genDate": "2020-06-05 18:08:14 UTC"
+          "genDate": "2020-06-05 18:08:14 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 9,
@@ -136,7 +140,9 @@
         {
           "clone": 23,
           "gen": 228,
-          "genDate": "2020-06-14 03:16:22 UTC"
+          "genDate": "2020-06-14 03:16:22 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 24,
@@ -146,12 +152,16 @@
         {
           "clone": 25,
           "gen": 183,
-          "genDate": "2020-05-18 06:56:46 UTC"
+          "genDate": "2020-05-18 06:56:46 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 26,
           "gen": 196,
-          "genDate": "2020-06-24 23:37:57 UTC"
+          "genDate": "2020-06-24 23:37:57 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 27,
@@ -167,7 +177,9 @@
         {
           "clone": 29,
           "gen": 137,
-          "genDate": "2020-05-10 22:14:32 UTC"
+          "genDate": "2020-05-10 22:14:32 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 30,
@@ -182,12 +194,16 @@
         {
           "clone": 32,
           "gen": 187,
-          "genDate": "2020-06-22 21:40:58 UTC"
+          "genDate": "2020-06-22 21:40:58 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 33,
           "gen": 79,
-          "genDate": "2020-05-15 00:53:51 UTC"
+          "genDate": "2020-05-15 00:53:51 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 34,
@@ -256,8 +272,10 @@
         },
         {
           "clone": 46,
-          "gen": 198,
-          "genDate": "2020-06-23 14:02:10 UTC"
+          "gen": 199,
+          "genDate": "2020-06-23 15:20:23 UTC",
+          "aborted": true,
+          "abortedWhenDumped": true
         },
         {
           "clone": 47,
@@ -272,7 +290,9 @@
         {
           "clone": 49,
           "gen": 198,
-          "genDate": "2020-06-28 08:10:52 UTC"
+          "genDate": "2020-06-28 08:10:52 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         }
       ]
     }

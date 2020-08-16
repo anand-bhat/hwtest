@@ -14,8 +14,6 @@ requests.packages.urllib3.disable_warnings()
 MAX_FAILURES = 0
 s = requests.Session()
 
-yello
-
 
 def main(argv):
     """Main function."""
@@ -273,13 +271,14 @@ def wu_check(project, run, clone, gen):
         if code in ['Ok', 'Relayed']:
             if faulty or dumped:
                 success = True
-            return (1, genDate)
+            else:
+                return (1, genDate)
         elif code in ['Faulty', 'Faulty 2']:
             faulty = True
             faultCount = faultCount + 1
         elif code == 'Dumped':
-            faultCount = faultCount + 1
             dumped = True
+            faultCount = faultCount + 1
     if faultCount >= MAX_FAILURES:
         if dumped and not success:
             return (3, genDate)
