@@ -1,7 +1,7 @@
 {
   "project": 14520,
   "maxFailures": 5,
-  "lastUpdated": 1597587306079,
+  "lastUpdated": 1597590880720,
   "maxRuns": 1,
   "maxClonesPerRun": 1000,
   "maxGensPerClone": 320,
@@ -451,7 +451,9 @@
         {
           "clone": 87,
           "gen": 155,
-          "genDate": "2020-07-10 12:45:59 UTC"
+          "genDate": "2020-07-10 12:45:59 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 88,
@@ -856,7 +858,9 @@
         {
           "clone": 168,
           "gen": 19,
-          "genDate": "2020-06-04 00:52:13 UTC"
+          "genDate": "2020-06-04 00:52:13 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 169,
@@ -1254,7 +1258,9 @@
         {
           "clone": 247,
           "gen": 51,
-          "genDate": "2020-06-24 15:10:00 UTC"
+          "genDate": "2020-06-24 15:10:00 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 248,
@@ -1430,7 +1436,9 @@
         {
           "clone": 282,
           "gen": 30,
-          "genDate": "2020-06-11 15:29:27 UTC"
+          "genDate": "2020-06-11 15:29:27 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 283,
@@ -1766,7 +1774,7 @@
         },
         {
           "clone": 349,
-          "gen": 98,
+          "gen": 97,
           "genDate": "2020-06-27 15:33:32 UTC"
         },
         {
@@ -3290,8 +3298,10 @@
         },
         {
           "clone": 653,
-          "gen": 125,
-          "genDate": "2020-07-09 03:15:36 UTC"
+          "gen": 126,
+          "genDate": "2020-07-09 05:47:04 UTC",
+          "aborted": true,
+          "abortedWhenDumped": true
         },
         {
           "clone": 654,
@@ -4664,7 +4674,9 @@
         {
           "clone": 927,
           "gen": 24,
-          "genDate": "2020-06-01 21:56:07 UTC"
+          "genDate": "2020-06-01 21:56:07 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 928,

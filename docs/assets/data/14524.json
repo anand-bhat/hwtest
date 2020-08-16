@@ -1,7 +1,7 @@
 {
   "project": 14524,
   "maxFailures": 5,
-  "lastUpdated": 1597549046243,
+  "lastUpdated": 1597592267835,
   "maxRuns": 1000,
   "maxClonesPerRun": 6,
   "maxGensPerClone": 60,
@@ -11121,8 +11121,10 @@
         },
         {
           "clone": 2,
-          "gen": 35,
-          "genDate": "2020-06-11 00:52:23 UTC"
+          "gen": 36,
+          "genDate": "2020-06-16 03:34:33 UTC",
+          "aborted": true,
+          "abortedWhenDumped": true
         },
         {
           "clone": 3,
@@ -16055,8 +16057,10 @@
         },
         {
           "clone": 5,
-          "gen": 16,
-          "genDate": "2020-06-10 04:29:14 UTC"
+          "gen": 17,
+          "genDate": "2020-06-15 05:08:41 UTC",
+          "aborted": true,
+          "abortedWhenDumped": true
         }
       ]
     },
@@ -17821,8 +17825,10 @@
       "clones": [
         {
           "clone": 0,
-          "gen": 3,
-          "genDate": "2020-03-14 11:42:11 UTC"
+          "gen": 4,
+          "genDate": "2020-03-14 14:22:40 UTC",
+          "aborted": true,
+          "abortedWhenDumped": true
         },
         {
           "clone": 1,
@@ -19334,8 +19340,10 @@
         },
         {
           "clone": 1,
-          "gen": 29,
-          "genDate": "2020-05-15 16:56:23 UTC"
+          "gen": 30,
+          "genDate": "2020-06-10 06:13:33 UTC",
+          "aborted": true,
+          "abortedWhenDumped": true
         },
         {
           "clone": 2,
@@ -21837,8 +21845,10 @@
         },
         {
           "clone": 3,
-          "gen": 44,
-          "genDate": "2020-06-23 21:08:49 UTC"
+          "gen": 45,
+          "genDate": "2020-06-25 02:24:18 UTC",
+          "aborted": true,
+          "abortedWhenDumped": true
         },
         {
           "clone": 4,
@@ -22143,8 +22153,10 @@
         },
         {
           "clone": 1,
-          "gen": 0,
-          "genDate": "2020-03-14 13:00:01 UTC"
+          "gen": 1,
+          "genDate": "2020-03-14 13:39:58 UTC",
+          "aborted": true,
+          "abortedWhenDumped": true
         },
         {
           "clone": 2,
@@ -30636,8 +30648,10 @@
       "clones": [
         {
           "clone": 0,
-          "gen": 0,
-          "genDate": "2020-03-14 10:38:54 UTC"
+          "gen": 1,
+          "genDate": "2020-03-24 11:42:15 UTC",
+          "aborted": true,
+          "abortedWhenDumped": true
         },
         {
           "clone": 1,
@@ -31314,8 +31328,10 @@
         },
         {
           "clone": 2,
-          "gen": 0,
-          "genDate": "2020-03-14 14:16:31 UTC"
+          "gen": 1,
+          "genDate": "2020-03-14 16:46:49 UTC",
+          "aborted": true,
+          "abortedWhenDumped": true
         },
         {
           "clone": 3,
