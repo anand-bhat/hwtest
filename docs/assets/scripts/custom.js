@@ -284,16 +284,16 @@ function prcgProgress() {
         }
         if (totalGensFailedWhenDumpedForRun > 0) {
           flags.push('B1549');
-          genText = `${genText} ${failedWhenDumpedAlert(totalGensFailedWhenDumpedForRun)}`;
+          runText = `${runText} ${failedWhenDumpedAlert(totalGensFailedWhenDumpedForRun)}`;
         }
         if (totalGensFailedWhenSuccessForRun > 0) {
           flags.push('B1532');
-          genText = `${genText} ${failedWhenSuccessAlert(totalGensFailedWhenSuccessForRun)}`;
+          runText = `${runText} ${failedWhenSuccessAlert(totalGensFailedWhenSuccessForRun)}`;
         }
         if (totalGensFailedWhenSuccessAndDumpedForRun > 0) {
           flags.push('B1532');
           flags.push('B1549');
-          genText = `${genText} ${failedWhenSuccessAndDumpedAlert(totalGensFailedWhenSuccessAndDumpedForRun)}`;
+          runText = `${runText} ${failedWhenSuccessAndDumpedAlert(totalGensFailedWhenSuccessAndDumpedForRun)}`;
         }
         if (totalGensLateForRun > 0) {
           flags.push('L');
