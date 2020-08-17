@@ -1,7 +1,7 @@
 {
   "project": 14184,
   "maxFailures": 5,
-  "lastUpdated": 1597589602650,
+  "lastUpdated": 1597629800749,
   "maxRuns": 15,
   "maxClonesPerRun": 100,
   "maxGensPerClone": 400,
@@ -43,7 +43,9 @@
         {
           "clone": 5,
           "gen": 108,
-          "genDate": "2019-09-16 17:00:02 UTC"
+          "genDate": "2019-09-16 17:00:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 6,
@@ -121,7 +123,9 @@
         {
           "clone": 18,
           "gen": 62,
-          "genDate": "2019-10-21 15:45:02 UTC"
+          "genDate": "2019-10-21 15:45:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 19,
@@ -236,7 +240,9 @@
         {
           "clone": 37,
           "gen": 31,
-          "genDate": "2019-10-15 10:00:02 UTC"
+          "genDate": "2019-10-15 10:00:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 38,
@@ -530,7 +536,9 @@
         {
           "clone": 86,
           "gen": 12,
-          "genDate": "2019-10-16 18:30:02 UTC"
+          "genDate": "2019-10-16 18:30:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 87,
@@ -629,8 +637,8 @@
         },
         {
           "clone": 2,
-          "gen": 49,
-          "genDate": "2019-08-21 07:00:02 UTC"
+          "gen": 79,
+          "genDate": "2019-09-01 00:45:02 UTC"
         },
         {
           "clone": 3,
@@ -744,7 +752,9 @@
         {
           "clone": 21,
           "gen": 40,
-          "genDate": "2019-09-19 07:45:02 UTC"
+          "genDate": "2019-09-19 07:45:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 22,
@@ -930,7 +940,9 @@
         {
           "clone": 52,
           "gen": 91,
-          "genDate": "2019-10-01 07:00:02 UTC"
+          "genDate": "2019-10-01 07:00:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 53,
@@ -1080,7 +1092,9 @@
         {
           "clone": 77,
           "gen": 27,
-          "genDate": "2019-10-17 01:00:01 UTC"
+          "genDate": "2019-10-17 01:00:01 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 78,
@@ -1278,7 +1292,9 @@
         {
           "clone": 9,
           "gen": 86,
-          "genDate": "2019-10-05 04:15:01 UTC"
+          "genDate": "2019-10-05 04:15:01 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 10,
@@ -1416,7 +1432,9 @@
         {
           "clone": 32,
           "gen": 41,
-          "genDate": "2019-10-21 15:45:02 UTC"
+          "genDate": "2019-10-21 15:45:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 33,
@@ -1588,8 +1606,8 @@
         },
         {
           "clone": 61,
-          "gen": 49,
-          "genDate": "2019-10-01 21:15:01 UTC"
+          "gen": 89,
+          "genDate": "2019-11-18 03:45:02 UTC"
         },
         {
           "clone": 62,
@@ -2073,7 +2091,9 @@
         {
           "clone": 40,
           "gen": 59,
-          "genDate": "2019-11-08 01:00:02 UTC"
+          "genDate": "2019-11-08 01:00:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 41,
@@ -2200,7 +2220,9 @@
         {
           "clone": 61,
           "gen": 51,
-          "genDate": "2019-10-21 14:15:02 UTC"
+          "genDate": "2019-10-21 14:15:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 62,
@@ -2211,7 +2233,9 @@
         {
           "clone": 63,
           "gen": 56,
-          "genDate": "2019-11-28 07:45:02 UTC"
+          "genDate": "2019-11-28 07:45:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 64,
@@ -2998,7 +3022,9 @@
         {
           "clone": 92,
           "gen": 13,
-          "genDate": "2019-10-21 15:45:02 UTC"
+          "genDate": "2019-10-21 15:45:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 93,
@@ -3074,7 +3100,9 @@
         {
           "clone": 4,
           "gen": 27,
-          "genDate": "2019-08-26 06:00:09 UTC"
+          "genDate": "2019-08-26 06:00:09 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 5,
@@ -3383,7 +3411,9 @@
         {
           "clone": 55,
           "gen": 85,
-          "genDate": "2019-09-20 21:45:01 UTC"
+          "genDate": "2019-09-20 21:45:01 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 56,
@@ -3472,7 +3502,9 @@
         {
           "clone": 70,
           "gen": 21,
-          "genDate": "2019-10-27 03:15:02 UTC"
+          "genDate": "2019-10-27 03:15:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 71,
@@ -4165,7 +4197,9 @@
         {
           "clone": 84,
           "gen": 49,
-          "genDate": "2019-11-02 19:45:01 UTC"
+          "genDate": "2019-11-02 19:45:01 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 85,
@@ -4249,7 +4283,9 @@
         {
           "clone": 98,
           "gen": 39,
-          "genDate": "2019-11-13 10:15:02 UTC"
+          "genDate": "2019-11-13 10:15:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 99,
@@ -4415,7 +4451,9 @@
         {
           "clone": 25,
           "gen": 49,
-          "genDate": "2019-10-05 13:15:02 UTC"
+          "genDate": "2019-10-05 13:15:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 26,
@@ -5440,12 +5478,16 @@
         {
           "clone": 94,
           "gen": 5,
-          "genDate": "2019-10-22 20:15:01 UTC"
+          "genDate": "2019-10-22 20:15:01 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 95,
           "gen": 50,
-          "genDate": "2019-11-25 07:00:02 UTC"
+          "genDate": "2019-11-25 07:00:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 96,
@@ -5940,7 +5982,9 @@
         {
           "clone": 76,
           "gen": 70,
-          "genDate": "2019-09-16 21:45:02 UTC"
+          "genDate": "2019-09-16 21:45:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 77,
@@ -6269,7 +6313,9 @@
         {
           "clone": 30,
           "gen": 52,
-          "genDate": "2019-09-18 13:15:02 UTC"
+          "genDate": "2019-09-18 13:15:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 31,
@@ -6304,7 +6350,9 @@
         {
           "clone": 36,
           "gen": 32,
-          "genDate": "2019-10-21 17:00:02 UTC"
+          "genDate": "2019-10-21 17:00:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 37,
@@ -6417,7 +6465,9 @@
         {
           "clone": 55,
           "gen": 42,
-          "genDate": "2019-10-05 14:00:02 UTC"
+          "genDate": "2019-10-05 14:00:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 56,
@@ -6668,7 +6718,9 @@
         {
           "clone": 97,
           "gen": 4,
-          "genDate": "2019-10-15 03:15:02 UTC"
+          "genDate": "2019-10-15 03:15:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 98,
@@ -7128,7 +7180,9 @@
         {
           "clone": 72,
           "gen": 61,
-          "genDate": "2019-11-26 07:45:02 UTC"
+          "genDate": "2019-11-26 07:45:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 73,
@@ -7332,7 +7386,9 @@
         {
           "clone": 5,
           "gen": 30,
-          "genDate": "2019-10-21 16:45:02 UTC"
+          "genDate": "2019-10-21 16:45:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 6,
@@ -7490,7 +7546,9 @@
         {
           "clone": 31,
           "gen": 110,
-          "genDate": "2019-10-31 00:15:02 UTC"
+          "genDate": "2019-10-31 00:15:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 32,
@@ -7501,7 +7559,9 @@
         {
           "clone": 33,
           "gen": 60,
-          "genDate": "2019-09-17 14:30:02 UTC"
+          "genDate": "2019-09-17 14:30:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 34,
@@ -7555,7 +7615,9 @@
         {
           "clone": 42,
           "gen": 143,
-          "genDate": "2019-11-16 00:45:01 UTC"
+          "genDate": "2019-11-16 00:45:01 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 43,
@@ -8159,7 +8221,9 @@
         {
           "clone": 41,
           "gen": 79,
-          "genDate": "2019-09-23 17:15:02 UTC"
+          "genDate": "2019-09-23 17:15:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 42,
@@ -8235,7 +8299,9 @@
         {
           "clone": 54,
           "gen": 138,
-          "genDate": "2019-10-16 18:30:02 UTC"
+          "genDate": "2019-10-16 18:30:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 55,
@@ -8637,7 +8703,9 @@
         {
           "clone": 20,
           "gen": 61,
-          "genDate": "2019-10-05 13:15:02 UTC"
+          "genDate": "2019-10-05 13:15:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 21,
@@ -8895,7 +8963,9 @@
         {
           "clone": 63,
           "gen": 43,
-          "genDate": "2019-10-21 15:30:02 UTC"
+          "genDate": "2019-10-21 15:30:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 64,
@@ -9032,7 +9102,9 @@
         {
           "clone": 86,
           "gen": 29,
-          "genDate": "2019-10-27 13:45:02 UTC"
+          "genDate": "2019-10-27 13:45:02 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 87,
