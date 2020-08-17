@@ -50,7 +50,7 @@ function prcg2Chart(projectId, runId, maxClonesPerRun, maxGensPerClone, dataSeri
       maintainAspectRatio: false,
       datasets: [{
         line: {
-          showLine: true,
+          showLine: false,
         },
       }],
       legend: {
