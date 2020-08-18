@@ -34,6 +34,7 @@ python projectProgressChecker.py -f ../docs/assets/data/16402.json
 python projectProgressChecker.py -f ../docs/assets/data/16416.json
 python projectProgressChecker.py -f ../docs/assets/data/16418.json
 python projectProgressChecker.py -f ../docs/assets/data/16421.json
+python projectProgressChecker.py -f ../docs/assets/data/16600.json
 python projectProgressChecker.py -f ../docs/assets/data/16800.json
 python projectProgressChecker.py -f ../docs/assets/data/16801.json
 python projectProgressChecker.py -f ../docs/assets/data/16804.json
