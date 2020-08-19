@@ -1,0 +1,271 @@
+{
+  "project": 14508,
+  "maxFailures": 5,
+  "lastUpdated": 1597817492661,
+  "maxRuns": 1,
+  "maxClonesPerRun": 50,
+  "maxGensPerClone": 65,
+  "trajLengthPerWU": 0,
+  "runs": [
+    {
+      "run": 0,
+      "clones": [
+        {
+          "clone": 0,
+          "gen": 64,
+          "genDate": "2020-03-10 04:40:02 UTC"
+        },
+        {
+          "clone": 1,
+          "gen": 64,
+          "genDate": "2020-03-06 02:00:01 UTC"
+        },
+        {
+          "clone": 2,
+          "gen": 64,
+          "genDate": "2020-04-19 11:17:47 UTC"
+        },
+        {
+          "clone": 3,
+          "gen": 64,
+          "genDate": "2020-03-10 12:15:01 UTC"
+        },
+        {
+          "clone": 4,
+          "gen": 64,
+          "genDate": "2020-02-27 21:40:01 UTC"
+        },
+        {
+          "clone": 5,
+          "gen": 64,
+          "genDate": "2020-03-12 16:15:02 UTC"
+        },
+        {
+          "clone": 6,
+          "gen": 64,
+          "genDate": "2020-02-27 09:40:02 UTC"
+        },
+        {
+          "clone": 7,
+          "gen": 64,
+          "genDate": "2020-03-09 21:40:02 UTC"
+        },
+        {
+          "clone": 8,
+          "gen": 64,
+          "genDate": "2020-03-02 22:15:02 UTC"
+        },
+        {
+          "clone": 9,
+          "gen": 64,
+          "genDate": "2020-03-21 20:26:02 UTC"
+        },
+        {
+          "clone": 10,
+          "gen": 64,
+          "genDate": "2020-03-02 16:15:01 UTC"
+        },
+        {
+          "clone": 11,
+          "gen": 64,
+          "genDate": "2020-03-11 04:15:01 UTC"
+        },
+        {
+          "clone": 12,
+          "gen": 64,
+          "genDate": "2020-03-04 17:40:01 UTC"
+        },
+        {
+          "clone": 13,
+          "gen": 64,
+          "genDate": "2020-03-06 04:40:02 UTC"
+        },
+        {
+          "clone": 14,
+          "gen": 64,
+          "genDate": "2020-03-07 18:00:02 UTC"
+        },
+        {
+          "clone": 15,
+          "gen": 64,
+          "genDate": "2020-03-03 19:40:01 UTC"
+        },
+        {
+          "clone": 16,
+          "gen": 64,
+          "genDate": "2020-03-07 20:40:01 UTC"
+        },
+        {
+          "clone": 17,
+          "gen": 64,
+          "genDate": "2020-03-02 04:40:02 UTC"
+        },
+        {
+          "clone": 18,
+          "gen": 64,
+          "genDate": "2020-03-03 22:40:02 UTC"
+        },
+        {
+          "clone": 19,
+          "gen": 64,
+          "genDate": "2020-05-09 20:51:56 UTC"
+        },
+        {
+          "clone": 20,
+          "gen": 64,
+          "genDate": "2020-03-04 11:40:02 UTC"
+        },
+        {
+          "clone": 21,
+          "gen": 64,
+          "genDate": "2020-03-05 11:00:02 UTC"
+        },
+        {
+          "clone": 22,
+          "gen": 64,
+          "genDate": "2020-06-04 23:44:13 UTC"
+        },
+        {
+          "clone": 23,
+          "gen": 64,
+          "genDate": "2020-03-06 12:40:02 UTC"
+        },
+        {
+          "clone": 24,
+          "gen": 64,
+          "genDate": "2020-06-07 00:28:37 UTC"
+        },
+        {
+          "clone": 25,
+          "gen": 64,
+          "genDate": "2020-03-09 22:15:03 UTC"
+        },
+        {
+          "clone": 26,
+          "gen": 64,
+          "genDate": "2020-03-11 22:00:01 UTC"
+        },
+        {
+          "clone": 27,
+          "gen": 64,
+          "genDate": "2020-03-20 14:47:53 UTC"
+        },
+        {
+          "clone": 28,
+          "gen": 56,
+          "genDate": "2020-05-17 01:39:05 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
+        },
+        {
+          "clone": 29,
+          "gen": 64,
+          "genDate": "2020-06-02 14:17:27 UTC"
+        },
+        {
+          "clone": 30,
+          "gen": 64,
+          "genDate": "2020-03-04 13:40:02 UTC"
+        },
+        {
+          "clone": 31,
+          "gen": 64,
+          "genDate": "2020-04-04 22:29:57 UTC"
+        },
+        {
+          "clone": 32,
+          "gen": 64,
+          "genDate": "2020-04-01 16:50:52 UTC"
+        },
+        {
+          "clone": 33,
+          "gen": 64,
+          "genDate": "2020-04-11 10:51:26 UTC"
+        },
+        {
+          "clone": 34,
+          "gen": 64,
+          "genDate": "2020-02-27 14:00:02 UTC"
+        },
+        {
+          "clone": 35,
+          "gen": 40,
+          "genDate": "2020-05-11 06:50:54 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
+        },
+        {
+          "clone": 36,
+          "gen": 64,
+          "genDate": "2020-03-18 15:37:57 UTC"
+        },
+        {
+          "clone": 37,
+          "gen": 64,
+          "genDate": "2020-06-12 17:03:48 UTC"
+        },
+        {
+          "clone": 38,
+          "gen": 64,
+          "genDate": "2020-03-08 03:40:02 UTC"
+        },
+        {
+          "clone": 39,
+          "gen": 64,
+          "genDate": "2020-03-13 05:56:47 UTC"
+        },
+        {
+          "clone": 40,
+          "gen": 64,
+          "genDate": "2020-03-12 06:40:02 UTC"
+        },
+        {
+          "clone": 41,
+          "gen": 64,
+          "genDate": "2020-03-02 22:15:02 UTC"
+        },
+        {
+          "clone": 42,
+          "gen": 64,
+          "genDate": "2020-03-05 14:00:02 UTC"
+        },
+        {
+          "clone": 43,
+          "gen": 64,
+          "genDate": "2020-03-05 07:00:02 UTC"
+        },
+        {
+          "clone": 44,
+          "gen": 64,
+          "genDate": "2020-03-06 01:40:02 UTC"
+        },
+        {
+          "clone": 45,
+          "gen": 64,
+          "genDate": "2020-05-11 01:36:20 UTC"
+        },
+        {
+          "clone": 46,
+          "gen": 64,
+          "genDate": "2020-03-11 16:15:01 UTC"
+        },
+        {
+          "clone": 47,
+          "gen": 64,
+          "genDate": "2020-03-11 19:00:02 UTC"
+        },
+        {
+          "clone": 48,
+          "gen": 64,
+          "genDate": "2020-03-13 06:40:56 UTC"
+        },
+        {
+          "clone": 49,
+          "gen": 64,
+          "genDate": "2020-05-14 01:20:53 UTC",
+          "aborted": true
+        }
+      ]
+    }
+  ]
+}
