@@ -29,7 +29,7 @@ def main(argv):
     parser.add_argument('-l', '--length', type=float, default=0, help='Trajectory length (in ns) per WU (default: 0)')
     parser.add_argument('-ra', '--retryaborted', type=bool, default=False, help='Retry Gens previously marked as aborted')
     parser.add_argument('-rc', '--rechecklastgen', type=bool, default=False, help='Recheck the last recorded Gen. Useful when there was a bug in scanning and things need correction')
-    parser.add_argument('-st', '--searchtype', type=str, default='binary', help='Specifies the search type -- binary or alternate (default: binary)')
+    parser.add_argument('-st', '--searchtype', type=str, default='alternate', help='Specifies the search type -- binary or alternate (default: binary)')
     parser.add_argument('-sr', '--startingrun', type=int, default=0, help='Start at Run X')
     parser.add_argument('-sc', '--startingclone', type=int, default=0, help='Start at Clone X')
     parser.add_argument('-zz', '--checkfinalgenfirst', type=bool, default=False, help='Check the final Gen first. Useful for first time runs for projects that are almost complete')
