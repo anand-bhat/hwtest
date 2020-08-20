@@ -88,7 +88,7 @@ function prcg2Chart(projectId, runId, maxClonesPerRun, maxGensPerClone, dataSeri
         callbacks: {
           label(tooltipItem) {
             // Returned formatted tooltip
-            return `Clone: ${tooltipItem.xLabel}; Gen: ${tooltipItem.yLabel} (${((tooltipItem.yLabel + 1) / maxGensPerClone) * 100}%)`;
+            return `Clone: ${tooltipItem.xLabel}; Gen: ${tooltipItem.yLabel} (${round(((tooltipItem.yLabel + 1) / maxGensPerClone) * 100, 2)}%)`;
           },
         },
         filter(tooltipItem) {
