@@ -271,7 +271,7 @@ def wu_check(project, run, clone, gen):
                 success = True
             else:
                 return (1, genDate)
-        elif code in ['Faulty', 'Faulty 2']:
+        elif code in ['Faulty', 'Faulty 2', 'Failed']:
             faulty = True
             faultCount = faultCount + 1
         elif code == 'Dumped':
