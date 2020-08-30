@@ -15,5 +15,5 @@ python projectProgressChecker.py -f ../docs/assets/data/16449.json
 python projectProgressChecker.py -f ../docs/assets/data/16451.json
 python projectProgressChecker.py -f ../docs/assets/data/16600.json
 python projectProgressChecker.py -f ../docs/assets/data/16810.json
-python projectProgressChecker.py -f ../docs/assets/data/16920X.json
+python projectProgressChecker.py -f ../docs/assets/data/16920.json
 cmd
