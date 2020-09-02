@@ -626,18 +626,13 @@ function addOrgEntry(orgName, orgLogo, orgTitle, orgLink, orgActions, orgTeamId)
 function participatingOrganisations() {
   $.getJSON('../assets/data/participatingOrganisations.json')
     .done((data) => {
+        alert('here1');
       // Generated content
       let content = [];
 
       $.each(data.orgs, (orgIndex, org) => {
-        let orgName = org.name;
-        let orgLogo = org.logo;
-        let orgTitle = org.title;
-        let orgLink = org.source;
-        let orgActions = org.actions;
-        let orgTeamId = org.team;
-
-        content.push(addOrgEntry());
+        alert('here');
+        content.push(addOrgEntry(org.name, org.logo, org.title, org.source, org.actions, org.team));
         if (orgIndex % 2 === 0) {
           content.push('	<div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>');
         }
