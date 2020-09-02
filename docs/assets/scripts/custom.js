@@ -650,7 +650,7 @@ function participatingOrganisations() {
         if (orgIndex % 5 === 0) {
           content.push('	<div class="w-100 d-none d-xl-block"><!-- wrap every 5 on xl--></div>');
         }
-      }
+      });
 
       $('#orgs').html(content.join(''));
     })
