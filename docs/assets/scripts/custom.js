@@ -633,16 +633,16 @@ function participatingOrganisations() {
       $.each(data.orgs, (orgIndex, org) => {
         alert('here');
         content.push(addOrgEntry(org.name, org.logo, org.title, org.source, org.actions, org.team));
-        if (orgIndex+1 % 2 === 0) {
+        if ((orgIndex + 1) % 2 === 0) {
           content.push('	<div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>');
         }
-        if (orgIndex+1 % 3 === 0) {
+        if ((orgIndex + 1) % 3 === 0) {
           content.push('	<div class="w-100 d-none d-md-block d-lg-none"><!-- wrap every 3 on md--></div>');
         }
-        if (orgIndex+1 % 4 === 0) {
+        if ((orgIndex + 1) % 4 === 0) {
           content.push('	<div class="w-100 d-none d-lg-block d-xl-none"><!-- wrap every 4 on lg--></div>');
         }
-        if (orgIndex+1 % 5 === 0) {
+        if ((orgIndex + 1) % 5 === 0) {
           content.push('	<div class="w-100 d-none d-xl-block"><!-- wrap every 5 on xl--></div>');
         }
       });
