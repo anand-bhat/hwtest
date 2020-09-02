@@ -589,6 +589,76 @@ function prcgProgress2() {
     });
 }
 
+function addOrgEntry(orgName, orgLogo, orgTitle, orgLink, orgActions, orgTeamId) {
+  let content = [];
+  content.push('  <div class="card mb-4">');
+  content.push('    <div class="card-body">');
+  content.push(`      <img src="../assets/images/entity/${orgLogo}" class="card-img-top cardimg" alt="/${orgName} logo">`);
+  content.push('      <p>&nbsp;</p>');
+  content.push(`      <div class="card-title"><a href="${orgLink}" rel="noopener" target="_blank">${orgTitle}</a></div>`);
+  content.push('    </div>');
+  content.push('    <div class="card-footer">');
+  if (orgActions.includes('FAH')) {
+    content.push('      <i class="material-icons" title="Running Folding@home">computer</i>');
+  }
+  if (orgActions.includes('BUILD')) {
+    content.push('      <i class="material-icons" title="Collaborating in Software Development">build</i>');
+  }
+  if (orgActions.includes('INFRA')) {
+    content.push('      <i class="material-icons" title="Providing infrastructure/ hosting">storage</i>');
+  }
+  if (orgActions.includes('AWARE')) {
+    content.push('      <i class="material-icons" title="Spreading awareness">campaign</i>');
+  }
+  if (orgActions.includes('COMPETE')) {
+    content.push('      <i class="material-icons" title="Hosting Folding@home competitions">emoji_events</i>');
+  }
+
+  if (orgTeamId) {
+    content.push(`      <div class="float-right"><a href="https://stats.foldingathome.org/team/${orgTeamId}" class="text-body" rel="noopener" target="_blank"><i class="material-icons" title="FAH Team">group_add</i></a></div>`);
+  }
+  content.push('    </div>');
+  content.push('  </div>');
+
+  return content.join('');
+}
+
+function participatingOrganisations() {
+  $.getJSON('../assets/data/participatingOrganisations.json')
+    .done((data) => {
+      // Generated content
+      let content = [];
+
+      $.each(data.orgs, (orgIndex, org) => {
+        let orgName = org.name;
+        let orgLogo = org.logo;
+        let orgTitle = org.title;
+        let orgLink = org.source;
+        let orgActions = org.actions;
+        let orgTeamId = org.team;
+
+        content.push(addOrgEntry());
+        if (orgIndex %% 2 === 0) {
+          content.push('<div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>');
+        }
+        if (orgIndex %% 3 === 0) {
+          content.push('<div class="w-100 d-none d-md-block d-lg-none"><!-- wrap every 3 on md--></div>');
+        }
+        if (orgIndex %% 4 === 0) {
+          content.push('<div class="w-100 d-none d-lg-block d-xl-none"><!-- wrap every 4 on lg--></div>');
+        }
+        if (orgIndex %% 5 === 0) {
+          content.push('<div class="w-100 d-none d-xl-block"><!-- wrap every 5 on xl--></div>');
+        }
+      }
+
+      $('#orgs').html(content.join(''));
+    })
+    .fail(() => {
+      $('#orgs').html('Unable to get data.');
+    });
+}
+
 function totalLabelFormatter() {
   return 'Total:';
 }
@@ -612,6 +682,11 @@ $(document).ready(() => {
   // PRCG Progress 2
   if (page === 'prcgProgress2') {
     prcgProgress2();
+  }
+
+  // Participating organisations
+  if (page === 'participatingOrganisations1') {
+    participatingOrganisations();
   }
 
   // Toggle page description visibility
