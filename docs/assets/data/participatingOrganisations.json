@@ -9,44 +9,43 @@
       "team": 254500
     },
     {
-      "name": "AMD",
-      "logo": "amd.png",
-      "title": "Using Your AMD Powered System to Help Researchers in the Fight Against Infectious Diseases",
-      "source": "https://community.amd.com/community/gaming/blog/2020/04/23/using-your-amd-powered-system-to-help-researchers-in-the-fight-against-infectious-diseases",
-      "actions": ["FAH", "BUILD"],
-      "team": 254500
+      "name": "Analog Way",
+      "logo": "analog_way.svg",
+      "title": "Analog Way's Picturall Media Server and Its Users Harness Computing Power for Folding@home During COVID-19 Crisis",
+      "source": "https://www.analogway.com/americas/actualites/news-center/analog-way-s-picturall-media-server-and-its-users-harness-computing-power-for-foldingathome-during-covid-19-crisis/",
+      "actions": ["FAH"],
+      "team": 249440
     },
     {
-      "name": "AMD",
-      "logo": "amd.png",
-      "title": "Using Your AMD Powered System to Help Researchers in the Fight Against Infectious Diseases",
-      "source": "https://community.amd.com/community/gaming/blog/2020/04/23/using-your-amd-powered-system-to-help-researchers-in-the-fight-against-infectious-diseases",
-      "actions": ["FAH", "BUILD"],
-      "team": 254500
+      "name": "Avast",
+      "logo": "avast.svg",
+      "title": "Join Avast in supporting Folding@home and the search for answers on COVID-19",
+      "source": "https://blog.avast.com/help-the-fight-against-covid-19-by-joining-the-foldinghome-project",
+      "actions": ["FAH", "INFRA"],
+      "team": 236798
     },
     {
-      "name": "AMD",
-      "logo": "amd.png",
-      "title": "Using Your AMD Powered System to Help Researchers in the Fight Against Infectious Diseases",
-      "source": "https://community.amd.com/community/gaming/blog/2020/04/23/using-your-amd-powered-system-to-help-researchers-in-the-fight-against-infectious-diseases",
-      "actions": ["FAH", "BUILD"],
-      "team": 254500
+      "name": "Bahamas Paradise Cruise Line",
+      "logo": "bahamas_paradise_cruise_line.png",
+      "title": "Bahamas Paradise Cruise Line teams up with Folding@home project to help find cure for COVID-19",
+      "source": "https://www.bahamasparadisecruise.com/press-room/bahamas-paradise-cruise-line-teams-up-with-folding-home-project-to-help-find-cure-for-covid-19/",
+      "actions": ["FAH"]
     },
     {
-      "name": "AMD",
-      "logo": "amd.png",
-      "title": "Using Your AMD Powered System to Help Researchers in the Fight Against Infectious Diseases",
-      "source": "https://community.amd.com/community/gaming/blog/2020/04/23/using-your-amd-powered-system-to-help-researchers-in-the-fight-against-infectious-diseases",
-      "actions": ["FAH", "BUILD"],
-      "team": 254500
+      "name": "Carnegie Institution for Science",
+      "logo": "carnegie_institution_for_science.png",
+      "title": "DPB/DGE IT and Calc join Carnegie v COVID-19 and Folding@home",
+      "source": "https://it.dge.carnegiescience.edu/notifications/announcements/dpbdge-it-and-calc-join-carnegie-v-covid-19-and-foldinghome",
+      "actions": ["FAH"],
+      "team": 262377
     },
     {
-      "name": "AMD",
-      "logo": "amd.png",
-      "title": "Using Your AMD Powered System to Help Researchers in the Fight Against Infectious Diseases",
-      "source": "https://community.amd.com/community/gaming/blog/2020/04/23/using-your-amd-powered-system-to-help-researchers-in-the-fight-against-infectious-diseases",
-      "actions": ["FAH", "BUILD"],
-      "team": 254500
+      "name": "CERN",
+      "logo": "cern.svg",
+      "title": "CERN contributes computers to combatting COVID-19",
+      "source": "https://home.cern/news/news/cern/cern-contributes-computers-combatting-covid-19",
+      "actions": ["FAH"],
+      "team": 38188
     }
   ]
 }
