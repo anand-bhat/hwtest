@@ -97,7 +97,7 @@
     },
     {
       "name": "EVGA",
-      "logo": "evga.png",
+      "logo": "evga.svg",
       "title": "Did you know that your EVGA graphics card has the potential to help fight disease?",
       "source": "https://www.evga.com/folding/",
       "actions": ["AWARE", "COMPETE"],
@@ -137,7 +137,7 @@
     },
     {
       "name": "Intel",
-      "logo": "intel.jpg",
+      "logo": "intel.svg",
       "title": "Intel is donating PC power to tackle COVID-19, and you can too!",
       "source": "https://blogs.intel.com/jobs/2020/08/intel-is-donating-pc-power-to-tackle-covid-19-and-you-can-too/",
       "actions": ["FAH"],
@@ -183,7 +183,7 @@
     },
     {
       "name": "LinusTechTips",
-      "logo": "linus_tech_tips.png",
+      "logo": "linus_tech_tips.svg",
       "title": "LinusTechTips: Here's How YOU Can Help Find a Cure for COVID-19!",
       "source": "https://www.youtube.com/watch?v=KU4qOebhkfs",
       "actions": ["FAH", "INFRA", "AWARE", "COMPETE"],
@@ -239,7 +239,7 @@
     },
     {
       "name": "Oracle",
-      "logo": "oracle.png",
+      "logo": "oracle.svg",
       "title": "Oracle and Customers Are Stepping Up in the COVID-19 Fight",
       "source": "https://www.oracle.com/at/corporate/blog/oracle-and-customers-fight-covid-2020-05-05.html",
       "actions": ["FAH", "INFRA"],
@@ -293,7 +293,7 @@
     },
     {
       "name": "Telefonica",
-      "logo": "telefonica.jpg",
+      "logo": "telefonica.svg",
       "title": "Telefonica Contributes the Group’s Processing Power to Help on Coronavirus Research",
       "source": "https://www.telefonica.com/documents/737979/145906488/pr-foldingathome-telefonica.pdf/84b32c98-2930-b074-790e-62ca12731e2e?version=1.0",
       "actions": ["FAH"],
@@ -357,7 +357,7 @@
     },
     {
       "name": "VMware",
-      "logo": "vmware.png",
+      "logo": "vmware.svg",
       "title": "A Force for Good: VMware Appliance for Folding@Home",
       "source": "https://octo.vmware.com/vmware-appliance-fah/",
       "actions": ["FAH", "BUILD", "AWARE"],
