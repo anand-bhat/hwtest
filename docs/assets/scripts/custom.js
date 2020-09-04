@@ -678,7 +678,7 @@ $(document).ready(() => {
   }
 
   // Participating organisations
-  if (page === 'participatingOrganisations1') {
+  if (page === 'participatingOrganisations') {
     participatingOrganisations();
   }
 
