@@ -46,6 +46,274 @@
       "source": "https://home.cern/news/news/cern/cern-contributes-computers-combatting-covid-19",
       "actions": ["FAH"],
       "team": 38188
+    },
+    {
+      "name": "Cisco",
+      "logo": "cisco.svg",
+      "title": "What happens to the Cisco Live Network Infrastructure when the conference goes virtual?",
+      "source": "https://blogs.cisco.com/networking/what-happens-to-the-cisco-live-network-infrastructure-when-the-conference-goes-virtual",
+      "actions": ["FAH"],
+      "team": 1115
+    },
+    {
+      "name": "ESI Group",
+      "logo": "esi-group.png",
+      "title": "ESI Group participates in the fight against COVID-19 with Folding@Home",
+      "source": "https://www.esi-group.com/company/news/esi-group-participates-in-the-fight-against-covid-19-with-foldinghome",
+      "actions": ["FAH"],
+      "team": 251196
+    },
+    {
+      "name": "EVGA",
+      "logo": "evga.png",
+      "title": "Did you know that your EVGA graphics card has the potential to help fight disease?",
+      "source": "https://www.evga.com/folding/",
+      "actions": ["AWARE", "COMPETE"],
+      "team": 111065
+    },
+    {
+      "name": "Gilmour Academy",
+      "logo": "gilmour_academy.png",
+      "title": "Gilmour is currently donating 75GHz of CPU processing power to the Folding@Home COVID-19 research project",
+      "source": "https://www.gilmour.org/news-detail?pk=1193761",
+      "actions": ["FAH"],
+      "team": 260686
+    },
+    {
+      "name": "Gitlab",
+      "logo": "gitlab.svg",
+      "title": "Gitlab Team members are welcome to run Folding@home on their company provided computers",
+      "source": "https://about.gitlab.com/handbook/engineering/#foldinghome-and-covid-19",
+      "actions": ["FAH"],
+      "team": 245256
+    },
+    {
+      "name": "Hofstra University",
+      "logo": "hofstra_university.png",
+      "title": "Hofstra University: Powering COVID-19 Research",
+      "source": "https://news.hofstra.edu/2020/05/12/powering-virus-research/",
+      "actions": ["FAH"],
+      "team": 264460
+    },
+    {
+      "name": "Insight Enterprises",
+      "logo": "insight_enterprises.png",
+      "title": "Insight Enterprises: How Channel Partners Can Support Coronavirus Research With Folding@Home",
+      "source": "https://www.crn.com/news/components-peripherals/how-channel-partners-can-support-coronavirus-research-with-folding-home",
+      "actions": ["FAH"]
+    },
+    {
+      "name": "Jefferson Lab",
+      "logo": "jefferson_lab.png",
+      "title": "From quarks to the coronavirus: Jefferson Lab dedicates a portion of its supercomputing resources to help in the fight against the COVID-19 coronavirus",
+      "source": "https://www.jlab.org/news/stories/computing-building-blocks-virus",
+      "actions": ["FAH"],
+      "team": 260156
+    },
+    {
+      "name": "King's College London",
+      "logo": "kings_college_london.svg",
+      "title": "King's computer labs redeployed towards global coronavirus research",
+      "source": "https://www.kcl.ac.uk/news/kings-computer-labs-redeployed-towards-global-coronavirus-research",
+      "actions": ["FAH"]
+    },
+    {
+      "name": "LANfest",
+      "logo": "lanfest.jpg",
+      "title": "LANFest Calling all Gamers to Fight Covid-19 from their Computer… Seriously",
+      "source": "https://lanfest.com/events/foldingathome",
+      "actions": ["AWARE", "COMPETE"],
+      "team": 251622
+    },
+    {
+      "name": "LinusTechTips",
+      "logo": "linus_tech_tips.png",
+      "title": "LinusTechTips: Here's How YOU Can Help Find a Cure for COVID-19!",
+      "source": "https://www.youtube.com/watch?v=KU4qOebhkfs",
+      "actions": ["FAH", "INFRA", "AWARE", "COMPETE"],
+      "team": 223518
+    },
+    {
+      "name": "Michigan State University",
+      "logo": "michigan_state_university.svg",
+      "title": "Michigan State University: Using ComArtSci Computer Power to Understand COVID-19",
+      "source": "https://comartsci.msu.edu/about/newsroom/news/using-comartsci-computer-power-understand-covid-19",
+      "actions": ["FAH"],
+      "team": 38228
+    },
+    {
+      "name": "Microsoft",
+      "logo": "microsoft.png",
+      "title": "Microsoft's undersea datacenter helps the hunt for a COVID-19 vaccine",
+      "source": "https://news.microsoft.com/innovation-stories/project-natick-covid-19/"",
+      "actions": ["FAH", "INFRA", "AWARE"],
+      "team": 999
+    },
+    {
+      "name": "Moore Norman Technology Center",
+      "logo": "moore_norman_technology_center.png",
+      "title": "Moore Norman Technology Center's IT Program Part of the Global Search for COVID-19 Cure",
+      "source": "https://www.mntc.edu/about/news-publications/news-success/~board/news/post/mntc-it-program-part-of-the-global-search-for-covid-19-cure",
+      "actions": ["FAH"],
+      "team": 227286
+    },
+    {
+      "name": "Neocortix",
+      "logo": "neocortix.png",
+      "title": "Neocortix: Multi-Company Collaboration For Coronavirus Research On Arm Devices",
+      "source": "https://neocortix.com/coronavirus"",
+      "actions": ["FAH", "BUILD"],
+      "team": 266771
+    },
+    {
+      "name": "NVidia",
+      "logo": "nvidia.svg",
+      "title": "NVidia: Virus War Goes Viral - Folding@home Gets 1.5+ Exaflops to Fight COVID-19",
+      "source": "https://blogs.nvidia.com/blog/2020/04/01/foldingathome-exaflop-coronavirus/",
+      "actions": ["FAH", "BUILD", "AWARE"],
+      "team": 259918
+    },
+    {
+      "name": "Oracle",
+      "logo": "oracle.png",
+      "title": "Oracle and Customers Are Stepping Up in the COVID-19 Fight",
+      "source": "https://www.oracle.com/at/corporate/blog/oracle-and-customers-fight-covid-2020-05-05.html",
+      "actions": ["FAH", "INFRA"],
+      "team": 242705
+    },
+    {
+      "name": "ORIGIN PC/ Corsair",
+      "logo": "corsair.svg",
+      "title": "ORIGIN PC Joins Folding@Home Research Efforts Using Gaming PC Power",
+      "source": "https://www.corsair.com/us/en/company/press-release/origin-pc-joins-folding-at-home-research-efforts-using-gaming-pc-power",
+      "actions": ["FAH"],
+      "team": 245755
+    },
+    {
+      "name": "Porsche Informatik",
+      "logo": "porsche_informatik.gif",
+      "title": "Porsche Informatik is deploying its resources to support scientific research",
+      "source": "https://www.porscheinformatik.com/en/gemeinsam-rechnen-gegen-corona/",
+      "actions": ["FAH"],
+      "team": 264767
+    },
+    {
+      "name": "RB Royal",
+      "logo": "rb_royal.jpg",
+      "title": "RB Royal Joins Forces with Folding@home to Provide Computing Power in Search for COVID-19 Vaccine",
+      "source": "https://www.rbroyal.com/rb-royal-joins-forces-with-foldinghome-to-provide-computing-power-in-search-for-covid-19-vaccine/",
+      "actions": ["FAH"]
+    },
+    {
+      "name": "SAP",
+      "logo": "sap.svg",
+      "title": "SAP: Folding@home: Big Data Meets Epidemiology",
+      "source": "https://news.sap.com/2020/04/in-focus-folding-home-big-data-epidemiology/",
+      "actions": ["FAH"],
+      "team": 229957
+    },
+    {
+      "name": "Schreiner University",
+      "logo": "schreiner_university.png",
+      "title": "Schreiner University Joins the Fight Against COVID-19",
+      "source": "https://schreiner.edu/news-schreiner-university-joins-the-fight-against-covid-19/",
+      "actions": ["FAH"],
+      "team": 260259
+    },
+    {
+      "name": "Southeast Missouri State University",
+      "logo": "semo.png",
+      "title": "Southeast Missouri State University's EDvolution Center Supporting COVID-19 Research Via Folding@Home",
+      "source": "https://news.semo.edu/southeasts-edvolution-center-supporting-covid-19-research-via-foldinghome",
+      "actions": ["FAH"]
+    },
+    {
+      "name": "Telefonica",
+      "logo": "telefonica.jpg",
+      "title": "Telefonica Contributes the Group’s Processing Power to Help on Coronavirus Research",
+      "source": "https://www.telefonica.com/documents/737979/145906488/pr-foldingathome-telefonica.pdf/84b32c98-2930-b074-790e-62ca12731e2e?version=1.0",
+      "actions": ["FAH"],
+      "team": 259280
+    },
+    {
+      "name": "UKRI STFC",
+      "logo": "ukri_stfc.png",
+      "title": "STFC's Hartree Centre speeds up the search for the most effective Coronavirus treatment – and how you can help!",
+      "source": "https://stfc.ukri.org/news/stfcs-hartree-centre-speeds-up-the-search-for-the-most-effective-coronavirus-treatment-and-how-you-can-help/",
+      "actions": ["FAH"],
+      "team": 240995"
+    },
+    {
+      "name": "University of Delaware",
+      "logo": "university_of_delaware.png",
+      "title": "University of Delaware's Douglas White uses personal computers to help coronavirus research",
+      "source": "https://www.udel.edu/udaily/2020/april/folding-at-home-COVID-19-initiative-proteins-donating-computer-time/",
+      "actions": ["FAH"],
+      "team": 249717
+    },
+    {
+      "name": "University of East Anglia",
+      "logo": "university_of_east_anglia.png",
+      "title": "University of East Anglia offers up computing resources to global search for coronavirus therapies",
+      "source": "https://www.uea.ac.uk/about/-/uea-offers-up-computing-resources-to-global-search-for-coronavirus-therapies",
+      "actions": ["FAH"],
+      "team": 251113
+    },
+    {
+      "name": "University of Illinois at Chicago's Electronic Visualization Laboratory",
+      "logo": "uic_evl.png",
+      "title": "University of Illinois at Chicago's Electronic Visualization Laboratory Supports Open-Science Folding@home COVID-19 Research with Computing Resources",
+      "source": "https://www.evl.uic.edu/entry.php?id=2499",
+      "actions": ["FAH"],
+      "team": 263148
+    },
+    {
+      "name": "University of Michigan",
+      "logo": "university_of_michigan.png",
+      "title": "University of Michigan: Playing a small part in fighting COVID-19",
+      "source": "https://its.umich.edu/news/article/miworkspace-update-supporting-you-through-covid-19-crisis",
+      "actions": ["FAH"],
+      "team": 245613
+    },
+    {
+      "name": "University of Nebraska-Lincoln",
+      "logo": "university_of_nebraska-lincoln.jpg",
+      "title": "University of Nebraska-Lincoln: Holland Computing Center contributing to COVID-19 research",
+      "source": "https://news.unl.edu/newsrooms/today/article/holland-computing-center-contributing-to-covid-19-research/",
+      "actions": ["FAH"],
+      "team": 256631
+    },
+    {
+      "name": "University of Wisconsin-Platteville",
+      "logo": "university_of_wisconsin-platteville.png",
+      "title": "University of Wisconsin-Platteville students join global initiative to share resources to research COVID-19",
+      "source": "https://www.uwplatt.edu/news/students-join-global-initiative-share-resources-research-covid-19",
+      "actions": ["FAH"],
+      "team": 150682
+    },
+    {
+      "name": "VMware",
+      "logo": "vmware.png",
+      "title": "A Force for Good: VMware Appliance for Folding@Home",
+      "source": "https://octo.vmware.com/vmware-appliance-fah/",
+      "actions": ["FAH", "BUILD", "AWARE"],
+      "team": 52737
+    },
+    {
+      "name": "Westchester PC Users Group",
+      "logo": "wpcug.gif",
+      "title": "Westchester computer enthusiasts donate PC time to help with coronavirus cure",
+      "source": "https://pelhamexaminer.com/25165/announcing/westchester-computer-enthusiasts-donate-pc-time-to-help-with-coronavirus-cure/",
+      "actions": ["AWARE"],
+      "team": 40098
+    },
+    {
+      "name": "Winthrop University",
+      "logo": "winthrop_university.png",
+      "title": "Winthrop Joins Folding@home Project",
+      "source": "https://www.winthrop.edu/news-events/winthrop-joins-folding-home-project.aspx",
+      "actions": ["FAH"],
+      "team": 260865
     }
   ]
 }
