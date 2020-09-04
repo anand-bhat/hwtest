@@ -17,6 +17,14 @@
       "team": 249440
     },
     {
+      "name": "Arizona Research Computing",
+      "logo": "arizona_research_computing.jpg",
+      "title": "Arizona State University, Northern Arizona University and University of Arizona join forces to contribute to COVID-19 modeling and simulation efforts",
+      "source": "https://asunow.asu.edu/20200714-arizona-universities-join-forces-contribute-covid-19-modeling-and-simulation-efforts",
+      "actions": ["FAH"],
+      "team": 239945
+    },
+    {
       "name": "Avast",
       "logo": "avast.svg",
       "title": "Join Avast in supporting Folding@home and the search for answers on COVID-19",
@@ -32,14 +40,6 @@
       "actions": ["FAH"]
     },
     {
-      "name": "Carnegie Institution for Science",
-      "logo": "carnegie_institution_for_science.png",
-      "title": "DPB/DGE IT and Calc join Carnegie v COVID-19 and Folding@home",
-      "source": "https://it.dge.carnegiescience.edu/notifications/announcements/dpbdge-it-and-calc-join-carnegie-v-covid-19-and-foldinghome",
-      "actions": ["FAH"],
-      "team": 262377
-    },
-    {
       "name": "CERN",
       "logo": "cern.svg",
       "title": "CERN contributes computers to combatting COVID-19",
@@ -48,12 +48,44 @@
       "team": 38188
     },
     {
+      "name": "CFH Cable",
+      "logo": "cfh_cable.jpg",
+      "title": "The CFH family of companies have come up with a way to assist researchers around the world taking up the global fight against the Coronavirus (COVID-19)",
+      "source": "https://cfhcable.com/news.htm",
+      "actions": ["FAH"],
+      "team": 246234 
+    },
+    {
+      "name": "Carnegie Institution for Science",
+      "logo": "carnegie_institution_for_science.png",
+      "title": "DPB/DGE IT and Calc join Carnegie v COVID-19 and Folding@home",
+      "source": "https://it.dge.carnegiescience.edu/notifications/announcements/dpbdge-it-and-calc-join-carnegie-v-covid-19-and-foldinghome",
+      "actions": ["FAH"],
+      "team": 262377
+    },
+    {
       "name": "Cisco",
       "logo": "cisco.svg",
       "title": "What happens to the Cisco Live Network Infrastructure when the conference goes virtual?",
       "source": "https://blogs.cisco.com/networking/what-happens-to-the-cisco-live-network-infrastructure-when-the-conference-goes-virtual",
       "actions": ["FAH"],
       "team": 1115
+    },
+    {
+      "name": "Compute Canada",
+      "logo": "compute_canada.jpg",
+      "title": "Compute Canada: Harnessing the power of scientific cloud computing to fight covid-19",
+      "source": "https://www.computecanada.ca/featured/harnessing-the-power-of-scientific-cloud-computing-to-fight-covid-19/",
+      "actions": ["FAH"],
+      "team": 250396
+    },
+    {
+      "name": "Conova",
+      "logo": "conova.png",
+      "title": "Conova donates resources for COVID research to Folding@home [translated from German]",
+      "source": "https://www.conova.com/2020/05/14/conova-spendet-ressourcen-fuer-covid-forschung-an-foldinghome/",
+      "actions": ["FAH"],
+      "team": 264767
     },
     {
       "name": "ESI Group",
@@ -96,6 +128,22 @@
       "team": 264460
     },
     {
+      "name": "Hewlett Packard Enterprise",
+      "logo": "hpe.svg",
+      "title": "Multiple HPE efforts help fight COVID-19",
+      "source": "https://developer.hpe.com/blog/multiple-hpe-efforts-help-fight-covid-19",
+      "actions": ["FAH"],
+      "team": 247332
+    },
+    {
+      "name": "Intel",
+      "logo": "intel.jpg",
+      "title": "Intel is donating PC power to tackle COVID-19, and you can too!",
+      "source": "https://blogs.intel.com/jobs/2020/08/intel-is-donating-pc-power-to-tackle-covid-19-and-you-can-too/",
+      "actions": ["FAH"],
+      "team": 711
+    },
+    {
       "name": "Insight Enterprises",
       "logo": "insight_enterprises.png",
       "title": "Insight Enterprises: How Channel Partners Can Support Coronavirus Research With Folding@Home",
@@ -124,6 +172,14 @@
       "source": "https://lanfest.com/events/foldingathome",
       "actions": ["AWARE", "COMPETE"],
       "team": 251622
+    },
+    {
+      "name": "LUT University and LAB University of Applied Sciences",
+      "logo": "lut-lab_university.svg",
+      "title": "LUT University and LAB University of Applied Sciences donate computational power to help tackle the coronavirus crisis – computer lab computers now working hard around the clock",
+      "source": "https://lab.fi/en/news/lut-and-lab-donate-computational-power-help-tackle-coronavirus-crisis-computer-lab-computers",
+      "actions": ["FAH"],
+      "team": 257637
     },
     {
       "name": "LinusTechTips",
@@ -158,14 +214,6 @@
       "team": 227286
     },
     {
-      "name": "Neocortix",
-      "logo": "neocortix.png",
-      "title": "Neocortix: Multi-Company Collaboration For Coronavirus Research On Arm Devices",
-      "source": "https://neocortix.com/coronavirus",
-      "actions": ["FAH", "BUILD"],
-      "team": 266771
-    },
-    {
       "name": "NVidia",
       "logo": "nvidia.svg",
       "title": "NVidia: Virus War Goes Viral - Folding@home Gets 1.5+ Exaflops to Fight COVID-19",
@@ -174,12 +222,12 @@
       "team": 259918
     },
     {
-      "name": "Oracle",
-      "logo": "oracle.png",
-      "title": "Oracle and Customers Are Stepping Up in the COVID-19 Fight",
-      "source": "https://www.oracle.com/at/corporate/blog/oracle-and-customers-fight-covid-2020-05-05.html",
-      "actions": ["FAH", "INFRA"],
-      "team": 242705
+      "name": "Neocortix",
+      "logo": "neocortix.png",
+      "title": "Neocortix: Multi-Company Collaboration For Coronavirus Research On Arm Devices",
+      "source": "https://neocortix.com/coronavirus",
+      "actions": ["FAH", "BUILD"],
+      "team": 266771
     },
     {
       "name": "ORIGIN PC/ Corsair",
@@ -188,6 +236,14 @@
       "source": "https://www.corsair.com/us/en/company/press-release/origin-pc-joins-folding-at-home-research-efforts-using-gaming-pc-power",
       "actions": ["FAH"],
       "team": 245755
+    },
+    {
+      "name": "Oracle",
+      "logo": "oracle.png",
+      "title": "Oracle and Customers Are Stepping Up in the COVID-19 Fight",
+      "source": "https://www.oracle.com/at/corporate/blog/oracle-and-customers-fight-covid-2020-05-05.html",
+      "actions": ["FAH", "INFRA"],
+      "team": 242705
     },
     {
       "name": "Porsche Informatik",
@@ -226,6 +282,14 @@
       "title": "Southeast Missouri State University's EDvolution Center Supporting COVID-19 Research Via Folding@Home",
       "source": "https://news.semo.edu/southeasts-edvolution-center-supporting-covid-19-research-via-foldinghome",
       "actions": ["FAH"]
+    },
+    {
+      "name": "Sylphen",
+      "logo": "sylphen.svg",
+      "title": "Sylphen: News from \"Mittelhessen fights Corona\" [translated from German]",
+      "source": "https://www.sylphen.com/blog/view/neuigkeiten-von-mittelhessen-fights-corona.html",
+      "actions": ["FAH"],
+      "team": 255225
     },
     {
       "name": "Telefonica",
