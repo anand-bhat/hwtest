@@ -145,7 +145,7 @@
       "name": "Microsoft",
       "logo": "microsoft.png",
       "title": "Microsoft's undersea datacenter helps the hunt for a COVID-19 vaccine",
-      "source": "https://news.microsoft.com/innovation-stories/project-natick-covid-19/"",
+      "source": "https://news.microsoft.com/innovation-stories/project-natick-covid-19/",
       "actions": ["FAH", "INFRA", "AWARE"],
       "team": 999
     },
@@ -161,7 +161,7 @@
       "name": "Neocortix",
       "logo": "neocortix.png",
       "title": "Neocortix: Multi-Company Collaboration For Coronavirus Research On Arm Devices",
-      "source": "https://neocortix.com/coronavirus"",
+      "source": "https://neocortix.com/coronavirus",
       "actions": ["FAH", "BUILD"],
       "team": 266771
     },
@@ -241,7 +241,7 @@
       "title": "STFC's Hartree Centre speeds up the search for the most effective Coronavirus treatment – and how you can help!",
       "source": "https://stfc.ukri.org/news/stfcs-hartree-centre-speeds-up-the-search-for-the-most-effective-coronavirus-treatment-and-how-you-can-help/",
       "actions": ["FAH"],
-      "team": 240995"
+      "team": 240995
     },
     {
       "name": "University of Delaware",
