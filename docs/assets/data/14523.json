@@ -28061,8 +28061,10 @@
       "clones": [
         {
           "clone": 0,
-          "gen": 1,
-          "genDate": "2020-03-14 18:52:25 UTC"
+          "gen": 2,
+          "genDate": "2020-03-14 18:52:25 UTC",
+          "aborted": true,
+          "abortedWhenSuccessAndDumped": true
         },
         {
           "clone": 1,

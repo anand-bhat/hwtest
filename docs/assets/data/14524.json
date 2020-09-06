@@ -10187,7 +10187,9 @@
         {
           "clone": 0,
           "gen": 24,
-          "genDate": "2020-06-10 08:00:04 UTC"
+          "genDate": "2020-06-10 08:00:04 UTC",
+          "aborted": true,
+          "abortedWhenSuccessAndDumped": true
         },
         {
           "clone": 1,
