@@ -93,7 +93,9 @@
         {
           "clone": 14,
           "gen": 108,
-          "genDate": "2020-06-22 03:05:35 UTC"
+          "genDate": "2020-06-22 03:05:35 UTC",
+          "aborted": true,
+          "abortedWhenSuccess": true
         },
         {
           "clone": 15,
