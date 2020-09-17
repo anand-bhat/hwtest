@@ -1,7 +1,7 @@
 {
   "project": 11766,
   "maxFailures": 5,
-  "lastUpdated": 1600070987027,
+  "lastUpdated": 1600328608769,
   "maxRuns": 1,
   "maxClonesPerRun": 40,
   "maxGensPerClone": 1000,
@@ -12,23 +12,23 @@
       "clones": [
         {
           "clone": 0,
-          "gen": 126,
-          "genDate": "2020-09-14 04:51:04 UTC"
+          "gen": 127,
+          "genDate": "2020-09-14 15:54:41 UTC"
         },
         {
           "clone": 1,
-          "gen": 308,
-          "genDate": "2020-09-14 03:41:42 UTC"
+          "gen": 310,
+          "genDate": "2020-09-15 08:22:00 UTC"
         },
         {
           "clone": 2,
-          "gen": 344,
-          "genDate": "2020-09-14 04:33:19 UTC"
+          "gen": 347,
+          "genDate": "2020-09-16 16:33:57 UTC"
         },
         {
           "clone": 3,
-          "gen": 201,
-          "genDate": "2020-09-14 03:07:31 UTC"
+          "gen": 202,
+          "genDate": "2020-09-14 09:54:16 UTC"
         },
         {
           "clone": 4,
