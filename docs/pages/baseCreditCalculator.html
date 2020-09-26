@@ -9,26 +9,34 @@ tagline_min: BaseCreditCalculator
 <hr>
 <div>
 	<form class="form-horizontal" >
-		<div class="row form-group">
+		<div class="row form-group"><!-- Project details -->
 			<div class="col">
-				<!-- Target PPD input -->
-				<label class="control-label" for="targetPPD">Target PPD</label>
-				<input id="targetPPD" name="targetPPD" type="number" class="form-control input-md" required>
+				<!-- Project ID -->
+				<label class="col-md-4 control-label" for="projectId">Project ID</label>
+				<input id="projectId" name="projectId" type="number" class="form-control input-md">
 			</div>
 			<div class="col">
-				<!-- Run input -->
-				<label class="control-label" for="minTPF">TPF (min)</label>
-				<input id="minTPF" name="minTPF" type="number" class="form-control input-md" required>
+				<!-- k-factor (default=0.75) -->
+				<label class="col-md-4 control-label" for="k">k-factor</label>
+				<input id="k" name="k" type="number" class="form-control input-md" required>
 			</div>
 			<div class="col">
-				<!-- Clone input -->
-				<label class="control-label" for="secTPF">TPF (sec)</label>
-				<input id="secTPF" name="secTPF" type="number" class="form-control input-md" required>
-			</div>
-			<div class="col">
-				<!-- Gen input -->
-				<label class="control-label" for="finalDeadline">Final Deadline</label>
+				<!-- Final deadline -->
+				<label class="col-md-4 control-label" for="finalDeadline">Final Deadline</label>
 				<input id="finalDeadline" name="finalDeadline" type="number" class="form-control input-md" required>
+			</div>
+			<div class="col">
+				<!-- Current BC -->
+				<label class="col-md-4 control-label" for="currentBC">Current BC</label>
+				<input id="currentBC" name="currentBC" type="number" class="form-control input-md" required>
+			</div>
+		</div>
+		<div class="row form-group"><!-- Execution details -->
+			<div class="col-md-auto">
+				<!-- Run input -->
+				<label class="control-label" for="minTPF">Time per frame (TPF)</label>
+				<input id="minTPF" name="minTPF" type="number" class="form-control input-md" required>min
+				<input id="secTPF" name="secTPF" type="number" class="form-control input-md" required>sec
 			</div>
 		</div>
 		<div class="row form-group justify-content-md-center">
