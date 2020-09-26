@@ -4,8 +4,7 @@ tagline: Base Credit Calculator
 tagline_min: BaseCreditCalculator
 ---
 <div>
-	This page lets you calculate the desired base credit for a Folding@home project. The formula used is:<br>
-	Suggested base credit = <targetPPD>/(14.4*SQRT(14.4*0.75*<expiration>/<timePerFrame>)/<timePerFrame>)
+	This page lets you calculate the desired <a href="https://foldingathome.org/faqs/points/bonus-points/how-is-the-qrb-determined/" rel="noopener" target="_blank">base credit</a> for a Folding@home project.
 </div>
 <hr>
 <div>
@@ -13,9 +12,9 @@ tagline_min: BaseCreditCalculator
 		<div class="row form-group"><!--Target PPD -->
 			<div class="col">
 				<!-- Target PPD -->
-				<label class="control-label" for="targetPPD">Target&nbsp;PPD</label>
-				<input id="targetPPD" name="targetPPD" type="number" class="form-control input-md border border-success">
-				<small id="targetPPDHelp" class="form-text text-muted">Enter the target points per day (PPD) for your Folding slot.</small>
+				<label class="control-label" for="targetPPD1">Target&nbsp;PPD</label>
+				<input id="targetPPD1" name="targetPPD1" type="number" class="form-control input-md border border-success">
+				<small id="targetPPD1Help" class="form-text text-muted">Enter the target points per day (PPD) for your Folding slot.</small>
 			</div>
 		</div>
 		<div class="row form-group"><!-- Project details -->
@@ -40,7 +39,13 @@ tagline_min: BaseCreditCalculator
 				<input id="currentBC" name="currentBC" type="number" class="form-control input-md" required>
 			</div>
 		</div>
-		<div class="row form-group"><!-- Execution details -->
+		<div class="row form-group"><!-- Environment and details -->
+			<div class="col">
+				<!-- Target PPD -->
+				<label class="control-label" for="targetPPD">Target&nbsp;PPD</label>
+				<input id="targetPPD" name="targetPPD" type="number" class="form-control input-md border border-success">
+				<small id="targetPPDHelp" class="form-text text-muted">Enter the target points per day (PPD) for your Folding slot.</small>
+			</div>
 			<div class="col-md-12">
 				<label class="control-label">Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
 			</div>
@@ -49,6 +54,10 @@ tagline_min: BaseCreditCalculator
 			</div>
 			<div class="col">
 				<input id="secTPF" name="secTPF" type="number" class="form-control input-md" placeholder="seconds" required>
+			</div>
+			<div class="col">
+				<label class="control-label" for="calculatedBC">Calculated BC</label>
+				<input id="calculatedBC" name="calculatedBC" type="number" class="form-control input-md" disabled>
 			</div>
 		</div>
 		<div class="row form-group justify-content-md-center">

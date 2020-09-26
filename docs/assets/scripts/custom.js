@@ -769,8 +769,6 @@ $(document).ready(() => {
   $('#calculateBC').on('click', function calculateBC(e) {
     if ($(this).closest('form')[0].checkValidity()) {
       e.preventDefault();
-      alert('Here2');
-
       const projectId = $('#projectId').val();
       const k = $('#k').val();
       const deadline = $('#deadline').val();
@@ -785,7 +783,6 @@ $(document).ready(() => {
 
       $('#calculateBCResult').text(`Calculated Base credit is ${calculatedBC}`);
     } else {
-      alert('Here3');
       $(this).closest('form')[0].reportValidity();
     }
   });
