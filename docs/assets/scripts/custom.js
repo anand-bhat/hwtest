@@ -764,4 +764,17 @@ $(document).ready(() => {
       $(this).closest('form')[0].reportValidity();
     }
   });
+
+  // Calculate base credit for project
+  $('#calculateBC').on('click', function calculateBC(e) {
+
+    if ($(this).closest('form')[0].checkValidity()) {
+      e.preventDefault();
+
+      $('#wuStatus').text('Checking for WU credits...');
+      $('#wuStatus').removeClass();
+    } else {
+      $(this).closest('form')[0].reportValidity();
+    }
+  });
 });
