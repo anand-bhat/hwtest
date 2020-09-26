@@ -9,7 +9,7 @@ tagline_min: BaseCreditCalculator
 <hr>
 <div>
 	<form class="form-horizontal" >
-		<div class="row form-group border"><!-- Project details -->
+		<div class="row form-group"><!-- Project details -->
 			<div class="col">
 				<!-- Project ID -->
 				<label class="control-label" for="projectId">Project&nbsp;ID</label>
@@ -31,14 +31,15 @@ tagline_min: BaseCreditCalculator
 				<input id="currentBC" name="currentBC" type="number" class="form-control input-md" required>
 			</div>
 		</div>
-		<div class="row form-group border"><!-- Environment and details -->
+		<div>Enter the target PPD and observed TPF for up to 5 clients:</div>
+		<div class="row form-group"><!-- #1 Environment and details -->
 			<div class="col">
 				<!-- Target PPD -->
-				<label class="control-label" for="targetPPD">Target&nbsp;PPD</label>
-				<input id="targetPPD" name="targetPPD" type="number" class="form-control input-md">
+				<label class="control-label" for="targetPPD">#1: Target&nbsp;PPD</label>
+				<input id="targetPPD" name="targetPPD" type="number" class="form-control input-md" required>
 			</div>
 			<div class="col">
-				<label class="control-label" for="minTPF">Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
+				<label class="control-label" for="minTPF">#1: Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
 				<input id="minTPF" name="minTPF" type="number" class="form-control input-md" placeholder="minutes" required>
 			</div>
 			<div class="col">
@@ -46,8 +47,84 @@ tagline_min: BaseCreditCalculator
 				<input id="secTPF" name="secTPF" type="number" class="form-control input-md" placeholder="seconds" required>
 			</div>
 			<div class="col">
-				<label class="control-label" for="calculatedBC">Calculated&nbsp;BC</label>
+				<label class="control-label" for="calculatedBC">#1: Calculated&nbsp;BC</label>
 				<input id="calculatedBC" name="calculatedBC" type="number" class="form-control input-md" disabled>
+			</div>
+		</div>
+		<div class="row form-group"><!-- #2 Environment and details -->
+			<div class="col">
+				<!-- Target PPD -->
+				<label class="control-label" for="targetPPD2">#2: Target&nbsp;PPD</label>
+				<input id="targetPPD2" name="targetPPD2" type="number" class="form-control input-md">
+			</div>
+			<div class="col">
+				<label class="control-label" for="minTPF2">#2: Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
+				<input id="minTPF2" name="minTPF2" type="number" class="form-control input-md" placeholder="minutes">
+			</div>
+			<div class="col">
+				<label class="control-label" for="secTPF2">&nbsp;</label>
+				<input id="secTPF2" name="secTPF2" type="number" class="form-control input-md" placeholder="seconds">
+			</div>
+			<div class="col">
+				<label class="control-label" for="calculatedBC2">#2: Calculated&nbsp;BC</label>
+				<input id="calculatedBC2" name="calculatedBC2" type="number" class="form-control input-md" disabled>
+			</div>
+		</div>
+		<div class="row form-group"><!-- #3 Environment and details -->
+			<div class="col">
+				<!-- Target PPD -->
+				<label class="control-label" for="targetPPD3">#3: Target&nbsp;PPD</label>
+				<input id="targetPPD3" name="targetPPD3" type="number" class="form-control input-md">
+			</div>
+			<div class="col">
+				<label class="control-label" for="minTPF3">#3: Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
+				<input id="minTPF3" name="minTPF3" type="number" class="form-control input-md" placeholder="minutes">
+			</div>
+			<div class="col">
+				<label class="control-label" for="secTPF3">&nbsp;</label>
+				<input id="secTPF3" name="secTPF3" type="number" class="form-control input-md" placeholder="seconds">
+			</div>
+			<div class="col">
+				<label class="control-label" for="calculatedBC3">#3: Calculated&nbsp;BC</label>
+				<input id="calculatedBC3" name="calculatedBC3" type="number" class="form-control input-md" disabled>
+			</div>
+		</div>
+		<div class="row form-group"><!-- #4 Environment and details -->
+			<div class="col">
+				<!-- Target PPD -->
+				<label class="control-label" for="targetPPD4">#4: Target&nbsp;PPD</label>
+				<input id="targetPPD4" name="targetPPD4" type="number" class="form-control input-md">
+			</div>
+			<div class="col">
+				<label class="control-label" for="minTPF4">#4: Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
+				<input id="minTPF4" name="minTPF4" type="number" class="form-control input-md" placeholder="minutes">
+			</div>
+			<div class="col">
+				<label class="control-label" for="secTPF4">&nbsp;</label>
+				<input id="secTPF4" name="secTPF4" type="number" class="form-control input-md" placeholder="seconds">
+			</div>
+			<div class="col">
+				<label class="control-label" for="calculatedBC4">#4: Calculated&nbsp;BC</label>
+				<input id="calculatedBC4" name="calculatedBC4" type="number" class="form-control input-md" disabled>
+			</div>
+		</div>
+		<div class="row form-group"><!-- #5 Environment and details -->
+			<div class="col">
+				<!-- Target PPD -->
+				<label class="control-label" for="targetPPD5">#5: Target&nbsp;PPD</label>
+				<input id="targetPPD5" name="targetPPD5" type="number" class="form-control input-md">
+			</div>
+			<div class="col">
+				<label class="control-label" for="minTPF3">#5: Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
+				<input id="minTPF5" name="minTPF5" type="number" class="form-control input-md" placeholder="minutes">
+			</div>
+			<div class="col">
+				<label class="control-label" for="secTPF5">&nbsp;</label>
+				<input id="secTPF5" name="secTPF5" type="number" class="form-control input-md" placeholder="seconds">
+			</div>
+			<div class="col">
+				<label class="control-label" for="calculatedBC5">#5: Calculated&nbsp;BC</label>
+				<input id="calculatedBC5" name="calculatedBC5" type="number" class="form-control input-md" disabled>
 			</div>
 		</div>
 		<div class="row form-group justify-content-md-center">
