@@ -822,7 +822,7 @@ $(document).ready(() => {
       }
 
       const getAvg = calculatedBCs => calculatedBCs.reduce((p, c) => p + c) / calculatedBCs.length;
-      const calculatedBC = getAvg(calculatedBCs);
+      const calculatedBC = round(getAvg(calculatedBCs), 0);
       $('#calculatedBCResult').text(`Calculated Base credit is ${calculatedBC}`);
       $('#calculatedBCResult').addClass('bg-green');
     } else {
