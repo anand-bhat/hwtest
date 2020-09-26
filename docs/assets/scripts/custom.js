@@ -795,7 +795,7 @@ $(document).ready(() => {
       const minTPF3 = $('#minTPF3').val();
       const secTPF3 = $('#secTPF3').val();
 	  alert(secTPF3);
-      const tpf3 = ((minTPF3 * 60) + (secTPF3 * 1) / 60;
+      const tpf3 = ((minTPF3 * 60) + (secTPF3 * 1)) / 60;
 	  alert(tpf3);
       const calculatedBC3 = round(targetPPD3 / (14.4 * Math.sqrt(14.4 * k * deadline / tpf3) / tpf3), 0);
       $('#calculatedBC3').val(calculatedBC3);
