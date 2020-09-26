@@ -767,13 +767,15 @@ $(document).ready(() => {
 
   // Calculate base credit for project
   $('#calculateBC').on('click', function calculateBC(e) {
+    alert('Here1');
 
     if ($(this).closest('form')[0].checkValidity()) {
       e.preventDefault();
+      alert('Here2');
 
-      $('#wuStatus').text('Checking for WU credits...');
-      $('#wuStatus').removeClass();
+      $('#calculateBCResult').text('Checking for WU credits...');
     } else {
+      alert('Here3');
       $(this).closest('form')[0].reportValidity();
     }
   });
