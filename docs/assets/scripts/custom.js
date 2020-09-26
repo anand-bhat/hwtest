@@ -773,13 +773,14 @@ $(document).ready(() => {
       const k = $('#k').val();
       const deadline = $('#deadline').val();
       const currentBC = $('#currentBC').val();
+
       const minTPF = $('#minTPF').val();
       const secTPF = $('#secTPF').val();
       const targetPPD = $('#targetPPD').val();
       const tpf = ((minTPF * 60) + secTPF) / 60;
 
       const calculatedBC = round(targetPPD / (14.4 * Math.sqrt(14.4 * k * deadline / tpf) / tpf), 0);
-      alert(calculatedBC);
+      $('#calculatedBC').val(calculatedBC);
 
       $('#calculateBCResult').text(`Calculated Base credit is ${calculatedBC}`);
     } else {
