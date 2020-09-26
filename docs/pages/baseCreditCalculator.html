@@ -1,0 +1,64 @@
+---
+layout: page
+tagline: Base Credit Calculator
+tagline_min: BaseCreditCalculator
+---
+<div>
+	This page lets you calculate the desired base credit for a Folding@home project.
+</div>
+<hr>
+<div>
+	<form class="form-horizontal" >
+		<div class="row form-group">
+			<div class="col">
+				<!-- Target PPD input -->
+				<label class="control-label" for="targetPPD">Target PPD</label>
+				<input id="targetPPD" name="targetPPD" type="number" class="form-control input-md" required>
+			</div>
+			<div class="col">
+				<!-- Run input -->
+				<label class="control-label" for="minTPF">TPF (min)</label>
+				<input id="minTPF" name="minTPF" type="number" class="form-control input-md" required>
+			</div>
+			<div class="col">
+				<!-- Clone input -->
+				<label class="control-label" for="secTPF">TPF (sec)</label>
+				<input id="secTPF" name="secTPF" type="number" class="form-control input-md" required>
+			</div>
+			<div class="col">
+				<!-- Gen input -->
+				<label class="control-label" for="finalDeadline">Final Deadline</label>
+				<input id="finalDeadline" name="finalDeadline" type="number" class="form-control input-md" required>
+			</div>
+		</div>
+		<div class="row form-group justify-content-md-center">
+			<div class="col-md-auto">
+				<!-- Buttons -->
+				<button id="calculateBC" name="calculateBC" class="btn btn-primary">Calculate</button>
+				<button id="calculateBCReset" name="calculateBCReset" class="btn btn-danger" type="reset">Reset</button>
+			</div>
+		</div>
+	</form>
+</div>
+<hr>
+<div>
+	<!-- Display result -->
+	<div id="wuStatus">Click the "Check" button.</div>
+	<div id="wuStatusData" class="collapse">
+		<table id="wuStatusTable" class="hover order-column row-border cell-border">
+			<thead>
+				<tr>
+					<th data-field="user">User Name</th>
+					<th data-field="team">Team ID</th>
+					<th data-field="cpuid">CPU ID</th>
+					<th data-field="credit">Credits (Points)</th>
+					<th data-field="assign_time">WU Assign At</th>
+					<th data-field="log_time">WU Returned At</th>
+					<th data-field="credit_time">WU Credited At</th>
+					<th data-field="days">Duration (in days)</th>
+					<th data-field="code">Status</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</div>
