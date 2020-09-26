@@ -822,6 +822,7 @@ $(document).ready(() => {
       }
 
       const calculatedBC = calculatedBCs => calculatedBCs.reduce((p, c) => p + c) / calculatedBCs.length;
+	  alert(calculatedBC);
       $('#calculatedBCResult').text(`Calculated Base credit is ${calculatedBC}`);
     } else {
       $(this).closest('form')[0].reportValidity();
