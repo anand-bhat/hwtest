@@ -783,7 +783,7 @@ $(document).ready(() => {
       const calculatedBC = round(targetPPD / (14.4 * Math.sqrt(14.4 * k * deadline / tpf) / tpf), 0);
       alert(calculatedBC);
 
-      $('#calculateBCResult').text(`Calculated Base credit is $calculatedBC`);
+      $('#calculateBCResult').text(`Calculated Base credit is ${calculatedBC}`);
     } else {
       alert('Here3');
       $(this).closest('form')[0].reportValidity();
