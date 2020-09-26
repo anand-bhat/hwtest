@@ -780,9 +780,10 @@ $(document).ready(() => {
       const targetPPD = $('#targetPPD').val();
       const tpf = ((minTPF * 60) + secTPF) / 60;
 
-      const calculatedBC = targetPPD / (14.4 * Math.sqrt(14.4 * k * deadline / tpf) / tpf)
+      const calculatedBC = round(targetPPD / (14.4 * Math.sqrt(14.4 * k * deadline / tpf) / tpf), 0);
+      alert(calculatedBC);
 
-      $('#calculateBCResult').text('Checking for WU credits...' + calculatedBC);
+      $('#calculateBCResult').text(`Calculated Base credit is $calculatedBC`);
     } else {
       alert('Here3');
       $(this).closest('form')[0].reportValidity();
