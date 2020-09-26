@@ -821,9 +821,11 @@ $(document).ready(() => {
         calculatedBCs.push(calculatedBC5);
       }
 
-      const calculatedBC = calculatedBCs => calculatedBCs.reduce((p, c) => p + c) / calculatedBCs.length;
+      const getAvg = calculatedBCs => calculatedBCs.reduce((p, c) => p + c) / calculatedBCs.length;
+      const calculatedBC = getAvg(calculatedBCs);
 	  alert(calculatedBC);
       $('#calculatedBCResult').text(`Calculated Base credit is ${calculatedBC}`);
+	  .addClass('bg-green')
     } else {
       $(this).closest('form')[0].reportValidity();
     }
