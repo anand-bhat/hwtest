@@ -767,11 +767,18 @@ $(document).ready(() => {
 
   // Calculate base credit for project
   $('#calculateBC').on('click', function calculateBC(e) {
-    alert('Here1');
-
     if ($(this).closest('form')[0].checkValidity()) {
       e.preventDefault();
       alert('Here2');
+
+      const projectId = $('#projectId').val();
+      const k = $('#k').val();
+      const finalDeadline = $('#finalDeadline').val();
+      const currentBC = $('#currentBC').val();
+      const minTPF = $('#minTPF').val();
+      const secTPF = $('#secTPF').val();
+
+      const calculatedBC = 
 
       $('#calculateBCResult').text('Checking for WU credits...');
     } else {
