@@ -18,7 +18,7 @@ tagline_min: BaseCreditCalculator
 			<div class="col">
 				<!-- k-factor (default=0.75) -->
 				<label class="control-label" for="k">k-factor</label>
-				<input id="k" name="k" type="number" class="form-control input-md" required>
+				<input id="k" name="k" type="number" class="form-control input-md" required value="0.75">
 			</div>
 			<div class="col">
 				<!-- Final deadline -->
@@ -32,11 +32,13 @@ tagline_min: BaseCreditCalculator
 			</div>
 		</div>
 		<div class="row form-group"><!-- Execution details -->
+			<label class="control-label" for="minTPF">Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
 			<div class="col">
 				<!-- Run input -->
-				<label class="control-label" for="minTPF">Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
-				<input id="minTPF" name="minTPF" type="number" class="form-control input-md" required>min
-				<input id="secTPF" name="secTPF" type="number" class="form-control input-md" required>sec
+				<input id="minTPF" name="minTPF" type="number" class="form-control input-md" required>minute(s)
+			</div>
+			<div class="col">
+				<input id="secTPF" name="secTPF" type="number" class="form-control input-md" required>second(s)
 			</div>
 		</div>
 		<div class="row form-group justify-content-md-center">
