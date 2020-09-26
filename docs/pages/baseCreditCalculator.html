@@ -32,11 +32,9 @@ tagline_min: BaseCreditCalculator
 			</div>
 		</div>
 		<div class="row form-group"><!-- Execution details -->
-			<div class="col-md-12">
-				<label class="control-label">Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
-			</div>
 			<div class="col">
 				<!-- Run input -->
+				<label class="control-label">Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
 				<input id="minTPF" name="minTPF" type="number" class="form-control input-md" placeholder="minutes" required>
 			</div>
 			<div class="col">
@@ -55,22 +53,5 @@ tagline_min: BaseCreditCalculator
 <hr>
 <div>
 	<!-- Display result -->
-	<div id="wuStatus">Click the "Check" button.</div>
-	<div id="wuStatusData" class="collapse">
-		<table id="wuStatusTable" class="hover order-column row-border cell-border">
-			<thead>
-				<tr>
-					<th data-field="user">User Name</th>
-					<th data-field="team">Team ID</th>
-					<th data-field="cpuid">CPU ID</th>
-					<th data-field="credit">Credits (Points)</th>
-					<th data-field="assign_time">WU Assign At</th>
-					<th data-field="log_time">WU Returned At</th>
-					<th data-field="credit_time">WU Credited At</th>
-					<th data-field="days">Duration (in days)</th>
-					<th data-field="code">Status</th>
-				</tr>
-			</thead>
-		</table>
-	</div>
+	<div id="calculateBCResult">Click the "Check" button.</div>
 </div>
