@@ -769,20 +769,45 @@ $(document).ready(() => {
   $('#calculateBC').on('click', function calculateBC(e) {
     if ($(this).closest('form')[0].checkValidity()) {
       e.preventDefault();
-      const projectId = $('#projectId').val();
       const k = $('#k').val();
       const deadline = $('#deadline').val();
-      const currentBC = $('#currentBC').val();
 
-      const minTPF = $('#minTPF').val();
-      const secTPF = $('#secTPF').val();
-      const targetPPD = $('#targetPPD').val();
-      const tpf = ((minTPF * 60) + secTPF) / 60;
+      const targetPPD1 = $('#targetPPD1').val();
+      const minTPF1 = $('#minTPF1').val();
+      const secTPF1 = $('#secTPF1').val();
+      const tpf1 = ((minTPF1 * 60) + secTPF1) / 60;
+      const calculatedBC1 = round(targetPPD1 / (14.4 * Math.sqrt(14.4 * k * deadline / tpf1) / tpf1), 0);
+      $('#calculatedBC1').val(calculatedBC1);
 
-      const calculatedBC = round(targetPPD / (14.4 * Math.sqrt(14.4 * k * deadline / tpf) / tpf), 0);
-      $('#calculatedBC').val(calculatedBC);
+      const targetPPD2 = $('#targetPPD2').val();
+      const minTPF2 = $('#minTPF2').val();
+      const secTPF2 = $('#secTPF2').val();
+      const tpf2 = ((minTPF2 * 60) + secTPF2) / 60;
+      const calculatedBC2 = round(targetPPD2 / (14.4 * Math.sqrt(14.4 * k * deadline / tpf2) / tpf2), 0);
+      $('#calculatedBC2').val(calculatedBC2);
 
-      $('#calculateBCResult').text(`Calculated Base credit is ${calculatedBC}`);
+      const targetPPD3 = $('#targetPPD3').val();
+      const minTPF3 = $('#minTPF3').val();
+      const secTPF3 = $('#secTPF3').val();
+      const tpf3 = ((minTPF3 * 60) + secTPF3) / 60;
+      const calculatedBC3 = round(targetPPD3 / (14.4 * Math.sqrt(14.4 * k * deadline / tpf3) / tpf3), 0);
+      $('#calculatedBC3').val(calculatedBC3);
+
+      const targetPPD4 = $('#targetPPD4').val();
+      const minTPF4 = $('#minTPF4').val();
+      const secTPF4 = $('#secTPF4').val();
+      const tpf4 = ((minTPF4 * 60) + secTPF4) / 60;
+      const calculatedBC4 = round(targetPPD4 / (14.4 * Math.sqrt(14.4 * k * deadline / tpf4) / tpf4), 0);
+      $('#calculatedBC4').val(calculatedBC4);
+
+      const targetPPD5 = $('#targetPPD5').val();
+      const minTPF5 = $('#minTPF5').val();
+      const secTPF5 = $('#secTPF5').val();
+      const tpf5 = ((minTPF5 * 60) + secTPF5) / 60;
+      const calculatedBC5 = round(targetPPD5 / (14.4 * Math.sqrt(14.4 * k * deadline / tpf5) / tpf5), 0);
+      $('#calculatedBC5').val(calculatedBC5);
+
+      $('#calculateBCResult').text(`Calculated Base credit is ${calculatedBC1}`);
     } else {
       $(this).closest('form')[0].reportValidity();
     }

@@ -11,11 +11,6 @@ tagline_min: BaseCreditCalculator
 	<form class="form-horizontal" >
 		<div class="row form-group"><!-- Project details -->
 			<div class="col">
-				<!-- Project ID -->
-				<label class="control-label" for="projectId">Project&nbsp;ID</label>
-				<input id="projectId" name="projectId" type="number" class="form-control input-md">
-			</div>
-			<div class="col">
 				<!-- k-factor (default=0.75) -->
 				<label class="control-label" for="k">k-factor</label>
 				<input id="k" name="k" type="number" class="form-control input-md" required step="0.01" value="0.75">
@@ -25,30 +20,25 @@ tagline_min: BaseCreditCalculator
 				<label class="control-label" for="deadline">Deadline</label>
 				<input id="deadline" name="deadline" type="number" class="form-control input-md" required>
 			</div>
-			<div class="col">
-				<!-- Current BC -->
-				<label class="control-label" for="currentBC">Current&nbsp;BC</label>
-				<input id="currentBC" name="currentBC" type="number" class="form-control input-md" required>
-			</div>
 		</div>
 		<div>Enter the target PPD and observed TPF for up to 5 clients:</div>
 		<div class="row form-group"><!-- #1 Environment and details -->
 			<div class="col">
 				<!-- Target PPD -->
-				<label class="control-label" for="targetPPD">#1: Target&nbsp;PPD</label>
-				<input id="targetPPD" name="targetPPD" type="number" class="form-control input-md" required>
+				<label class="control-label" for="targetPPD1">#1: Target&nbsp;PPD</label>
+				<input id="targetPPD1" name="targetPPD1" type="number" class="form-control input-md" required>
 			</div>
 			<div class="col">
-				<label class="control-label" for="minTPF">#1: Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
-				<input id="minTPF" name="minTPF" type="number" class="form-control input-md" placeholder="minutes" required>
+				<label class="control-label" for="minTPF1">#1: Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
+				<input id="minTPF1" name="minTPF1" type="number" class="form-control input-md" placeholder="minutes" required>
 			</div>
 			<div class="col">
-				<label class="control-label" for="secTPF">&nbsp;</label>
-				<input id="secTPF" name="secTPF" type="number" class="form-control input-md" placeholder="seconds" required>
+				<label class="control-label" for="secTPF1">&nbsp;</label>
+				<input id="secTPF1" name="secTPF1" type="number" class="form-control input-md" placeholder="seconds" required>
 			</div>
 			<div class="col">
-				<label class="control-label" for="calculatedBC">#1: Calculated&nbsp;BC</label>
-				<input id="calculatedBC" name="calculatedBC" type="number" class="form-control input-md" disabled>
+				<label class="control-label" for="calculatedBC1">#1: Calculated&nbsp;BC</label>
+				<input id="calculatedBC1" name="calculatedBC1" type="number" class="form-control input-md" disabled>
 			</div>
 		</div>
 		<div class="row form-group"><!-- #2 Environment and details -->
@@ -139,5 +129,5 @@ tagline_min: BaseCreditCalculator
 <hr>
 <div>
 	<!-- Display result -->
-	<div id="calculateBCResult">Click the "Check" button.</div>
+	<div id="calculatedBCResult">Click the "Check" button.</div>
 </div>
