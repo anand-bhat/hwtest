@@ -773,14 +773,16 @@ $(document).ready(() => {
 
       const projectId = $('#projectId').val();
       const k = $('#k').val();
-      const finalDeadline = $('#finalDeadline').val();
+      const deadline = $('#deadline').val();
       const currentBC = $('#currentBC').val();
       const minTPF = $('#minTPF').val();
       const secTPF = $('#secTPF').val();
+      const targetPPD = $('#targetPPD').val();
+      const tpf = ((minTPF * 60) + secTPF) / 60;
 
-      const calculatedBC = 
+      const calculatedBC = targetPPD / (14.4 * Math.sqrt(14.4 * k * deadline / tpf) / tpf)
 
-      $('#calculateBCResult').text('Checking for WU credits...');
+      $('#calculateBCResult').text('Checking for WU credits...' + calculatedBC);
     } else {
       alert('Here3');
       $(this).closest('form')[0].reportValidity();
