@@ -14,12 +14,12 @@ tagline_min: BaseCreditCalculator
 			<div class="col">
 				<!-- k-factor (default=0.75) -->
 				<label class="control-label" for="k">k-factor</label>
-				<input id="k" name="k" type="number" class="form-control input-md" required step="0.01" value="0.75">
+				<input id="k" name="k" type="number" class="form-control input-md" min="0" max="1" required step="0.01" value="0.75">
 			</div>
 			<div class="col">
 				<!-- Deadline -->
 				<label class="control-label" for="deadline">Deadline (days; from <a href="https://apps.foldingathome.org/psummary?visibility=ALL" rel="noopener" target="_blank">psummary</a>)</label>
-				<input id="deadline" name="deadline" type="number" class="form-control input-md" required>
+				<input id="deadline" name="deadline" type="number" class="form-control input-md" min="0" step="0.1" required>
 			</div>
 		</div>
 		<div><b>Execution environment details: Enter the target PPD and observed TPF for up to 5 clients</b></div>
@@ -27,15 +27,15 @@ tagline_min: BaseCreditCalculator
 			<div class="col">
 				<!-- Target PPD -->
 				<label class="control-label" for="targetPPD1">#1:&nbsp;Target&nbsp;PPD</label>
-				<input id="targetPPD1" name="targetPPD1" type="number" class="form-control input-md" required>
+				<input id="targetPPD1" name="targetPPD1" type="number" class="form-control input-md" min="0" required>
 			</div>
 			<div class="col">
 				<label class="control-label" for="minTPF1">#1:&nbsp;Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
-				<input id="minTPF1" name="minTPF1" type="number" class="form-control input-md" placeholder="minutes" required>
+				<input id="minTPF1" name="minTPF1" type="number" class="form-control input-md" min="0" placeholder="minutes" required>
 			</div>
 			<div class="col">
 				<label class="control-label" for="secTPF1">&nbsp;</label>
-				<input id="secTPF1" name="secTPF1" type="number" class="form-control input-md" placeholder="seconds" required>
+				<input id="secTPF1" name="secTPF1" type="number" class="form-control input-md" min="0" max="59" placeholder="seconds" required>
 			</div>
 			<div class="col">
 				<label class="control-label" for="calculatedBC1">#1:&nbsp;Calculated&nbsp;BC</label>
@@ -46,15 +46,15 @@ tagline_min: BaseCreditCalculator
 			<div class="col">
 				<!-- Target PPD -->
 				<label class="control-label" for="targetPPD2">#2:&nbsp;Target&nbsp;PPD</label>
-				<input id="targetPPD2" name="targetPPD2" type="number" class="form-control input-md">
+				<input id="targetPPD2" name="targetPPD2" type="number" class="form-control input-md" min="0">
 			</div>
 			<div class="col">
 				<label class="control-label" for="minTPF2">#2:&nbsp;Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
-				<input id="minTPF2" name="minTPF2" type="number" class="form-control input-md" placeholder="minutes">
+				<input id="minTPF2" name="minTPF2" type="number" class="form-control input-md" min="0" placeholder="minutes">
 			</div>
 			<div class="col">
 				<label class="control-label" for="secTPF2">&nbsp;</label>
-				<input id="secTPF2" name="secTPF2" type="number" class="form-control input-md" placeholder="seconds">
+				<input id="secTPF2" name="secTPF2" type="number" class="form-control input-md" min="0" max="59" placeholder="seconds">
 			</div>
 			<div class="col">
 				<label class="control-label" for="calculatedBC2">#2:&nbsp;Calculated&nbsp;BC</label>
@@ -65,15 +65,15 @@ tagline_min: BaseCreditCalculator
 			<div class="col">
 				<!-- Target PPD -->
 				<label class="control-label" for="targetPPD3">#3:&nbsp;Target&nbsp;PPD</label>
-				<input id="targetPPD3" name="targetPPD3" type="number" class="form-control input-md">
+				<input id="targetPPD3" name="targetPPD3" type="number" class="form-control input-md" min="0">
 			</div>
 			<div class="col">
 				<label class="control-label" for="minTPF3">#3:&nbsp;Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
-				<input id="minTPF3" name="minTPF3" type="number" class="form-control input-md" placeholder="minutes">
+				<input id="minTPF3" name="minTPF3" type="number" class="form-control input-md" min="0" placeholder="minutes">
 			</div>
 			<div class="col">
 				<label class="control-label" for="secTPF3">&nbsp;</label>
-				<input id="secTPF3" name="secTPF3" type="number" class="form-control input-md" placeholder="seconds">
+				<input id="secTPF3" name="secTPF3" type="number" class="form-control input-md" min="0" max="59" placeholder="seconds">
 			</div>
 			<div class="col">
 				<label class="control-label" for="calculatedBC3">#3:&nbsp;Calculated&nbsp;BC</label>
@@ -84,15 +84,15 @@ tagline_min: BaseCreditCalculator
 			<div class="col">
 				<!-- Target PPD -->
 				<label class="control-label" for="targetPPD4">#4:&nbsp;Target&nbsp;PPD</label>
-				<input id="targetPPD4" name="targetPPD4" type="number" class="form-control input-md">
+				<input id="targetPPD4" name="targetPPD4" type="number" class="form-control input-md" min="0">
 			</div>
 			<div class="col">
 				<label class="control-label" for="minTPF4">#4:&nbsp;Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
-				<input id="minTPF4" name="minTPF4" type="number" class="form-control input-md" placeholder="minutes">
+				<input id="minTPF4" name="minTPF4" type="number" class="form-control input-md" min="0" placeholder="minutes">
 			</div>
 			<div class="col">
 				<label class="control-label" for="secTPF4">&nbsp;</label>
-				<input id="secTPF4" name="secTPF4" type="number" class="form-control input-md" placeholder="seconds">
+				<input id="secTPF4" name="secTPF4" type="number" class="form-control input-md" min="0" max="59" placeholder="seconds">
 			</div>
 			<div class="col">
 				<label class="control-label" for="calculatedBC4">#4:&nbsp;Calculated&nbsp;BC</label>
@@ -103,15 +103,15 @@ tagline_min: BaseCreditCalculator
 			<div class="col">
 				<!-- Target PPD -->
 				<label class="control-label" for="targetPPD5">#5:&nbsp;Target&nbsp;PPD</label>
-				<input id="targetPPD5" name="targetPPD5" type="number" class="form-control input-md">
+				<input id="targetPPD5" name="targetPPD5" type="number" class="form-control input-md" min="0">
 			</div>
 			<div class="col">
 				<label class="control-label" for="minTPF3">#5:&nbsp;Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
-				<input id="minTPF5" name="minTPF5" type="number" class="form-control input-md" placeholder="minutes">
+				<input id="minTPF5" name="minTPF5" type="number" class="form-control input-md" min="0" placeholder="minutes">
 			</div>
 			<div class="col">
 				<label class="control-label" for="secTPF5">&nbsp;</label>
-				<input id="secTPF5" name="secTPF5" type="number" class="form-control input-md" placeholder="seconds">
+				<input id="secTPF5" name="secTPF5" type="number" class="form-control input-md" min="0" max="59" placeholder="seconds">
 			</div>
 			<div class="col">
 				<label class="control-label" for="calculatedBC5">#5:&nbsp;Calculated&nbsp;BC</label>
