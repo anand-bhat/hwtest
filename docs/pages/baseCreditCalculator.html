@@ -10,6 +10,14 @@ tagline_min: BaseCreditCalculator
 <hr>
 <div>
 	<form class="form-horizontal" >
+		<div class="row form-group"><!--Target PPD -->
+			<div class="col">
+				<!-- Target PPD -->
+				<label class="control-label" for="targetPPD">Target&nbsp;PPD</label>
+				<input id="targetPPD" name="targetPPD" type="number" class="form-control input-md border border-success">
+				<small id="targetPPDHelp" class="form-text text-muted">Enter the target points per day (PPD) for your Folding slot.</small>
+			</div>
+		</div>
 		<div class="row form-group"><!-- Project details -->
 			<div class="col">
 				<!-- Project ID -->
@@ -37,18 +45,10 @@ tagline_min: BaseCreditCalculator
 				<label class="control-label">Time&nbsp;per&nbsp;frame&nbsp;(TPF)</label>
 			</div>
 			<div class="col">
-				<!-- Run input -->
 				<input id="minTPF" name="minTPF" type="number" class="form-control input-md" placeholder="minutes" required>
 			</div>
 			<div class="col">
 				<input id="secTPF" name="secTPF" type="number" class="form-control input-md" placeholder="seconds" required>
-			</div>
-		</div>
-		<div class="row form-group"><!--Target PPD -->
-			<div class="col border border-success">
-				<!-- Target PPD -->
-				<label class="control-label border border-success" for="targetPPD">Target&nbsp;PPD</label>
-				<input id="targetPPD" name="targetPPD" type="number" class="form-control input-md border border-success">
 			</div>
 		</div>
 		<div class="row form-group justify-content-md-center">
