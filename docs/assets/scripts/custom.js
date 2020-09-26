@@ -806,8 +806,9 @@ $(document).ready(() => {
       const tpf5 = ((minTPF5 * 60) + secTPF5) / 60;
       const calculatedBC5 = round(targetPPD5 / (14.4 * Math.sqrt(14.4 * k * deadline / tpf5) / tpf5), 0);
       $('#calculatedBC5').val(calculatedBC5);
-		alert('Here1');
-      $('#calculateBCResult').text(`Calculated Base credit is ${calculatedBC1}`);
+
+      const calculatedBC = round((calculatedBC1 + calculatedBC2 + calculatedBC3 + calculatedBC4 + calculatedBC5) / 5, 0);
+      $('#calculatedBCResult').text(`Calculated Base credit is ${calculatedBC}`);
     } else {
       $(this).closest('form')[0].reportValidity();
     }
