@@ -789,6 +789,7 @@ $(document).ready(() => {
       $('#calculatedBC2').val(calculatedBC2);
       if (calculatedBC2 != 0) {
         calculatedBCs.push(calculatedBC2);
+      }
 
       const targetPPD3 = $('#targetPPD3').val();
       const minTPF3 = $('#minTPF3').val();
@@ -798,6 +799,7 @@ $(document).ready(() => {
       $('#calculatedBC3').val(calculatedBC3);
       if (calculatedBC3 != 0) {
         calculatedBCs.push(calculatedBC3);
+      }
 
       const targetPPD4 = $('#targetPPD4').val();
       const minTPF4 = $('#minTPF4').val();
@@ -807,6 +809,7 @@ $(document).ready(() => {
       $('#calculatedBC4').val(calculatedBC4);
       if (calculatedBC4 != 0) {
         calculatedBCs.push(calculatedBC4);
+      }
 
       const targetPPD5 = $('#targetPPD5').val();
       const minTPF5 = $('#minTPF5').val();
@@ -816,8 +819,9 @@ $(document).ready(() => {
       $('#calculatedBC5').val(calculatedBC5);
       if (calculatedBC5 != 0) {
         calculatedBCs.push(calculatedBC5);
+      }
 
-      const calculatedBC = calculatedBCs => calculatedBCs.reduce((p,c) => p+c) / calculatedBCs.length
+      const calculatedBC = calculatedBCs => calculatedBCs.reduce((p, c) => p + c) / calculatedBCs.length;
       $('#calculatedBCResult').text(`Calculated Base credit is ${calculatedBC}`);
     } else {
       $(this).closest('form')[0].reportValidity();
