@@ -778,7 +778,7 @@ $(document).ready(() => {
       const secTPF1 = $('#secTPF1').val();
       const tpf1 = ((minTPF1 * 60) + (secTPF1 * 1)) / 60;
       const calculatedBC1 = round(targetPPD1 / (14.4 * Math.sqrt(14.4 * k * deadline / tpf1) / tpf1), 0);
-      $('#calculatedBC1').val(calculatedBC1);
+      $('#calculatedBC1').val(calculatedBC1.toLocaleString());
       calculatedBCs.push(calculatedBC1);
 
       const targetPPD2 = $('#targetPPD2').val();
@@ -786,7 +786,7 @@ $(document).ready(() => {
       const secTPF2 = $('#secTPF2').val();
       const tpf2 = ((minTPF2 * 60) + (secTPF2 * 1)) / 60;
       const calculatedBC2 = round(targetPPD2 / (14.4 * Math.sqrt(14.4 * k * deadline / tpf2) / tpf2), 0);
-      $('#calculatedBC2').val(calculatedBC2);
+      $('#calculatedBC2').val(calculatedBC2.toLocaleString());
       if (calculatedBC2 != 0) {
         calculatedBCs.push(calculatedBC2);
       }
@@ -796,7 +796,7 @@ $(document).ready(() => {
       const secTPF3 = $('#secTPF3').val();
       const tpf3 = ((minTPF3 * 60) + (secTPF3 * 1)) / 60;
       const calculatedBC3 = round(targetPPD3 / (14.4 * Math.sqrt(14.4 * k * deadline / tpf3) / tpf3), 0);
-      $('#calculatedBC3').val(calculatedBC3);
+      $('#calculatedBC3').val(calculatedBC3.toLocaleString());
       if (calculatedBC3 != 0) {
         calculatedBCs.push(calculatedBC3);
       }
@@ -806,7 +806,7 @@ $(document).ready(() => {
       const secTPF4 = $('#secTPF4').val();
       const tpf4 = ((minTPF4 * 60) + (secTPF4 * 1)) / 60;
       const calculatedBC4 = round(targetPPD4 / (14.4 * Math.sqrt(14.4 * k * deadline / tpf4) / tpf4), 0);
-      $('#calculatedBC4').val(calculatedBC4);
+      $('#calculatedBC4').val(calculatedBC4.toLocaleString());
       if (calculatedBC4 != 0) {
         calculatedBCs.push(calculatedBC4);
       }
@@ -816,13 +816,13 @@ $(document).ready(() => {
       const secTPF5 = $('#secTPF5').val();
       const tpf5 = ((minTPF5 * 60) + (secTPF5 * 1)) / 60;
       const calculatedBC5 = round(targetPPD5 / (14.4 * Math.sqrt(14.4 * k * deadline / tpf5) / tpf5), 0);
-      $('#calculatedBC5').val(calculatedBC5);
+      $('#calculatedBC5').val(calculatedBC5.toLocaleString());
       if (calculatedBC5 != 0) {
         calculatedBCs.push(calculatedBC5);
       }
 
       const getAvg = calculatedBCs => calculatedBCs.reduce((p, c) => p + c) / calculatedBCs.length;
-      const calculatedBC = round(getAvg(calculatedBCs), 0);
+      const calculatedBC = round(getAvg(calculatedBCs), 0).toLocaleString();
       $('#calculatedBCResult').text(`Calculated Base credit is ${calculatedBC}`);
       $('#calculatedBCResult').addClass('bg-green');
     } else {
