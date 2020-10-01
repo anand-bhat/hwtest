@@ -1,4 +1,7 @@
 python projectProgressChecker.py -f ../docs/assets/data/13827.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/13828.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/13829.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/13830.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/14377.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/14520.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/14521.json -st alternate
