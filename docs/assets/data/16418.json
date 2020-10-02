@@ -1,7 +1,7 @@
 {
   "project": 16418,
   "maxFailures": 5,
-  "lastUpdated": 1601377389072,
+  "lastUpdated": 1601644552445,
   "maxRuns": 1,
   "maxClonesPerRun": 2000,
   "maxGensPerClone": 500,
