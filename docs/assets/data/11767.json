@@ -1,7 +1,7 @@
 {
   "project": 11767,
   "maxFailures": 5,
-  "lastUpdated": 1604362512040,
+  "lastUpdated": 1605093112153,
   "maxRuns": 1,
   "maxClonesPerRun": 40,
   "maxGensPerClone": 1000,
@@ -12,68 +12,68 @@
       "clones": [
         {
           "clone": 0,
-          "gen": 949,
-          "genDate": "2020-11-02 15:42:06 UTC"
+          "gen": 978,
+          "genDate": "2020-11-07 13:31:38 UTC"
         },
         {
           "clone": 1,
-          "gen": 739,
-          "genDate": "2020-11-02 11:43:56 UTC"
+          "gen": 781,
+          "genDate": "2020-11-07 15:22:53 UTC"
         },
         {
           "clone": 2,
-          "gen": 782,
-          "genDate": "2020-11-02 23:35:56 UTC"
+          "gen": 829,
+          "genDate": "2020-11-07 12:03:59 UTC"
         },
         {
           "clone": 3,
-          "gen": 614,
-          "genDate": "2020-11-02 22:52:33 UTC"
+          "gen": 655,
+          "genDate": "2020-11-06 17:38:28 UTC"
         },
         {
           "clone": 4,
-          "gen": 689,
-          "genDate": "2020-11-02 22:10:12 UTC"
+          "gen": 735,
+          "genDate": "2020-11-07 09:59:46 UTC"
         },
         {
           "clone": 5,
-          "gen": 486,
-          "genDate": "2020-11-02 23:54:41 UTC"
+          "gen": 510,
+          "genDate": "2020-11-06 17:30:24 UTC"
         },
         {
           "clone": 6,
-          "gen": 928,
-          "genDate": "2020-11-02 22:09:21 UTC"
+          "gen": 962,
+          "genDate": "2020-11-06 19:40:45 UTC"
         },
         {
           "clone": 7,
-          "gen": 549,
-          "genDate": "2020-11-02 13:56:20 UTC"
+          "gen": 576,
+          "genDate": "2020-11-06 15:21:06 UTC"
         },
         {
           "clone": 8,
-          "gen": 393,
-          "genDate": "2020-11-01 05:31:08 UTC"
+          "gen": 408,
+          "genDate": "2020-11-06 17:06:26 UTC"
         },
         {
           "clone": 9,
-          "gen": 454,
-          "genDate": "2020-11-02 18:37:11 UTC"
+          "gen": 481,
+          "genDate": "2020-11-06 16:47:54 UTC"
         },
         {
           "clone": 10,
-          "gen": 354,
-          "genDate": "2020-11-01 00:45:51 UTC"
+          "gen": 365,
+          "genDate": "2020-11-06 09:26:54 UTC"
         },
         {
           "clone": 11,
-          "gen": 220,
-          "genDate": "2020-11-01 05:04:02 UTC"
+          "gen": 224,
+          "genDate": "2020-11-05 09:41:05 UTC"
         },
         {
           "clone": 12,
-          "gen": 265,
-          "genDate": "2020-11-01 05:10:06 UTC"
+          "gen": 268,
+          "genDate": "2020-11-05 08:06:05 UTC"
         },
         {
           "clone": 13,
