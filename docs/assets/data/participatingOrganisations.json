@@ -17,6 +17,14 @@
       "team": 249440
     },
     {
+      "name": "Apogee Solutions",
+      "logo": "apogee_solutions.svg",
+      "title": "Philanthropy at Apogee - Folding@home",
+      "source": "https://www.apogeesolutions.co.uk/charities",
+      "actions": ["FAH"],
+      "team": 259959
+    },
+    {
       "name": "Arizona Research Computing",
       "logo": "arizona_research_computing.jpg",
       "title": "Arizona State University, Northern Arizona University and University of Arizona join forces to contribute to COVID-19 modeling and simulation efforts",
@@ -88,6 +96,14 @@
       "team": 264767
     },
     {
+      "name": "Cyxtera",
+      "logo": "cyxtera.png",
+      "title": "We're Joining the Fight Against COVID-19",
+      "source": "https://www.cyxtera.com/blog/business/were-joining-the-fight-against-covid-19",
+      "actions": ["FAH"],
+      "team": 238525
+    },
+    {
       "name": "ESI Group",
       "logo": "esi-group.png",
       "title": "ESI Group participates in the fight against COVID-19 with Folding@Home",
@@ -110,6 +126,14 @@
       "source": "https://www.evga.com/folding/",
       "actions": ["AWARE", "COMPETE"],
       "team": 111065
+    },
+    {
+      "name": "Fortem Capital",
+      "logo": "fortem_capital.png",
+      "title": "Fortem Capital Supports Folding@home",
+      "source": "https://www.linkedin.com/posts/fortem-capital-limted_alternativeinvestments-fortemcapital-foldingathome-activity-6711622636234977280-Glof",
+      "actions": ["FAH"],
+      "team": 256940
     },
     {
       "name": "Gilmour Academy",
@@ -148,7 +172,7 @@
       "logo": "intel.svg",
       "title": "Intel is donating PC power to tackle COVID-19, and you can too!",
       "source": "https://blogs.intel.com/jobs/2020/08/intel-is-donating-pc-power-to-tackle-covid-19-and-you-can-too/",
-      "actions": ["FAH"],
+      "actions": ["FAH", "BUILD"],
       "team": 711
     },
     {
@@ -157,6 +181,14 @@
       "title": "Insight Enterprises: How Channel Partners Can Support Coronavirus Research With Folding@Home",
       "source": "https://www.crn.com/news/components-peripherals/how-channel-partners-can-support-coronavirus-research-with-folding-home",
       "actions": ["FAH"]
+    },
+    {
+      "name": "iomart",
+      "logo": "iomart.png",
+      "title": "iomart commits spare compute to help the fight against COVID-19",
+      "source": "https://docs.iomart.com/iomart-commits-spare-compute-to-help-the-fight-against-covid-19/",
+      "actions": ["FAH"],
+      "team": 240216
     },
     {
       "name": "Jefferson Lab",
@@ -259,6 +291,14 @@
       "source": "https://www.oracle.com/at/corporate/blog/oracle-and-customers-fight-covid-2020-05-05.html",
       "actions": ["FAH", "INFRA"],
       "team": 242705
+    },
+    {
+      "name": "Petrobras",
+      "logo": "petrobras.svg",
+      "title": "We mobilize supercomputers to collaborate with research to combat Covid-19 [translated from Portuguese]",
+      "source": "https://nossaenergia.petrobras.com.br/pt/sustentabilidade/mobilizamos-supercomputadores-para-colaborar-com-pesquisas-de-combate-ao-covid-19/",
+      "actions": ["FAH"],
+      "team": 247463
     },
     {
       "name": "Porsche Informatik",
@@ -392,6 +432,14 @@
       "source": "https://octo.vmware.com/vmware-appliance-fah/",
       "actions": ["FAH", "BUILD", "AWARE"],
       "team": 52737
+    },
+    {
+      "name": "Washington University in St. Louis",
+      "logo": "washington_university_in_st_louis.png",
+      "title": "Folding@home's fight against COVID-19 enlists big tech, gamers, pro soccer",
+      "source": "https://medicine.wustl.edu/news/foldinghomes-fight-against-covid-19-enlists-big-tech-gamers-pro-soccer/",
+      "actions": ["FAH", "BUILD", "INFRA"],
+      "team": 40211
     },
     {
       "name": "Westchester PC Users Group",
