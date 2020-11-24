@@ -96,6 +96,14 @@
       "team": 251196
     },
     {
+      "name": "Ethical Society of St Louis",
+      "logo": "ethical_society_of_st_louis.svg",
+      "title": "Folding@home – Ethical Society of St Louis group",
+      "source": "https://ethicalstl.org/foldinghome-ethical-society-of-st-louis-group/",
+      "actions": ["FAH"],
+      "team": 266591
+    },
+    {
       "name": "EVGA",
       "logo": "evga.svg",
       "title": "Did you know that your EVGA graphics card has the potential to help fight disease?",
@@ -163,6 +171,13 @@
       "logo": "kings_college_london.svg",
       "title": "King's computer labs redeployed towards global coronavirus research",
       "source": "https://www.kcl.ac.uk/news/kings-computer-labs-redeployed-towards-global-coronavirus-research",
+      "actions": ["FAH"]
+    },
+    {
+      "name": "LaLiga",
+      "logo": "la_liga.png",
+      "title": "LaLiga is sharing its computing power to accelerate COVID-19 research",
+      "source": "https://newsletter.laliga.es/global-futbol/laliga-is-sharing-its-computing-power-to-accelerate-covid-19-research",
       "actions": ["FAH"]
     },
     {
@@ -254,6 +269,13 @@
       "team": 264767
     },
     {
+      "name": "Pure Storage",
+      "logo": "pure_storage.svg",
+      "title": "Supercomputing Powerhouse Folding@home Runs on FlashBlade",
+      "source": "https://blog.purestorage.com/folding-at-home-on-flashblade/",
+      "actions": ["INFRA"]
+    },
+    {
       "name": "RB Royal",
       "logo": "rb_royal.jpg",
       "title": "RB Royal Joins Forces with Folding@home to Provide Computing Power in Search for COVID-19 Vaccine",
@@ -275,6 +297,14 @@
       "source": "https://schreiner.edu/news-schreiner-university-joins-the-fight-against-covid-19/",
       "actions": ["FAH"],
       "team": 260259
+    },
+    {
+      "name": "SCS Wire",
+      "logo": "scs_wire.jpg",
+      "title": "SCS Wire applauds the efforts made by researchers at the Washington University School of Medicine to find new COVID-19 therapies, and have joined the effort",
+      "source": "http://www.wirestraight.com/project-photo-vault/university-washington-medicine-folding-at-home.html",
+      "actions": ["FAH"],
+      "team": 263947
     },
     {
       "name": "Southeast Missouri State University",
