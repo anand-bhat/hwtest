@@ -15,6 +15,7 @@ python projectProgressChecker.py -f ../docs/assets/data/14296.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/14297.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/14298.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/14299.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/14377.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/14500.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/14501.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/14502.json -st alternate
@@ -39,7 +40,13 @@ python projectProgressChecker.py -f ../docs/assets/data/14529.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/14530.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/14630.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/14631.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/14821.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/14822.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/14825.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/14827.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/14828.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/14836.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/14852.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/16400.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/16401.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/16402.json -st alternate
@@ -51,9 +58,22 @@ python projectProgressChecker.py -f ../docs/assets/data/16422.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/16423.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/16431.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/16448.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/16449.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/16450.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/16452.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/16453.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/16454.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/16455.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/16500.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/16600.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/16800.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/16801.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/16802.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/16803.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/16804.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/16805.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/16806.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/16810.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/16920.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/17200.json -st alternate
 cmd
