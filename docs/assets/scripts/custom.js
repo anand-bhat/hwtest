@@ -655,15 +655,14 @@ function participatingOrganisations() {
 function projectSummary() {
   $.getJSON('../assets/data/projectSummary.json')
     .done((data) => {
-		alert(data);
-
-      // Populate data into clone details table
+      // Populate data into project summary table
       $('#projectSummaryTable').bootstrapTable({
         data: data,
         formatNoMatches() {
           return 'No data found.';
         },
       });
+      $('#projectSummaryTable').show();
     })
     .fail(() => {
       $('#projectSummaryError').html('Unable to get data.');
