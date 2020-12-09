@@ -652,6 +652,23 @@ function participatingOrganisations() {
     });
 }
 
+function participatingOrganisations() {
+  $.getJSON('../assets/data/projectSummary.json')
+    .done((data) => {
+
+      // Populate data into clone details table
+      $('#projectSummaryTable').bootstrapTable({
+        data: data,
+        formatNoMatches() {
+          return 'No data found.';
+        },
+      });
+    })
+    .fail(() => {
+      $('#projectSummaryError').html('Unable to get data.');
+    });
+}
+
 function totalLabelFormatter() {
   return 'Total:';
 }
@@ -675,6 +692,11 @@ $(document).ready(() => {
   // PRCG Progress 2
   if (page === 'prcgProgress2') {
     prcgProgress2();
+  }
+
+  // Project Summary
+  if (page === 'projectProgress2') {
+    projectSummary();
   }
 
   // Participating organisations

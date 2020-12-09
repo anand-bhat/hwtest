@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "project": 16451,
+      "active": true,
+      "beta": false,
+      "public": true,
+      "type": "GRO_A7",
+      "ws": "66.170.111.50",
+      "credit": 450,
+      "timeout": 129600,
+      "deadline": 604800,
+      "atoms": 29571,
+      "contact": "sukrit.singh",
+      "cause": "covid-19",
+      "percentage": 68.89457627118644
+    },
+    {
+      "project": 16801,
+      "active": false,
+      "beta": "-",
+      "public": "-",
+      "type": "OPENMM_22",
+      "ws": "-",
+      "credit": 16800,
+      "timeout": 16800,
+      "deadline": 16800,
+      "atoms": 16800,
+      "contact": "OPENMM_22",
+      "cause": "covid-19",
+      "percentage": 99.8631
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+---
+layout: blank
+tagline: Project Progress
+tagline_min: ProjectProgress
+---
+<div role="banner">
+	<h2><img src="../assets/images/foldingathome.png" width="32" height="32" alt="Folding@home logo"> <a href="../">{{ site.title }}</a> - Project Progress</h2>
+</div>
+<hr>
+<div>
+	A sample visualisation of project progress.
+</div>
+<hr>
+<div id="projectSummaryError"></div>
+<div>
+	<table id="projectSummaryTable" class="collapse">
+		<thead>
+			<tr>
+				<th data-field="project" data-sortable="true" data-title-tooltip="Project ID" data-width="1" data-width-unit="%">Project</th>
+				<th data-field="active" data-sortable="true" data-title-tooltip="Is this project active?" data-width="1" data-width-unit="%">Active</th>
+				<th data-field="beta" data-sortable="true" data-title-tooltip="Is this project being assigned to Beta clients?" data-width="1" data-width-unit="%">Beta</th>
+				<th data-field="public" data-sortable="true" data-title-tooltip="Is this project being assigned to Public clients?" data-width="1" data-width-unit="%">Public</th>
+				<th data-field="type" data-sortable="true" data-title-tooltip="Project type" data-width="1" data-width-unit="%">Core Type</th>
+				<th data-field="ws" data-sortable="true" data-title-tooltip="Work Server for this project" data-width="1" data-width-unit="%">Work Server</th>
+				<th data-field="credit" data-sortable="true" data-title-tooltip="Project credit" data-width="1" data-width-unit="%">Credit</th>
+				<th data-field="timeout" data-sortable="true" data-title-tooltip="Number of days before a work unit is reassigned to another client" data-width="1" data-width-unit="%">Timeout</th>
+				<th data-field="deadline" data-sortable="true" data-title-tooltip="Number of days before a work unit is discarded by a client" data-width="1" data-width-unit="%">Deadline</th>
+				<th data-field="atoms" data-sortable="true" data-title-tooltip="Number of atoms" data-width="1" data-width-unit="%">Atoms</th>
+				<th data-field="contact" data-sortable="true" data-title-tooltip="Project contact" data-width="1" data-width-unit="%">Contact</th>
+				<th data-field="cause" data-sortable="true" data-title-tooltip="Project cause" data-width="1" data-width-unit="%">Cause</th>
+				<th data-field="progressVal" data-visible="false">Progress</th>
+				<th data-field="progress" data-halign="center" data-sortable="true" data-sort-name="progressVal" data-title-tooltip="Progress expressed in terms of the number of remaining WUs for this project">Progress</th>
+			</tr>
+		</thead>
+	</table>
+</div>
