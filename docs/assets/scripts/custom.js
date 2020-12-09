@@ -652,7 +652,7 @@ function participatingOrganisations() {
     });
 }
 
-function participatingOrganisations() {
+function projectSummary() {
   $.getJSON('../assets/data/projectSummary.json')
     .done((data) => {
 
