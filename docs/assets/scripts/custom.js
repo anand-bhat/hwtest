@@ -695,7 +695,7 @@ $(document).ready(() => {
   }
 
   // Project Summary
-  if (page === 'projectProgress2') {
+  if (page === 'projectProgress21') {
     projectSummary();
   }
 
