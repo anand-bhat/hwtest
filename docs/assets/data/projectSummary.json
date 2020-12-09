@@ -1,5 +1,4 @@
-{
-  "projects": [
+[
     {
       "project": 16451,
       "active": true,
@@ -30,5 +29,4 @@
       "cause": "covid-19",
       "percentage": 99.8631
     }
-  ]
-}
+]
