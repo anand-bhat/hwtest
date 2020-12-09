@@ -655,6 +655,7 @@ function participatingOrganisations() {
 function projectSummary() {
   $.getJSON('../assets/data/projectSummary.json')
     .done((data) => {
+		alert(data);
 
       // Populate data into clone details table
       $('#projectSummaryTable').bootstrapTable({
@@ -695,7 +696,7 @@ $(document).ready(() => {
   }
 
   // Project Summary
-  if (page === 'projectProgress21') {
+  if (page === 'projectProgress2') {
     projectSummary();
   }
 
