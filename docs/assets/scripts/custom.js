@@ -656,8 +656,8 @@ function projectSummary() {
   $.getJSON('../assets/data/projectSummary.json')
     .done((data) => {
       $.each(data.projects, (projectIndex, project) => {
-        alert(project.percentage);
-        project.percentage = 35;
+        project.progressVal = project.percentage;
+        project.progress = project.percentage;
       });
 
       // Populate data into project summary table
