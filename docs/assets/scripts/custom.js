@@ -34,7 +34,7 @@ const colorClass = {
 
 function round(value, decimals) {
   // Source: https://www.jacklmoore.com/notes/rounding-in-javascript/
-  return Number(`${Math.round(`${value}e${decimals}`)}e-${decimals}`);
+  return Number(`Math.round(`${value}e${decimals}`)e-${decimals}`);
 }
 
 function getProgressBar(percentage, color) {
