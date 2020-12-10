@@ -659,6 +659,8 @@ function projectSummary() {
         project.percentage = round(project.percentage, 2)
         project.progressVal = project.percentage;
         colorClassIndex = (project.percentage/30) * 100;
+		alert(colorClassIndex);
+		alert(colorClass[colorClassIndex]);
         project.progress = getProgressBar(project.percentage, colorClass[colorClassIndex]);
       });
 
