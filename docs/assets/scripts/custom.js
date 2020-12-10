@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 const colorClass = {
   0: '#FF0000',
   1: '#FF1100',
@@ -664,9 +665,9 @@ function projectSummary() {
   $.getJSON('../assets/data/projectSummary.json')
     .done((data) => {
       $.each(data.projects, (projectIndex, project) => {
-        project.percentage = round(project.percentage, 2)
-        project.timeout = round(project.timeout / 86400, 2)
-        project.deadline = round(project.deadline / 86400, 2)
+        project.percentage = round(project.percentage, 2);
+        project.timeout = round(project.timeout / 86400, 2);
+        project.deadline = round(project.deadline / 86400, 2);
 
         project.projectVal = project.project;
         project.project = projectDetailsLink(project.project);
@@ -679,7 +680,7 @@ function projectSummary() {
 
         project.type = (project.type.startsWith('OPENMM')? 'GPU' : 'CPU') + '&nbsp;(' + project.type + ')';
 
-        colorClassIndex = Math.max(0, Math.floor(project.percentage * 30 / 100) - 1);
+        const colorClassIndex = Math.max(0, Math.floor(project.percentage * 30 / 100) - 1);
 
         project.progressVal = project.percentage;
         project.progress = prcgProgressLink(project.projectVal, getProgressBar(project.percentage, colorClass[colorClassIndex]));
