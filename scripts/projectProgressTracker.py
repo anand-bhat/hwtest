@@ -47,7 +47,7 @@ def main(argv):
         if not project_summary_entry.get('cause'):
             # Get cause from project details
             project_details = get_api_response('https://api.foldingathome.org/project/' + str(project))
-            project_summary_entry['cause'] = project_details['cause']
+            project_summary_entry['cause'] = project_details.get('cause', 'unknown')
 
         # Get project progress data
         project_entry = read_json(str(project))
@@ -101,7 +101,7 @@ def write_json(filename, entry):
 def get_api_response(url):
     """Get an API response."""
     response = s.get(url)
-    if response.status_code != 200:
+    if response.status_code != 200 and response.status_code != 404:
         print('ERROR: Error in API response')
         exit(1)
 
