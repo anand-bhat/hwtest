@@ -16,7 +16,9 @@ tagline_min: ProjectProgress
 	<table id="projectSummaryTable" class="collapse" data-toggle1="table" data-url1="../assets/data/projectSummary.json">
 		<thead>
 			<tr>
-				<th data-field="project" data-sortable="true" data-title-tooltip="Project ID" data-width="1" data-width-unit="%">Project</th>
+				<th data-field="projectVal" data-visible="false">Project</th>
+				<th data-field="project" data-sort-name="projectVal" data-sortable="true" data-title-tooltip="Project ID" data-width="1" data-width-unit="%">Project</th>
+				<th data-field="cause" data-sortable="true" data-title-tooltip="Project cause" data-width="1" data-width-unit="%">Cause</th>
 				<th data-field="active" data-sortable="true" data-title-tooltip="Is this project active?" data-width="1" data-width-unit="%">Active</th>
 				<th data-field="beta" data-sortable="true" data-title-tooltip="Is this project being assigned to Beta clients?" data-width="1" data-width-unit="%">Beta</th>
 				<th data-field="public" data-sortable="true" data-title-tooltip="Is this project being assigned to Public clients?" data-width="1" data-width-unit="%">Public</th>
@@ -27,7 +29,6 @@ tagline_min: ProjectProgress
 				<th data-field="deadline" data-sortable="true" data-title-tooltip="Number of days before a work unit is discarded by a client" data-width="1" data-width-unit="%">Deadline</th>
 				<th data-field="atoms" data-sortable="true" data-title-tooltip="Number of atoms" data-width="1" data-width-unit="%">Atoms</th>
 				<th data-field="contact" data-sortable="true" data-title-tooltip="Project contact" data-width="1" data-width-unit="%">Contact</th>
-				<th data-field="cause" data-sortable="true" data-title-tooltip="Project cause" data-width="1" data-width-unit="%">Cause</th>
 				<th data-field="progressVal" data-visible="false">Progress</th>
 				<th data-field="progress" data-halign="center" data-sortable="true" data-sort-name="progressVal" data-title-tooltip="Progress expressed in terms of the number of remaining WUs for this project">Progress</th>
 			</tr>

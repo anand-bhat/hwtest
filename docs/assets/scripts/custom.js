@@ -106,6 +106,10 @@ function prcgProgress2Link(project, run) {
   return `<a href="./prcgProgress2?project=${project}&run=${run}">${run}</a>`;
 }
 
+function projectDetailsLink(project) {
+  return `<a href="https://stats.foldingathome.org/project?p=${project}">${project}</a>`;
+}
+
 function wuLookupLink(project, run, clone, gen) {
   return `<a href="https://apps.foldingathome.org/wu#project=${project}&run=${run}&clone=${clone}&gen=${gen}" rel="noopener" target="_blank">${gen}</a>`;
 }
@@ -657,10 +661,16 @@ function projectSummary() {
     .done((data) => {
       $.each(data.projects, (projectIndex, project) => {
         project.percentage = round(project.percentage, 2)
-        project.progressVal = project.percentage;
+        project.timeout = round(project.timeout / 86400, 2)
+
+        project.projectVal = project.project;
+        project.project = projectDetailsLink(project.project);
+
+        project.type = (project.type.startsWith('OPENMM')? 'GPU' : 'CPU') + ' (' + project.type + ')';
+
         colorClassIndex = Math.floor(project.percentage * 30 / 100);
-		alert(colorClassIndex);
-		alert(colorClass[colorClassIndex]);
+
+        project.progressVal = project.percentage;
         project.progress = getProgressBar(project.percentage, colorClass[colorClassIndex]);
       });
 
