@@ -675,6 +675,8 @@ function projectSummary() {
         project.public = project.active ? (project.public ? 'Yes' : 'No') : '-';
         project.active = project.active ? 'Yes' : 'No';
 
+        project.cause = project.cause === 'unspecified' ? 'other' : project.cause;
+
         project.type = (project.type.startsWith('OPENMM')? 'GPU' : 'CPU') + '&nbsp;(' + project.type + ')';
 
         colorClassIndex = Math.max(0, Math.floor(project.percentage * 30 / 100) - 1);
