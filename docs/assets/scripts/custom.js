@@ -658,7 +658,7 @@ function projectSummary() {
       $.each(data.projects, (projectIndex, project) => {
         project.percentage = round(project.percentage, 2)
         project.progressVal = project.percentage;
-        colorClassIndex = (project.percentage/30) * 100;
+        colorClassIndex = project.percentage * 30 / 100;
 		alert(colorClassIndex);
 		alert(colorClass[colorClassIndex]);
         project.progress = getProgressBar(project.percentage, colorClass[colorClassIndex]);
