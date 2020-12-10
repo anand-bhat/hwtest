@@ -656,8 +656,10 @@ function projectSummary() {
   $.getJSON('../assets/data/projectSummary.json')
     .done((data) => {
       $.each(data.projects, (projectIndex, project) => {
+        project.percentage = round(project.percentage, 2)
         project.progressVal = project.percentage;
-        project.progress = project.percentage;
+        colorClassIndex = (project.percentage/30) * 100;
+        project.progress = getProgressBar(project.percentage, colorClass[colorClassIndex]),
       });
 
       // Populate data into project summary table
