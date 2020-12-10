@@ -677,7 +677,7 @@ function projectSummary() {
 
         project.type = (project.type.startsWith('OPENMM')? 'GPU' : 'CPU') + '&nbsp;(' + project.type + ')';
 
-        colorClassIndex = Math.floor(project.percentage * 30 / 100);
+        colorClassIndex = Math.max(0, Math.floor(project.percentage * 30 / 100) - 1);
 
         project.progressVal = project.percentage;
         project.progress = prcgProgressLink(project.projectVal, getProgressBar(project.percentage, colorClass[colorClassIndex]));
