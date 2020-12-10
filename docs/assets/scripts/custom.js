@@ -704,7 +704,8 @@ function projectSummary() {
       // Populate data into project summary table
       $('#projectSummaryTable').bootstrapTable({
         data: data.projects,
-        formatNoMatches() {
+        filterBy: {contact: ['jrporter']},
+        formatNoMatches: function () {
           return 'No data found.';
         },
       });
