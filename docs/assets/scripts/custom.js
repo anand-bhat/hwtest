@@ -667,8 +667,8 @@ function projectSummary() {
         project.project = projectDetailsLink(project.project);
 
         project.active = project.active ? 'Yes' : 'No';
-        project.beta = project.beta ? 'Yes' : 'No';
-        project.public = project.public ? 'Yes' : 'No';
+        project.beta = project.active ? (project.beta ? 'Yes' : 'No') : '-';
+        project.public = project.active ? (project.public ? 'Yes' : 'No') : '-';
 
         project.type = (project.type.startsWith('OPENMM')? 'GPU' : 'CPU') + '&nbsp;(' + project.type + ')';
 
