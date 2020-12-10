@@ -680,7 +680,7 @@ function projectSummary() {
         colorClassIndex = Math.floor(project.percentage * 30 / 100);
 
         project.progressVal = project.percentage;
-        project.progress = prcgProgressLink(project.project, getProgressBar(project.percentage, colorClass[colorClassIndex]));
+        project.progress = prcgProgressLink(project.projectVal, getProgressBar(project.percentage, colorClass[colorClassIndex]));
       });
 
       // Populate data into project summary table
