@@ -666,6 +666,10 @@ function projectSummary() {
         project.projectVal = project.project;
         project.project = projectDetailsLink(project.project);
 
+        project.active = project.active ? 'Yes' : 'No';
+        project.beta = project.beta ? 'Yes' : 'No';
+        project.public = project.public ? 'Yes' : 'No';
+
         project.type = (project.type.startsWith('OPENMM')? 'GPU' : 'CPU') + '&nbsp;(' + project.type + ')';
 
         colorClassIndex = Math.floor(project.percentage * 30 / 100);
