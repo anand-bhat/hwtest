@@ -6,7 +6,6 @@ import math
 import requests
 import sys
 import time
-from time import sleep
 
 
 requests.packages.urllib3.disable_warnings()
@@ -249,7 +248,7 @@ def wu_check(project, run, clone, gen):
 
     print('   Checking status for Project {}, Run {}, Clone {}, Gen {}...'.format(project, run, clone, gen))
     url = 'https://api.foldingathome.org/project/{}/run/{}/clone/{}/gen/{}'.format(project, run, clone, gen)
-    sleep(0.01)
+    time.sleep(0.01)
     response = s.get(url)
     if response.status_code != 200:
         print('ERROR: Error in API response')
@@ -258,9 +257,7 @@ def wu_check(project, run, clone, gen):
     response = response.json()
     response.reverse()
     faultCount = 0
-    dumped = False
-    success = False
-    faulty = False
+    dumped = success = faulty = False
     genDate = None
     for result in response:
         if genDate is None:
