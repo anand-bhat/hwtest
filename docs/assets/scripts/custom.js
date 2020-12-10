@@ -659,7 +659,7 @@ function projectSummary() {
         project.percentage = round(project.percentage, 2)
         project.progressVal = project.percentage;
         colorClassIndex = (project.percentage/30) * 100;
-        project.progress = getProgressBar(project.percentage, colorClass[colorClassIndex]),
+        project.progress = getProgressBar(project.percentage, colorClass[colorClassIndex]);
       });
 
       // Populate data into project summary table
