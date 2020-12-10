@@ -1,4 +1,4 @@
-"""Creates data set for FAH WU DB."""
+"""Creates data set for FAH project summary."""
 
 import getopt
 import json
@@ -43,9 +43,9 @@ def main(argv):
             project_summary_entry['beta'] = '-'
             project_summary_entry['public'] = '-'
             project_summary_entry['ws'] = '-'
-            
+
         if not project_summary_entry.get('cause'):
-            # Get project details
+            # Get cause from project details
             project_details = get_api_response('https://api.foldingathome.org/project/' + str(project))
             project_summary_entry['cause'] = project_details['cause']
 
@@ -69,15 +69,15 @@ def main(argv):
                 skipped = clone_entry.get('skipped', False)
                 gen = clone_entry['gen']
 
-                # Total WUs completed (successfully or otherwise) for this clone
+                # Total WUs completed (successfully or otherwise)
                 totalGensCompletedForClone = maxGensPerClone if (aborted or skipped) else (gen + 1)
 
                 # Update project level accumulators
                 totalGensCompletedForProject += totalGensCompletedForClone
 
         # Percentage completion for the project
-        project_summary_entry['percentage'] = (100 * totalGensCompletedForProject) / totalGensForProject
-        
+        project_summary_entry['percentage'] = 100 * totalGensCompletedForProject / totalGensForProject
+
     write_json('projectSummary', project_summary)
 
 
