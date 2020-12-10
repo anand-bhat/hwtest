@@ -655,9 +655,14 @@ function participatingOrganisations() {
 function projectSummary() {
   $.getJSON('../assets/data/projectSummary.json')
     .done((data) => {
+      $.each(data.projects, (projectIndex, project) => {
+        alert(project.percentage);
+        project.percentage = 35;
+      });
+
       // Populate data into project summary table
       $('#projectSummaryTable').bootstrapTable({
-        data: data,
+        data: data.projects,
         formatNoMatches() {
           return 'No data found.';
         },
