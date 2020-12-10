@@ -665,23 +665,38 @@ function projectSummary() {
   $.getJSON('../assets/data/projectSummary.json')
     .done((data) => {
       $.each(data.projects, (projectIndex, project) => {
+        // Reformat a few fields for better display
+        // Round percentage to two decimals
         project.percentage = round(project.percentage, 2);
+
+        // Represent timeout and deadline as days
         project.timeout = round(project.timeout / 86400, 2);
         project.deadline = round(project.deadline / 86400, 2);
 
+        // Provide link to FAH project details page
         project.projectVal = project.project;
         project.project = projectDetailsLink(project.project);
 
+        // Use Yes/ No instead of true/ false
         project.beta = project.active ? (project.beta ? 'Yes' : 'No') : '-';
         project.public = project.active ? (project.public ? 'Yes' : 'No') : '-';
         project.active = project.active ? 'Yes' : 'No';
 
+        // Call 'unspecified' causes as 'other'
         project.cause = project.cause === 'unspecified' ? 'other' : project.cause;
 
+        // Add GPU or CPU based on core type
         project.type = (project.type.startsWith('OPENMM')? 'GPU' : 'CPU') + '&nbsp;(' + project.type + ')';
 
-        const colorClassIndex = Math.max(0, Math.floor(project.percentage * 30 / 100) - 1);
+        // Add locale specific thousand separators
+        project.creditVal = project.credit;
+        project.credit = project.credit.toLocaleString();
 
+        project.atomsVal = project.atoms;
+        project.atoms = project.atoms.toLocaleString();
+
+        // Show progress bar that links to project progress details page
+        const colorClassIndex = Math.max(0, Math.floor(project.percentage * 30 / 100) - 1);
         project.progressVal = project.percentage;
         project.progress = prcgProgressLink(project.projectVal, getProgressBar(project.percentage, colorClass[colorClassIndex]));
       });
