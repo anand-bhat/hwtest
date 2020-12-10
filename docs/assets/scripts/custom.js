@@ -709,6 +709,7 @@ function projectSummary() {
           return 'No data found.';
         },
       });
+      $('#projectSummaryTable').bootstrapTable('filterBy', {contact: ['vithanin']});
       $('#projectSummaryTable').show();
     })
     .fail(() => {
