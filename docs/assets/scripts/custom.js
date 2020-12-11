@@ -711,10 +711,10 @@ function projectSummary() {
 
       const visibility = new URLSearchParams(window.location.search).get('visibility');
       let filter = {}
-      if (visibility === null || visibility.toLowerCase() === 'public') {
-        filter = {public: ['Yes']};
-      } else if (visibility.toLowerCase() === 'all') {
+      if (visibility === null || visibility.toLowerCase() === 'active') {
         filter = {active: ['Yes']};
+      } else if (visibility.toLowerCase() === 'public') {
+        filter = {public: ['Yes']};
       } else if (visibility.toLowerCase() === 'beta') {
         filter = {beta: ['Yes']};
       }
