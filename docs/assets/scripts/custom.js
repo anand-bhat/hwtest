@@ -709,6 +709,7 @@ function projectSummary() {
         }
       });
 
+      // Control visibility of projects
       const visibility = new URLSearchParams(window.location.search).get('visibility');
       let filter = {}
       if (visibility === null || visibility.toLowerCase() === 'active') {
