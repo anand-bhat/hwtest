@@ -708,7 +708,18 @@ function projectSummary() {
           return 'No data found.';
         },
       });
-      $('#projectSummaryTable').bootstrapTable('filterBy', {active: ['Yes']});
+
+      const visibility = new URLSearchParams(window.location.search).get('visibility');
+      let filter = {}
+      if (visibility === null || visibility.toLowerCase() === 'public') {
+        filter = {public: ['Yes']};
+      } else if (visibility.toLowerCase() === 'all') {
+        filter = {active: ['Yes']};
+      } else if (visibility.toLowerCase() === 'beta') {
+        filter = {beta: ['Yes']};
+      }
+
+      $('#projectSummaryTable').bootstrapTable('filterBy', filter);
       $('#projectSummaryTable').show();
     })
     .fail(() => {
