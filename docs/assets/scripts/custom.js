@@ -677,11 +677,7 @@ function projectSummary() {
         project.projectVal = project.project;
         project.project = projectDetailsLink(project.project);
 
-        // Use Yes/ No instead of true/ false
-        //project.beta = project.active ? (project.beta ? 'Yes' : 'No') : '-';
-        //project.public = project.active ? (project.public ? 'Yes' : 'No') : '-';
-        //project.active = project.active ? 'Yes' : 'No';
-        project.status = project.active ? (project.internal ? 'I' : 'X') : 'Inactive';
+        // Determine project release status
         let releases = [];
         if (project.internal) {
           releases.push('I');
@@ -695,7 +691,6 @@ function projectSummary() {
         if (!project.active) {
           releases.push('-');
         }
-
         project.status = releases.toString();
 
         // Call 'unspecified' causes as 'other'
@@ -735,7 +730,7 @@ function projectSummary() {
       } else if (visibility.toLowerCase() === 'beta') {
         filter = {beta: true};
       } else if (visibility.toLowerCase() === 'internal') {
-        filter = {beta: true};
+        filter = {internal: true};
       }
 
       $('#projectSummaryTable').bootstrapTable('filterBy', filter);
