@@ -678,9 +678,27 @@ function projectSummary() {
         project.project = projectDetailsLink(project.project);
 
         // Use Yes/ No instead of true/ false
-        project.beta = project.active ? (project.beta ? 'Yes' : 'No') : '-';
-        project.public = project.active ? (project.public ? 'Yes' : 'No') : '-';
-        project.active = project.active ? 'Yes' : 'No';
+        //project.beta = project.active ? (project.beta ? 'Yes' : 'No') : '-';
+        //project.public = project.active ? (project.public ? 'Yes' : 'No') : '-';
+        //project.active = project.active ? 'Yes' : 'No';
+        project.status = project.active ? (project.internal ? 'I' : 'X') : 'Inactive';
+        let releases = [];
+        alert(project.internal);
+        if (project.internal) {
+          releases.push('Internal');
+        }
+        if (project.active && project.beta) {
+          releases.push('Beta');
+        }
+        if (project.active && project.public) {
+          releases.push('Public');
+        }
+
+        if (releases.size() == 0) {
+          releases.push('-');
+        }
+
+        project.status = releases.toString();
 
         // Call 'unspecified' causes as 'other'
         project.cause = project.cause === 'unspecified' ? 'other' : project.cause;
@@ -713,11 +731,11 @@ function projectSummary() {
       const visibility = new URLSearchParams(window.location.search).get('visibility');
       let filter = {}
       if (visibility === null || visibility.toLowerCase() === 'active') {
-        filter = {active: ['Yes']};
+        filter = {active: true};
       } else if (visibility.toLowerCase() === 'public') {
-        filter = {public: ['Yes']};
+        filter = {public: true};
       } else if (visibility.toLowerCase() === 'beta') {
-        filter = {beta: ['Yes']};
+        filter = {beta: true};
       }
 
       $('#projectSummaryTable').bootstrapTable('filterBy', filter);

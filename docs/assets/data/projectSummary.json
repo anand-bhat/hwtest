@@ -103,7 +103,7 @@
       "atoms": 194420,
       "contact": "jrporter",
       "cause": "unknown",
-      "percentage": 35.1192
+      "percentage": 36.0165
     },
     {
       "project": 14184,
@@ -568,7 +568,7 @@
       "atoms": 57052,
       "contact": "vithanin",
       "cause": "covid-19",
-      "percentage": 99.62424242424242
+      "percentage": 100.0
     },
     {
       "project": 14528,
@@ -763,7 +763,7 @@
       "atoms": 169725,
       "contact": "mc26",
       "cause": "covid-19",
-      "percentage": 32.83714285714286
+      "percentage": 33.30285714285714
     },
     {
       "project": 16400,
@@ -973,7 +973,7 @@
       "atoms": 29571,
       "contact": "sukrit.singh",
       "cause": "covid-19",
-      "percentage": 68.89457627118644
+      "percentage": 69.93898305084745
     },
     {
       "project": 16452,
@@ -1033,7 +1033,7 @@
       "atoms": 32201,
       "contact": "sukrit.singh",
       "cause": "unspecified",
-      "percentage": 48.2398
+      "percentage": 50.7834
     },
     {
       "project": 16456,
@@ -1048,7 +1048,7 @@
       "atoms": 33222,
       "contact": "sukrit.singh",
       "cause": "unspecified",
-      "percentage": 26.39537037037037
+      "percentage": 26.395833333333332
     },
     {
       "project": 16500,

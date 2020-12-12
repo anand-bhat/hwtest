@@ -27,8 +27,6 @@ def main(argv):
             if item['id'] == project:
                 projectIsInPsummary = True
                 project_summary_entry['active'] = True
-                project_summary_entry['beta'] = item['beta']
-                project_summary_entry['public'] = item['public']
                 project_summary_entry['type'] = item['type']
                 project_summary_entry['ws'] = item['ws']
                 project_summary_entry['credit'] = item['credit']
@@ -36,6 +34,11 @@ def main(argv):
                 project_summary_entry['deadline'] = item['deadline']
                 project_summary_entry['atoms'] = item['atoms']
                 project_summary_entry['contact'] = item['contact']
+
+                # If there is an internal indicator, do not set beta and public indicators
+                if not project_summary_entry.get('internal'):
+                    project_summary_entry['beta'] = item['beta']
+                    project_summary_entry['public'] = item['public']
                 break
 
         if not projectIsInPsummary:
