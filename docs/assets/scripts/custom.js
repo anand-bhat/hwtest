@@ -693,8 +693,7 @@ function projectSummary() {
         if (project.active && project.public) {
           releases.push('P');
         }
-
-        if (releases.size() == 0) {
+        if (!project.active) {
           releases.push('-');
         }
 
