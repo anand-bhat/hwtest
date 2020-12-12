@@ -683,7 +683,6 @@ function projectSummary() {
         //project.active = project.active ? 'Yes' : 'No';
         project.status = project.active ? (project.internal ? 'I' : 'X') : 'Inactive';
         let releases = [];
-        alert(project.internal);
         if (project.internal) {
           releases.push('I');
         }
@@ -734,6 +733,8 @@ function projectSummary() {
       } else if (visibility.toLowerCase() === 'public') {
         filter = {public: true};
       } else if (visibility.toLowerCase() === 'beta') {
+        filter = {beta: true};
+      } else if (visibility.toLowerCase() === 'internal') {
         filter = {beta: true};
       }
 
