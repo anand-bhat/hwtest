@@ -685,13 +685,13 @@ function projectSummary() {
         let releases = [];
         alert(project.internal);
         if (project.internal) {
-          releases.push('Internal');
+          releases.push('I');
         }
         if (project.active && project.beta) {
-          releases.push('Beta');
+          releases.push('B');
         }
         if (project.active && project.public) {
-          releases.push('Public');
+          releases.push('P');
         }
 
         if (releases.size() == 0) {
