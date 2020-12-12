@@ -3,6 +3,7 @@
     {
       "project": 13807,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -18,6 +19,7 @@
     {
       "project": 13808,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -33,6 +35,7 @@
     {
       "project": 13827,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -48,6 +51,7 @@
     {
       "project": 13828,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -63,6 +67,7 @@
     {
       "project": 13829,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -78,6 +83,7 @@
     {
       "project": 13830,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -93,6 +99,7 @@
     {
       "project": 13831,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "GRO_A7",
@@ -108,6 +115,7 @@
     {
       "project": 14184,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -123,6 +131,7 @@
     {
       "project": 14290,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -138,6 +147,7 @@
     {
       "project": 14291,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -153,6 +163,7 @@
     {
       "project": 14292,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -168,6 +179,7 @@
     {
       "project": 14293,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -183,6 +195,7 @@
     {
       "project": 14294,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -198,6 +211,7 @@
     {
       "project": 14295,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -213,6 +227,7 @@
     {
       "project": 14296,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -228,6 +243,7 @@
     {
       "project": 14297,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -243,6 +259,7 @@
     {
       "project": 14298,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -258,6 +275,7 @@
     {
       "project": 14299,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -273,6 +291,7 @@
     {
       "project": 14377,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "GRO_A7",
@@ -288,6 +307,7 @@
     {
       "project": 14500,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -303,6 +323,7 @@
     {
       "project": 14501,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -318,6 +339,7 @@
     {
       "project": 14502,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -333,6 +355,7 @@
     {
       "project": 14503,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -348,6 +371,7 @@
     {
       "project": 14504,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -363,6 +387,7 @@
     {
       "project": 14505,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -378,6 +403,7 @@
     {
       "project": 14506,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -393,6 +419,7 @@
     {
       "project": 14507,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -408,6 +435,7 @@
     {
       "project": 14508,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -423,6 +451,7 @@
     {
       "project": 14509,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -438,6 +467,7 @@
     {
       "project": 14510,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -453,6 +483,7 @@
     {
       "project": 14511,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_21",
@@ -468,6 +499,7 @@
     {
       "project": 14520,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -483,6 +515,7 @@
     {
       "project": 14521,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -498,6 +531,7 @@
     {
       "project": 14523,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "GRO_A7",
@@ -513,6 +547,7 @@
     {
       "project": 14524,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "GRO_A7",
@@ -528,6 +563,7 @@
     {
       "project": 14525,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "GRO_A7",
@@ -543,6 +579,7 @@
     {
       "project": 14526,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "GRO_A7",
@@ -558,6 +595,7 @@
     {
       "project": 14527,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "GRO_A7",
@@ -573,6 +611,7 @@
     {
       "project": 14528,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -588,6 +627,7 @@
     {
       "project": 14529,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "GRO_A7",
@@ -603,6 +643,7 @@
     {
       "project": 14530,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -618,6 +659,7 @@
     {
       "project": 14630,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "GRO_A7",
@@ -633,6 +675,7 @@
     {
       "project": 14631,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "GRO_A7",
@@ -648,6 +691,7 @@
     {
       "project": 14821,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "GRO_A7",
@@ -663,6 +707,7 @@
     {
       "project": 14822,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "GRO_A7",
@@ -678,6 +723,7 @@
     {
       "project": 14825,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "GRO_A7",
@@ -693,6 +739,7 @@
     {
       "project": 14827,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "GRO_A7",
@@ -708,6 +755,7 @@
     {
       "project": 14828,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "GRO_A7",
@@ -723,6 +771,7 @@
     {
       "project": 14836,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -738,6 +787,7 @@
     {
       "project": 14852,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "GRO_A7",
@@ -753,6 +803,7 @@
     {
       "project": 14903,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "OPENMM_22",
@@ -768,6 +819,7 @@
     {
       "project": 16400,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -783,6 +835,7 @@
     {
       "project": 16401,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -798,6 +851,7 @@
     {
       "project": 16402,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -813,6 +867,7 @@
     {
       "project": 16403,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -828,6 +883,7 @@
     {
       "project": 16416,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -843,6 +899,7 @@
     {
       "project": 16418,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -858,6 +915,7 @@
     {
       "project": 16421,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -873,6 +931,7 @@
     {
       "project": 16422,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -888,6 +947,7 @@
     {
       "project": 16423,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -903,6 +963,7 @@
     {
       "project": 16431,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -918,6 +979,7 @@
     {
       "project": 16448,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_22",
@@ -933,6 +995,7 @@
     {
       "project": 16449,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -948,6 +1011,7 @@
     {
       "project": 16450,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -963,6 +1027,7 @@
     {
       "project": 16451,
       "active": true,
+      "internal": false,
       "beta": false,
       "public": true,
       "type": "GRO_A7",
@@ -978,6 +1043,7 @@
     {
       "project": 16452,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -993,6 +1059,7 @@
     {
       "project": 16453,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -1008,6 +1075,7 @@
     {
       "project": 16454,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -1023,6 +1091,7 @@
     {
       "project": 16455,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -1038,6 +1107,7 @@
     {
       "project": 16456,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -1053,6 +1123,7 @@
     {
       "project": 16500,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -1068,6 +1139,7 @@
     {
       "project": 16600,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_22",
@@ -1083,6 +1155,7 @@
     {
       "project": 16800,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -1098,6 +1171,7 @@
     {
       "project": 16801,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -1113,6 +1187,7 @@
     {
       "project": 16802,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -1128,6 +1203,7 @@
     {
       "project": 16803,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -1143,6 +1219,7 @@
     {
       "project": 16804,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -1158,6 +1235,7 @@
     {
       "project": 16805,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -1173,6 +1251,7 @@
     {
       "project": 16806,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -1188,6 +1267,7 @@
     {
       "project": 16810,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "GRO_A8",
@@ -1203,6 +1283,7 @@
     {
       "project": 16920,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_22",
@@ -1218,6 +1299,7 @@
     {
       "project": 17200,
       "active": false,
+      "internal": false,
       "beta": false,
       "public": false,
       "type": "OPENMM_22",
