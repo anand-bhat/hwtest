@@ -679,7 +679,7 @@ function projectSummary() {
 
         // Determine project release status
         let releases = [];
-        if (project.internal) {
+        if (project.active && project.internal) {
           releases.push('I');
         }
         if (project.active && project.beta) {

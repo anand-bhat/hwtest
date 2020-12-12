@@ -35,16 +35,17 @@ def main(argv):
                 project_summary_entry['atoms'] = item['atoms']
                 project_summary_entry['contact'] = item['contact']
 
-                # If there is an internal indicator, do not set beta and public indicators
-                if not project_summary_entry.get('internal'):
+                # If project is in internal, do not set beta and public indicators.
+                # The expectation at this time is that these should be set manually, if the project is also released to Beta/ Public
+                # The first internal=true indicator would need to be added manually to the projectSummary.json until psummary provides a way to identify these projects.
+                if project_summary_entry.get('internal', False):
                     project_summary_entry['beta'] = item['beta']
                     project_summary_entry['public'] = item['public']
                 break
 
         if not projectIsInPsummary:
-            project_summary_entry['active'] = False
-            project_summary_entry['beta'] = '-'
-            project_summary_entry['public'] = '-'
+            project_summary_entry['active'] = project_summary_entry['beta'] = project_summary_entry['public'] = False
+            # Do not set internal = false as the expectation at this time is that this flag is manually controlled in the json file
             project_summary_entry['ws'] = '-'
 
         if not project_summary_entry.get('cause'):
