@@ -697,7 +697,7 @@ function projectSummary() {
         project.cause = project.cause === 'unspecified' ? 'other' : project.cause;
 
         // Add GPU or CPU based on core type
-        project.type = (project.type.startsWith('OPENMM')? 'GPU' : 'CPU') + '&nbsp;(' + project.type + ')';
+        project.type = (project.type.startsWith('OPENMM')? 'GPU' : 'CPU') + '&nbsp;(' + project.type.replace('GRO', 'GROMACS') + ')';
 
         // Add locale specific thousand separators
         project.creditVal = project.credit;
