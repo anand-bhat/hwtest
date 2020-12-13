@@ -686,7 +686,7 @@ function projectSummary() {
           releases.push('B');
         }
         if (project.active && project.public) {
-          releases.push('P');
+          releases.push('Public');
         }
         if (!project.active) {
           releases.push('-');
