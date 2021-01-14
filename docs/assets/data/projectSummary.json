@@ -46,7 +46,7 @@
       "atoms": 194420,
       "contact": "jrporter",
       "cause": "unspecified",
-      "percentage": 94.12691666666667
+      "percentage": 98.53966666666666
     },
     {
       "project": 13828,
@@ -62,7 +62,7 @@
       "atoms": 194420,
       "contact": "jrporter",
       "cause": "unspecified",
-      "percentage": 94.37485380116959
+      "percentage": 98.6798245614035
     },
     {
       "project": 13829,
@@ -78,7 +78,7 @@
       "atoms": 194420,
       "contact": "jrporter",
       "cause": "unspecified",
-      "percentage": 93.93033333333334
+      "percentage": 98.49691666666666
     },
     {
       "project": 13830,
@@ -94,7 +94,7 @@
       "atoms": 194420,
       "contact": "jrporter",
       "cause": "unspecified",
-      "percentage": 93.9145
+      "percentage": 98.44241666666667
     },
     {
       "project": 13831,
@@ -110,7 +110,7 @@
       "atoms": 194420,
       "contact": "jrporter",
       "cause": "unknown",
-      "percentage": 36.0165
+      "percentage": 43.0509
     },
     {
       "project": 14184,
@@ -290,19 +290,19 @@
     },
     {
       "project": 14377,
-      "active": true,
+      "active": false,
       "internal": false,
       "beta": false,
-      "public": true,
+      "public": false,
       "type": "GRO_A7",
-      "ws": "69.94.66.7",
+      "ws": "-",
       "credit": 730,
       "timeout": 198719,
       "deadline": 423360,
       "atoms": 55560,
       "contact": "voelz",
       "cause": "covid-19",
-      "percentage": 63.3241958041958
+      "percentage": 63.324475524475524
     },
     {
       "project": 14500,
@@ -498,12 +498,12 @@
     },
     {
       "project": 14520,
-      "active": false,
+      "active": true,
       "internal": false,
       "beta": false,
-      "public": false,
+      "public": true,
       "type": "GRO_A7",
-      "ws": "-",
+      "ws": "128.252.203.10",
       "credit": 365,
       "timeout": 432000,
       "deadline": 604800,
@@ -514,12 +514,12 @@
     },
     {
       "project": 14521,
-      "active": false,
+      "active": true,
       "internal": false,
       "beta": false,
-      "public": false,
+      "public": true,
       "type": "GRO_A7",
-      "ws": "-",
+      "ws": "128.252.203.10",
       "credit": 365,
       "timeout": 432000,
       "deadline": 604800,
@@ -658,12 +658,12 @@
     },
     {
       "project": 14630,
-      "active": true,
+      "active": false,
       "internal": false,
       "beta": false,
-      "public": true,
+      "public": false,
       "type": "GRO_A7",
-      "ws": "69.94.66.7",
+      "ws": "-",
       "credit": 630,
       "timeout": 172800,
       "deadline": 414720,
@@ -674,12 +674,12 @@
     },
     {
       "project": 14631,
-      "active": true,
+      "active": false,
       "internal": false,
       "beta": false,
-      "public": true,
+      "public": false,
       "type": "GRO_A7",
-      "ws": "69.94.66.7",
+      "ws": "-",
       "credit": 630,
       "timeout": 172800,
       "deadline": 414720,
@@ -802,19 +802,19 @@
     },
     {
       "project": 14903,
-      "active": true,
+      "active": false,
       "internal": false,
       "beta": false,
-      "public": true,
+      "public": false,
       "type": "OPENMM_22",
-      "ws": "129.213.157.105",
+      "ws": "-",
       "credit": 31800,
       "timeout": 138240,
       "deadline": 864000,
       "atoms": 169725,
       "contact": "mc26",
       "cause": "covid-19",
-      "percentage": 33.30285714285714
+      "percentage": 35.79642857142857
     },
     {
       "project": 16400,
@@ -1038,18 +1038,18 @@
       "atoms": 29571,
       "contact": "sukrit.singh",
       "cause": "covid-19",
-      "percentage": 69.93898305084745
+      "percentage": 72.42305084745763
     },
     {
       "project": 16452,
-      "active": false,
+      "active": true,
       "internal": false,
       "beta": false,
-      "public": false,
+      "public": true,
       "type": "GRO_A7",
-      "ws": "-",
+      "ws": "206.223.170.146",
       "credit": 450,
-      "timeout": 129600,
+      "timeout": 259200,
       "deadline": 604800,
       "atoms": 29571,
       "contact": "sukrit.singh",
@@ -1102,7 +1102,7 @@
       "atoms": 32201,
       "contact": "sukrit.singh",
       "cause": "unspecified",
-      "percentage": 50.7834
+      "percentage": 56.9423
     },
     {
       "project": 16456,
@@ -1279,6 +1279,22 @@
       "contact": "sergiopc",
       "cause": "covid-19",
       "percentage": 80.47333333333333
+    },
+    {
+      "project": 16812,
+      "active": true,
+      "internal": false,
+      "type": "GRO_A8",
+      "ws": "178.174.196.138",
+      "credit": 2660,
+      "timeout": 84516,
+      "deadline": 362880,
+      "atoms": 63000,
+      "contact": "sergiopc",
+      "cause": "unspecified",
+      "percentage": 99.90456410256411,
+      "beta": false,
+      "public": true
     },
     {
       "project": 16920,

@@ -38,7 +38,7 @@ def main(argv):
                 # If project is in internal, do not set beta and public indicators.
                 # The expectation at this time is that these should be set manually, if the project is also released to Beta/ Public
                 # The first internal=true indicator would need to be added manually to the projectSummary.json until psummary provides a way to identify these projects.
-                if project_summary_entry.get('internal', False):
+                if not project_summary_entry.get('internal', False):
                     project_summary_entry['beta'] = item['beta']
                     project_summary_entry['public'] = item['public']
                 break
