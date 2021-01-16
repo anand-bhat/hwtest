@@ -1,9 +1,24 @@
 {
   "projects": [
     {
-      "project": 13807,
-      "active": false,
+      "project": 13436,
       "internal": false,
+      "active": false,
+      "beta": false,
+      "public": false,
+      "ws": "-",
+      "credit": 118000,
+      "timeout": 172800,
+      "deadline": 259200,
+      "atoms": 84006,
+      "contact": "john.chodera",
+      "cause": "covid-19",
+      "percentage": 55.37514124293785
+    },
+    {
+      "project": 13807,
+      "internal": false,
+      "active": false,
       "beta": false,
       "public": false,
       "type": "GRO_A7",
@@ -1287,7 +1302,7 @@
       "type": "GRO_A8",
       "ws": "178.174.196.138",
       "credit": 2660,
-      "timeout": 81295,
+      "timeout": 83977,
       "deadline": 362880,
       "atoms": 63000,
       "contact": "sergiopc",
