@@ -110,7 +110,7 @@
       "atoms": 194420,
       "contact": "jrporter",
       "cause": "unknown",
-      "percentage": 43.8739
+      "percentage": 44.194
     },
     {
       "project": 14184,
@@ -1287,14 +1287,30 @@
       "type": "GRO_A8",
       "ws": "178.174.196.138",
       "credit": 2660,
-      "timeout": 84109,
+      "timeout": 81295,
       "deadline": 362880,
       "atoms": 63000,
       "contact": "sergiopc",
       "cause": "unspecified",
-      "percentage": 99.91851282051282,
+      "percentage": 99.93415384615385,
       "beta": false,
       "public": true
+    },
+    {
+      "project": 16814,
+      "internal": false,
+      "active": true,
+      "type": "GRO_A8",
+      "ws": "130.237.11.145",
+      "credit": 3010,
+      "timeout": 207360,
+      "deadline": 362880,
+      "atoms": 64366,
+      "contact": "sergiopc",
+      "beta": false,
+      "public": true,
+      "cause": "unspecified",
+      "percentage": 98.47287179487179
     },
     {
       "project": 16920,
