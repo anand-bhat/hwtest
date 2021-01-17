@@ -526,7 +526,7 @@
       "atoms": 34514,
       "contact": "vithanin",
       "cause": "unspecified",
-      "percentage": 70.83
+      "percentage": 74.4434375
     },
     {
       "project": 14521,
@@ -542,7 +542,7 @@
       "atoms": 34514,
       "contact": "vithanin",
       "cause": "unspecified",
-      "percentage": 71.29875
+      "percentage": 74.9040625
     },
     {
       "project": 14523,
@@ -1054,7 +1054,7 @@
       "atoms": 29571,
       "contact": "sukrit.singh",
       "cause": "covid-19",
-      "percentage": 72.42305084745763
+      "percentage": 72.43542372881356
     },
     {
       "project": 16452,
@@ -1303,7 +1303,7 @@
       "type": "GRO_A8",
       "ws": "178.174.196.138",
       "credit": 2660,
-      "timeout": 79630,
+      "timeout": 70267,
       "deadline": 362880,
       "atoms": 63000,
       "contact": "sergiopc",
