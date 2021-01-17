@@ -14,7 +14,7 @@
       "atoms": 84006,
       "contact": "john.chodera",
       "cause": "covid-19",
-      "percentage": 55.37514124293785
+      "percentage": 55.384745762711866
     },
     {
       "project": 13807,
@@ -126,7 +126,7 @@
       "atoms": 194420,
       "contact": "jrporter",
       "cause": "unknown",
-      "percentage": 44.194
+      "percentage": 44.2416
     },
     {
       "project": 14184,
@@ -526,7 +526,7 @@
       "atoms": 34514,
       "contact": "vithanin",
       "cause": "unspecified",
-      "percentage": 74.4434375
+      "percentage": 74.7003125
     },
     {
       "project": 14521,
@@ -542,7 +542,7 @@
       "atoms": 34514,
       "contact": "vithanin",
       "cause": "unspecified",
-      "percentage": 74.9040625
+      "percentage": 75.10625
     },
     {
       "project": 14523,
@@ -1054,7 +1054,7 @@
       "atoms": 29571,
       "contact": "sukrit.singh",
       "cause": "covid-19",
-      "percentage": 72.43542372881356
+      "percentage": 72.43576271186441
     },
     {
       "project": 16452,
@@ -1303,12 +1303,12 @@
       "type": "GRO_A8",
       "ws": "178.174.196.138",
       "credit": 2660,
-      "timeout": 70267,
+      "timeout": 73141,
       "deadline": 362880,
       "atoms": 63000,
       "contact": "sergiopc",
       "cause": "unspecified",
-      "percentage": 99.93415384615385,
+      "percentage": 99.93923076923078,
       "beta": false,
       "public": true
     },
@@ -1326,7 +1326,7 @@
       "beta": false,
       "public": true,
       "cause": "unspecified",
-      "percentage": 98.47287179487179
+      "percentage": 98.60533333333333
     },
     {
       "project": 16920,
@@ -1470,7 +1470,7 @@
       "beta": false,
       "public": true,
       "cause": "unspecified",
-      "percentage": 99.784
+      "percentage": 99.786
     },
     {
       "project": 17211,
@@ -1486,7 +1486,7 @@
       "beta": false,
       "public": true,
       "cause": "covid-19",
-      "percentage": 92.13
+      "percentage": 92.294
     },
     {
       "project": 17212,
@@ -1502,7 +1502,7 @@
       "beta": false,
       "public": true,
       "cause": "unspecified",
-      "percentage": 88.902
+      "percentage": 89.102
     }
   ]
 }
