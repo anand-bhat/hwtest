@@ -3,18 +3,18 @@
     {
       "project": 13436,
       "internal": false,
-      "active": false,
-      "beta": false,
-      "public": false,
+      "active": true,
+      "beta": true,
+      "public": true,
       "type": "OPENMM_22",
-      "ws": "-",
-      "credit": 118000,
+      "ws": "18.188.125.154",
+      "credit": 125550,
       "timeout": 172800,
       "deadline": 259200,
-      "atoms": 84006,
+      "atoms": 89709,
       "contact": "john.chodera",
       "cause": "covid-19",
-      "percentage": 55.384745762711866
+      "percentage": 55.46440677966102
     },
     {
       "project": 13807,
@@ -126,7 +126,7 @@
       "atoms": 194420,
       "contact": "jrporter",
       "cause": "unknown",
-      "percentage": 44.2416
+      "percentage": 44.5796
     },
     {
       "project": 14184,
@@ -526,7 +526,7 @@
       "atoms": 34514,
       "contact": "vithanin",
       "cause": "unspecified",
-      "percentage": 74.7003125
+      "percentage": 80.1478125
     },
     {
       "project": 14521,
@@ -542,7 +542,7 @@
       "atoms": 34514,
       "contact": "vithanin",
       "cause": "unspecified",
-      "percentage": 75.10625
+      "percentage": 80.613125
     },
     {
       "project": 14523,
@@ -1054,7 +1054,7 @@
       "atoms": 29571,
       "contact": "sukrit.singh",
       "cause": "covid-19",
-      "percentage": 72.43576271186441
+      "percentage": 72.44169491525423
     },
     {
       "project": 16452,
@@ -1303,12 +1303,12 @@
       "type": "GRO_A8",
       "ws": "178.174.196.138",
       "credit": 2660,
-      "timeout": 73141,
+      "timeout": 99710,
       "deadline": 362880,
       "atoms": 63000,
       "contact": "sergiopc",
       "cause": "unspecified",
-      "percentage": 99.93923076923078,
+      "percentage": 99.95005128205128,
       "beta": false,
       "public": true
     },
@@ -1326,7 +1326,7 @@
       "beta": false,
       "public": true,
       "cause": "unspecified",
-      "percentage": 98.60533333333333
+      "percentage": 99.1076923076923
     },
     {
       "project": 16920,
@@ -1470,7 +1470,7 @@
       "beta": false,
       "public": true,
       "cause": "unspecified",
-      "percentage": 99.786
+      "percentage": 99.83
     },
     {
       "project": 17211,
@@ -1486,7 +1486,7 @@
       "beta": false,
       "public": true,
       "cause": "covid-19",
-      "percentage": 92.294
+      "percentage": 93.79
     },
     {
       "project": 17212,
@@ -1502,7 +1502,7 @@
       "beta": false,
       "public": true,
       "cause": "unspecified",
-      "percentage": 89.102
+      "percentage": 90.574
     }
   ]
 }
