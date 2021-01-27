@@ -1,6 +1,102 @@
 {
   "projects": [
     {
+      "project": 13430,
+      "internal": false,
+      "active": true,
+      "type": "OPENMM_22",
+      "ws": "18.188.125.154",
+      "credit": 60900,
+      "timeout": 172800,
+      "deadline": 259200,
+      "atoms": 89709,
+      "contact": "john.chodera",
+      "beta": true,
+      "public": true,
+      "cause": "covid-19",
+      "percentage": 56.273446327683615
+    },
+    {
+      "project": 13431,
+      "internal": false,
+      "active": true,
+      "type": "OPENMM_22",
+      "ws": "18.188.125.154",
+      "credit": 60900,
+      "timeout": 172800,
+      "deadline": 259200,
+      "atoms": 89709,
+      "contact": "john.chodera",
+      "beta": true,
+      "public": true,
+      "cause": "covid-19",
+      "percentage": 34.0135593220339
+    },
+    {
+      "project": 13432,
+      "internal": false,
+      "active": true,
+      "type": "OPENMM_22",
+      "ws": "18.188.125.154",
+      "credit": 60900,
+      "timeout": 172800,
+      "deadline": 259200,
+      "atoms": 89709,
+      "contact": "john.chodera",
+      "beta": true,
+      "public": true,
+      "cause": "covid-19",
+      "percentage": 56.05141242937853
+    },
+    {
+      "project": 13433,
+      "internal": false,
+      "active": true,
+      "type": "OPENMM_22",
+      "ws": "18.188.125.154",
+      "credit": 60900,
+      "timeout": 172800,
+      "deadline": 259200,
+      "atoms": 89709,
+      "contact": "john.chodera",
+      "beta": true,
+      "public": true,
+      "cause": "covid-19",
+      "percentage": 33.96892655367232
+    },
+    {
+      "project": 13434,
+      "internal": false,
+      "active": true,
+      "type": "OPENMM_22",
+      "ws": "18.188.125.154",
+      "credit": 125550,
+      "timeout": 172800,
+      "deadline": 259200,
+      "atoms": 89709,
+      "contact": "john.chodera",
+      "beta": true,
+      "public": true,
+      "cause": "covid-19",
+      "percentage": 55.54180790960452
+    },
+    {
+      "project": 13435,
+      "internal": false,
+      "active": true,
+      "type": "OPENMM_22",
+      "ws": "18.188.125.154",
+      "credit": 125550,
+      "timeout": 172800,
+      "deadline": 259200,
+      "atoms": 89709,
+      "contact": "john.chodera",
+      "beta": true,
+      "public": true,
+      "cause": "covid-19",
+      "percentage": 33.18587570621469
+    },
+    {
       "project": 13436,
       "internal": false,
       "active": true,
@@ -14,7 +110,23 @@
       "atoms": 89709,
       "contact": "john.chodera",
       "cause": "covid-19",
-      "percentage": 55.46440677966102
+      "percentage": 55.59209039548023
+    },
+    {
+      "project": 13437,
+      "internal": false,
+      "active": true,
+      "type": "OPENMM_22",
+      "ws": "18.188.125.154",
+      "credit": 125550,
+      "timeout": 172800,
+      "deadline": 259200,
+      "atoms": 89709,
+      "contact": "john.chodera",
+      "beta": true,
+      "public": true,
+      "cause": "covid-19",
+      "percentage": 40.0361581920904
     },
     {
       "project": 13807,
@@ -126,7 +238,7 @@
       "atoms": 194420,
       "contact": "jrporter",
       "cause": "unknown",
-      "percentage": 44.5796
+      "percentage": 44.593
     },
     {
       "project": 14184,
@@ -526,7 +638,7 @@
       "atoms": 34514,
       "contact": "vithanin",
       "cause": "unspecified",
-      "percentage": 80.1478125
+      "percentage": 81.126875
     },
     {
       "project": 14521,
@@ -542,7 +654,7 @@
       "atoms": 34514,
       "contact": "vithanin",
       "cause": "unspecified",
-      "percentage": 80.613125
+      "percentage": 81.5515625
     },
     {
       "project": 14523,
@@ -1054,7 +1166,7 @@
       "atoms": 29571,
       "contact": "sukrit.singh",
       "cause": "covid-19",
-      "percentage": 72.44169491525423
+      "percentage": 72.44237288135594
     },
     {
       "project": 16452,
@@ -1303,12 +1415,12 @@
       "type": "GRO_A8",
       "ws": "178.174.196.138",
       "credit": 2660,
-      "timeout": 99710,
+      "timeout": 100756,
       "deadline": 362880,
       "atoms": 63000,
       "contact": "sergiopc",
       "cause": "unspecified",
-      "percentage": 99.95005128205128,
+      "percentage": 99.95015384615385,
       "beta": false,
       "public": true
     },
@@ -1326,7 +1438,7 @@
       "beta": false,
       "public": true,
       "cause": "unspecified",
-      "percentage": 99.1076923076923
+      "percentage": 99.13702564102564
     },
     {
       "project": 16920,
@@ -1486,7 +1598,7 @@
       "beta": false,
       "public": true,
       "cause": "covid-19",
-      "percentage": 93.79
+      "percentage": 93.946
     },
     {
       "project": 17212,
@@ -1502,7 +1614,7 @@
       "beta": false,
       "public": true,
       "cause": "unspecified",
-      "percentage": 90.574
+      "percentage": 90.726
     }
   ]
 }
