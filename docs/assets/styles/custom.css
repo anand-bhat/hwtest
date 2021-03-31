@@ -24,3 +24,6 @@ body {
 	max-width: 170px;
 	width: auto;
 }
+.fixed-table-container thead th .th-inner {
+	white-space: normal;
+}
