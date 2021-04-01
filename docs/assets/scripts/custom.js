@@ -691,7 +691,7 @@ function projectSummary() {
         if (!project.active) {
           releases.push('-');
         }
-        project.status = releases.toString();
+        project.status = releases.join(', ');
 
         // Call 'unspecified' causes as 'other'
         project.cause = project.cause === 'unspecified' ? 'other' : project.cause;
