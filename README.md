@@ -1,8 +1,8 @@
 
 # Folding@home
 
-[![Code Climate](https://codeclimate.com/github/anand-bhat/hwtest/badges/gpa.svg)](https://codeclimate.com/github/anand-bhat/foldingathome)
-[![Issue Count](https://codeclimate.com/github/anand-bhat/hwtest/badges/issue_count.svg)](https://codeclimate.com/github/anand-bhat/foldingathome)
+[![Code Climate](https://codeclimate.com/github/anand-bhat/hwtest/badges/gpa.svg)](https://codeclimate.com/github/anand-bhat/hwtest)
+[![Issue Count](https://codeclimate.com/github/anand-bhat/hwtest/badges/issue_count.svg)](https://codeclimate.com/github/anand-bhat/hwtest)
 
 Some tools and scripts for the [Folding@home](https://foldingathome.org) project.
 
