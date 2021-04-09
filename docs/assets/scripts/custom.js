@@ -153,7 +153,7 @@ function lateAlert(count) {
 }
 
 function projectConfigText(projectId, data) {
-  return `Project ${projectId} has been configured to have ${data.maxRuns}${data.maxRuns > 1 ? ' Runs' : ' Run'}, each with ${data.maxClonesPerRun}${data.maxClonesPerRun > 1 ? ' Clones' : ' Clone'}. Each Clone has ${data.maxGensPerClone}${data.maxGensPerClone > 1 ? ' Gens' : ' Gen'}, resulting in ${data.maxRuns * data.maxClonesPerRun * data.maxGensPerClone} potential WUs for the project. Each WU represents ${data.trajLengthPerWU} nanoseconds of simulation.`;
+  return `Project ${projectId} has been configured to have ${data.maxRuns.toLocaleString()}${data.maxRuns > 1 ? ' Runs' : ' Run'}, each with ${data.maxClonesPerRun.toLocaleString()}${data.maxClonesPerRun > 1 ? ' Clones' : ' Clone'}. Each Clone has ${data.maxGensPerClone.toLocaleString()}${data.maxGensPerClone > 1 ? ' Gens' : ' Gen'}, resulting in ${(data.maxRuns * data.maxClonesPerRun * data.maxGensPerClone).toLocaleString()} potential WUs for the project. Each WU represents ${data.trajLengthPerWU.toLocaleString()} nanoseconds of simulation.`;
 }
 
 function formattedDateString(dateVal) {
