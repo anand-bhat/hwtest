@@ -1447,7 +1447,7 @@
       "type": "GRO_A8",
       "ws": "178.174.196.138",
       "credit": 3100,
-      "timeout": 114313,
+      "timeout": 122047,
       "deadline": 362880,
       "atoms": 63000,
       "contact": "sergiopc",
