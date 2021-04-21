@@ -1447,14 +1447,14 @@
       "type": "GRO_A8",
       "ws": "178.174.196.138",
       "credit": 3100,
-      "timeout": 101807,
+      "timeout": 106457,
       "deadline": 362880,
       "atoms": 63000,
       "contact": "sergiopc",
       "beta": false,
       "public": true,
       "cause": "unspecified",
-      "percentage": 68.11725
+      "percentage": 69.55485714285714
     },
     {
       "project": 16920,
