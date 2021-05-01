@@ -1166,7 +1166,7 @@
       "atoms": 29571,
       "contact": "sukrit.singh",
       "cause": "covid-19",
-      "percentage": 72.44389830508474
+      "percentage": 72.51661016949153
     },
     {
       "project": 16452,
@@ -1447,7 +1447,7 @@
       "type": "GRO_A8",
       "ws": "178.174.196.138",
       "credit": 3100,
-      "timeout": 64580,
+      "timeout": 77881,
       "deadline": 362880,
       "atoms": 63000,
       "contact": "sergiopc",
