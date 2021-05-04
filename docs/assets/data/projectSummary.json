@@ -238,7 +238,7 @@
       "atoms": 194420,
       "contact": "jrporter",
       "cause": "unknown",
-      "percentage": 44.8897
+      "percentage": 44.8899
     },
     {
       "project": 14184,
@@ -1447,14 +1447,14 @@
       "type": "GRO_A8",
       "ws": "178.174.196.138",
       "credit": 3100,
-      "timeout": 227525,
+      "timeout": 259764,
       "deadline": 362880,
       "atoms": 63000,
       "contact": "sergiopc",
       "beta": false,
       "public": true,
       "cause": "unspecified",
-      "percentage": 69.8745
+      "percentage": 70.69582142857143
     },
     {
       "project": 16920,
