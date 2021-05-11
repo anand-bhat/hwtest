@@ -227,11 +227,11 @@
     {
       "project": 13831,
       "internal": false,
-      "active": true,
+      "active": false,
       "beta": false,
-      "public": true,
+      "public": false,
       "type": "GRO_A7",
-      "ws": "128.252.203.9",
+      "ws": "-",
       "credit": 900,
       "timeout": 432000,
       "deadline": 604800,
@@ -1447,14 +1447,14 @@
       "type": "GRO_A8",
       "ws": "178.174.196.138",
       "credit": 3100,
-      "timeout": 362880,
+      "timeout": 162194,
       "deadline": 362880,
       "atoms": 63000,
       "contact": "sergiopc",
       "beta": false,
       "public": true,
       "cause": "unspecified",
-      "percentage": 70.56035714285714
+      "percentage": 78.42210714285714
     },
     {
       "project": 16920,
