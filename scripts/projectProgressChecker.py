@@ -108,24 +108,28 @@ def main(argv):
                     print('   Not checking progress for aborted Gen')
                     continue
 
-                if checkFinalGenFirst:
-                    # Special case: Check last gen
-                    response = wu_check(project, run, clone, maxGensPerClone - 1)
-                    if response[0] == 1:
-                        # Record this gen where traj has completed
-                        record_clone_entry(clone_entry, maxGensPerClone - 1, response[1], response[0])
-                        continue
-                    elif response[0] >= 2:
-                        # Record this gen where traj has been aborted
-                        record_clone_entry(clone_entry, maxGensPerClone - 1, response[1], response[0])
-                        continue
-
                 # Special case: Check next gen
                 response = wu_check(project, run, clone, gen + 1)
                 lastGenDate = '-'
                 if response[0] == 0:
                     print('   No progress detected')
-                    continue
+                    # Super special case: Check next gen
+                    response = wu_check(project, run, clone, gen + 2)
+                    if response[0] == 0:
+                        print('   No progress detected for sure')
+                        continue
+                    elif response[0] == 1:
+                        # Record this gen where traj has completed
+                        record_clone_entry(clone_entry, gen + 2, response[1], response[0])
+                        if (gen + 2) == (maxGensPerClone - 1):
+                            # This is the last gen
+                            continue
+                        lastGenDate = response[1]
+                    elif response[0] >= 2:
+                        # Record this gen where traj has been aborted
+                        record_clone_entry(clone_entry, gen + 2, response[1], response[0])
+                        continue
+                    #continue
                 elif response[0] == 1:
                     # Record this gen where traj has completed
                     record_clone_entry(clone_entry, gen + 1, response[1], response[0])
@@ -137,14 +141,6 @@ def main(argv):
                     # Record this gen where traj has been aborted
                     record_clone_entry(clone_entry, gen + 1, response[1], response[0])
                     continue
-
-                if not checkFinalGenFirst:
-                    # Special case: Check last gen
-                    response = wu_check(project, run, clone, maxGensPerClone - 1)
-                    if response[0] >= 1:
-                        # Record this gen where traj has completed
-                        record_clone_entry(clone_entry, maxGensPerClone - 1, response[1], response[0])
-                        continue
 
                 if searchType == 'alternate':
                     # Search Gens by hopping alternate Gens (useful for deltas)
