@@ -26,7 +26,7 @@ def main(argv):
     parser.add_argument('-g', '--gen', type=int, help='Max. number of gens per clone')
     parser.add_argument('-e', '--errors', type=int, default=5, help='Max. number of errors before the trajectory is aborted (default: 5)')
     parser.add_argument('-l', '--length', type=float, default=0, help='Trajectory length (in ns) per WU (default: 0)')
-    parser.add_argument('-ra', '--retryaborted', type=bool, default=False, help='Retry Gens previously marked as aborted')
+    parser.add_argument('-ra', '--retryaborted', type=bool, default=True, help='Retry Gens previously marked as aborted')
     parser.add_argument('-rc', '--rechecklastgen', type=bool, default=False, help='Recheck the last recorded Gen. Useful when there was a bug in scanning and things need correction')
     parser.add_argument('-st', '--searchtype', type=str, default='binary', help='Specifies the search type -- binary or alternate (default: binary)')
     parser.add_argument('-sr', '--startingrun', type=int, default=0, help='Start at Run X')
@@ -244,7 +244,7 @@ def wu_check(project, run, clone, gen):
 
     print('   Checking status for Project {}, Run {}, Clone {}, Gen {}...'.format(project, run, clone, gen))
     url = 'https://api.foldingathome.org/project/{}/run/{}/clone/{}/gen/{}'.format(project, run, clone, gen)
-    time.sleep(1)
+    time.sleep(.75)
     response = s.get(url)
     if response.status_code != 200:
         print('ERROR: Error in API response')
