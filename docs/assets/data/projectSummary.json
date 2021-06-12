@@ -430,7 +430,7 @@
       "atoms": 55560,
       "contact": "voelz",
       "cause": "covid-19",
-      "percentage": 66.40811188811189
+      "percentage": 67.38759906759907
     },
     {
       "project": 14500,
@@ -830,7 +830,7 @@
       "atoms": 55560,
       "contact": "voelz",
       "cause": "covid-19",
-      "percentage": 25.846153846153847
+      "percentage": 25.98948717948718
     },
     {
       "project": 14822,
@@ -846,7 +846,7 @@
       "atoms": 55625,
       "contact": "voelz",
       "cause": "covid-19",
-      "percentage": 25.393374233128835
+      "percentage": 25.57398773006135
     },
     {
       "project": 14825,
@@ -862,7 +862,7 @@
       "atoms": 55625,
       "contact": "voelz",
       "cause": "covid-19",
-      "percentage": 15.057873233215547
+      "percentage": 15.268727915194347
     },
     {
       "project": 14827,
@@ -878,7 +878,7 @@
       "atoms": 55625,
       "contact": "voelz",
       "cause": "covid-19",
-      "percentage": 14.705022222222222
+      "percentage": 14.71791111111111
     },
     {
       "project": 14828,
@@ -894,7 +894,7 @@
       "atoms": 55625,
       "contact": "voelz",
       "cause": "covid-19",
-      "percentage": 23.747191011235955
+      "percentage": 23.920930979133228
     },
     {
       "project": 14836,
@@ -926,7 +926,7 @@
       "atoms": 55560,
       "contact": "voelz",
       "cause": "covid-19",
-      "percentage": 25.36284382284382
+      "percentage": 25.58993006993007
     },
     {
       "project": 14903,
@@ -942,7 +942,7 @@
       "atoms": 169725,
       "contact": "mc26",
       "cause": "covid-19",
-      "percentage": 37.590714285714284
+      "percentage": 37.59285714285714
     },
     {
       "project": 16400,
@@ -958,7 +958,7 @@
       "atoms": 29125,
       "contact": "sukrit.singh",
       "cause": "covid-19",
-      "percentage": 99.4529
+      "percentage": 99.4549
     },
     {
       "project": 16401,
@@ -1006,7 +1006,7 @@
       "atoms": 29578,
       "contact": "sukrit.singh",
       "cause": "covid-19",
-      "percentage": 91.61868987631699
+      "percentage": 91.621071919377
     },
     {
       "project": 16416,
@@ -1054,7 +1054,7 @@
       "atoms": 67345,
       "contact": "sukrit.singh",
       "cause": "covid-19",
-      "percentage": 99.68992
+      "percentage": 99.69248
     },
     {
       "project": 16422,
@@ -1070,7 +1070,7 @@
       "atoms": 67345,
       "contact": "sukrit.singh",
       "cause": "covid-19",
-      "percentage": 87.17273310521813
+      "percentage": 87.17715996578272
     },
     {
       "project": 16423,
@@ -1086,7 +1086,7 @@
       "atoms": 49885,
       "contact": "sukrit.singh",
       "cause": "covid-19",
-      "percentage": 78.65043561284163
+      "percentage": 78.66299081035923
     },
     {
       "project": 16431,
@@ -1102,7 +1102,7 @@
       "atoms": 156282,
       "contact": "sukrit.singh",
       "cause": "covid-19",
-      "percentage": 93.1741889483066
+      "percentage": 93.17597147950089
     },
     {
       "project": 16448,
@@ -1262,7 +1262,7 @@
       "atoms": 226546,
       "contact": "xuhuihuang",
       "cause": "covid-19",
-      "percentage": 99.9745
+      "percentage": 99.986
     },
     {
       "project": 16600,
@@ -1278,7 +1278,7 @@
       "atoms": 226545,
       "contact": "xuhuihuang",
       "cause": "covid-19",
-      "percentage": 57.8316
+      "percentage": 57.958
     },
     {
       "project": 16800,
@@ -1342,7 +1342,7 @@
       "atoms": 100000,
       "contact": "sergiopc",
       "cause": "covid-19",
-      "percentage": 88.94525
+      "percentage": 88.95225
     },
     {
       "project": 16804,
@@ -1358,7 +1358,7 @@
       "atoms": 61000,
       "contact": "sergiopc",
       "cause": "unspecified",
-      "percentage": 0.897975
+      "percentage": 0.8981
     },
     {
       "project": 16805,
@@ -1374,7 +1374,7 @@
       "atoms": 99119,
       "contact": "sergiopc",
       "cause": "covid-19",
-      "percentage": 63.9572
+      "percentage": 64.4032
     },
     {
       "project": 16806,
@@ -1390,7 +1390,7 @@
       "atoms": 60618,
       "contact": "sergiopc",
       "cause": "covid-19",
-      "percentage": 71.1972
+      "percentage": 71.1994
     },
     {
       "project": 16810,
@@ -1447,7 +1447,7 @@
       "type": "GRO_A8",
       "ws": "178.174.196.138",
       "credit": 3100,
-      "timeout": 309004,
+      "timeout": 362880,
       "deadline": 362880,
       "atoms": 63000,
       "contact": "sergiopc",
