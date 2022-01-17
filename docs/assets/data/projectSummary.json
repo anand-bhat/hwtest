@@ -145,20 +145,36 @@
       "percentage": 100.0
     },
     {
-      "project": 13460,
+      "project": 13459,
       "internal": false,
       "active": true,
       "type": "OPENMM_22",
       "ws": "54.157.202.86",
+      "credit": 2100,
+      "timeout": 86400,
+      "deadline": 172800,
+      "atoms": 4082,
+      "contact": "john.chodera",
+      "beta": false,
+      "public": true,
+      "cause": "covid-19",
+      "percentage": 99.99914442162903
+    },
+    {
+      "project": 13460,
+      "internal": false,
+      "active": false,
+      "type": "OPENMM_22",
+      "ws": "-",
       "credit": 54400,
       "timeout": 86400,
       "deadline": 172800,
       "atoms": 89709,
       "contact": "john.chodera",
       "beta": false,
-      "public": true,
+      "public": false,
       "cause": "covid-19",
-      "percentage": 99.9828431372549
+      "percentage": 100.0
     },
     {
       "project": 13461,
@@ -1502,7 +1518,7 @@
       "beta": false,
       "public": true,
       "cause": "unspecified",
-      "percentage": 90.79810714285715
+      "percentage": 90.46521428571428
     },
     {
       "project": 16920,
