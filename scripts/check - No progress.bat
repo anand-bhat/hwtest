@@ -79,7 +79,9 @@ python projectProgressChecker.py -f ../docs/assets/data/16801.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/16802.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/16803.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/16804.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/16805.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/16806.json -st alternate
+python projectProgressChecker.py -f ../docs/assets/data/16810.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/16812.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/16814.json -st alternate
 python projectProgressChecker.py -f ../docs/assets/data/16920.json -st alternate
