@@ -179,16 +179,16 @@
     {
       "project": 13461,
       "internal": false,
-      "active": true,
+      "active": false,
       "type": "OPENMM_22",
-      "ws": "54.157.202.86",
+      "ws": "-",
       "credit": 2100,
       "timeout": 86400,
       "deadline": 172800,
       "atoms": 4082,
       "contact": "john.chodera",
       "beta": false,
-      "public": true,
+      "public": false,
       "cause": "covid-19",
       "percentage": 100.0
     },
@@ -926,7 +926,7 @@
       "atoms": 55625,
       "contact": "voelz",
       "cause": "covid-19",
-      "percentage": 16.579416961130743
+      "percentage": 16.914288869257952
     },
     {
       "project": 14827,
@@ -942,7 +942,7 @@
       "atoms": 55625,
       "contact": "voelz",
       "cause": "covid-19",
-      "percentage": 15.063522222222222
+      "percentage": 15.159566666666667
     },
     {
       "project": 14828,
@@ -1326,7 +1326,7 @@
       "atoms": 226546,
       "contact": "xuhuihuang",
       "cause": "covid-19",
-      "percentage": 99.991
+      "percentage": 99.992
     },
     {
       "project": 16600,
@@ -1342,7 +1342,7 @@
       "atoms": 226545,
       "contact": "xuhuihuang",
       "cause": "covid-19",
-      "percentage": 59.1915
+      "percentage": 59.2271
     },
     {
       "project": 16800,
