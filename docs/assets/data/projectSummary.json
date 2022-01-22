@@ -926,7 +926,7 @@
       "atoms": 55625,
       "contact": "voelz",
       "cause": "covid-19",
-      "percentage": 16.914288869257952
+      "percentage": 16.953423144876325
     },
     {
       "project": 14827,
@@ -942,7 +942,7 @@
       "atoms": 55625,
       "contact": "voelz",
       "cause": "covid-19",
-      "percentage": 15.159566666666667
+      "percentage": 15.43368888888889
     },
     {
       "project": 14828,
@@ -1326,7 +1326,7 @@
       "atoms": 226546,
       "contact": "xuhuihuang",
       "cause": "covid-19",
-      "percentage": 99.992
+      "percentage": 99.994
     },
     {
       "project": 16600,
@@ -1518,7 +1518,7 @@
       "beta": false,
       "public": true,
       "cause": "unspecified",
-      "percentage": 90.46521428571428
+      "percentage": 90.46078571428572
     },
     {
       "project": 16920,
