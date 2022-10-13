@@ -31,7 +31,7 @@ def main(argv):
     parser.add_argument('-st', '--searchtype', type=str, default='binary', help='Specifies the search type -- binary or alternate (default: binary)')
     parser.add_argument('-sr', '--startingrun', type=int, default=0, help='Start at Run X')
     parser.add_argument('-sc', '--startingclone', type=int, default=0, help='Start at Clone X')
-    parser.add_argument('-zz', '--checkfinalgenfirst', type=bool, default=False, help='Check the final Gen first. Useful for first time runs for projects that are almost complete')
+    parser.add_argument('-zz', '--checkfinalgenfirst', type=bool, default=True, help='Check the final Gen first. Useful for first time runs for projects that are almost complete')
     args = parser.parse_args()
 
     projectFile = args.file
@@ -108,6 +108,20 @@ def main(argv):
                     print('   Not checking progress for aborted Gen')
                     continue
 
+                if checkFinalGenFirst:
+                    # Special case: Check last gen
+                    response = wu_check(project, run, clone, maxGensPerClone - 1)
+                    if response[0] == 1:
+                        # Record this gen where traj has completed
+                        record_clone_entry(clone_entry, maxGensPerClone - 1, response[1], response[0])
+                        continue
+                    elif response[0] >= 2:
+                        # Record this gen where traj has been aborted
+                        record_clone_entry(clone_entry, maxGensPerClone - 1, response[1], response[0])
+                        continue
+
+                gen = gen + 1
+
                 # Special case: Check next gen
                 response = wu_check(project, run, clone, gen + 1)
                 lastGenDate = '-'
@@ -117,7 +131,23 @@ def main(argv):
                     response = wu_check(project, run, clone, gen + 2)
                     if response[0] == 0:
                         print('   No progress detected for sure')
-                        continue
+                        # Super super special case: Check next gen
+                        response = wu_check(project, run, clone, gen + 3)
+                        if response[0] == 0:
+                            print('   No progress detected for sure2')
+                            continue
+                        elif response[0] == 1:
+                            # Record this gen where traj has completed
+                            record_clone_entry(clone_entry, gen + 3, response[1], response[0])
+                            if (gen + 2) == (maxGensPerClone - 1):
+                                # This is the last gen
+                                continue
+                            lastGenDate = response[1]
+                        elif response[0] >= 2:
+                            # Record this gen where traj has been aborted
+                            record_clone_entry(clone_entry, gen + 3, response[1], response[0])
+                            continue
+                        #continue
                     elif response[0] == 1:
                         # Record this gen where traj has completed
                         record_clone_entry(clone_entry, gen + 2, response[1], response[0])
@@ -141,6 +171,16 @@ def main(argv):
                     # Record this gen where traj has been aborted
                     record_clone_entry(clone_entry, gen + 1, response[1], response[0])
                     continue
+
+                gen = gen + 1
+
+                if not checkFinalGenFirst:
+                    # Special case: Check last gen
+                    response = wu_check(project, run, clone, maxGensPerClone - 1)
+                    if response[0] >= 1:
+                        # Record this gen where traj has completed
+                        record_clone_entry(clone_entry, maxGensPerClone - 1, response[1], response[0])
+                        continue
 
                 if searchType == 'alternate':
                     # Search Gens by hopping alternate Gens (useful for deltas)
@@ -244,7 +284,7 @@ def wu_check(project, run, clone, gen):
 
     print('   Checking status for Project {}, Run {}, Clone {}, Gen {}...'.format(project, run, clone, gen))
     url = 'https://api.foldingathome.org/project/{}/run/{}/clone/{}/gen/{}'.format(project, run, clone, gen)
-    time.sleep(.75)
+    time.sleep(1)
     response = s.get(url)
     if response.status_code != 200:
         print('ERROR: Error in API response')
